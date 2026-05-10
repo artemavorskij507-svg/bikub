@@ -1,0 +1,549 @@
+- generic [ref=e2]:
+  - main [ref=e3]:
+    - generic [ref=e4]:
+      - generic [ref=e6]:
+        - generic [ref=e7]:
+          - generic [ref=e8]: B
+          - generic [ref=e9]:
+            - paragraph [ref=e10]: BiKuBe Delivery
+            - paragraph [ref=e11]: Narvik, Norway
+        - generic [ref=e12]:
+          - generic [ref=e13]: Live Partner Data
+          - generic [ref=e14]: Updated 15:22
+        - button "Cart" [ref=e15] [cursor=pointer]
+      - main [ref=e16]:
+        - generic [ref=e18]:
+          - generic:
+            - paragraph: Delivery
+          - generic [ref=e19]:
+            - generic [ref=e20]:
+              - generic [ref=e21]:
+                - generic [ref=e22]: Narvik Delivery Hub
+                - heading "Fresh groceries, food and freight delivered across Narvik." [level=1] [ref=e23]
+                - paragraph [ref=e24]: Real BiKuBe partner network. Live slots. Checkout from one flow without switching between marketplaces.
+              - generic [ref=e25]:
+                - button "Shop partner offers" [ref=e26] [cursor=pointer]
+                - button "Open checkout" [ref=e27] [cursor=pointer]
+              - generic [ref=e28]:
+                - generic [ref=e29]:
+                  - term [ref=e30]: Retail partners
+                  - definition [ref=e31]: "12"
+                - generic [ref=e32]:
+                  - term [ref=e33]: Food partners
+                  - definition [ref=e34]: "12"
+                - generic [ref=e35]:
+                  - term [ref=e36]: Coverage zones
+                  - definition [ref=e37]: "1"
+                - generic [ref=e38]:
+                  - term [ref=e39]: Upcoming slots
+                  - definition [ref=e40]: "0"
+            - generic [ref=e41]:
+              - img "Narvik delivery basket"
+              - generic [ref=e42]:
+                - paragraph [ref=e43]: Primary zone
+                - paragraph [ref=e44]: Narvik Personal Errands (60km)
+              - generic [ref=e45]:
+                - paragraph [ref=e46]: Service mix
+                - generic [ref=e47]:
+                  - paragraph [ref=e48]: Grocery 12
+                  - paragraph [ref=e49]: Food 12
+                  - paragraph [ref=e50]: Freight 6
+        - generic [ref=e51]:
+          - generic [ref=e52]:
+            - button "All 30" [ref=e53] [cursor=pointer]
+            - button "Grocery 12" [ref=e54] [cursor=pointer]
+            - button "Food 12" [ref=e55] [cursor=pointer]
+            - button "Freight 6" [ref=e56] [cursor=pointer]
+          - generic [ref=e57]:
+            - generic [ref=e58]:
+              - generic [ref=e59]: Search partners and services
+              - searchbox "Search partners and services" [ref=e60]
+              - img
+            - generic [ref=e61]:
+              - generic [ref=e62]: Coverage zone
+              - combobox "Coverage zone" [ref=e63]:
+                - option "All zones" [selected]
+                - option "Narvik Personal Errands (60km)"
+            - button "Checkout" [ref=e64] [cursor=pointer]
+        - generic [ref=e65]:
+          - complementary [ref=e66]:
+            - article [ref=e67]:
+              - img "Promo green" [ref=e68]
+              - generic [ref=e69]:
+                - paragraph [ref=e70]: New customer offer
+                - heading "Enjoy 10% off your first Narvik order." [level=3] [ref=e71]
+                - paragraph [ref=e72]: Active across grocery, food and freight checkout flows.
+            - article [ref=e73]:
+              - img "Promo pink" [ref=e74]
+              - generic [ref=e75]:
+                - paragraph [ref=e76]: Free delivery
+                - heading "Orders over 550 kr ship with zero fee." [level=3] [ref=e77]
+                - paragraph [ref=e78]: Applies automatically when slot and zone are eligible.
+            - article [ref=e79]:
+              - img "Promo yellow" [ref=e80]
+              - generic [ref=e81]:
+                - paragraph [ref=e82]: Family bundle
+                - heading "Fresh groceries for your week in one checkout." [level=3] [ref=e83]
+                - paragraph [ref=e84]: Recommended picks are updated from active partners.
+          - generic [ref=e85]:
+            - generic [ref=e86]:
+              - generic [ref=e87]:
+                - paragraph [ref=e88]: Weekly best selling items
+                - heading "Curated picks for Narvik" [level=2] [ref=e89]
+              - button "Show all" [ref=e90] [cursor=pointer]
+            - generic [ref=e91]:
+              - button "Fresh Vegetables" [ref=e92] [cursor=pointer]
+              - button "Bakery & Food" [ref=e93] [cursor=pointer]
+              - button "Freight & Cargo" [ref=e94] [cursor=pointer]
+              - button "All" [ref=e95] [cursor=pointer]
+            - generic [ref=e96]:
+              - article [ref=e97]:
+                - img "AMFI Narvik" [ref=e98]
+                - generic [ref=e99]:
+                  - paragraph [ref=e100]: AMFI Narvik
+                  - paragraph [ref=e101]: AMFI
+                  - generic [ref=e102]:
+                    - paragraph [ref=e103]: 59,00 kr
+                    - button "Add to cart" [ref=e104] [cursor=pointer]
+              - article [ref=e105]:
+                - img "Alicofood Noor Tawfiq Sabiri" [ref=e106]
+                - generic [ref=e107]:
+                  - paragraph [ref=e108]: Alicofood Noor Tawfiq Sabiri
+                  - paragraph [ref=e109]: Alicofood
+                  - generic [ref=e110]:
+                    - paragraph [ref=e111]: 59,00 kr
+                    - button "Add to cart" [ref=e112] [cursor=pointer]
+              - article [ref=e113]:
+                - img "Biltema" [ref=e114]
+                - generic [ref=e115]:
+                  - paragraph [ref=e116]: Biltema
+                  - paragraph [ref=e117]: Biltema
+                  - generic [ref=e118]:
+                    - paragraph [ref=e119]: 59,00 kr
+                    - button "Add to cart" [ref=e120] [cursor=pointer]
+              - article [ref=e121]:
+                - img "Bohus Narvik" [ref=e122]
+                - generic [ref=e123]:
+                  - paragraph [ref=e124]: Bohus Narvik
+                  - paragraph [ref=e125]: Bohus
+                  - generic [ref=e126]:
+                    - paragraph [ref=e127]: 59,00 kr
+                    - button "Add to cart" [ref=e128] [cursor=pointer]
+              - article [ref=e129]:
+                - img "Bunnpris & Gourmet (Narvik)" [ref=e130]
+                - generic [ref=e131]:
+                  - paragraph [ref=e132]: Bunnpris & Gourmet (Narvik)
+                  - paragraph [ref=e133]: Bunnpris
+                  - generic [ref=e134]:
+                    - paragraph [ref=e135]: 59,00 kr
+                    - button "Add to cart" [ref=e136] [cursor=pointer]
+              - article [ref=e137]:
+                - img "Byggeriet S. Thorstensen" [ref=e138]
+                - generic [ref=e139]:
+                  - paragraph [ref=e140]: Byggeriet S. Thorstensen
+                  - paragraph [ref=e141]: Byggeriet
+                  - generic [ref=e142]:
+                    - paragraph [ref=e143]: 59,00 kr
+                    - button "Add to cart" [ref=e144] [cursor=pointer]
+        - generic [ref=e145]:
+          - generic [ref=e146]:
+            - generic [ref=e148]:
+              - heading "Today's Narvik picks" [level=2] [ref=e149]
+              - paragraph [ref=e150]: Live offers from active BiKuBe partners.
+            - generic [ref=e151]:
+              - article [ref=e152]:
+                - generic:
+                  - img "AMFI Narvik"
+                  - generic [ref=e153]: grocery
+                - generic [ref=e154]:
+                  - heading "AMFI Narvik" [level=3] [ref=e155]
+                  - paragraph [ref=e156]: AMFI
+                  - paragraph [ref=e157]: Shopping center
+                  - generic [ref=e158]:
+                    - paragraph [ref=e159]: 59,00 kr
+                    - paragraph [ref=e160]: ETA 45 min
+                  - button "Add to cart" [ref=e162] [cursor=pointer]
+              - article [ref=e163]:
+                - generic:
+                  - img "Alicofood Noor Tawfiq Sabiri"
+                  - generic [ref=e164]: grocery
+                - generic [ref=e165]:
+                  - heading "Alicofood Noor Tawfiq Sabiri" [level=3] [ref=e166]
+                  - paragraph [ref=e167]: Alicofood
+                  - paragraph [ref=e168]: International food store
+                  - generic [ref=e169]:
+                    - paragraph [ref=e170]: 59,00 kr
+                    - paragraph [ref=e171]: ETA 45 min
+                  - button "Add to cart" [ref=e173] [cursor=pointer]
+              - article [ref=e174]:
+                - generic:
+                  - img "Biltema"
+                  - generic [ref=e175]: grocery
+                - generic [ref=e176]:
+                  - heading "Biltema" [level=3] [ref=e177]
+                  - paragraph [ref=e178]: Biltema
+                  - paragraph [ref=e179]: Auto parts and tools
+                  - generic [ref=e180]:
+                    - paragraph [ref=e181]: 59,00 kr
+                    - paragraph [ref=e182]: ETA 45 min
+                  - button "Add to cart" [ref=e184] [cursor=pointer]
+              - article [ref=e185]:
+                - generic:
+                  - img "Bohus Narvik"
+                  - generic [ref=e186]: grocery
+                - generic [ref=e187]:
+                  - heading "Bohus Narvik" [level=3] [ref=e188]
+                  - paragraph [ref=e189]: Bohus
+                  - paragraph [ref=e190]: Furniture and interior
+                  - generic [ref=e191]:
+                    - paragraph [ref=e192]: 59,00 kr
+                    - paragraph [ref=e193]: ETA 45 min
+                  - button "Add to cart" [ref=e195] [cursor=pointer]
+              - article [ref=e196]:
+                - generic:
+                  - img "Bunnpris & Gourmet (Narvik)"
+                  - generic [ref=e197]: grocery
+                - generic [ref=e198]:
+                  - heading "Bunnpris & Gourmet (Narvik)" [level=3] [ref=e199]
+                  - paragraph [ref=e200]: Bunnpris
+                  - paragraph [ref=e201]: Grocery store
+                  - generic [ref=e202]:
+                    - paragraph [ref=e203]: 59,00 kr
+                    - paragraph [ref=e204]: ETA 45 min
+                  - button "Add to cart" [ref=e206] [cursor=pointer]
+              - article [ref=e207]:
+                - generic:
+                  - img "Byggeriet S. Thorstensen"
+                  - generic [ref=e208]: grocery
+                - generic [ref=e209]:
+                  - heading "Byggeriet S. Thorstensen" [level=3] [ref=e210]
+                  - paragraph [ref=e211]: Byggeriet
+                  - paragraph [ref=e212]: Building materials
+                  - generic [ref=e213]:
+                    - paragraph [ref=e214]: 59,00 kr
+                    - paragraph [ref=e215]: ETA 45 min
+                  - button "Add to cart" [ref=e217] [cursor=pointer]
+              - article [ref=e218]:
+                - generic:
+                  - img "Byggerns Bjerkvik"
+                  - generic [ref=e219]: grocery
+                - generic [ref=e220]:
+                  - heading "Byggerns Bjerkvik" [level=3] [ref=e221]
+                  - paragraph [ref=e222]: Byggerns
+                  - paragraph [ref=e223]: Building materials
+                  - generic [ref=e224]:
+                    - paragraph [ref=e225]: 59,00 kr
+                    - paragraph [ref=e226]: ETA 45 min
+                  - button "Add to cart" [ref=e228] [cursor=pointer]
+              - article [ref=e229]:
+                - generic:
+                  - img "Byggtorget Mathisen & Mathisen"
+                  - generic [ref=e230]: grocery
+                - generic [ref=e231]:
+                  - heading "Byggtorget Mathisen & Mathisen" [level=3] [ref=e232]
+                  - paragraph [ref=e233]: Byggtorget
+                  - paragraph [ref=e234]: Building materials
+                  - generic [ref=e235]:
+                    - paragraph [ref=e236]: 59,00 kr
+                    - paragraph [ref=e237]: ETA 45 min
+                  - button "Add to cart" [ref=e239] [cursor=pointer]
+              - article [ref=e240]:
+                - generic:
+                  - img "Byggtorget Mathisen & Mathisen"
+                  - generic [ref=e241]: grocery
+                - generic [ref=e242]:
+                  - heading "Byggtorget Mathisen & Mathisen" [level=3] [ref=e243]
+                  - paragraph [ref=e244]: Byggtorget
+                  - paragraph [ref=e245]: Building materials
+                  - generic [ref=e246]:
+                    - paragraph [ref=e247]: 59,00 kr
+                    - paragraph [ref=e248]: ETA 45 min
+                  - button "Add to cart" [ref=e250] [cursor=pointer]
+              - article [ref=e251]:
+                - generic:
+                  - img "Clas Ohlson"
+                  - generic [ref=e252]: grocery
+                - generic [ref=e253]:
+                  - heading "Clas Ohlson" [level=3] [ref=e254]
+                  - paragraph [ref=e255]: Clas Ohlson
+                  - paragraph [ref=e256]: Tools and gadgets
+                  - generic [ref=e257]:
+                    - paragraph [ref=e258]: 59,00 kr
+                    - paragraph [ref=e259]: ETA 45 min
+                  - button "Add to cart" [ref=e261] [cursor=pointer]
+              - article [ref=e262]:
+                - generic:
+                  - img "Clas Ohlson Narvik"
+                  - generic [ref=e263]: grocery
+                - generic [ref=e264]:
+                  - heading "Clas Ohlson Narvik" [level=3] [ref=e265]
+                  - paragraph [ref=e266]: Clas Ohlson
+                  - paragraph [ref=e267]: Tools and gadgets
+                  - generic [ref=e268]:
+                    - paragraph [ref=e269]: 59,00 kr
+                    - paragraph [ref=e270]: ETA 45 min
+                  - button "Add to cart" [ref=e272] [cursor=pointer]
+              - article [ref=e273]:
+                - generic:
+                  - img "Coop Extra"
+                  - generic [ref=e274]: grocery
+                - generic [ref=e275]:
+                  - heading "Coop Extra" [level=3] [ref=e276]
+                  - paragraph [ref=e277]: Coop
+                  - paragraph [ref=e278]: Grocery store
+                  - generic [ref=e279]:
+                    - paragraph [ref=e280]: 59,00 kr
+                    - paragraph [ref=e281]: ETA 45 min
+                  - button "Add to cart" [ref=e283] [cursor=pointer]
+              - article [ref=e284]:
+                - generic:
+                  - img "Arctic Train Café"
+                  - generic [ref=e285]: food
+                - generic [ref=e286]:
+                  - heading "Arctic Train Café" [level=3] [ref=e287]
+                  - paragraph [ref=e288]: BiKuBe Food Partner
+                  - paragraph [ref=e289]: Train station cafe
+                  - generic [ref=e290]:
+                    - paragraph [ref=e291]: 49,00 kr
+                    - paragraph [ref=e292]: ETA 35 min
+                  - button "Add to cart" [ref=e294] [cursor=pointer]
+              - article [ref=e295]:
+                - generic:
+                  - img "Arilds Grillbar"
+                  - generic [ref=e296]: food
+                - generic [ref=e297]:
+                  - heading "Arilds Grillbar" [level=3] [ref=e298]
+                  - paragraph [ref=e299]: BiKuBe Food Partner
+                  - paragraph [ref=e300]: Grill bar
+                  - generic [ref=e301]:
+                    - paragraph [ref=e302]: 49,00 kr
+                    - paragraph [ref=e303]: ETA 35 min
+                  - button "Add to cart" [ref=e305] [cursor=pointer]
+              - article [ref=e306]:
+                - generic:
+                  - img "Bella Napoli"
+                  - generic [ref=e307]: food
+                - generic [ref=e308]:
+                  - heading "Bella Napoli" [level=3] [ref=e309]
+                  - paragraph [ref=e310]: BiKuBe Food Partner
+                  - paragraph [ref=e311]: Italian restaurant
+                  - generic [ref=e312]:
+                    - paragraph [ref=e313]: 49,00 kr
+                    - paragraph [ref=e314]: ETA 35 min
+                  - button "Add to cart" [ref=e316] [cursor=pointer]
+              - article [ref=e317]:
+                - generic:
+                  - img "Burger King Narvik"
+                  - generic [ref=e318]: food
+                - generic [ref=e319]:
+                  - heading "Burger King Narvik" [level=3] [ref=e320]
+                  - paragraph [ref=e321]: BiKuBe Food Partner
+                  - paragraph [ref=e322]: Fast food
+                  - generic [ref=e323]:
+                    - paragraph [ref=e324]: 49,00 kr
+                    - paragraph [ref=e325]: ETA 35 min
+                  - button "Add to cart" [ref=e327] [cursor=pointer]
+              - article [ref=e328]:
+                - generic:
+                  - img "Duus Narvik"
+                  - generic [ref=e329]: food
+                - generic [ref=e330]:
+                  - heading "Duus Narvik" [level=3] [ref=e331]
+                  - paragraph [ref=e332]: BiKuBe Food Partner
+                  - paragraph [ref=e333]: Restaurant
+                  - generic [ref=e334]:
+                    - paragraph [ref=e335]: 49,00 kr
+                    - paragraph [ref=e336]: ETA 35 min
+                  - button "Add to cart" [ref=e338] [cursor=pointer]
+              - article [ref=e339]:
+                - generic:
+                  - img "Fiskehallen Narvik"
+                  - generic [ref=e340]: food
+                - generic [ref=e341]:
+                  - heading "Fiskehallen Narvik" [level=3] [ref=e342]
+                  - paragraph [ref=e343]: BiKuBe Food Partner
+                  - paragraph [ref=e344]: Fish restaurant
+                  - generic [ref=e345]:
+                    - paragraph [ref=e346]: 49,00 kr
+                    - paragraph [ref=e347]: ETA 35 min
+                  - button "Add to cart" [ref=e349] [cursor=pointer]
+              - article [ref=e350]:
+                - generic:
+                  - img "Fiskekroken"
+                  - generic [ref=e351]: food
+                - generic [ref=e352]:
+                  - heading "Fiskekroken" [level=3] [ref=e353]
+                  - paragraph [ref=e354]: BiKuBe Food Partner
+                  - paragraph [ref=e355]: Seafood restaurant
+                  - generic [ref=e356]:
+                    - paragraph [ref=e357]: 49,00 kr
+                    - paragraph [ref=e358]: ETA 35 min
+                  - button "Add to cart" [ref=e360] [cursor=pointer]
+              - article [ref=e361]:
+                - generic:
+                  - img "Fu Lam Restaurant"
+                  - generic [ref=e362]: food
+                - generic [ref=e363]:
+                  - heading "Fu Lam Restaurant" [level=3] [ref=e364]
+                  - paragraph [ref=e365]: BiKuBe Food Partner
+                  - paragraph [ref=e366]: Chinese cuisine
+                  - generic [ref=e367]:
+                    - paragraph [ref=e368]: 49,00 kr
+                    - paragraph [ref=e369]: ETA 45 min
+                  - button "Add to cart" [ref=e371] [cursor=pointer]
+              - article [ref=e372]:
+                - generic:
+                  - img "Furu Gastropub"
+                  - generic [ref=e373]: food
+                - generic [ref=e374]:
+                  - heading "Furu Gastropub" [level=3] [ref=e375]
+                  - paragraph [ref=e376]: BiKuBe Food Partner
+                  - paragraph [ref=e377]: Restaurant and bar
+                  - generic [ref=e378]:
+                    - paragraph [ref=e379]: 49,00 kr
+                    - paragraph [ref=e380]: ETA 35 min
+                  - button "Add to cart" [ref=e382] [cursor=pointer]
+              - article [ref=e383]:
+                - generic:
+                  - img "Kafferiet Restaurant & Bar"
+                  - generic [ref=e384]: food
+                - generic [ref=e385]:
+                  - heading "Kafferiet Restaurant & Bar" [level=3] [ref=e386]
+                  - paragraph [ref=e387]: BiKuBe Food Partner
+                  - paragraph [ref=e388]: Cafe restaurant
+                  - generic [ref=e389]:
+                    - paragraph [ref=e390]: 49,00 kr
+                    - paragraph [ref=e391]: ETA 35 min
+                  - button "Add to cart" [ref=e393] [cursor=pointer]
+              - article [ref=e394]:
+                - generic:
+                  - img "Linken Restaurant & Bar"
+                  - generic [ref=e395]: food
+                - generic [ref=e396]:
+                  - heading "Linken Restaurant & Bar" [level=3] [ref=e397]
+                  - paragraph [ref=e398]: BiKuBe Food Partner
+                  - paragraph [ref=e399]: Restaurant and rooftop bar
+                  - generic [ref=e400]:
+                    - paragraph [ref=e401]: 49,00 kr
+                    - paragraph [ref=e402]: ETA 35 min
+                  - button "Add to cart" [ref=e404] [cursor=pointer]
+              - article [ref=e405]:
+                - generic:
+                  - img "Milano Restaurant Narvik"
+                  - generic [ref=e406]: food
+                - generic [ref=e407]:
+                  - heading "Milano Restaurant Narvik" [level=3] [ref=e408]
+                  - paragraph [ref=e409]: BiKuBe Food Partner
+                  - paragraph [ref=e410]: Italian restaurant
+                  - generic [ref=e411]:
+                    - paragraph [ref=e412]: 49,00 kr
+                    - paragraph [ref=e413]: ETA 35 min
+                  - button "Add to cart" [ref=e415] [cursor=pointer]
+              - article [ref=e416]:
+                - generic:
+                  - img "Emergency Tow"
+                  - generic [ref=e417]: freight
+                - generic [ref=e418]:
+                  - heading "Emergency Tow" [level=3] [ref=e419]
+                  - paragraph [ref=e420]: BiKuBe Freight
+                  - paragraph [ref=e421]: Emergency bike towing service
+                  - generic [ref=e422]:
+                    - paragraph [ref=e423]: 129,00 kr
+                    - paragraph [ref=e424]: Live ETA
+                  - button "Add to cart" [ref=e426] [cursor=pointer]
+              - article [ref=e427]:
+                - generic:
+                  - img "Эвакуация в городе"
+                  - generic [ref=e428]: freight
+                - generic [ref=e429]:
+                  - heading "Эвакуация в городе" [level=3] [ref=e430]
+                  - paragraph [ref=e431]: BiKuBe Freight
+                  - paragraph [ref=e432]: Погрузка/перевозка
+                  - generic [ref=e433]:
+                    - paragraph [ref=e434]: 129,00 kr
+                    - paragraph [ref=e435]: Live ETA
+                  - button "Add to cart" [ref=e437] [cursor=pointer]
+              - article [ref=e438]:
+                - generic:
+                  - img "Эвакуация по E6/E10"
+                  - generic [ref=e439]: freight
+                - generic [ref=e440]:
+                  - heading "Эвакуация по E6/E10" [level=3] [ref=e441]
+                  - paragraph [ref=e442]: BiKuBe Freight
+                  - paragraph [ref=e443]: Км-тариф + база
+                  - generic [ref=e444]:
+                    - paragraph [ref=e445]: 129,00 kr
+                    - paragraph [ref=e446]: Live ETA
+                  - button "Add to cart" [ref=e448] [cursor=pointer]
+              - article [ref=e449]:
+                - generic:
+                  - img "Вытягивание из снега"
+                  - generic [ref=e450]: freight
+                - generic [ref=e451]:
+                  - heading "Вытягивание из снега" [level=3] [ref=e452]
+                  - paragraph [ref=e453]: BiKuBe Freight
+                  - paragraph [ref=e454]: Лебёдка/страпы
+                  - generic [ref=e455]:
+                    - paragraph [ref=e456]: 129,00 kr
+                    - paragraph [ref=e457]: Live ETA
+                  - button "Add to cart" [ref=e459] [cursor=pointer]
+              - article [ref=e460]:
+                - generic:
+                  - img "Прикуривание"
+                  - generic [ref=e461]: freight
+                - generic [ref=e462]:
+                  - heading "Прикуривание" [level=3] [ref=e463]
+                  - paragraph [ref=e464]: BiKuBe Freight
+                  - paragraph [ref=e465]: Пуск/проверка
+                  - generic [ref=e466]:
+                    - paragraph [ref=e467]: 129,00 kr
+                    - paragraph [ref=e468]: Live ETA
+                  - button "Add to cart" [ref=e470] [cursor=pointer]
+              - article [ref=e471]:
+                - generic:
+                  - img "Замена колеса"
+                  - generic [ref=e472]: freight
+                - generic [ref=e473]:
+                  - heading "Замена колеса" [level=3] [ref=e474]
+                  - paragraph [ref=e475]: BiKuBe Freight
+                  - paragraph [ref=e476]: Домкрат/момент
+                  - generic [ref=e477]:
+                    - paragraph [ref=e478]: 129,00 kr
+                    - paragraph [ref=e479]: Live ETA
+                  - button "Add to cart" [ref=e481] [cursor=pointer]
+          - complementary [ref=e482]:
+            - generic [ref=e483]:
+              - heading "Narvik Partner Coverage" [level=3] [ref=e484]
+              - paragraph [ref=e485]: Operational entities that feed this delivery flow.
+              - generic [ref=e486]:
+                - generic [ref=e487]:
+                  - term [ref=e488]: Retail partners
+                  - definition [ref=e489]: "6"
+                - generic [ref=e490]:
+                  - term [ref=e491]: Food partners
+                  - definition [ref=e492]: "6"
+                - generic [ref=e493]:
+                  - term [ref=e494]: Coverage zones
+                  - definition [ref=e495]: "1"
+                - generic [ref=e496]:
+                  - term [ref=e497]: Available slots
+                  - definition [ref=e498]: "0"
+            - generic [ref=e499]:
+              - heading "Coverage zones" [level=3] [ref=e500]
+              - generic [ref=e502]:
+                - paragraph [ref=e503]: Narvik Personal Errands (60km)
+                - paragraph [ref=e504]: service_area
+            - generic [ref=e505]:
+              - heading "Next dispatch windows" [level=3] [ref=e506]
+              - paragraph [ref=e508]: No open slots for selected date/zone.
+        - generic [ref=e510]:
+          - generic [ref=e511]:
+            - paragraph [ref=e512]: Ready to fill your cart
+            - heading "Fresh fruits and vegetables delivered daily." [level=3] [ref=e513]
+            - paragraph [ref=e514]: We deliver everything you need straight to your door across Narvik zones, with slot validation and partner-level visibility.
+            - generic [ref=e515]:
+              - button "Shop fresh produce" [ref=e516] [cursor=pointer]
+              - button "Open checkout" [ref=e517] [cursor=pointer]
+          - generic:
+            - img "Fresh basket"
+  - contentinfo [ref=e518]: © 2026 BiKuBe Ecosystem. All rights reserved.

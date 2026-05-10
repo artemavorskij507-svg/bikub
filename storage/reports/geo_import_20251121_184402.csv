@@ -1,0 +1,5 @@
+zone_name,slug,type,status,source_file
+"Narvik City",narvik-city,polygon,created,/mnt/data/Доставка.txt
+Ankenes,ankenes,circle,created,/mnt/data/Доставка.txt
+Bjerkvik,bjerkvik,circle,created,/mnt/data/Доставка.txt
+"Narvik +60 km",narvik-60km,circle,created,/mnt/data/Доставка.txt

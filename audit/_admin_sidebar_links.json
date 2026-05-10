@@ -1,0 +1,361 @@
+{
+  "count": 89,
+  "links": [
+    {
+      "href": "http://136.119.84.22/admin",
+      "text": "Dashboard"
+    },
+    {
+      "href": "http://136.119.84.22/admin/a-i-agent-team-chat",
+      "text": "Team Chat"
+    },
+    {
+      "href": "http://136.119.84.22/admin/admin-i-p-rules",
+      "text": "Admin IP Rules"
+    },
+    {
+      "href": "http://136.119.84.22/admin/a-p-i-keys-management",
+      "text": "API Keys Management"
+    },
+    {
+      "href": "http://136.119.84.22/admin/audit-logs",
+      "text": "Audit Logs"
+    },
+    {
+      "href": "http://136.119.84.22/admin/security/two-factor-setup",
+      "text": "2FA Setup"
+    },
+    {
+      "href": "http://136.119.84.22/admin/service-categories",
+      "text": "Categories"
+    },
+    {
+      "href": "http://136.119.84.22/admin/service-types",
+      "text": "Услуги"
+    },
+    {
+      "href": "http://136.119.84.22/admin/client-profiles",
+      "text": "Клиенты"
+    },
+    {
+      "href": "http://136.119.84.22/admin/partners",
+      "text": "Партнёры"
+    },
+    {
+      "href": "http://136.119.84.22/admin/payouts",
+      "text": "Выплаты"
+    },
+    {
+      "href": "http://136.119.84.22/admin/bikube-smart-assistant",
+      "text": "Bikube Assistant"
+    },
+    {
+      "href": "http://136.119.84.22/admin/assistant-conversations",
+      "text": "Assistant Conversations"
+    },
+    {
+      "href": "http://136.119.84.22/admin/delivery-operations",
+      "text": "Операционный центр доставки"
+    },
+    {
+      "href": "http://136.119.84.22/admin/dispatch",
+      "text": "Диспетчерская"
+    },
+    {
+      "href": "http://136.119.84.22/admin/tasks",
+      "text": "Tasks"
+    },
+    {
+      "href": "http://136.119.84.22/admin/work-specifications",
+      "text": "ТЗ и задачи"
+    },
+    {
+      "href": "http://136.119.84.22/admin/schedule-slots",
+      "text": "Временные слоты"
+    },
+    {
+      "href": "http://136.119.84.22/admin/users",
+      "text": "Пользователи"
+    },
+    {
+      "href": "http://136.119.84.22/admin/feature-flags",
+      "text": "Feature Flags"
+    },
+    {
+      "href": "http://136.119.84.22/admin/analytics-orders",
+      "text": "Заказы (Аналитика)"
+    },
+    {
+      "href": "http://136.119.84.22/admin/roadside-debug-page",
+      "text": "Debug & Demo"
+    },
+    {
+      "href": "http://136.119.84.22/admin/virtual-office-dashboard",
+      "text": "Virtual Office"
+    },
+    {
+      "href": "http://136.119.84.22/admin/agents",
+      "text": "Virtual Office Agents"
+    },
+    {
+      "href": "http://136.119.84.22/admin/ad-categories",
+      "text": "Ad Categories"
+    },
+    {
+      "href": "http://136.119.84.22/admin/ad-features",
+      "text": "Ad Features"
+    },
+    {
+      "href": "http://136.119.84.22/admin/ad-imports",
+      "text": "Bulk Import"
+    },
+    {
+      "href": "http://136.119.84.22/admin/classified-ads",
+      "text": "Ads Moderation"
+    },
+    {
+      "href": "http://136.119.84.22/admin/shops",
+      "text": "Shops"
+    },
+    {
+      "href": "http://136.119.84.22/admin/admin-ip-rules",
+      "text": "Admin IP Rules"
+    },
+    {
+      "href": "http://136.119.84.22/admin/api-keys",
+      "text": "API Keys"
+    },
+    {
+      "href": "http://136.119.84.22/admin/webhook-logs",
+      "text": "Webhook Center"
+    },
+    {
+      "href": "http://136.119.84.22/admin/operations-core",
+      "text": "Unified Operations Core"
+    },
+    {
+      "href": "http://136.119.84.22/admin/service-jobs",
+      "text": "Service Jobs"
+    },
+    {
+      "href": "http://136.119.84.22/admin/live-operations-map",
+      "text": "Live Operations Map"
+    },
+    {
+      "href": "http://136.119.84.22/admin/operation-exceptions",
+      "text": "Operation Exceptions"
+    },
+    {
+      "href": "http://136.119.84.22/admin/executor-shifts",
+      "text": "Executor Shifts"
+    },
+    {
+      "href": "http://136.119.84.22/admin/executor-breaks",
+      "text": "Executor Breaks"
+    },
+    {
+      "href": "http://136.119.84.22/admin/dispatch-rule-sets",
+      "text": "Dispatch Rule Sets"
+    },
+    {
+      "href": "http://136.119.84.22/admin/dispatch-rule-preview",
+      "text": "Dispatch Rule Preview"
+    },
+    {
+      "href": "http://136.119.84.22/admin/loyalty-balances",
+      "text": "Баланси балів"
+    },
+    {
+      "href": "http://136.119.84.22/admin/loyalty-transactions",
+      "text": "Історія операцій"
+    },
+    {
+      "href": "http://136.119.84.22/admin/employees",
+      "text": "Исполнители"
+    },
+    {
+      "href": "http://136.119.84.22/admin/price-estimate-logs",
+      "text": "Логи Расчёта Цен"
+    },
+    {
+      "href": "http://136.119.84.22/admin/support-tickets",
+      "text": "Support Tickets"
+    },
+    {
+      "href": "http://136.119.84.22/admin/payment-settings",
+      "text": "Настройки платежей"
+    },
+    {
+      "href": "http://136.119.84.22/admin/geo-zones",
+      "text": "Geo Zones"
+    },
+    {
+      "href": "http://136.119.84.22/admin/pricing-rules",
+      "text": "Pricing Rules"
+    },
+    {
+      "href": "http://136.119.84.22/admin/errand-tasks",
+      "text": "Errand Tasks"
+    },
+    {
+      "href": "http://136.119.84.22/admin/restaurants",
+      "text": "Restaurants"
+    },
+    {
+      "href": "http://136.119.84.22/admin/retail-stores",
+      "text": "Retail Stores"
+    },
+    {
+      "href": "http://136.119.84.22/admin/delivery/delivery-orders",
+      "text": "Delivery"
+    },
+    {
+      "href": "http://136.119.84.22/admin/orders",
+      "text": "Delivery Orders"
+    },
+    {
+      "href": "http://136.119.84.22/admin/errand-order-details",
+      "text": "Errand Order Details"
+    },
+    {
+      "href": "http://136.119.84.22/admin/delivery-zones",
+      "text": "Delivery Zones"
+    },
+    {
+      "href": "http://136.119.84.22/admin/coupons",
+      "text": "Coupons"
+    },
+    {
+      "href": "http://136.119.84.22/admin/disposal-items",
+      "text": "Disposal Items"
+    },
+    {
+      "href": "http://136.119.84.22/admin/disposal-partners",
+      "text": "Disposal Partners"
+    },
+    {
+      "href": "http://136.119.84.22/admin/eco-certificates",
+      "text": "Eco Certificates"
+    },
+    {
+      "href": "http://136.119.84.22/admin/eco-teams",
+      "text": "Eco Teams"
+    },
+    {
+      "href": "http://136.119.84.22/admin/eco-disposal-dashboard",
+      "text": "Аналитика ЭКО-услуг"
+    },
+    {
+      "href": "http://136.119.84.22/admin/claims",
+      "text": "Claims"
+    },
+    {
+      "href": "http://136.119.84.22/admin/handyman-assignments",
+      "text": "Handyman Assignments"
+    },
+    {
+      "href": "http://136.119.84.22/admin/handyman-materials-entries",
+      "text": "Handyman Materials Entries"
+    },
+    {
+      "href": "http://136.119.84.22/admin/repair-projects",
+      "text": "Repair Projects"
+    },
+    {
+      "href": "http://136.119.84.22/admin/repair-stages",
+      "text": "Repair Stages"
+    },
+    {
+      "href": "http://136.119.84.22/admin/repair-team-members",
+      "text": "Repair Team Members"
+    },
+    {
+      "href": "http://136.119.84.22/admin/work-warranties",
+      "text": "Work Warranties"
+    },
+    {
+      "href": "http://136.119.84.22/admin/moving/executor-profiles",
+      "text": "Executor Profiles"
+    },
+    {
+      "href": "http://136.119.84.22/admin/moving/moving-items",
+      "text": "Moving Items"
+    },
+    {
+      "href": "http://136.119.84.22/admin/moving/moving-orders",
+      "text": "Замовлення Переїздів"
+    },
+    {
+      "href": "http://136.119.84.22/admin/moving/teams",
+      "text": "Moving Teams"
+    },
+    {
+      "href": "http://136.119.84.22/admin/moving/moving-order-photos",
+      "text": "Moving Order Photos"
+    },
+    {
+      "href": "http://136.119.84.22/admin/moving/moving-order-tasks",
+      "text": "Moving Order Tasks"
+    },
+    {
+      "href": "http://136.119.84.22/admin/roadside-dashboard",
+      "text": "Roadside & Tow"
+    },
+    {
+      "href": "http://136.119.84.22/admin/roadside-dispatch-board",
+      "text": "Roadside Dispatch"
+    },
+    {
+      "href": "http://136.119.84.22/admin/roadside-presets",
+      "text": "Виды работ Roadside"
+    },
+    {
+      "href": "http://136.119.84.22/admin/road-helper-profiles",
+      "text": "Дорожные помощники"
+    },
+    {
+      "href": "http://136.119.84.22/admin/vehicle-inspection-requests",
+      "text": "Заявки на осмотр авто"
+    },
+    {
+      "href": "http://136.119.84.22/admin/roadside-partners",
+      "text": "Партнёры-эвакуаторы"
+    },
+    {
+      "href": "http://136.119.84.22/admin/vehicle-inspection-presets",
+      "text": "Пресеты осмотра авто"
+    },
+    {
+      "href": "http://136.119.84.22/admin/roadside-emergencies",
+      "text": "Экстренные вызовы Roadside"
+    },
+    {
+      "href": "http://136.119.84.22/admin/analitika-social-care",
+      "text": "Аналитика и отчёты"
+    },
+    {
+      "href": "http://136.119.84.22/admin/community-points-balances",
+      "text": "Баллы сообщества"
+    },
+    {
+      "href": "http://136.119.84.22/admin/care-plans",
+      "text": "Планы заботы"
+    },
+    {
+      "href": "http://136.119.84.22/admin/social-helper-profiles",
+      "text": "Помощники"
+    },
+    {
+      "href": "http://136.119.84.22/admin/pultkoordinatora-social-care",
+      "text": "Пульт координатора"
+    },
+    {
+      "href": "http://136.119.84.22/admin/social-care-orders",
+      "text": "Соц. заказы"
+    },
+    {
+      "href": "http://136.119.84.22/admin/care-services",
+      "text": "Типы услуг"
+    }
+  ]
+}

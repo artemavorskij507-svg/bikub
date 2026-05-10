@@ -1,0 +1,24 @@
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+HTTP/1.1 302 Found
+Server: nginx/1.22.1
+Content-Type: text/html; charset=utf-8
+Connection: keep-alive
+Cache-Control: no-cache, private
+Date: Wed, 22 Apr 2026 12:50:56 GMT
+Location: https://136.119.84.22.nip.io/admin/login
+Content-Security-Policy: default-src 'self' blob:; script-src 'self' https://js.stripe.com https://cdn.tailwindcss.com https://unpkg.com https://api.mapbox.com 'unsafe-inline' 'unsafe-eval' blob:; script-src-elem 'self' https://js.stripe.com https://cdn.tailwindcss.com https://unpkg.com https://api.mapbox.com 'unsafe-inline' 'unsafe-eval' blob:; worker-src 'self' blob:; connect-src 'self' https://api.stripe.com https://api.mapbox.com ws: wss: blob: data:; img-src 'self' data: https: blob:; media-src 'self' blob: data:; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://fonts.bunny.net https://cdn.jsdelivr.net https://cdnjs.cloudflare.com https://api.mapbox.com; style-src-elem 'self' 'unsafe-inline' https://fonts.googleapis.com https://fonts.bunny.net https://cdn.jsdelivr.net https://cdnjs.cloudflare.com https://api.mapbox.com; font-src 'self' data: https://fonts.gstatic.com https://fonts.bunny.net https://cdnjs.cloudflare.com; frame-src https://js.stripe.com https://hooks.stripe.com; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'self';
+Strict-Transport-Security: max-age=31536000; includeSubDomains; preload
+X-Content-Type-Options: nosniff
+X-Frame-Options: DENY
+X-XSS-Protection: 1; mode=block
+Referrer-Policy: strict-origin-when-cross-origin
+Permissions-Policy: geolocation=(), microphone=(), camera=(), payment=()
+X-Debug-Host: 136.119.84.22.nip.io
+X-Debug-LocalRuntime: 0
+X-Request-Id: f7decb96-dcd7-47e7-a18f-af7078f1af90
+Set-Cookie: XSRF-TOKEN=eyJpdiI6IkJHdnQ1STV1OU1GdER6OUJROUx2eXc9PSIsInZhbHVlIjoiNmtIc3A4NVNRREREU3pKNndaV1FFbS9YcGMwMWxWSmJDdnBTT0s4SEtwNmY3bzF4TTkrVzEyeHJjenFCUFJwT2hnaDk4VDNJN0ZSbXlpZGMvYVI4MktjbWNPT1lYWDNheG9QenV2YnI0blpyYWZwV2RMZGthZEc0bHdwT3FiNG0iLCJtYWMiOiIxZGY2YWU3ODczNjkzYmNmMzVkNTlmZTRjMmVkYTA2NTk0MjJhY2UwN2NiNDMzNzFkNmQ1NjNjZDAyOTNiYTc2IiwidGFnIjoiIn0%3D; expires=Wed, 22 Apr 2026 14:50:56 GMT; Max-Age=7200; path=/; secure; samesite=lax
+Set-Cookie: glf_bike_care_session=eyJpdiI6IkxqdjlDOEg4ZUE4MW0yZFZCZi9QVFE9PSIsInZhbHVlIjoiY2Q2cnN1UEppb3AxVTRBUS9GamxCMFJqRk1zdUhZWFJtWnlRaGM1VmNZTW00enAwbE5TdXA2MU5zSmF1UGNxS0hUaFdQRjkwQTBQaXA0RzNnOFE4cnJaa0I3TGZRbzIvUlhaTXhIZWMvRnFJdUZGZXMvTDBnWWV5WHJJOEpUVHQiLCJtYWMiOiJkMzA1MDU0ZWU2YjVjMTBmNjA3ODEwMWE2YWRmZmJmNDdkYTFmOTkyNzhiMGE5ZjVkODUzMWQ4YWNiNDgzNWI5IiwidGFnIjoiIn0%3D; expires=Wed, 22 Apr 2026 14:50:56 GMT; Max-Age=7200; path=/; secure; httponly; samesite=lax
+Strict-Transport-Security: max-age=31536000
+

@@ -1,0 +1,20 @@
+﻿const { chromium } = require('@playwright/test');
+const fs = require('fs');
+(async () => {
+  const browser = await chromium.launch({ headless: true });
+  const page = await browser.newPage();
+  page.setDefaultTimeout(60000);
+  await page.goto('http://136.119.84.22/admin/login', {waitUntil:'domcontentloaded'});
+  await page.fill('input[type="email"]','keks@glf.no');
+  await page.fill('input[type="password"]','6636');
+  await Promise.all([page.waitForLoadState('networkidle'), page.click('button[type="submit"]')]);
+  const r = await page.goto('http://136.119.84.22/admin/orders/create', {waitUntil:'domcontentloaded'});
+  await page.waitForTimeout(500);
+  const html = await page.content();
+  const text = await page.locator('body').innerText();
+  await page.screenshot({path:'audit/_orders_create_500.png', fullPage:true});
+  fs.writeFileSync('audit/_orders_create_500_body.txt', text.slice(0,10000));
+  fs.writeFileSync('audit/_orders_create_500.html', html);
+  console.log(JSON.stringify({status:r?r.status():null, title: await page.title()}, null, 2));
+  await browser.close();
+})();

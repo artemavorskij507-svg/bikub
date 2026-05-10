@@ -1,0 +1,316 @@
+{
+    "generated_at": "2026-04-21T19:42:28+00:00",
+    "base_url": "http://127.0.0.1",
+    "emails": [
+        "keks@glf.no",
+        "keks@gfl.no",
+        "oleksandr@glf.no",
+        "maria@glf.no",
+        "eva.nystad@glf.no"
+    ],
+    "summary": {
+        "total": 5,
+        "ok": 2,
+        "warn": 2,
+        "fail": 0,
+        "missing_user": 1
+    },
+    "results": [
+        {
+            "email": "keks@glf.no",
+            "status": "ok",
+            "roles": [
+                "admin"
+            ],
+            "statuses": {
+                "map_live": 200,
+                "jobs": 200,
+                "executors": 200,
+                "exceptions": 200,
+                "triage": 200,
+                "saved_filters_get": 200,
+                "replan_recommendations": 200,
+                "routing_shadow_metrics": 200,
+                "routing_provider_health": 200,
+                "job_drawer": 200,
+                "candidate_compare": 200,
+                "saved_filters_post": 200,
+                "saved_filters_delete": 200,
+                "bulk_action": 200,
+                "manual_dispatch_fresh": 200,
+                "manual_reassign_fresh": 200,
+                "exception_acknowledge_fresh": 200,
+                "exception_resolve_fresh": 200
+            },
+            "detail": {
+                "job_id": 708,
+                "drawer_has_candidates": true,
+                "compare_has_payload": true,
+                "bulk_body": {
+                    "action": "exceptions_bulk_acknowledge",
+                    "updated_count": 0,
+                    "message": "Exceptions acknowledged"
+                },
+                "write_probe": {
+                    "mode": "executed",
+                    "organization_id": "fcdc782d-434e-425e-a1e6-1a7550f786dc",
+                    "tenant_id": 1,
+                    "job_id": 709,
+                    "exception_id": 115,
+                    "executor_ids": [
+                        735,
+                        736
+                    ],
+                    "manual_dispatch_body": {
+                        "message": "Job manually assigned.",
+                        "job_id": 709,
+                        "assignment_id": 332,
+                        "executor_id": 735,
+                        "entity_updated_at": "2026-04-21T19:42:22+00:00",
+                        "drawer_version": "2026-04-21 19:42:22.000000"
+                    },
+                    "manual_reassign_body": {
+                        "message": "Job manually reassigned.",
+                        "job_id": 709,
+                        "assignment_id": 333,
+                        "executor_id": 736,
+                        "entity_updated_at": "2026-04-21T19:42:22+00:00",
+                        "drawer_version": "2026-04-21 19:42:22.000000"
+                    },
+                    "exception_acknowledge_body": {
+                        "message": "Exception acknowledged.",
+                        "exception_id": 115,
+                        "status": "acknowledged",
+                        "entity_updated_at": "2026-04-21T19:42:22+00:00",
+                        "drawer_version": "2026-04-21 19:42:22.000000"
+                    },
+                    "exception_resolve_body": {
+                        "message": "Exception resolved.",
+                        "exception_id": 115,
+                        "status": "resolved",
+                        "entity_updated_at": "2026-04-21T19:42:22+00:00",
+                        "drawer_version": "2026-04-21 19:42:22.000000"
+                    }
+                },
+                "auth_fail_count": 0,
+                "server_error_count": 0
+            }
+        },
+        {
+            "email": "keks@gfl.no",
+            "status": "missing_user",
+            "roles": [],
+            "detail": []
+        },
+        {
+            "email": "oleksandr@glf.no",
+            "status": "ok",
+            "roles": [
+                "ops_admin"
+            ],
+            "statuses": {
+                "map_live": 200,
+                "jobs": 200,
+                "executors": 200,
+                "exceptions": 200,
+                "triage": 200,
+                "saved_filters_get": 200,
+                "replan_recommendations": 200,
+                "routing_shadow_metrics": 200,
+                "routing_provider_health": 200,
+                "job_drawer": 200,
+                "candidate_compare": 200,
+                "saved_filters_post": 200,
+                "saved_filters_delete": 200,
+                "bulk_action": 200,
+                "manual_dispatch_fresh": 200,
+                "manual_reassign_fresh": 200,
+                "exception_acknowledge_fresh": 200,
+                "exception_resolve_fresh": 200
+            },
+            "detail": {
+                "job_id": 709,
+                "drawer_has_candidates": true,
+                "compare_has_payload": true,
+                "bulk_body": {
+                    "action": "exceptions_bulk_acknowledge",
+                    "updated_count": 0,
+                    "message": "Exceptions acknowledged"
+                },
+                "write_probe": {
+                    "mode": "executed",
+                    "organization_id": "fcdc782d-434e-425e-a1e6-1a7550f786dc",
+                    "tenant_id": 1,
+                    "job_id": 710,
+                    "exception_id": 117,
+                    "executor_ids": [
+                        737,
+                        738
+                    ],
+                    "manual_dispatch_body": {
+                        "message": "Job manually assigned.",
+                        "job_id": 710,
+                        "assignment_id": 334,
+                        "executor_id": 737,
+                        "entity_updated_at": "2026-04-21T19:42:24+00:00",
+                        "drawer_version": "2026-04-21 19:42:24.000000"
+                    },
+                    "manual_reassign_body": {
+                        "message": "Job manually reassigned.",
+                        "job_id": 710,
+                        "assignment_id": 335,
+                        "executor_id": 738,
+                        "entity_updated_at": "2026-04-21T19:42:24+00:00",
+                        "drawer_version": "2026-04-21 19:42:24.000000"
+                    },
+                    "exception_acknowledge_body": {
+                        "message": "Exception acknowledged.",
+                        "exception_id": 117,
+                        "status": "acknowledged",
+                        "entity_updated_at": "2026-04-21T19:42:24+00:00",
+                        "drawer_version": "2026-04-21 19:42:24.000000"
+                    },
+                    "exception_resolve_body": {
+                        "message": "Exception resolved.",
+                        "exception_id": 117,
+                        "status": "resolved",
+                        "entity_updated_at": "2026-04-21T19:42:24+00:00",
+                        "drawer_version": "2026-04-21 19:42:24.000000"
+                    }
+                },
+                "auth_fail_count": 0,
+                "server_error_count": 0
+            }
+        },
+        {
+            "email": "maria@glf.no",
+            "status": "warn",
+            "roles": [
+                "ops_manager"
+            ],
+            "statuses": {
+                "map_live": 200,
+                "jobs": 200,
+                "executors": 200,
+                "exceptions": 200,
+                "triage": 200,
+                "saved_filters_get": 200,
+                "replan_recommendations": 200,
+                "routing_shadow_metrics": 200,
+                "routing_provider_health": 200,
+                "job_drawer": 200,
+                "candidate_compare": 200,
+                "saved_filters_post": 200,
+                "saved_filters_delete": 200,
+                "bulk_action": 200,
+                "manual_dispatch_fresh": 403,
+                "manual_reassign_fresh": 403,
+                "exception_acknowledge_fresh": 200,
+                "exception_resolve_fresh": 200
+            },
+            "detail": {
+                "job_id": 710,
+                "drawer_has_candidates": true,
+                "compare_has_payload": true,
+                "bulk_body": {
+                    "action": "exceptions_bulk_acknowledge",
+                    "updated_count": 0,
+                    "message": "Exceptions acknowledged"
+                },
+                "write_probe": {
+                    "mode": "executed",
+                    "organization_id": "fcdc782d-434e-425e-a1e6-1a7550f786dc",
+                    "tenant_id": 1,
+                    "job_id": 711,
+                    "exception_id": 118,
+                    "executor_ids": [
+                        739,
+                        740
+                    ],
+                    "manual_dispatch_body": {
+                        "message": "This action is unauthorized."
+                    },
+                    "manual_reassign_body": {
+                        "message": "This action is unauthorized."
+                    },
+                    "exception_acknowledge_body": {
+                        "message": "Exception acknowledged.",
+                        "exception_id": 118,
+                        "status": "acknowledged",
+                        "entity_updated_at": "2026-04-21T19:42:26+00:00",
+                        "drawer_version": "2026-04-21 19:42:26.000000"
+                    },
+                    "exception_resolve_body": {
+                        "message": "Exception resolved.",
+                        "exception_id": 118,
+                        "status": "resolved",
+                        "entity_updated_at": "2026-04-21T19:42:26+00:00",
+                        "drawer_version": "2026-04-21 19:42:26.000000"
+                    }
+                },
+                "auth_fail_count": 0,
+                "server_error_count": 0
+            }
+        },
+        {
+            "email": "eva.nystad@glf.no",
+            "status": "warn",
+            "roles": [
+                "ops_rules_admin"
+            ],
+            "statuses": {
+                "map_live": 200,
+                "jobs": 200,
+                "executors": 200,
+                "exceptions": 200,
+                "triage": 200,
+                "saved_filters_get": 200,
+                "replan_recommendations": 200,
+                "routing_shadow_metrics": 200,
+                "routing_provider_health": 200,
+                "job_drawer": 200,
+                "candidate_compare": 200,
+                "saved_filters_post": 200,
+                "saved_filters_delete": 200,
+                "bulk_action": 403,
+                "manual_dispatch_fresh": 403,
+                "manual_reassign_fresh": 403,
+                "exception_acknowledge_fresh": 403,
+                "exception_resolve_fresh": 403
+            },
+            "detail": {
+                "job_id": 711,
+                "drawer_has_candidates": true,
+                "compare_has_payload": true,
+                "bulk_body": {
+                    "message": "Forbidden"
+                },
+                "write_probe": {
+                    "mode": "executed",
+                    "organization_id": "fcdc782d-434e-425e-a1e6-1a7550f786dc",
+                    "tenant_id": 1,
+                    "job_id": 712,
+                    "exception_id": 119,
+                    "executor_ids": [
+                        741,
+                        742
+                    ],
+                    "manual_dispatch_body": {
+                        "message": "This action is unauthorized."
+                    },
+                    "manual_reassign_body": {
+                        "message": "This action is unauthorized."
+                    },
+                    "exception_acknowledge_body": {
+                        "message": "This action is unauthorized."
+                    },
+                    "exception_resolve_body": {
+                        "message": "This action is unauthorized."
+                    }
+                },
+                "auth_fail_count": 0,
+                "server_error_count": 0
+            }
+        }
+    ]
+}

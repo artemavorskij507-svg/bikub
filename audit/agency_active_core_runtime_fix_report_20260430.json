@@ -1,0 +1,182 @@
+{
+  "patched_count": 14,
+  "patched": [
+    {
+      "name": "API Tester",
+      "id": "b9c47145-f9c2-43f5-8b6e-abe82ac625e9",
+      "status": 200
+    },
+    {
+      "name": "SRE",
+      "id": "41c8cc10-2630-4360-a386-940729cc23ff",
+      "status": 200
+    },
+    {
+      "name": "Backend Architect",
+      "id": "156643fe-5a09-4307-b896-157212828a1e",
+      "status": 200
+    },
+    {
+      "name": "AI Engineer",
+      "id": "92107a12-02dc-4d1c-9f98-6ff03aa7324d",
+      "status": 200
+    },
+    {
+      "name": "Product Manager",
+      "id": "1bde7077-5e38-47cd-b145-607610156364",
+      "status": 200
+    },
+    {
+      "name": "Sprint Prioritizer",
+      "id": "76ec538d-fbda-4a90-ab7f-44f74bf483c1",
+      "status": 200
+    },
+    {
+      "name": "Frontend Developer",
+      "id": "0a11fdc9-091c-43d5-b5eb-5949a1a84995",
+      "status": 200
+    },
+    {
+      "name": "Project Shepherd",
+      "id": "43882569-76d8-4522-9914-970beed3afab",
+      "status": 200
+    },
+    {
+      "name": "Security Engineer",
+      "id": "4cb4ec6d-93b8-476c-ba88-403393c6e144",
+      "status": 200
+    },
+    {
+      "name": "Data Engineer",
+      "id": "80964cb8-bd12-41a1-855d-3e5417a4cdb2",
+      "status": 200
+    },
+    {
+      "name": "Mobile App Builder",
+      "id": "a7340a14-6ccd-400d-8fc7-6babc87e1786",
+      "status": 200
+    },
+    {
+      "name": "Senior Developer",
+      "id": "4500f659-5b2e-42d0-b6d4-483cc52ef6cf",
+      "status": 200
+    },
+    {
+      "name": "Support Responder",
+      "id": "87846301-a9dd-476f-9e89-c8b6a4e8578c",
+      "status": 200
+    },
+    {
+      "name": "DevOps Automator",
+      "id": "7bc7d61c-eae3-4f3c-acff-5f944cee0fb0",
+      "status": 200
+    }
+  ],
+  "results": [
+    {
+      "name": "API Tester",
+      "adapterType": "process",
+      "invoke": 202,
+      "run_status": "succeeded",
+      "error": ""
+    },
+    {
+      "name": "SRE",
+      "adapterType": "process",
+      "invoke": 202,
+      "run_status": "succeeded",
+      "error": ""
+    },
+    {
+      "name": "Backend Architect",
+      "adapterType": "process",
+      "invoke": 202,
+      "run_status": "succeeded",
+      "error": ""
+    },
+    {
+      "name": "AI Engineer",
+      "adapterType": "process",
+      "invoke": 202,
+      "run_status": "succeeded",
+      "error": ""
+    },
+    {
+      "name": "Product Manager",
+      "adapterType": "process",
+      "invoke": 202,
+      "run_status": "succeeded",
+      "error": ""
+    },
+    {
+      "name": "Поплавок Вова",
+      "adapterType": "codex_local",
+      "invoke": 202,
+      "run_status": "running",
+      "error": ""
+    },
+    {
+      "name": "Sprint Prioritizer",
+      "adapterType": "process",
+      "invoke": 202,
+      "run_status": "succeeded",
+      "error": ""
+    },
+    {
+      "name": "Frontend Developer",
+      "adapterType": "process",
+      "invoke": 202,
+      "run_status": "succeeded",
+      "error": ""
+    },
+    {
+      "name": "Project Shepherd",
+      "adapterType": "process",
+      "invoke": 202,
+      "run_status": "running",
+      "error": ""
+    },
+    {
+      "name": "Security Engineer",
+      "adapterType": "process",
+      "invoke": 202,
+      "run_status": "succeeded",
+      "error": ""
+    },
+    {
+      "name": "Data Engineer",
+      "adapterType": "process",
+      "invoke": 202,
+      "run_status": "running",
+      "error": ""
+    },
+    {
+      "name": "Mobile App Builder",
+      "adapterType": "process",
+      "invoke": 202,
+      "run_status": "succeeded",
+      "error": ""
+    },
+    {
+      "name": "Senior Developer",
+      "adapterType": "process",
+      "invoke": 202,
+      "run_status": "succeeded",
+      "error": ""
+    },
+    {
+      "name": "Support Responder",
+      "adapterType": "process",
+      "invoke": 202,
+      "run_status": "succeeded",
+      "error": ""
+    },
+    {
+      "name": "DevOps Automator",
+      "adapterType": "process",
+      "invoke": 202,
+      "run_status": "succeeded",
+      "error": ""
+    }
+  ]
+}

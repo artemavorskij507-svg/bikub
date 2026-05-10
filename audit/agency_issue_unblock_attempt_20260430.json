@@ -1,0 +1,9 @@
+{
+  "patch_status": 200,
+  "comment_status": 201,
+  "invoke_status": 202,
+  "issue_status": "todo",
+  "director_model": "openai/gemma4:e2b",
+  "last_run_status": "cancelled",
+  "last_run_error": "Cancelled because issue dependencies are still blocked; Paperclip will wake the assignee when blockers resolve"
+}

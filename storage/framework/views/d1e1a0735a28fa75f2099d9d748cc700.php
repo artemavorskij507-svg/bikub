@@ -1,0 +1,1 @@
+<?php /**PATH /var/www/bikube/vendor/filament/filament/resources/views/components/global-search/end.blade.php ENDPATH**/ ?>

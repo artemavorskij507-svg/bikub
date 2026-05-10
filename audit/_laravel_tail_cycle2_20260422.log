@@ -1,0 +1,180 @@
+        "assignment_id": null,
+        "updated_at": "2026-04-22T08:14:05+00:00"
+    },
+    "socket": null
+}  
+[2026-04-22 08:14:05] production.INFO: Broadcasting [exception.opened] on channels [private-operations.ab2592b3-dd8b-4d12-948b-5ddf61b8a019.exceptions] with payload:
+{
+    "exception_id": 145,
+    "service_job_id": 873,
+    "type": "no_executor_found",
+    "severity": "high",
+    "status": "open",
+    "socket": null
+}  
+[2026-04-22 08:14:05] production.INFO: Broadcasting [operation_exception.updated] on channels [private-ops.organization.ab2592b3-dd8b-4d12-948b-5ddf61b8a019] with payload:
+{
+    "exception_id": 145,
+    "payload": {
+        "service_job_id": 873,
+        "assignment_id": null,
+        "executor_id": null,
+        "type": "no_executor_found",
+        "severity": "high",
+        "status": "open",
+        "detected_at": "2026-04-22T08:14:05+00:00"
+    },
+    "socket": null
+}  
+[2026-04-22 08:14:05] production.INFO: Broadcasting [job.status.changed] on channels [private-operations.ab2592b3-dd8b-4d12-948b-5ddf61b8a019.delivery] with payload:
+{
+    "service_job_id": 874,
+    "from_status": "pending_dispatch",
+    "to_status": "assigned",
+    "socket": null
+}  
+[2026-04-22 08:14:05] production.INFO: Broadcasting [service_job.updated] on channels [private-ops.organization.ab2592b3-dd8b-4d12-948b-5ddf61b8a019, private-ops.job.874] with payload:
+{
+    "job_id": 874,
+    "payload": {
+        "status": "assigned",
+        "from": "pending_dispatch",
+        "to": "assigned",
+        "reason": "assignment_proposed",
+        "executor_id": 912,
+        "assignment_id": 412,
+        "updated_at": "2026-04-22T08:14:05+00:00"
+    },
+    "socket": null
+}  
+[2026-04-22 08:14:05] production.INFO: Broadcasting [job.status.changed] on channels [private-operations.ab2592b3-dd8b-4d12-948b-5ddf61b8a019.roadside] with payload:
+{
+    "service_job_id": 876,
+    "from_status": "pending_dispatch",
+    "to_status": "assigned",
+    "socket": null
+}  
+[2026-04-22 08:14:05] production.INFO: Broadcasting [service_job.updated] on channels [private-ops.organization.ab2592b3-dd8b-4d12-948b-5ddf61b8a019, private-ops.job.876] with payload:
+{
+    "job_id": 876,
+    "payload": {
+        "status": "assigned",
+        "from": "pending_dispatch",
+        "to": "assigned",
+        "reason": "assignment_proposed",
+        "executor_id": 914,
+        "assignment_id": 414,
+        "updated_at": "2026-04-22T08:14:05+00:00"
+    },
+    "socket": null
+}  
+[2026-04-22 08:14:06] production.INFO: Broadcasting [job.status.changed] on channels [private-operations.ab2592b3-dd8b-4d12-948b-5ddf61b8a019.moving] with payload:
+{
+    "service_job_id": 877,
+    "from_status": "pending_dispatch",
+    "to_status": "assigned",
+    "socket": null
+}  
+[2026-04-22 08:14:06] production.INFO: Broadcasting [service_job.updated] on channels [private-ops.organization.ab2592b3-dd8b-4d12-948b-5ddf61b8a019, private-ops.job.877] with payload:
+{
+    "job_id": 877,
+    "payload": {
+        "status": "assigned",
+        "from": "pending_dispatch",
+        "to": "assigned",
+        "reason": "assignment_proposed",
+        "executor_id": 913,
+        "assignment_id": 415,
+        "updated_at": "2026-04-22T08:14:06+00:00"
+    },
+    "socket": null
+}  
+[2026-04-22 08:14:06] production.INFO: Broadcasting [job.status.changed] on channels [private-operations.ab2592b3-dd8b-4d12-948b-5ddf61b8a019.delivery] with payload:
+{
+    "service_job_id": 878,
+    "from_status": "pending_dispatch",
+    "to_status": "assigned",
+    "socket": null
+}  
+[2026-04-22 08:14:06] production.INFO: Broadcasting [service_job.updated] on channels [private-ops.organization.ab2592b3-dd8b-4d12-948b-5ddf61b8a019, private-ops.job.878] with payload:
+{
+    "job_id": 878,
+    "payload": {
+        "status": "assigned",
+        "from": "pending_dispatch",
+        "to": "assigned",
+        "reason": "manual_dispatch",
+        "executor_id": 917,
+        "assignment_id": 416,
+        "updated_at": "2026-04-22T08:14:06+00:00"
+    },
+    "socket": null
+}  
+[2026-04-22 08:14:06] production.INFO: Broadcasting [service_job.updated] on channels [private-ops.organization.ab2592b3-dd8b-4d12-948b-5ddf61b8a019, private-ops.job.878] with payload:
+{
+    "job_id": 878,
+    "payload": {
+        "status": "assigned",
+        "reason": "manual_dispatch",
+        "executor_id": 917,
+        "assignment_id": 416,
+        "updated_at": "2026-04-22T08:14:06+00:00"
+    },
+    "socket": null
+}  
+[2026-04-22 08:14:06] production.INFO: ops.workbench.action {"actor_user_id":120,"action":"manual_dispatch_requested","success":true,"target_type":"service_job","target_id":878,"job_id":878,"executor_id":917,"exception_id":null,"message":null,"payload":{"executor_id":917,"expected_job_version":"2026-04-22 08:14:06.000000","notes":"runtime smoke"},"happened_at":"2026-04-22T08:14:06+00:00"} 
+[2026-04-22 08:14:06] production.INFO: Broadcasting [workbench.action.performed] on channels [private-ops.organization.ab2592b3-dd8b-4d12-948b-5ddf61b8a019] with payload:
+{
+    "actor_user_id": 120,
+    "action": "manual_dispatch_requested",
+    "success": true,
+    "job_id": 878,
+    "executor_id": 917,
+    "exception_id": null,
+    "message": "Job manually assigned.",
+    "payload": [],
+    "happened_at": "2026-04-22T08:14:06+00:00",
+    "socket": null
+}  
+[2026-04-22 08:14:07] production.INFO: Broadcasting [job.status.changed] on channels [private-operations.ab2592b3-dd8b-4d12-948b-5ddf61b8a019.delivery] with payload:
+{
+    "service_job_id": 879,
+    "from_status": "pending_dispatch",
+    "to_status": "assigned",
+    "socket": null
+}  
+[2026-04-22 08:14:07] production.INFO: Broadcasting [service_job.updated] on channels [private-ops.organization.ab2592b3-dd8b-4d12-948b-5ddf61b8a019, private-ops.job.879] with payload:
+{
+    "job_id": 879,
+    "payload": {
+        "status": "assigned",
+        "from": "pending_dispatch",
+        "to": "assigned",
+        "reason": "assignment_proposed",
+        "executor_id": 915,
+        "assignment_id": 417,
+        "updated_at": "2026-04-22T08:14:07+00:00"
+    },
+    "socket": null
+}  
+[2026-04-22 08:14:08] production.INFO: Broadcasting [job.status.changed] on channels [private-operations.ab2592b3-dd8b-4d12-948b-5ddf61b8a019.delivery] with payload:
+{
+    "service_job_id": 880,
+    "from_status": "pending_dispatch",
+    "to_status": "assigned",
+    "socket": null
+}  
+[2026-04-22 08:14:08] production.INFO: Broadcasting [service_job.updated] on channels [private-ops.organization.ab2592b3-dd8b-4d12-948b-5ddf61b8a019, private-ops.job.880] with payload:
+{
+    "job_id": 880,
+    "payload": {
+        "status": "assigned",
+        "from": "pending_dispatch",
+        "to": "assigned",
+        "reason": "assignment_proposed",
+        "executor_id": 916,
+        "assignment_id": 418,
+        "updated_at": "2026-04-22T08:14:08+00:00"
+    },
+    "socket": null
+}  

@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="900" viewBox="0 0 1400 900" fill="none">
+  <defs>
+    <linearGradient id="a" x1="0" y1="0" x2="1400" y2="900" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#D5EFFB"/>
+      <stop offset="1" stop-color="#9ED4F0"/>
+    </linearGradient>
+  </defs>
+  <rect width="1400" height="900" rx="48" fill="url(#a)"/>
+  <circle cx="250" cy="220" r="180" fill="#FFFFFF" fill-opacity="0.38"/>
+  <circle cx="1220" cy="760" r="210" fill="#FFFFFF" fill-opacity="0.26"/>
+  <rect x="450" y="180" width="520" height="500" rx="70" fill="#F7FCFF" fill-opacity="0.88"/>
+  <path d="M546 520h330l-42 120H588l-42-120Z" fill="#8A5A2A"/>
+  <circle cx="628" cy="462" r="46" fill="#FF6F61"/>
+  <circle cx="708" cy="438" r="40" fill="#8CD16A"/>
+  <circle cx="786" cy="458" r="42" fill="#FFBB46"/>
+  <circle cx="848" cy="496" r="34" fill="#E06666"/>
+  <text x="110" y="710" fill="#102129" font-family="Arial, sans-serif" font-size="92" font-weight="900">FRESH DELIVERY</text>
+  <text x="110" y="780" fill="#2C4957" font-family="Arial, sans-serif" font-size="36" font-weight="700">Trusted by Narvik local partner network</text>
+</svg>

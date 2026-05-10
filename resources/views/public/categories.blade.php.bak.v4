@@ -1,0 +1,222 @@
+@extends("layouts.app")
+@section("title", "Категорії послуг — GLF BiKuBe")
+@section("description", "Оберіть категорію послуг.")
+@section("content")
+<style>
+.hero-bg{position:relative;overflow:hidden;background:linear-gradient(135deg,#0f172a 0%,#1e293b 30%,#0f172a 60%,#1a1a2e 100%)}
+.hero-bg::before{content:"";position:absolute;inset:0;background:radial-gradient(ellipse 80% 60% at 20% 80%,rgba(6,182,212,.12) 0%,transparent 60%),radial-gradient(ellipse 60% 40% at 80% 20%,rgba(139,92,246,.1) 0%,transparent 60%),radial-gradient(ellipse 50% 50% at 50% 50%,rgba(236,72,153,.08) 0%,transparent 70%);animation:bgShift 15s ease-in-out infinite alternate}
+@keyframes bgShift{0%{filter:hue-rotate(0deg);transform:scale(1)}50%{filter:hue-rotate(30deg);transform:scale(1.05)}100%{filter:hue-rotate(-15deg);transform:scale(1)}}
+.grid-overlay{position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.03) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.03) 1px,transparent 1px);background-size:60px 60px;animation:gridScroll 30s linear infinite}
+@keyframes gridScroll{0%{transform:translate(0,0)}100%{transform:translate(60px,60px)}}
+.cat-card-wrapper{perspective:1200px;position:relative;z-index:10}
+.cat-card{position:relative;transform-style:preserve-3d;transition:transform .5s cubic-bezier(.23,1,.32,1),box-shadow .5s ease;border:none;backface-visibility:hidden}
+.cat-card:hover{transform:translateY(-12px) rotateX(4deg) rotateY(-2deg) scale(1.03);box-shadow:0 30px 60px rgba(0,0,0,.35),0 15px 30px rgba(0,0,0,.2),0 0 40px var(--card-glow,rgba(6,182,212,.3))}
+.cat-card-inner{position:relative;background:rgba(255,255,255,.05);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border:1px solid rgba(255,255,255,.1);border-radius:24px;padding:2.5rem 2rem 2rem;overflow:hidden}
+.cat-card-inner::before{content:"";position:absolute;top:-50%;left:-50%;width:200%;height:200%;background:conic-gradient(from 0deg,transparent,rgba(255,255,255,.05),transparent 30%);animation:shineRotate 6s linear infinite}
+@keyframes shineRotate{0%{transform:rotate(0deg)}100%{transform:rotate(360deg)}}
+.cat-card-inner>*{position:relative;z-index:2}
+.card-icon-3d{width:72px;height:72px;display:flex;align-items:center;justify-content:center;border-radius:20px;font-size:2rem;color:#fff;margin-bottom:1.5rem;background:var(--icon-grad);box-shadow:0 8px 25px var(--icon-shadow),0 0 0 4px rgba(255,255,255,.05);transform:translateZ(20px);transition:transform .3s ease}
+.cat-card:hover .card-icon-3d{transform:translateZ(40px) scale(1.1) rotateY(10deg)}
+.service-count{display:inline-flex;align-items:center;gap:.3rem;padding:.25rem .7rem;background:rgba(255,255,255,.08);border-radius:20px;font-size:.72rem;color:rgba(255,255,255,.5);margin-bottom:.5rem}
+.card-cta{display:inline-flex;align-items:center;gap:.5rem;margin-top:1.2rem;padding:.65rem 1.5rem;border-radius:50px;font-weight:600;font-size:.88rem;text-decoration:none;transition:all .3s ease;background:var(--cta-grad);color:#fff;box-shadow:0 4px 15px var(--cta-shadow)}
+.card-cta:hover{transform:translateY(-2px) scale(1.05);box-shadow:0 8px 25px var(--cta-shadow);filter:brightness(1.15)}
+.card-cta .arr{transition:transform .3s ease;display:inline-block}
+.card-cta:hover .arr{transform:translateX(4px)}
+.book-label{font-size:.7rem;text-transform:uppercase;letter-spacing:.15em;color:rgba(255,255,255,.35);margin-bottom:.5rem;margin-top:1.5rem;padding-top:1.5rem;border-top:1px solid rgba(255,255,255,.08)}
+.book-link{display:inline-flex;align-items:center;gap:.4rem;padding:.3rem .7rem;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.1);border-radius:10px;color:rgba(255,255,255,.7);font-size:.78rem;text-decoration:none;transition:all .25s ease;margin-right:.3rem;margin-bottom:.3rem}
+.book-link:hover{background:rgba(255,255,255,.15);color:#fff;border-color:rgba(255,255,255,.3);transform:translateY(-2px)}
+@keyframes gradText{0%,100%{background-position:0% 50%}50%{background-position:100% 50%}}
+.hero-title{background:linear-gradient(135deg,#22d3ee,#a78bfa,#f472b6,#fbbf24,#34d399,#22d3ee);background-size:400% 400%;animation:gradText 8s ease infinite;-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+.categories-section{position:relative;z-index:1;background:rgba(15,23,42,.85);backdrop-filter:blur(10px)}
+#flag-bg{position:fixed;inset:0;z-index:0;opacity:0;transition:opacity .8s cubic-bezier(.4,0,.2,1);pointer-events:none;background-size:cover;background-position:center}
+#flag-bg.on{opacity:1}
+#flag-bg::after{content:"";position:absolute;inset:0;background:rgba(0,0,0,.75);backdrop-filter:blur(8px)}
+@media(max-width:768px){.cat-card-inner{padding:1.5rem 1.2rem 1.2rem}.card-icon-3d{width:56px;height:56px;font-size:1.5rem}}
+</style>
+<div id="flag-bg"></div>
+<div class="hero-bg relative">
+  <div class="grid-overlay"></div>
+  <div id="particles" class="absolute inset-0 pointer-events-none overflow-hidden"></div>
+  <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-28 sm:py-36 text-center">
+    <div class="inline-flex items-center gap-2 px-5 py-2 rounded-full bg-cyan-500/10 border border-cyan-400/20 mb-8">
+      <span class="w-2 h-2 rounded-full bg-cyan-400 animate-pulse"></span>
+      <span class="text-sm tracking-widest uppercase text-cyan-300/80">GLF BiKuBe Service Hub</span>
+    </div>
+    <h1 class="hero-title text-5xl sm:text-6xl md:text-7xl font-black tracking-tight mb-6 leading-[1.1]">Категорії послуг</h1>
+    <p class="max-w-3xl mx-auto text-lg sm:text-xl text-slate-300/90 leading-8 mb-10">Оберіть категорію — від <span class="text-cyan-400 font-semibold">доставки</span> та <span class="text-violet-400 font-semibold">переїзду</span> до <span class="text-emerald-400 font-semibold">соціальної допомоги</span>, <span class="text-amber-400 font-semibold">їжі</span> та <span class="text-sky-400 font-semibold">IT-рішень</span>.</p>
+    <div class="flex flex-col sm:flex-row justify-center gap-4">
+      <a href="#cats" class="group inline-flex items-center gap-2 rounded-full bg-cyan-500 px-8 py-4 text-sm font-bold text-slate-900 shadow-lg shadow-cyan-500/30 hover:bg-cyan-400 transition-all hover:-translate-y-0.5"><span>Переглянути всі послуги</span><svg class="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7"/></svg></a>
+      <a href="/catalog" class="inline-flex items-center gap-2 rounded-full border border-white/[.15] bg-white/[.06] px-8 py-4 text-sm font-semibold text-white/90 hover:bg-white/[.12] transition-all"><svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/></svg><span>Повний каталог</span></a>
+    </div>
+    <div class="mt-14 flex flex-wrap justify-center gap-8 sm:gap-12 text-center">
+      <div><div class="text-3xl font-black text-white">67</div><div class="text-sm text-cyan-400/70 mt-1">Послуг</div></div>
+      <div><div class="text-3xl font-black text-white">5</div><div class="text-sm text-violet-400/70 mt-1">Працівників</div></div>
+      <div><div class="text-3xl font-black text-white">8</div><div class="text-sm text-emerald-400/70 mt-1">Замовлень</div></div>
+      <div><div class="text-3xl font-black text-white">24/7</div><div class="text-sm text-amber-400/70 mt-1">Підтримка</div></div>
+    </div>
+  </div>
+</div>
+<section id="cats" class="categories-section py-24">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-16">
+      <span class="text-xs uppercase tracking-[0.3em] text-cyan-400/60 mb-3 block">Оберіть напрямок</span>
+      <h2 class="text-3xl sm:text-4xl font-black text-white tracking-tight">Наші категорії</h2>
+      <p class="text-slate-400 mt-4 max-w-2xl mx-auto text-lg">Кожна категорія — команда професіоналів та десятки готових рішень.</p>
+    </div>
+    <div class="grid gap-8 md:grid-cols-2 xl:grid-cols-3">
+      <div class="cat-card-wrapper" data-flag="https://flagcdn.com/w1280/no.png">
+        <div class="cat-card" style="--icon-grad:linear-gradient(135deg,#ef4444,#dc2626);--icon-shadow:rgba(239,68,68,.3);--card-glow:rgba(239,68,68,.15);--cta-grad:linear-gradient(135deg,#06b6d4,#0891b2);--cta-shadow:rgba(6,182,212,.35)">
+          <div class="cat-card-inner">
+            <div class="flex items-center justify-between mb-1"><span class="service-count">📦 8+ послуг</span><span class="text-2xl">🇳🇴</span></div>
+            <div class="card-icon-3d">📦</div>
+            <h3 class="text-xl font-bold text-white mb-3">Доставка</h3>
+            <p class="text-sm text-slate-300/80 leading-relaxed">Швидка доставка продуктів, посилок та великих замовлень по Нарвіку та області.</p>
+            <a href="/category/delivery" class="card-cta"><span>Перейти</span> <span class="arr">→</span></a>
+            <div class="book-label">📚 Корисні ресурси</div>
+            <a href="https://www.norway.no/en/ukraine/" class="book-link" target="_blank" rel="noopener"><span class="book-icon">📘</span> Norway & Ukraine</a>
+            <a href="https://www.postennorge.no/" class="book-link" target="_blank" rel="noopener"><span class="book-icon">📗</span> Posten Norge</a>
+          </div>
+        </div>
+      </div>
+      <div class="cat-card-wrapper" data-flag="https://flagcdn.com/w1280/ua.png">
+        <div class="cat-card" style="--icon-grad:linear-gradient(135deg,#3b82f6,#2563eb);--icon-shadow:rgba(59,130,246,.3);--card-glow:rgba(59,130,246,.15);--cta-grad:linear-gradient(135deg,#8b5cf6,#7c3aed);--cta-shadow:rgba(139,92,246,.35)">
+          <div class="cat-card-inner">
+            <div class="flex items-center justify-between mb-1"><span class="service-count">🚚 6+ послуг</span><span class="text-2xl">🇺🇦</span></div>
+            <div class="card-icon-3d">🚚</div>
+            <h3 class="text-xl font-bold text-white mb-3">Переїзд</h3>
+            <p class="text-sm text-slate-300/80 leading-relaxed">Переїзди під ключ: пакування, транспортування, розстановка меблів.</p>
+            <a href="/category/moving" class="card-cta"><span>Перейти</span> <span class="arr">→</span></a>
+            <div class="book-label">📚 Корисні ресурси</div>
+            <a href="https://ua-support.no" class="book-link" target="_blank" rel="noopener"><span class="book-icon">📘</span> UA Support Norge</a>
+            <a href="https://www.ifi.oslo.no" class="book-link" target="_blank" rel="noopener"><span class="book-icon">📗</span> IFI Oslo Guide</a>
+          </div>
+        </div>
+      </div>
+      <div class="cat-card-wrapper" data-flag="https://flagcdn.com/w1280/pl.png">
+        <div class="cat-card" style="--icon-grad:linear-gradient(135deg,#10b981,#059669);--icon-shadow:rgba(16,185,129,.3);--card-glow:rgba(16,185,129,.15);--cta-grad:linear-gradient(135deg,#f59e0b,#d97706);--cta-shadow:rgba(245,158,11,.35)">
+          <div class="cat-card-inner">
+            <div class="flex items-center justify-between mb-1"><span class="service-count">🔧 5+ послуг</span><span class="text-2xl">🇵🇱</span></div>
+            <div class="card-icon-3d">🔧</div>
+            <h3 class="text-xl font-bold text-white mb-3">Майстер на годину</h3>
+            <p class="text-sm text-slate-300/80 leading-relaxed">Ремонт, сантехніка, електрика та невеликі домашні завдання в один клік.</p>
+            <a href="/category/handyman" class="card-cta"><span>Перейти</span> <span class="arr">→</span></a>
+            <div class="book-label">📚 Корисні ресурси</div>
+            <a href="https://mittanbud.no/" class="book-link" target="_blank" rel="noopener"><span class="book-icon">📘</span> MittAnbud</a>
+            <a href="https://www.digi.no/" class="book-link" target="_blank" rel="noopener"><span class="book-icon">📗</span> Digi.no</a>
+          </div>
+        </div>
+      </div>
+      <div class="cat-card-wrapper" data-flag="https://flagcdn.com/w1280/se.png">
+        <div class="cat-card" style="--icon-grad:linear-gradient(135deg,#f59e0b,#d97706);--icon-shadow:rgba(245,158,11,.3);--card-glow:rgba(245,158,11,.15);--cta-grad:linear-gradient(135deg,#10b981,#059669);--cta-shadow:rgba(16,185,129,.35)">
+          <div class="cat-card-inner">
+            <div class="flex items-center justify-between mb-1"><span class="service-count">♻️ 7+ послуг</span><span class="text-2xl">🇸🇪</span></div>
+            <div class="card-icon-3d">♻️</div>
+            <h3 class="text-xl font-bold text-white mb-3">Еко-утилізація</h3>
+            <p class="text-sm text-slate-300/80 leading-relaxed">Збір, вивезення та утилізація непотрібних речей безпечно та екологічно.</p>
+            <a href="/category/eco" class="card-cta"><span>Перейти</span> <span class="arr">→</span></a>
+            <div class="book-label">📚 Корисні ресурси</div>
+            <a href="https://www.fretex.no" class="book-link" target="_blank" rel="noopener"><span class="book-icon">📘</span> Fretex Norge</a>
+            <a href="https://sirkular.no/" class="book-link" target="_blank" rel="noopener"><span class="book-icon">📗</span> Sirkular Økonomi</a>
+          </div>
+      </div>
+      <div class="cat-card-wrapper" data-flag="https://flagcdn.com/w1280/dk.png">
+        <div class="cat-card" style="--icon-grad:linear-gradient(135deg,#d946ef,#a855f7);--icon-shadow:rgba(217,70,239,.3);--card-glow:rgba(217,70,239,.15);--cta-grad:linear-gradient(135deg,#ec4899,#db2777);--cta-shadow:rgba(236,72,153,.35)">
+          <div class="cat-card-inner">
+            <div class="flex items-center justify-between mb-1"><span class="service-count">❤️ 10+ послуг</span><span class="text-2xl">🇩🇰</span></div>
+            <div class="card-icon-3d">❤️</div>
+            <h3 class="text-xl font-bold text-white mb-3">Соціальна допомога</h3>
+            <p class="text-sm text-slate-300/80 leading-relaxed">Підтримка літніх, сімей та людей з обмеженими можливостями.</p>
+            <a href="/category/social-help" class="card-cta"><span>Перейти</span> <span class="arr">→</span></a>
+            <div class="book-label">📚 Корисні ресурси</div>
+            <a href="https://www.nav.no/en" class="book-link" target="_blank" rel="noopener"><span class="book-icon">📘</span> NAV Norge</a>
+            <a href="https://bufdir.no" class="book-link" target="_blank" rel="noopener"><span class="book-icon">📗</span> Bufdir</a>
+          </div>
+        </div>
+      </div>
+      <div class="cat-card-wrapper" data-flag="https://flagcdn.com/w1280/fi.png">
+        <div class="cat-card" style="--icon-grad:linear-gradient(135deg,#64748b,#475569);--icon-shadow:rgba(100,116,139,.3);--card-glow:rgba(100,116,139,.15);--cta-grad:linear-gradient(135deg,#06b6d4,#0891b2);--cta-shadow:rgba(6,182,212,.35)">
+          <div class="cat-card-inner">
+            <div class="flex items-center justify-between mb-1"><span class="service-count">👤 5+ послуг</span><span class="text-2xl">🇫🇮</span></div>
+            <div class="card-icon-3d">👤</div>
+            <h3 class="text-xl font-bold text-white mb-3">Персональний помічник</h3>
+            <p class="text-sm text-slate-300/80 leading-relaxed">Асистент для доручень, покупок, запису на зустрічі та щоденних задач.</p>
+            <a href="/category/personal-task" class="card-cta"><span>Перейти</span> <span class="arr">→</span></a>
+            <div class="book-label">📚 Корисні ресурси</div>
+            <a href="https://www.norden.org/en" class="book-link" target="_blank" rel="noopener"><span class="book-icon">📘</span> Nordic Council</a>
+            <a href="https://europa.eu/youreuropean-rights" class="book-link" target="_blank" rel="noopener"><span class="book-icon">📗</span> EU Rights</a>
+          </div>
+        </div>
+      </div>
+      <div class="cat-card-wrapper" data-flag="https://flagcdn.com/w1280/de.png">
+        <div class="cat-card" style="--icon-grad:linear-gradient(135deg,#334155,#1e293b);--icon-shadow:rgba(51,65,85,.3);--card-glow:rgba(51,65,85,.15);--cta-grad:linear-gradient(135deg,#ef4444,#dc2626);--cta-shadow:rgba(239,68,68,.35)">
+          <div class="cat-card-inner">
+            <div class="flex items-center justify-between mb-1"><span class="service-count">🚗 8+ послуг</span><span class="text-2xl">🇩🇪</span></div>
+            <div class="card-icon-3d">🚗</div>
+            <h3 class="text-xl font-bold text-white mb-3">Евакуатор</h3>
+            <p class="text-sm text-slate-300/80 leading-relaxed">Швидка евакуація та допомога на дорозі, доступна 24/7.</p>
+            <a href="/category/tow" class="card-cta"><span>Перейти</span> <span class="arr">→</span></a>
+            <div class="book-label">📚 Корисні ресурси</div>
+            <a href="https://www.adac.de/" class="book-link" target="_blank" rel="noopener"><span class="book-icon">📘</span> ADAC</a>
+            <a href="https://www.vegvesen.no/en/" class="book-link" target="_blank" rel="noopener"><span class="book-icon">📗</span> Vegvesen</a>
+          </div>
+        </div>
+      </div>
+      <div class="cat-card-wrapper" data-flag="https://flagcdn.com/w1280/ee.png">
+        <div class="cat-card" style="--icon-grad:linear-gradient(135deg,#fbbf24,#f59e0b);--icon-shadow:rgba(251,191,36,.3);--card-glow:rgba(251,191,36,.15);--cta-grad:linear-gradient(135deg,#3b82f6,#2563eb);--cta-shadow:rgba(59,130,246,.35)">
+          <div class="cat-card-inner">
+            <div class="flex items-center justify-between mb-1"><span class="service-count">📋 оголошення</span><span class="text-2xl">🇪🇪</span></div>
+            <div class="card-icon-3d">📋</div>
+            <h3 class="text-xl font-bold text-white mb-3">Дошка оголошень</h3>
+            <p class="text-sm text-slate-300/80 leading-relaxed">Розміщуйте та знаходьте місцеві товари, послуги та оголошення.</p>
+            <a href="/classifieds" class="card-cta"><span>Перейти</span> <span class="arr">→</span></a>
+            <div class="book-label">📚 Корисні ресурси</div>
+            <a href="https://www.finn.no/" class="book-link" target="_blank" rel="noopener"><span class="book-icon">📘</span> FINN.no</a>
+            <a href="https://www.gulesider.no/" class="book-link" target="_blank" rel="noopener"><span class="book-icon">📗</span> Gule Sider</a>
+          </div>
+        </div>
+      </div>
+      <div class="cat-card-wrapper" data-flag="https://flagcdn.com/w1280/az.png">
+        <div class="cat-card" style="--icon-grad:linear-gradient(135deg,#fb7185,#e11d48);--icon-shadow:rgba(251,113,133,.3);--card-glow:rgba(251,113,133,.15);--cta-grad:linear-gradient(135deg,#f59e0b,#d97706);--cta-shadow:rgba(245,158,11,.35)">
+          <div class="cat-card-inner">
+            <div class="flex items-center justify-between mb-1"><span class="service-count">🍽️ Їжа</span><span class="text-2xl">🇦🇿</span></div>
+            <div class="card-icon-3d">🍽️</div>
+            <h3 class="text-xl font-bold text-white mb-3">GLF Mat</h3>
+            <p class="text-sm text-slate-300/80 leading-relaxed">Українська та азербайджанська їжа з доставкою, прямо з GLF Mat.</p>
+            <a href="/category/food" class="card-cta"><span>Перейти</span> <span class="arr">→</span></a>
+            <div class="book-label">📚 Корисні ресурси</div>
+            <a href="https://www.foodnorge.no/" class="book-link" target="_blank" rel="noopener"><span class="book-icon">📘</span> Food Norge</a>
+            <a href="https://www.matsentralen.no/" class="book-link" target="_blank" rel="noopener"><span class="book-icon">📗</span> Matsentralen</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<script>
+(function(){
+  var p=document.getElementById("particles");
+  var c=["#22d3ee","#a78bfa","#f472b6","#fbbf24","#34d399","#22d3ee"];
+  for(var i=0;i<20;i++){
+    var d=document.createElement("div");
+    d.className="particle";
+    var s=Math.random()*6+2;
+    d.style.cssText="width:"+s+"px;height:"+s+"px;left:"+Math.random()*100+"%;background:"+c[i%6]+";animation-duration:"+(Math.random()*15+10)+"s;animation-delay:"+Math.random()*10+"s;";
+    p.appendChild(d);
+  }
+  var fb=document.getElementById("flag-bg");
+  document.querySelectorAll(".cat-card-wrapper").forEach(function(w){
+    w.addEventListener("mouseenter",function(){fb.style.backgroundImage="url("+this.dataset.flag+")";fb.classList.add("on")});
+    w.addEventListener("mouseleave",function(){fb.classList.remove("on")});
+  });
+  document.querySelectorAll(".cat-card").forEach(function(card){
+    card.addEventListener("mousemove",function(e){
+      var r=this.getBoundingClientRect();
+      var x=(e.clientX-r.left)/r.width-.5;
+      var y=(e.clientY-r.top)/r.height-.5;
+      this.style.transform="translateY(-12px) rotateX("+(-y*8)+"deg) rotateY("+(x*8)+"deg) scale(1.03)";
+    });
+    card.addEventListener("mouseleave",function(){this.style.transform=""});
+  });
+})();
+</script>
+@endsection

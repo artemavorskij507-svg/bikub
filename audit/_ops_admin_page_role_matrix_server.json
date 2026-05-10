@@ -1,0 +1,239 @@
+{
+    "generated_at": "2026-04-21T19:52:50+00:00",
+    "host": "136.119.84.22",
+    "emails": [
+        "keks@glf.no",
+        "keks@gfl.no",
+        "oleksandr@glf.no",
+        "maria@glf.no",
+        "eva.nystad@glf.no"
+    ],
+    "paths": [
+        "/admin/live-operations-map",
+        "/admin/service-jobs",
+        "/admin/operation-exceptions",
+        "/admin/executor-shifts",
+        "/admin/executor-breaks",
+        "/admin/dispatch-rule-sets",
+        "/admin/dispatch-rule-preview"
+    ],
+    "summary": {
+        "total": 5,
+        "ok": 4,
+        "warn": 0,
+        "fail": 0,
+        "missing_user": 1
+    },
+    "results": [
+        {
+            "email": "keks@glf.no",
+            "status": "ok",
+            "roles": [
+                "admin"
+            ],
+            "pages": [
+                {
+                    "path": "/admin/live-operations-map",
+                    "status": 200,
+                    "location": null,
+                    "access_denied_text": false
+                },
+                {
+                    "path": "/admin/service-jobs",
+                    "status": 200,
+                    "location": null,
+                    "access_denied_text": false
+                },
+                {
+                    "path": "/admin/operation-exceptions",
+                    "status": 200,
+                    "location": null,
+                    "access_denied_text": false
+                },
+                {
+                    "path": "/admin/executor-shifts",
+                    "status": 200,
+                    "location": null,
+                    "access_denied_text": false
+                },
+                {
+                    "path": "/admin/executor-breaks",
+                    "status": 200,
+                    "location": null,
+                    "access_denied_text": false
+                },
+                {
+                    "path": "/admin/dispatch-rule-sets",
+                    "status": 200,
+                    "location": null,
+                    "access_denied_text": false
+                },
+                {
+                    "path": "/admin/dispatch-rule-preview",
+                    "status": 200,
+                    "location": null,
+                    "access_denied_text": false
+                }
+            ]
+        },
+        {
+            "email": "keks@gfl.no",
+            "status": "missing_user",
+            "roles": [],
+            "pages": []
+        },
+        {
+            "email": "oleksandr@glf.no",
+            "status": "ok",
+            "roles": [
+                "ops_admin"
+            ],
+            "pages": [
+                {
+                    "path": "/admin/live-operations-map",
+                    "status": 200,
+                    "location": null,
+                    "access_denied_text": false
+                },
+                {
+                    "path": "/admin/service-jobs",
+                    "status": 200,
+                    "location": null,
+                    "access_denied_text": false
+                },
+                {
+                    "path": "/admin/operation-exceptions",
+                    "status": 200,
+                    "location": null,
+                    "access_denied_text": false
+                },
+                {
+                    "path": "/admin/executor-shifts",
+                    "status": 200,
+                    "location": null,
+                    "access_denied_text": false
+                },
+                {
+                    "path": "/admin/executor-breaks",
+                    "status": 200,
+                    "location": null,
+                    "access_denied_text": false
+                },
+                {
+                    "path": "/admin/dispatch-rule-sets",
+                    "status": 200,
+                    "location": null,
+                    "access_denied_text": false
+                },
+                {
+                    "path": "/admin/dispatch-rule-preview",
+                    "status": 200,
+                    "location": null,
+                    "access_denied_text": false
+                }
+            ]
+        },
+        {
+            "email": "maria@glf.no",
+            "status": "ok",
+            "roles": [
+                "ops_manager"
+            ],
+            "pages": [
+                {
+                    "path": "/admin/live-operations-map",
+                    "status": 200,
+                    "location": null,
+                    "access_denied_text": false
+                },
+                {
+                    "path": "/admin/service-jobs",
+                    "status": 200,
+                    "location": null,
+                    "access_denied_text": false
+                },
+                {
+                    "path": "/admin/operation-exceptions",
+                    "status": 200,
+                    "location": null,
+                    "access_denied_text": false
+                },
+                {
+                    "path": "/admin/executor-shifts",
+                    "status": 200,
+                    "location": null,
+                    "access_denied_text": false
+                },
+                {
+                    "path": "/admin/executor-breaks",
+                    "status": 200,
+                    "location": null,
+                    "access_denied_text": false
+                },
+                {
+                    "path": "/admin/dispatch-rule-sets",
+                    "status": 200,
+                    "location": null,
+                    "access_denied_text": false
+                },
+                {
+                    "path": "/admin/dispatch-rule-preview",
+                    "status": 200,
+                    "location": null,
+                    "access_denied_text": false
+                }
+            ]
+        },
+        {
+            "email": "eva.nystad@glf.no",
+            "status": "ok",
+            "roles": [
+                "ops_rules_admin"
+            ],
+            "pages": [
+                {
+                    "path": "/admin/live-operations-map",
+                    "status": 200,
+                    "location": null,
+                    "access_denied_text": false
+                },
+                {
+                    "path": "/admin/service-jobs",
+                    "status": 200,
+                    "location": null,
+                    "access_denied_text": false
+                },
+                {
+                    "path": "/admin/operation-exceptions",
+                    "status": 200,
+                    "location": null,
+                    "access_denied_text": false
+                },
+                {
+                    "path": "/admin/executor-shifts",
+                    "status": 200,
+                    "location": null,
+                    "access_denied_text": false
+                },
+                {
+                    "path": "/admin/executor-breaks",
+                    "status": 200,
+                    "location": null,
+                    "access_denied_text": false
+                },
+                {
+                    "path": "/admin/dispatch-rule-sets",
+                    "status": 200,
+                    "location": null,
+                    "access_denied_text": false
+                },
+                {
+                    "path": "/admin/dispatch-rule-preview",
+                    "status": 200,
+                    "location": null,
+                    "access_denied_text": false
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,76 @@
+{
+  "checks": [
+    {
+      "url": "http://136.119.84.22/",
+      "status": 200,
+      "location": null
+    },
+    {
+      "url": "http://136.119.84.22/category/delivery",
+      "status": 200,
+      "location": null
+    },
+    {
+      "url": "http://136.119.84.22/category/moving",
+      "status": 200,
+      "location": null
+    },
+    {
+      "url": "http://136.119.84.22/category/handyman",
+      "status": 200,
+      "location": null
+    },
+    {
+      "url": "http://136.119.84.22/category/eco",
+      "status": 200,
+      "location": null
+    },
+    {
+      "url": "http://136.119.84.22/category/personal-task",
+      "status": 200,
+      "location": null
+    },
+    {
+      "url": "http://136.119.84.22/category/tow",
+      "status": 200,
+      "location": null
+    },
+    {
+      "url": "http://136.119.84.22/classifieds",
+      "status": 200,
+      "location": null
+    },
+    {
+      "url": "http://136.119.84.22/account",
+      "status": 302,
+      "location": "http://136.119.84.22/login"
+    },
+    {
+      "url": "http://136.119.84.22/lk",
+      "status": 302,
+      "location": "http://136.119.84.22/login"
+    },
+    {
+      "url": "http://136.119.84.22/admin",
+      "status": 302,
+      "location": "http://136.119.84.22/admin/login"
+    },
+    {
+      "url": "http://136.119.84.22/admin/login",
+      "status": 200,
+      "location": null
+    }
+  ],
+  "loginGfl": {
+    "email": "keks@gfl.no",
+    "ok": false,
+    "url": "http://136.119.84.22/admin/login",
+    "title": "Login - GLF BiKuBe"
+  },
+  "loginGlf": {
+    "email": "keks@glf.no",
+    "ok": true,
+    "url": "http://136.119.84.22/admin",
+    "title": "Dashboard - GLF BiKuBe"
+  }
+}

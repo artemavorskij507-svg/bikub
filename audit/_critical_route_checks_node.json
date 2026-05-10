@@ -1,0 +1,177 @@
+[
+  {
+    "url": "http://136.119.84.22/",
+    "status": 301,
+    "location": "https://136.119.84.22.nip.io/"
+  },
+  {
+    "url": "http://136.119.84.22/category/delivery",
+    "status": 301,
+    "location": "https://136.119.84.22.nip.io/category/delivery"
+  },
+  {
+    "url": "http://136.119.84.22/category/moving",
+    "status": 301,
+    "location": "https://136.119.84.22.nip.io/category/moving"
+  },
+  {
+    "url": "http://136.119.84.22/category/handyman",
+    "status": 301,
+    "location": "https://136.119.84.22.nip.io/category/handyman"
+  },
+  {
+    "url": "http://136.119.84.22/category/eco",
+    "status": 301,
+    "location": "https://136.119.84.22.nip.io/category/eco"
+  },
+  {
+    "url": "http://136.119.84.22/category/personal-task",
+    "status": 301,
+    "location": "https://136.119.84.22.nip.io/category/personal-task"
+  },
+  {
+    "url": "http://136.119.84.22/category/tow",
+    "status": 301,
+    "location": "https://136.119.84.22.nip.io/category/tow"
+  },
+  {
+    "url": "http://136.119.84.22/classifieds",
+    "status": 301,
+    "location": "https://136.119.84.22.nip.io/classifieds"
+  },
+  {
+    "url": "http://136.119.84.22/catalog",
+    "status": 301,
+    "location": "https://136.119.84.22.nip.io/catalog"
+  },
+  {
+    "url": "http://136.119.84.22/stores",
+    "status": 301,
+    "location": "https://136.119.84.22.nip.io/stores"
+  },
+  {
+    "url": "http://136.119.84.22/restaurants",
+    "status": 301,
+    "location": "https://136.119.84.22.nip.io/restaurants"
+  },
+  {
+    "url": "http://136.119.84.22/account",
+    "status": 301,
+    "location": "https://136.119.84.22.nip.io/account"
+  },
+  {
+    "url": "http://136.119.84.22/account/orders",
+    "status": 301,
+    "location": "https://136.119.84.22.nip.io/account/orders"
+  },
+  {
+    "url": "http://136.119.84.22/account/profile",
+    "status": 301,
+    "location": "https://136.119.84.22.nip.io/account/profile"
+  },
+  {
+    "url": "http://136.119.84.22/lk",
+    "status": 301,
+    "location": "https://136.119.84.22.nip.io/lk"
+  },
+  {
+    "url": "http://136.119.84.22/lk/orders",
+    "status": 301,
+    "location": "https://136.119.84.22.nip.io/lk/orders"
+  },
+  {
+    "url": "http://136.119.84.22/lk/support",
+    "status": 301,
+    "location": "https://136.119.84.22.nip.io/lk/support"
+  },
+  {
+    "url": "http://136.119.84.22/admin",
+    "status": 301,
+    "location": "https://136.119.84.22.nip.io/admin"
+  },
+  {
+    "url": "http://136.119.84.22/admin/login",
+    "status": 301,
+    "location": "https://136.119.84.22.nip.io/admin/login"
+  },
+  {
+    "url": "http://136.119.84.22/api/v1/health",
+    "status": 301,
+    "location": "https://136.119.84.22.nip.io/api/v1/health"
+  },
+  {
+    "url": "http://136.119.84.22/api/v1/categories",
+    "status": 301,
+    "location": "https://136.119.84.22.nip.io/api/v1/categories"
+  },
+  {
+    "url": "http://136.119.84.22/api/v1/service-types",
+    "status": 301,
+    "location": "https://136.119.84.22.nip.io/api/v1/service-types"
+  },
+  {
+    "url": "http://136.119.84.22/api/v1/restaurants",
+    "status": 301,
+    "location": "https://136.119.84.22.nip.io/api/v1/restaurants"
+  },
+  {
+    "url": "http://136.119.84.22/api/v1/stores",
+    "status": 301,
+    "location": "https://136.119.84.22.nip.io/api/v1/stores"
+  },
+  {
+    "url": "http://136.119.84.22/api/v1/public/catalog",
+    "status": 301,
+    "location": "https://136.119.84.22.nip.io/api/v1/public/catalog"
+  },
+  {
+    "url": "http://136.119.84.22/api/v1/public/slots",
+    "status": 301,
+    "location": "https://136.119.84.22.nip.io/api/v1/public/slots"
+  },
+  {
+    "url": "http://136.119.84.22/api/ops/map/live",
+    "status": 301,
+    "location": "https://136.119.84.22.nip.io/api/ops/map/live"
+  },
+  {
+    "url": "http://136.119.84.22/api/ops/jobs",
+    "status": 301,
+    "location": "https://136.119.84.22.nip.io/api/ops/jobs"
+  },
+  {
+    "url": "http://136.119.84.22/api/ops/executors",
+    "status": 301,
+    "location": "https://136.119.84.22.nip.io/api/ops/executors"
+  },
+  {
+    "url": "http://136.119.84.22/api/ops/exceptions",
+    "status": 301,
+    "location": "https://136.119.84.22.nip.io/api/ops/exceptions"
+  },
+  {
+    "url": "http://136.119.84.22/api/ops/workbench/triage",
+    "status": 301,
+    "location": "https://136.119.84.22.nip.io/api/ops/workbench/triage"
+  },
+  {
+    "url": "http://136.119.84.22/api/ops/workbench/saved-filters",
+    "status": 301,
+    "location": "https://136.119.84.22.nip.io/api/ops/workbench/saved-filters"
+  },
+  {
+    "url": "http://136.119.84.22/api/ops/workbench/replan-recommendations",
+    "status": 301,
+    "location": "https://136.119.84.22.nip.io/api/ops/workbench/replan-recommendations"
+  },
+  {
+    "url": "http://136.119.84.22/api/ops/workbench/routing-shadow-metrics",
+    "status": 301,
+    "location": "https://136.119.84.22.nip.io/api/ops/workbench/routing-shadow-metrics"
+  },
+  {
+    "url": "http://136.119.84.22/api/ops/workbench/routing-provider-health",
+    "status": 301,
+    "location": "https://136.119.84.22.nip.io/api/ops/workbench/routing-provider-health"
+  }
+]

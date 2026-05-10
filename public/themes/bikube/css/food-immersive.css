@@ -1,0 +1,388 @@
+:root {
+    --fi-accent-amber: rgba(251, 191, 36, 0.42);
+    --fi-accent-orange: rgba(249, 115, 22, 0.4);
+    --fi-accent-red: rgba(220, 38, 38, 0.34);
+    --fi-accent-blue: rgba(59, 130, 246, 0.22);
+    --fi-shadow-soft: 0 14px 32px rgba(10, 14, 24, 0.2);
+    --fi-shadow-strong: 0 28px 56px rgba(10, 14, 24, 0.3);
+    --fi-blur-hero: 32px;
+}
+
+/* HERO: 3D-ready container for parallax layers, videos and slides */
+.immersive-hero {
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+    transform-style: preserve-3d;
+    perspective: 1200px;
+    backface-visibility: hidden;
+}
+
+.immersive-hero > * {
+    position: relative;
+    z-index: 2;
+}
+
+.immersive-hero::before,
+.immersive-hero::after {
+    content: "";
+    position: absolute;
+    inset: -12%;
+    pointer-events: none;
+    z-index: 1;
+    will-change: transform, opacity, filter;
+}
+
+/* gradient glow */
+.immersive-hero::before {
+    background:
+        radial-gradient(circle at 16% 22%, var(--fi-accent-orange), transparent 40%),
+        radial-gradient(circle at 82% 20%, var(--fi-accent-red), transparent 46%),
+        radial-gradient(circle at 60% 78%, var(--fi-accent-amber), transparent 44%),
+        radial-gradient(circle at 48% 52%, var(--fi-accent-blue), transparent 48%);
+    filter: blur(var(--fi-blur-hero)) saturate(1.16);
+    opacity: 0.88;
+    transform: translate3d(0, 0, 0);
+    animation: fiGlowDrift 18s ease-in-out infinite alternate;
+}
+
+/* subtle noise + cinematic light */
+.immersive-hero::after {
+    background-image:
+        radial-gradient(rgba(255, 255, 255, 0.18) 0.7px, transparent 0.7px),
+        radial-gradient(rgba(255, 255, 255, 0.08) 0.55px, transparent 0.55px),
+        linear-gradient(120deg, rgba(255, 255, 255, 0.12), rgba(255, 255, 255, 0) 45%);
+    background-size: 3px 3px, 2px 2px, 100% 100%;
+    background-position: 0 0, 1px 1px, 0 0;
+    mix-blend-mode: soft-light;
+    opacity: 0.18;
+    animation: fiNoiseShift 4.2s steps(6) infinite;
+}
+
+/* Optional utility layer for additional noise texture */
+.fx-noise-layer {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    z-index: 3;
+    opacity: 0.12;
+    background-image: radial-gradient(rgba(255, 255, 255, 0.25) 0.6px, transparent 0.6px);
+    background-size: 2px 2px;
+    mix-blend-mode: soft-light;
+    animation: fiNoiseShift 3.8s steps(5) infinite;
+    will-change: transform, opacity;
+}
+
+/* Parallax helpers */
+.parallax-layer {
+    position: absolute;
+    inset: 0;
+    transform-style: preserve-3d;
+    pointer-events: none;
+    backface-visibility: hidden;
+    will-change: transform, opacity;
+}
+
+.parallax-depth-1 {
+    transform: translate3d(var(--px1, 0), var(--py1, 0), 0) scale(1.02);
+    filter: saturate(1.06);
+}
+
+.parallax-depth-2 {
+    transform: translate3d(var(--px2, 0), var(--py2, 0), 28px) scale(1.05);
+}
+
+.parallax-depth-3 {
+    transform: translate3d(var(--px3, 0), var(--py3, 0), 56px) scale(1.08);
+    filter: blur(0.2px) saturate(1.08);
+}
+
+/* Slide/video backgrounds inside hero */
+.slide-bg,
+.hero-video,
+.hero-bg-media {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform: translateZ(0);
+    will-change: transform, opacity, filter;
+}
+
+/* Motion blur pass */
+.motion-blur-overlay {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    z-index: 4;
+    background: linear-gradient(112deg, rgba(255, 255, 255, 0.18), rgba(255, 255, 255, 0));
+    mix-blend-mode: overlay;
+    opacity: 0.2;
+    transform: translate3d(-10%, 0, 0);
+    animation: fiBlurSweep 7.8s ease-in-out infinite;
+    will-change: transform, opacity;
+}
+
+/* Cards: 3D tilt */
+.tilt-card {
+    position: relative;
+    transform-style: preserve-3d;
+    perspective: 1100px;
+    will-change: transform;
+}
+
+.tilt-inner {
+    position: relative;
+    transform-style: preserve-3d;
+    transform: translateZ(0);
+    border-radius: inherit;
+    transition: transform 220ms cubic-bezier(0.2, 0.8, 0.2, 1), box-shadow 220ms ease;
+    box-shadow: var(--fi-shadow-soft);
+    will-change: transform, box-shadow;
+}
+
+.tilt-card:hover .tilt-inner,
+.tilt-card.is-tilting .tilt-inner {
+    box-shadow: var(--fi-shadow-strong);
+}
+
+.tilt-gloss {
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    pointer-events: none;
+    background: linear-gradient(
+        132deg,
+        rgba(255, 255, 255, 0.42) 0%,
+        rgba(255, 255, 255, 0.08) 28%,
+        rgba(255, 255, 255, 0) 60%
+    );
+    mix-blend-mode: screen;
+    opacity: var(--glossOpacity, 0);
+    transition: opacity 180ms ease;
+    will-change: opacity, transform;
+}
+
+.tilt-card:hover .tilt-gloss,
+.tilt-card.is-tilting .tilt-gloss {
+    opacity: 1;
+}
+
+/* Micro-interactions */
+.fx-float {
+    animation: fiFloat 4.8s ease-in-out infinite;
+    will-change: transform;
+}
+
+.fx-shimmer {
+    position: relative;
+    overflow: hidden;
+}
+
+.fx-shimmer::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -170%;
+    width: 130%;
+    height: 100%;
+    background: linear-gradient(110deg, transparent, rgba(255, 255, 255, 0.5), transparent);
+    transform: skewX(-18deg);
+    animation: fiShimmer 2.9s ease-in-out infinite;
+    pointer-events: none;
+    will-change: transform, opacity;
+}
+
+.fx-pulse-ring {
+    position: relative;
+}
+
+.fx-pulse-ring::before {
+    content: "";
+    position: absolute;
+    inset: -7px;
+    border-radius: inherit;
+    border: 1px solid rgba(249, 115, 22, 0.5);
+    opacity: 0;
+    transform: scale(0.95);
+    animation: fiPulseRing 2.2s ease-out infinite;
+    pointer-events: none;
+    will-change: transform, opacity;
+}
+
+/* Reveal on scroll (fail-safe: visible by default without JS) */
+.reveal-item {
+    opacity: 1;
+    transform: translate3d(0, 0, 0) scale(1);
+    filter: blur(0);
+}
+
+.immersive-motion .reveal-item {
+    opacity: 0;
+    transform: translate3d(0, 26px, 0) scale(0.985);
+    filter: blur(1.4px);
+    transition:
+        opacity 540ms cubic-bezier(0.2, 0.8, 0.2, 1),
+        transform 540ms cubic-bezier(0.2, 0.8, 0.2, 1),
+        filter 540ms ease;
+    will-change: opacity, transform, filter;
+}
+
+.immersive-motion .reveal-item.is-visible {
+    opacity: 1;
+    transform: translate3d(0, 0, 0) scale(1);
+    filter: blur(0);
+}
+
+.reveal-stagger-1 { transition-delay: 40ms; }
+.reveal-stagger-2 { transition-delay: 90ms; }
+.reveal-stagger-3 { transition-delay: 140ms; }
+.reveal-stagger-4 { transition-delay: 190ms; }
+.reveal-stagger-5 { transition-delay: 240ms; }
+
+@keyframes fiGlowDrift {
+    0% {
+        transform: translate3d(-2%, 0, 0) scale(1);
+        opacity: 0.82;
+    }
+    50% {
+        transform: translate3d(2%, -1.5%, 0) scale(1.03);
+        opacity: 0.95;
+    }
+    100% {
+        transform: translate3d(0, 2%, 0) scale(1.01);
+        opacity: 0.86;
+    }
+}
+
+@keyframes fiNoiseShift {
+    0% { transform: translate3d(0, 0, 0); }
+    25% { transform: translate3d(-1%, 1%, 0); }
+    50% { transform: translate3d(1%, -1%, 0); }
+    75% { transform: translate3d(0.5%, 1%, 0); }
+    100% { transform: translate3d(0, 0, 0); }
+}
+
+@keyframes fiBlurSweep {
+    0%,
+    100% {
+        transform: translate3d(-10%, 0, 0);
+        opacity: 0.16;
+    }
+    50% {
+        transform: translate3d(10%, 0, 0);
+        opacity: 0.28;
+    }
+}
+
+@keyframes fiFloat {
+    0%,
+    100% { transform: translate3d(0, 0, 0); }
+    50% { transform: translate3d(0, -8px, 0); }
+}
+
+@keyframes fiShimmer {
+    0% {
+        left: -170%;
+        opacity: 0;
+    }
+    22% { opacity: 0.82; }
+    72% { opacity: 0.46; }
+    100% {
+        left: 185%;
+        opacity: 0;
+    }
+}
+
+@keyframes fiPulseRing {
+    0% {
+        opacity: 0.66;
+        transform: scale(0.92);
+    }
+    82% {
+        opacity: 0;
+        transform: scale(1.1);
+    }
+    100% {
+        opacity: 0;
+        transform: scale(1.1);
+    }
+}
+
+/* Mobile simplification */
+@media (max-width: 768px) {
+    :root {
+        --fi-blur-hero: 22px;
+    }
+
+    .immersive-hero {
+        perspective: 760px;
+    }
+
+    .immersive-hero::before {
+        opacity: 0.72;
+        animation-duration: 22s;
+    }
+
+    .immersive-hero::after,
+    .fx-noise-layer {
+        opacity: 0.1;
+    }
+
+    .parallax-depth-2,
+    .parallax-depth-3,
+    .motion-blur-overlay {
+        transform: translate3d(0, 0, 0) scale(1.01);
+        animation-duration: 11s;
+        opacity: 0.12;
+    }
+
+    .tilt-inner {
+        transition-duration: 160ms;
+    }
+
+    .fx-shimmer::after {
+        animation-duration: 3.4s;
+        opacity: 0.56;
+    }
+
+    .reveal-item {
+        transform: translate3d(0, 14px, 0);
+        filter: none;
+    }
+}
+
+/* Accessibility + perf */
+@media (prefers-reduced-motion: reduce) {
+    .immersive-hero::before,
+    .immersive-hero::after,
+    .fx-noise-layer,
+    .motion-blur-overlay,
+    .fx-float,
+    .fx-shimmer::after,
+    .fx-pulse-ring::before,
+    .slide-bg,
+    .slide-bg video,
+    .slide-bg img,
+    .hero-video,
+    .hero-bg-media {
+        animation: none !important;
+    }
+
+    .parallax-layer,
+    .parallax-depth-1,
+    .parallax-depth-2,
+    .parallax-depth-3,
+    .tilt-inner,
+    .reveal-item,
+    .motion-blur-overlay {
+        transition: none !important;
+        transform: none !important;
+        filter: none !important;
+    }
+
+    .reveal-item {
+        opacity: 1 !important;
+    }
+}

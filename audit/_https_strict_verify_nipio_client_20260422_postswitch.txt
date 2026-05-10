@@ -1,0 +1,59 @@
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0* Host 136.119.84.22.nip.io:443 was resolved.
+* IPv6: (none)
+* IPv4: 136.119.84.22
+*   Trying 136.119.84.22:443...
+* schannel: disabled automatic use of client certificate
+* ALPN: curl offers http/1.1
+  0     0    0     0    0     0      0      0 --:--:--  0:00:01 --:--:--     0* ALPN: server accepted http/1.1
+* Connected to 136.119.84.22.nip.io (136.119.84.22) port 443
+* using HTTP/1.x
+  0     0    0     0    0     0      0      0 --:--:--  0:00:01 --:--:--     0> HEAD / HTTP/1.1
+> Host: 136.119.84.22.nip.io
+> User-Agent: curl/8.13.0
+> Accept: */*
+> 
+* Request completely sent off
+< HTTP/1.1 200 OK
+< Server: nginx/1.22.1
+< Content-Type: text/html; charset=UTF-8
+< Connection: keep-alive
+< Cache-Control: no-cache, private
+< Date: Wed, 22 Apr 2026 12:45:38 GMT
+< Content-Security-Policy: default-src 'self' blob:; script-src 'self' https://js.stripe.com https://cdn.tailwindcss.com https://unpkg.com https://api.mapbox.com 'unsafe-inline' 'unsafe-eval' blob:; script-src-elem 'self' https://js.stripe.com https://cdn.tailwindcss.com https://unpkg.com https://api.mapbox.com 'unsafe-inline' 'unsafe-eval' blob:; worker-src 'self' blob:; connect-src 'self' https://api.stripe.com https://api.mapbox.com ws: wss: blob: data:; img-src 'self' data: https: blob:; media-src 'self' blob: data:; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://fonts.bunny.net https://cdn.jsdelivr.net https://cdnjs.cloudflare.com https://api.mapbox.com; style-src-elem 'self' 'unsafe-inline' https://fonts.googleapis.com https://fonts.bunny.net https://cdn.jsdelivr.net https://cdnjs.cloudflare.com https://api.mapbox.com; font-src 'self' data: https://fonts.gstatic.com https://fonts.bunny.net https://cdnjs.cloudflare.com; frame-src https://js.stripe.com https://hooks.stripe.com; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'self';
+< Strict-Transport-Security: max-age=31536000; includeSubDomains; preload
+< X-Content-Type-Options: nosniff
+< X-Frame-Options: DENY
+< X-XSS-Protection: 1; mode=block
+< Referrer-Policy: strict-origin-when-cross-origin
+< Permissions-Policy: geolocation=(), microphone=(), camera=(), payment=()
+< X-Debug-Host: 136.119.84.22.nip.io
+< X-Debug-LocalRuntime: 0
+< X-Request-Id: 9fd42adc-625f-4aec-bb83-834be8841447
+< Set-Cookie: XSRF-TOKEN=eyJpdiI6Iml3UXRJUExvK3ZUNnBQbnN5VXZ1ZlE9PSIsInZhbHVlIjoiQ1RWdEFGS0I4VWpvZTlGMXBqK1ZLUFoxd0MzNVpSOUV1MDhKYmFqN3FNZUsva1F1VnZTRWRZaU94WkZ6OUNKNXJiMDBZMEY1OVkxaTJNNHhjQ0R6NUh2ODhoWGMzSlhkL3NlRWxtSERmNWxNTnQvcGZDSFVuc2JzNXBRYXlIVXQiLCJtYWMiOiJiYTcwMDQ3ZjQxNjc2YTA1NmY3MWNkZmRlNjFkYzk5M2FiOTQ3MjljM2Q3MzBlZDAxNjNiNWFlYTFhNzZhNjIxIiwidGFnIjoiIn0%3D; expires=Wed, 22 Apr 2026 14:45:38 GMT; Max-Age=7200; path=/; secure; samesite=lax
+< Set-Cookie: glf_bike_care_session=eyJpdiI6InZVMGliemxZTFdGaTNqenN2NEo4b1E9PSIsInZhbHVlIjoiTWFNVlI3OE56Q2VwOUcveDF2M3Jvc29ETDljSFAvZnNDSnR6ZHQ2WHJpOGlNVGg3V0p2WU5RTCt1VS82M3c1S042cFNjSWdkTGRsWHQ3NFgwdm1sUllPTU9DQ0tQbU0wRkVLMnVrUXJKM3N3Q1QwVUYrZlp0WkMyU0ZsT2ozdGciLCJtYWMiOiJjYWJhYjM4YmM4NjQ1MzkwZGI5OWQ5MWExYjk1NDY5ZTZkYjczZmIxMzAxNjc2OWY2N2JhYjg0M2YwZWEzNzQ1IiwidGFnIjoiIn0%3D; expires=Wed, 22 Apr 2026 14:45:38 GMT; Max-Age=7200; path=/; secure; httponly; samesite=lax
+< Strict-Transport-Security: max-age=31536000
+< 
+  0     0    0     0    0     0      0      0 --:--:--  0:00:01 --:--:--     0
+* Connection #0 to host 136.119.84.22.nip.io left intact
+HTTP/1.1 200 OK
+Server: nginx/1.22.1
+Content-Type: text/html; charset=UTF-8
+Connection: keep-alive
+Cache-Control: no-cache, private
+Date: Wed, 22 Apr 2026 12:45:38 GMT
+Content-Security-Policy: default-src 'self' blob:; script-src 'self' https://js.stripe.com https://cdn.tailwindcss.com https://unpkg.com https://api.mapbox.com 'unsafe-inline' 'unsafe-eval' blob:; script-src-elem 'self' https://js.stripe.com https://cdn.tailwindcss.com https://unpkg.com https://api.mapbox.com 'unsafe-inline' 'unsafe-eval' blob:; worker-src 'self' blob:; connect-src 'self' https://api.stripe.com https://api.mapbox.com ws: wss: blob: data:; img-src 'self' data: https: blob:; media-src 'self' blob: data:; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://fonts.bunny.net https://cdn.jsdelivr.net https://cdnjs.cloudflare.com https://api.mapbox.com; style-src-elem 'self' 'unsafe-inline' https://fonts.googleapis.com https://fonts.bunny.net https://cdn.jsdelivr.net https://cdnjs.cloudflare.com https://api.mapbox.com; font-src 'self' data: https://fonts.gstatic.com https://fonts.bunny.net https://cdnjs.cloudflare.com; frame-src https://js.stripe.com https://hooks.stripe.com; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'self';
+Strict-Transport-Security: max-age=31536000; includeSubDomains; preload
+X-Content-Type-Options: nosniff
+X-Frame-Options: DENY
+X-XSS-Protection: 1; mode=block
+Referrer-Policy: strict-origin-when-cross-origin
+Permissions-Policy: geolocation=(), microphone=(), camera=(), payment=()
+X-Debug-Host: 136.119.84.22.nip.io
+X-Debug-LocalRuntime: 0
+X-Request-Id: 9fd42adc-625f-4aec-bb83-834be8841447
+Set-Cookie: XSRF-TOKEN=eyJpdiI6Iml3UXRJUExvK3ZUNnBQbnN5VXZ1ZlE9PSIsInZhbHVlIjoiQ1RWdEFGS0I4VWpvZTlGMXBqK1ZLUFoxd0MzNVpSOUV1MDhKYmFqN3FNZUsva1F1VnZTRWRZaU94WkZ6OUNKNXJiMDBZMEY1OVkxaTJNNHhjQ0R6NUh2ODhoWGMzSlhkL3NlRWxtSERmNWxNTnQvcGZDSFVuc2JzNXBRYXlIVXQiLCJtYWMiOiJiYTcwMDQ3ZjQxNjc2YTA1NmY3MWNkZmRlNjFkYzk5M2FiOTQ3MjljM2Q3MzBlZDAxNjNiNWFlYTFhNzZhNjIxIiwidGFnIjoiIn0%3D; expires=Wed, 22 Apr 2026 14:45:38 GMT; Max-Age=7200; path=/; secure; samesite=lax
+Set-Cookie: glf_bike_care_session=eyJpdiI6InZVMGliemxZTFdGaTNqenN2NEo4b1E9PSIsInZhbHVlIjoiTWFNVlI3OE56Q2VwOUcveDF2M3Jvc29ETDljSFAvZnNDSnR6ZHQ2WHJpOGlNVGg3V0p2WU5RTCt1VS82M3c1S042cFNjSWdkTGRsWHQ3NFgwdm1sUllPTU9DQ0tQbU0wRkVLMnVrUXJKM3N3Q1QwVUYrZlp0WkMyU0ZsT2ozdGciLCJtYWMiOiJjYWJhYjM4YmM4NjQ1MzkwZGI5OWQ5MWExYjk1NDY5ZTZkYjczZmIxMzAxNjc2OWY2N2JhYjg0M2YwZWEzNzQ1IiwidGFnIjoiIn0%3D; expires=Wed, 22 Apr 2026 14:45:38 GMT; Max-Age=7200; path=/; secure; httponly; samesite=lax
+Strict-Transport-Security: max-age=31536000
+

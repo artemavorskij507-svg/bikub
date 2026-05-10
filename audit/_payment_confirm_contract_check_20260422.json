@@ -1,0 +1,24 @@
+{
+  "order_id": 18,
+  "payment_intent_id": "pi_3TOusoJvnGh6jvlD0Se5H7Gi",
+  "idempotency_key": "confirm-smoke-1776841658",
+  "first": {
+    "success": false,
+    "message": "Payment requires client-side confirmation or additional confirmation parameters.",
+    "data": {
+      "status": "requires_payment_method",
+      "payment_intent_id": "pi_3TOusoJvnGh6jvlD0Se5H7Gi",
+      "requires_action": true
+    }
+  },
+  "second": {
+    "success": false,
+    "message": "Payment requires client-side confirmation or additional confirmation parameters.",
+    "data": {
+      "status": "requires_payment_method",
+      "payment_intent_id": "pi_3TOusoJvnGh6jvlD0Se5H7Gi",
+      "requires_action": true
+    }
+  },
+  "same_response": true
+}

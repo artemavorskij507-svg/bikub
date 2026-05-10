@@ -1,0 +1,99 @@
+@extends('layouts.app')
+
+@section('title', 'Категории услуг — GLF BiKuBe')
+@section('description', 'Выберите категорию услуг GLF BiKuBe и перейдите на нужную страницу сервиса.')
+
+@section('content')
+<div class="bg-slate-50 min-h-screen">
+    <section class="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-700 text-white py-24">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <p class="text-sm uppercase tracking-[0.35em] text-cyan-300 mb-4">GLF Service Hub</p>
+            <h1 class="text-4xl sm:text-5xl font-semibold tracking-tight mb-6">Категории услуг</h1>
+            <p class="max-w-3xl mx-auto text-slate-200 text-lg sm:text-xl leading-8">
+                Быстро переходите к нужному разделу — от доставки и переезда до социальных услуг, ИТ и GLF Mat.
+            </p>
+            <div class="mt-10 flex flex-col sm:flex-row justify-center gap-4">
+                <a href="#services" class="inline-flex items-center justify-center rounded-full bg-cyan-500 px-6 py-3 text-sm font-semibold text-slate-950 shadow-lg shadow-cyan-500/30 hover:bg-cyan-400 transition">Перейти к услугам</a>
+                <a href="/catalog" class="inline-flex items-center justify-center rounded-full border border-white/20 bg-white/10 px-6 py-3 text-sm font-semibold text-white hover:bg-white/20 transition">Посмотреть каталог</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="relative py-20" id="services">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid gap-8 lg:grid-cols-2 xl:grid-cols-3">
+                <article class="group rounded-[28px] border border-slate-200/80 bg-white p-8 shadow-[0_32px_80px_rgba(15,23,42,0.08)] transition hover:-translate-y-1 hover:shadow-[0_32px_80px_rgba(15,23,42,0.16)]">
+                    <div class="flex h-16 w-16 items-center justify-center rounded-2xl bg-gradient-to-br from-red-500 to-rose-500 text-2xl text-white shadow-lg shadow-red-500/20 mb-6">📦</div>
+                    <h2 class="text-2xl font-semibold text-slate-900 mb-3">Доставка</h2>
+                    <p class="text-slate-600 mb-6">Быстрая доставка продуктов, посылок и крупных заказов по городу и области.</p>
+                    <a href="/category/delivery" class="inline-flex items-center gap-2 text-sm font-semibold text-cyan-600 hover:text-cyan-500">Перейти к доставке</a>
+                </article>
+
+                <article class="group rounded-[28px] border border-slate-200/80 bg-white p-8 shadow-[0_32px_80px_rgba(15,23,42,0.08)] transition hover:-translate-y-1 hover:shadow-[0_32px_80px_rgba(15,23,42,0.16)]">
+                    <div class="flex h-16 w-16 items-center justify-center rounded-2xl bg-gradient-to-br from-blue-500 to-sky-500 text-2xl text-white shadow-lg shadow-blue-500/20 mb-6">🚚</div>
+                    <h2 class="text-2xl font-semibold text-slate-900 mb-3">Переезд</h2>
+                    <p class="text-slate-600 mb-6">Переезды под ключ: упаковка, транспортировка и расстановка мебели.</p>
+                    <a href="/category/moving" class="inline-flex items-center gap-2 text-sm font-semibold text-cyan-600 hover:text-cyan-500">Перейти к переезду</a>
+                </article>
+
+                <article class="group rounded-[28px] border border-slate-200/80 bg-white p-8 shadow-[0_32px_80px_rgba(15,23,42,0.08)] transition hover:-translate-y-1 hover:shadow-[0_32px_80px_rgba(15,23,42,0.16)]">
+                    <div class="flex h-16 w-16 items-center justify-center rounded-2xl bg-gradient-to-br from-emerald-500 to-emerald-600 text-2xl text-white shadow-lg shadow-emerald-500/20 mb-6">🔧</div>
+                    <h2 class="text-2xl font-semibold text-slate-900 mb-3">Мастер на час</h2>
+                    <p class="text-slate-600 mb-6">Ремонт, сантехника, электрика и небольшие домашние задания в один клик.</p>
+                    <a href="/category/handyman" class="inline-flex items-center gap-2 text-sm font-semibold text-cyan-600 hover:text-cyan-500">Перейти к мастеру</a>
+                </article>
+
+                <article class="group rounded-[28px] border border-slate-200/80 bg-white p-8 shadow-[0_32px_80px_rgba(15,23,42,0.08)] transition hover:-translate-y-1 hover:shadow-[0_32px_80px_rgba(15,23,42,0.16)]">
+                    <div class="flex h-16 w-16 items-center justify-center rounded-2xl bg-gradient-to-br from-amber-500 to-orange-500 text-2xl text-white shadow-lg shadow-amber-500/20 mb-6">♻️</div>
+                    <h2 class="text-2xl font-semibold text-slate-900 mb-3">Эко‑утилизация</h2>
+                    <p class="text-slate-600 mb-6">Сбор, вывоз и утилизация ненужных вещей безопасно и экологично.</p>
+                    <a href="/category/eco" class="inline-flex items-center gap-2 text-sm font-semibold text-cyan-600 hover:text-cyan-500">Перейти к эко</a>
+                </article>
+
+                <article class="group rounded-[28px] border border-slate-200/80 bg-white p-8 shadow-[0_32px_80px_rgba(15,23,42,0.08)] transition hover:-translate-y-1 hover:shadow-[0_32px_80px_rgba(15,23,42,0.16)]">
+                    <div class="flex h-16 w-16 items-center justify-center rounded-2xl bg-gradient-to-br from-fuchsia-500 to-purple-600 text-2xl text-white shadow-lg shadow-fuchsia-500/20 mb-6">❤️</div>
+                    <h2 class="text-2xl font-semibold text-slate-900 mb-3">Социальная помощь</h2>
+                    <p class="text-slate-600 mb-6">Решения для поддержки пожилых, семей и людей с ограниченными возможностями.</p>
+                    <a href="/category/social-help" class="inline-flex items-center gap-2 text-sm font-semibold text-cyan-600 hover:text-cyan-500">Перейти к помощи</a>
+                </article>
+
+                <article class="group rounded-[28px] border border-slate-200/80 bg-white p-8 shadow-[0_32px_80px_rgba(15,23,42,0.08)] transition hover:-translate-y-1 hover:shadow-[0_32px_80px_rgba(15,23,42,0.16)]">
+                    <div class="flex h-16 w-16 items-center justify-center rounded-2xl bg-gradient-to-br from-slate-500 to-slate-700 text-2xl text-white shadow-lg shadow-slate-500/20 mb-6">👤</div>
+                    <h2 class="text-2xl font-semibold text-slate-900 mb-3">Персональный помощник</h2>
+                    <p class="text-slate-600 mb-6">Ассистент для поручений, покупок, записи на встречи и ежедневных задач.</p>
+                    <a href="/category/personal-task" class="inline-flex items-center gap-2 text-sm font-semibold text-cyan-600 hover:text-cyan-500">Перейти к помощнику</a>
+                </article>
+
+                <article class="group rounded-[28px] border border-slate-200/80 bg-white p-8 shadow-[0_32px_80px_rgba(15,23,42,0.08)] transition hover:-translate-y-1 hover:shadow-[0_32px_80px_rgba(15,23,42,0.16)]">
+                    <div class="flex h-16 w-16 items-center justify-center rounded-2xl bg-gradient-to-br from-slate-700 to-slate-900 text-2xl text-white shadow-lg shadow-slate-700/20 mb-6">🚗</div>
+                    <h2 class="text-2xl font-semibold text-slate-900 mb-3">Эвакуатор</h2>
+                    <p class="text-slate-600 mb-6">Быстрая эвакуация и помощь на дороге, доступная 24/7.</p>
+                    <a href="/category/tow" class="inline-flex items-center gap-2 text-sm font-semibold text-cyan-600 hover:text-cyan-500">Перейти к эвакуатору</a>
+                </article>
+
+                <article class="group rounded-[28px] border border-slate-200/80 bg-white p-8 shadow-[0_32px_80px_rgba(15,23,42,0.08)] transition hover:-translate-y-1 hover:shadow-[0_32px_80px_rgba(15,23,42,0.16)]">
+                    <div class="flex h-16 w-16 items-center justify-center rounded-2xl bg-gradient-to-br from-amber-400 to-yellow-500 text-2xl text-white shadow-lg shadow-amber-400/20 mb-6">📋</div>
+                    <h2 class="text-2xl font-semibold text-slate-900 mb-3">Доска объявлений</h2>
+                    <p class="text-slate-600 mb-6">Размещайте и находите местные товары, услуги и объявления.</p>
+                    <a href="/category/classifieds" class="inline-flex items-center gap-2 text-sm font-semibold text-cyan-600 hover:text-cyan-500">Перейти к объявлениям</a>
+                </article>
+
+                <article class="group rounded-[28px] border border-slate-200/80 bg-white p-8 shadow-[0_32px_80px_rgba(15,23,42,0.08)] transition hover:-translate-y-1 hover:shadow-[0_32px_80px_rgba(15,23,42,0.16)]">
+                    <div class="flex h-16 w-16 items-center justify-center rounded-2xl bg-gradient-to-br from-sky-500 to-blue-700 text-2xl text-white shadow-lg shadow-sky-500/20 mb-6">💻</div>
+                    <h2 class="text-2xl font-semibold text-slate-900 mb-3">IT & Маркетинг</h2>
+                    <p class="text-slate-600 mb-6">Веб, SEO, продвижение и цифровая поддержка для вашего бизнеса.</p>
+                    <a href="/category/it-marketing" class="inline-flex items-center gap-2 text-sm font-semibold text-cyan-600 hover:text-cyan-500">Перейти к IT</a>
+                </article>
+
+                <article class="group rounded-[28px] border border-slate-200/80 bg-white p-8 shadow-[0_32px_80px_rgba(15,23,42,0.08)] transition hover:-translate-y-1 hover:shadow-[0_32px_80px_rgba(15,23,42,0.16)]">
+                    <div class="flex h-16 w-16 items-center justify-center rounded-2xl bg-gradient-to-br from-rose-500 to-pink-600 text-2xl text-white shadow-lg shadow-rose-500/20 mb-6">🍽️</div>
+                    <h2 class="text-2xl font-semibold text-slate-900 mb-3">GLF Mat</h2>
+                    <p class="text-slate-600 mb-6">Украинская и азербайджанская еда с доставкой, прямо из GLF Mat.</p>
+                    <a href="/category/food" class="inline-flex items-center gap-2 text-sm font-semibold text-cyan-600 hover:text-cyan-500">Перейти к GLF Mat</a>
+                </article>
+            </div>
+        </div>
+    </section>
+</div>
+@endsection
+```

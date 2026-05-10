@@ -1,0 +1,321 @@
+/* LK Partner Theme — Bikube
+   Цветовая рестайлинг для Личного кабинета курьера/исполнителя
+   Файл: public/themes/lk/css/lk-theme.css
+*/
+:root{
+  --lk-bg-primary: #0f1724;        /* тёмный фон основной */
+  --lk-bg-panel: rgba(255,255,255,0.03);
+  --lk-accent: #f7b32b;           /* жёлтый акцент (мёд) */
+  --lk-accent-2: #00d4ff;         /* бирюзовый для вторичных элементов */
+  --lk-text: #e6eef7;
+  --lk-subtext: #a9b4c0;
+  --lk-border: rgba(255,255,255,0.06);
+  --lk-success: #32d583;
+  --lk-danger: #ff6b6b;
+  --container-max: 1200px;
+}
+
+/* Reset for LK theme */
+html.lk-theme {
+  background: linear-gradient(180deg, var(--lk-bg-primary) 0%, #061018 120%) !important;
+  min-height: 100% !important;
+}
+
+body.lk-theme {
+  background: linear-gradient(180deg, var(--lk-bg-primary) 0%, #061018 120%) !important;
+  color: var(--lk-text) !important;
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  min-height: 100vh !important;
+}
+
+/* Убираем светлый фон для lk-theme */
+body.lk-theme::before {
+  display: none !important;
+}
+
+/* Переопределяем цвета текста для lk-theme */
+body.lk-theme.text-slate-900,
+body.lk-theme .text-slate-900 {
+  color: var(--lk-text) !important;
+}
+
+/* Убираем bg-slate-50 если есть lk-theme */
+html.lk-theme.bg-slate-50,
+body.lk-theme.bg-slate-50 {
+  background: linear-gradient(180deg, var(--lk-bg-primary) 0%, #061018 120%) !important;
+}
+
+.lk-wrap { 
+  max-width: var(--container-max); 
+  margin: 0 auto; 
+  padding: 20px; 
+  box-sizing: border-box; 
+}
+
+/* Header / top bar for LK */
+.lk-topbar {
+  display:flex;
+  align-items:center;
+  gap:16px;
+  padding:12px 20px;
+  background: linear-gradient(90deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+  border:1px solid var(--lk-border);
+  border-radius:12px;
+  box-shadow: 0 6px 20px rgba(4,8,15,0.6);
+}
+
+.lk-topbar .logo { 
+  width:48px; 
+  height:48px; 
+  border-radius:8px; 
+  overflow:hidden; 
+  background:linear-gradient(180deg,#111,#000); 
+  display:flex;
+  align-items:center;
+  justify-content:center; 
+}
+
+.lk-topbar h1 { 
+  font-size:18px; 
+  margin:0; 
+  color:var(--lk-text); 
+  font-weight:700; 
+}
+
+.lk-topbar .meta { 
+  color:var(--lk-subtext); 
+  font-size:13px; 
+  margin-left:auto; 
+}
+
+/* Layout grid: sidebar + content */
+.lk-grid { 
+  display:grid; 
+  grid-template-columns: 260px 1fr; 
+  gap:20px; 
+  margin-top:18px; 
+  align-items:start; 
+}
+
+.lk-sidebar {
+  background: var(--lk-bg-panel);
+  border:1px solid var(--lk-border);
+  border-radius:12px;
+  padding:14px;
+  min-height: 320px;
+}
+
+.lk-sidebar .nav-item {
+  display:flex; 
+  align-items:center; 
+  gap:10px; 
+  padding:10px; 
+  border-radius:8px; 
+  color:var(--lk-text); 
+  text-decoration:none;
+  margin-bottom:6px;
+}
+
+.lk-sidebar .nav-item.active { 
+  background: linear-gradient(90deg, rgba(247,179,43,0.08), rgba(0,212,255,0.02)); 
+  box-shadow: 0 8px 18px rgba(0,0,0,0.45); 
+  border-left:3px solid var(--lk-accent); 
+}
+
+.lk-sidebar .nav-item svg { 
+  width:18px; 
+  height:18px; 
+  opacity:.95; 
+}
+
+.lk-sidebar .nav-section-title { 
+  color:var(--lk-subtext); 
+  font-size:12px; 
+  margin:10px 6px; 
+  text-transform:uppercase; 
+  letter-spacing:0.06em; 
+}
+
+.lk-content {
+  background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+  border:1px solid var(--lk-border);
+  border-radius:12px;
+  padding:18px;
+  box-shadow: 0 8px 30px rgba(3,7,12,0.6);
+}
+
+/* Cards */
+.lk-card { 
+  background: linear-gradient(180deg, rgba(255,255,255,0.01), rgba(255,255,255,0.005)); 
+  border-radius:10px; 
+  padding:14px; 
+  border:1px solid var(--lk-border); 
+}
+
+.lk-card-title { 
+  font-weight:700; 
+  font-size:15px; 
+  color:var(--lk-text); 
+  margin-bottom:8px; 
+}
+
+.lk-card-meta { 
+  color:var(--lk-subtext); 
+  font-size:13px; 
+}
+
+/* Buttons */
+.btn-lk {
+  display:inline-flex; 
+  align-items:center; 
+  gap:8px; 
+  padding:10px 14px; 
+  border-radius:10px; 
+  border:none;
+  font-weight:700; 
+  cursor:pointer;
+}
+
+.btn-primary-lk { 
+  background: linear-gradient(90deg,var(--lk-accent), #f4c14a); 
+  color:#091018; 
+  box-shadow: 0 8px 30px rgba(247,179,43,0.12); 
+}
+
+.btn-outline-lk { 
+  background:transparent; 
+  border:1px solid rgba(255,255,255,0.05); 
+  color:var(--lk-text); 
+}
+
+.btn-ghost-lk { 
+  background:transparent; 
+  color:var(--lk-accent-2); 
+  border:1px dashed rgba(0,212,255,0.06); 
+}
+
+/* Status badges */
+.lk-badge { 
+  padding:6px 8px; 
+  border-radius:8px; 
+  font-weight:700; 
+  font-size:13px; 
+  display:inline-block; 
+}
+
+.lk-badge--delivering { 
+  background: linear-gradient(90deg, rgba(0,212,255,0.06), rgba(247,179,43,0.06)); 
+  color:var(--lk-text); 
+  border:1px solid rgba(255,255,255,0.03); 
+}
+
+.lk-badge--pending { 
+  background: rgba(255,255,255,0.02); 
+  color:var(--lk-subtext); 
+  border:1px solid rgba(255,255,255,0.02); 
+}
+
+.lk-badge--urgent { 
+  background: linear-gradient(90deg,#ff6b6b,#ff8e6b); 
+  color:#0b0b0b; 
+}
+
+/* Order list */
+.lk-orders { 
+  display:flex; 
+  flex-direction:column; 
+  gap:12px; 
+}
+
+.lk-order-row { 
+  display:flex; 
+  gap:12px; 
+  align-items:center; 
+  padding:12px; 
+  border-radius:10px; 
+  background:linear-gradient(180deg, rgba(255,255,255,0.01), rgba(255,255,255,0.005)); 
+  border:1px solid var(--lk-border); 
+}
+
+.lk-order-row .order-meta { 
+  flex:1; 
+}
+
+.lk-order-row .order-actions { 
+  display:flex; 
+  gap:8px; 
+}
+
+/* Small helpers */
+.muted { 
+  color:var(--lk-subtext); 
+}
+
+.text-accent { 
+  color:var(--lk-accent); 
+  font-weight:700; 
+}
+
+/* Адаптивность для кнопок */
+@media (max-width: 640px) {
+  /* Убеждаемся что кнопки не перекрываются */
+  body.lk-theme .fixed.top-4.left-4 {
+    top: 1rem !important;
+    left: 1rem !important;
+    z-index: 40 !important;
+  }
+  
+  body.lk-theme .fixed.bottom-4.right-4 {
+    bottom: 1rem !important;
+    right: 1rem !important;
+    z-index: 50 !important;
+  }
+}
+
+/* Улучшения для навигации */
+body.lk-theme .glass-nav {
+  background: rgba(15, 23, 36, 0.8) !important;
+  backdrop-filter: blur(16px) saturate(180%);
+  -webkit-backdrop-filter: blur(16px) saturate(180%);
+  border-bottom: 1px solid var(--lk-border) !important;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3) !important;
+}
+
+body.lk-theme .nav-link-active {
+  background: linear-gradient(135deg, rgba(247, 179, 43, 0.2), rgba(251, 191, 36, 0.15)) !important;
+  color: var(--lk-accent) !important;
+  box-shadow: 0 2px 8px rgba(247, 179, 43, 0.3) !important;
+}
+
+body.lk-theme .nav-link-inactive {
+  color: var(--lk-subtext) !important;
+}
+
+body.lk-theme .nav-link-inactive:hover {
+  color: var(--lk-text) !important;
+  background: rgba(255, 255, 255, 0.05) !important;
+}
+
+/* Keep LK theme visuals scoped to layout/navigation only.
+   Do NOT override generic Tailwind utility classes globally,
+   otherwise content pages (schedule/orders/wallet) lose contrast and structure. */
+body.lk-theme main {
+  color: inherit;
+}
+
+@media (max-width:900px){
+  .lk-grid { 
+    grid-template-columns: 1fr; 
+  }
+  .lk-sidebar { 
+    order:2; 
+  }
+  .lk-content { 
+    order:1; 
+  }
+  .lk-topbar { 
+    flex-direction:column; 
+    align-items:flex-start; 
+    gap:8px; 
+  }
+}

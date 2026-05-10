@@ -1,0 +1,184 @@
+.gridSection {
+  position: relative;
+  overflow: hidden;
+  padding: clamp(3rem, 8vw, 6rem) 0;
+  background: radial-gradient(circle at 20% 20%, rgba(99, 102, 241, 0.25), transparent 55%),
+    radial-gradient(circle at 80% 0%, rgba(34, 211, 238, 0.18), transparent 55%),
+    linear-gradient(135deg, #0f172a, #111827 65%, #1e293b);
+  color: #f8fafc;
+}
+
+.sectionInner {
+  position: relative;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  z-index: 2;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  max-width: 620px;
+  margin-bottom: clamp(2.5rem, 6vw, 4rem);
+}
+
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.35rem 0.85rem;
+  border-radius: 999px;
+  background: rgba(99, 102, 241, 0.2);
+  font-size: 0.8rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.title {
+  font-size: clamp(2.2rem, 5vw, 3.2rem);
+  font-weight: 800;
+  line-height: 1.1;
+}
+
+.subtitle {
+  font-size: clamp(1rem, 2.2vw, 1.2rem);
+  color: rgba(226, 232, 240, 0.78);
+  line-height: 1.7;
+}
+
+.cardsGrid {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: clamp(1.25rem, 3vw, 2.25rem);
+  perspective: 1400px;
+}
+
+.cardWrapper {
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 0.4s ease, opacity 0.3s ease;
+  will-change: transform;
+}
+
+.cardWrapper:hover {
+  transform: translateY(-6px) scale(1.015);
+}
+
+.card {
+  position: relative;
+  height: 100%;
+  border-radius: 28px;
+  padding: clamp(1.75rem, 4vw, 2.2rem);
+  background: rgba(15, 23, 42, 0.68);
+  border: 1px solid rgba(148, 163, 184, 0.25);
+  box-shadow: 0 25px 50px -12px rgba(15, 23, 42, 0.45);
+  backdrop-filter: blur(18px);
+  overflow: hidden;
+  transition: transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+.card::before {
+  content: '';
+  position: absolute;
+  inset: -40% -40% 40% 40%;
+  background: radial-gradient(circle, rgba(99, 102, 241, 0.45), transparent 60%);
+  opacity: 0;
+  transition: opacity 0.35s ease;
+}
+
+.cardWrapper:hover .card::before {
+  opacity: 1;
+}
+
+.iconWrap {
+  width: 64px;
+  height: 64px;
+  border-radius: 20px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.7rem;
+  margin-bottom: 1.5rem;
+  background: rgba(99, 102, 241, 0.2);
+  box-shadow: 0 15px 35px rgba(99, 102, 241, 0.3);
+  transition: transform 0.25s ease;
+}
+
+.cardWrapper:hover .iconWrap {
+  transform: translateZ(35px) scale(1.05);
+}
+
+.cardTitle {
+  font-size: clamp(1.1rem, 2.4vw, 1.45rem);
+  font-weight: 700;
+  margin-bottom: 0.6rem;
+}
+
+.cardDescription {
+  color: rgba(226, 232, 240, 0.75);
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin-bottom: 1.25rem;
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1.6rem;
+}
+
+.tag {
+  padding: 0.35rem 0.75rem;
+  border-radius: 999px;
+  font-size: 0.75rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  background: rgba(148, 163, 184, 0.2);
+  color: rgba(226, 232, 240, 0.85);
+}
+
+.ctaButton {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.7rem 1.4rem;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.12);
+  color: #f8fafc;
+  font-weight: 600;
+  font-size: 0.95rem;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.ctaButton:hover {
+  background: rgba(255, 255, 255, 0.18);
+  transform: translateY(-2px);
+}
+
+.backgroundGlow {
+  position: absolute;
+  inset: -30% -20%;
+  pointer-events: none;
+  background: radial-gradient(circle, rgba(99, 102, 241, 0.35), transparent 60%);
+  opacity: 0.4;
+  filter: blur(64px);
+}
+
+@media (max-width: 1024px) {
+  .cardsGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 680px) {
+  .cardsGrid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .cardWrapper:hover {
+    transform: translateY(-4px) scale(1.01);
+  }
+}

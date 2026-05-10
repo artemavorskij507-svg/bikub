@@ -1,0 +1,49 @@
+@extends('layouts.app')
+@section('title', 'Категорії послуг — GLF BiKuBe')
+@section('description', 'Оберіть категорію послуг.')
+@section('content')
+<style>
+.hero-bg{position:relative;overflow:hidden;background:linear-gradient(135deg,#0f172a 0%,#1e293b 30%,#0f172a 60%,#1a1a2e 100%)}
+.hero-bg::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 80% 60% at 20% 80%,rgba(6,182,212,.12) 0%,transparent 60%),radial-gradient(ellipse 60% 40% at 80% 20%,rgba(139,92,246,.1) 0%,transparent 60%),radial-gradient(ellipse 50% 50% at 50% 50%,rgba(236,72,153,.08) 0%,transparent 70%);animation:bgShift 15s ease-in-out infinite alternate}
+@keyframes bgShift{0%{filter:hue-rotate(0deg);transform:scale(1)}50%{filter:hue-rotate(30deg);transform:scale(1.05)}100%{filter:hue-rotate(-15deg);transform:scale(1)}}
+.grid-overlay{position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.03) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.03) 1px,transparent 1px);background-size:60px 60px;animation:gridScroll 30s linear infinite}
+@keyframes gridScroll{0%{transform:translate(0,0)}100%{transform:translate(60px,60px)}}
+.cat-card-wrapper{perspective:1200px;position:relative;z-index:10}
+.cat-card{position:relative;transform-style:preserve-3d;transition:transform .5s cubic-bezier(.23,1,.32,1),box-shadow .5s ease;border:none;backface-visibility:hidden}
+.cat-card:hover{transform:translateY(-12px) rotateX(4deg) rotateY(-2deg) scale(1.03);box-shadow:0 30px 60px rgba(0,0,0,.35),0 15px 30px rgba(0,0,0,.2),0 0 40px var(--card-glow,rgba(6,182,212,.3))}
+.cat-card-inner{position:relative;background:rgba(255,255,255,.05);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border:1px solid rgba(255,255,255,.1);border-radius:24px;padding:2.5rem 2rem 2rem;overflow:hidden}
+.cat-card-inner::before{content:'';position:absolute;top:-50%;left:-50%;width:200%;height:200%;background:conic-gradient(from 0deg,transparent,rgba(255,255,255,.05),transparent 30%);animation:shineRotate 6s linear infinite}
+@keyframes shineRotate{0%{transform:rotate(0deg)}100%{transform:rotate(360deg)}}
+.cat-card-inner>*{position:relative;z-index:2}
+.card-icon-3d{width:72px;height:72px;display:flex;align-items:center;justify-content:center;border-radius:20px;font-size:2rem;color:#fff;margin-bottom:1.5rem;background:var(--icon-grad);box-shadow:0 8px 25px var(--icon-shadow),0 0 0 4px rgba(255,255,255,.05);transform:translateZ(20px);transition:transform .3s ease}
+.cat-card:hover .card-icon-3d{transform:translateZ(40px) scale(1.1) rotateY(10deg)}
+.service-count{display:inline-flex;align-items:center;gap:.3rem;padding:.25rem .7rem;background:rgba(255,255,255,.08);border-radius:20px;font-size:.72rem;color:rgba(255,255,255,.5);margin-bottom:.5rem}
+.card-cta{display:inline-flex;align-items:center;gap:.5rem;margin-top:1.2rem;padding:.65rem 1.5rem;border-radius:50px;font-weight:600;font-size:.88rem;text-decoration:none;transition:all .3s ease;background:var(--cta-grad);color:#fff;box-shadow:0 4px 15px var(--cta-shadow)}
+.card-cta:hover{transform:translateY(-2px) scale(1.05);box-shadow:0 8px 25px var(--cta-shadow);filter:brightness(1.15)}
+.card-cta .arr{transition:transform .3s ease;display:inline-block}
+.card-cta:hover .arr{transform:translateX(4px)}
+.book-section{margin-top:1.5rem;padding-top:1.5rem;border-top:1px solid rgba(255,255,255,.08)}
+.book-label{font-size:.7rem;text-transform:uppercase;letter-spacing:.15em;color:rgba(255,255,255,.35);margin-bottom:.5rem}
+.book-link{display:inline-flex;align-items:center;gap:.4rem;padding:.3rem .7rem;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.1);border-radius:10px;color:rgba(255,255,255,.7);font-size:.78rem;text-decoration:none;transition:all .25s ease;margin-right:.3rem;margin-bottom:.3rem}
+.book-link:hover{background:rgba(255,255,255,.15);color:#fff;border-color:rgba(255,255,255,.3);transform:translateY(-2px)}
+@keyframes gradText{0%,100%{background-position:0% 50%}50%{background-position:100% 50%}}
+.hero-title{background:linear-gradient(135deg,#22d3ee,#a78bfa,#f472b6,#fbbf24,#34d399,#22d3ee);background-size:400% 400%;animation:gradText 8s ease infinite;-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+.categories-section{position:relative;z-index:1;background:rgba(15,23,42,.85);backdrop-filter:blur(10px)}
+#flag-bg{position:fixed;inset:0;z-index:0;opacity:0;transition:opacity .8s cubic-bezier(.4,0,.2,1);pointer-events:none;background-size:cover;background-position:center}
+#flag-bg.on{opacity:1}
+#flag-bg::after{content:'';position:absolute;inset:0;background:rgba(0,0,0,.75);backdrop-filter:blur(8px)}
+@media(max-width:768px){.cat-card-inner{padding:1.5rem 1.2rem 1.2rem}.card-icon-3d{width:56px;height:56px;font-size:1.5rem}}
+</style>
+<div id="flag-bg"></div>
+<div class="hero-bg relative">
+  <div class="grid-overlay"></div>
+  <div id="particles" class="absolute inset-0 pointer-events-none overflow-hidden"></div>
+  <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-28 sm:py-36 text-center">
+    <div class="inline-flex items-center gap-2 px-5 py-2 rounded-full bg-cyan-500/10 border border-cyan-400/20 mb-8">
+      <span class="w-2 h-2 rounded-full bg-cyan-400 animate-pulse"></span>
+      <span class="text-sm tracking-widest uppercase text-cyan-300/80">GLF BiKuBe Service Hub</span>
+    </div>
+    <h1 class="hero-title text-5xl sm:text-6xl md:text-7xl font-black tracking-tight mb-6 leading-[1.1]">Категорії послуг</h1>
+    <p class="max-w-3xl mx-auto text-lg sm:text-xl text-slate-300/90 leading-8 mb-10">Оберіть категорію — від <span class="text-cyan-400 font-semibold">доставки</span> та <span class="text-violet-400 font-semibold">переїзду</span> до <span class="text-emerald-400 font-semibold">соціальної допомоги</span>, <span class="text-amber-400 font-semibold">їжі</span> та <span class="text-sky-400 font-semibold">IT-рішень</span>.</p>
+    <div class="flex flex-col sm:flex-row justify-center gap-4">
+      <a href="#cats" class="group inline-flex items-center gap-2 rounded-full bg-cyan-500 px-8 py-4 text-sm font-bold text-slate-900 shadow-lg shadow-cyan-500/30 hover:bg-cyan-400 transition-all hover:-translate-y-0.5"><span>Переглянути всі послуги</span><svg class="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-

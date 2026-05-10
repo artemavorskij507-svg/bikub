@@ -1,0 +1,2563 @@
+{
+  "policy_version": "model_policy_v1_2026-04-30",
+  "timestamp": "2026-04-30T10:20:23.043250+00:00",
+  "company": {
+    "id": "cd220028-fbc0-4a2a-8bfd-bbcb129c31ec",
+    "name": "Агенство"
+  },
+  "mode": "dry_run_then_apply",
+  "summary": {
+    "total_agents": 161,
+    "matched_by_exact_role": 160,
+    "matched_by_division_default": 0,
+    "matched_by_global_default": 1,
+    "unsupported_model_ids": [],
+    "unmatched_roles": [
+      {
+        "id": "4f087aad-0260-4db7-bf30-296e61d8dc81",
+        "name": "Поплавок Вова"
+      }
+    ],
+    "updated_count": 0,
+    "failed_count": 0,
+    "unchanged_count": 161,
+    "active_core_heartbeat_checked": 15
+  },
+  "dry_run": [
+    {
+      "id": "cb29f2dd-1546-421e-8aab-64bcb1fdc96d",
+      "name": "Senior Project Manager",
+      "status": "paused",
+      "staffingState": "standby_pool",
+      "current_model": "gpt-5",
+      "target_model": "gpt-5",
+      "match_type": "exact_role",
+      "unsupported": false
+    },
+    {
+      "id": "a61c5947-d166-4ba1-9534-15bbb1b877be",
+      "name": "Cultural Intelligence Strategist",
+      "status": "paused",
+      "staffingState": "standby_pool",
+      "current_model": "gpt-5.4",
+      "target_model": "gpt-5.4",
+      "match_type": "exact_role",
+      "unsupported": false
+    },
+    {
+      "id": "3d1c3020-f916-4f15-ab9a-2785f70ab293",
+      "name": "China Market Localization Strategist",
+      "status": "paused",
+      "staffingState": "standby_pool",
+      "current_model": "gpt-5.4",
+      "target_model": "gpt-5.4",
+      "match_type": "exact_role",
+      "unsupported": false
+    },
+    {
+      "id": "36a28e02-8d3a-43da-a65a-c7120eb0b81b",
+      "name": "Identity Graph Operator",
+      "status": "paused",
+      "staffingState": "standby_pool",
+      "current_model": "gpt-5.4",
+      "target_model": "gpt-5.4",
+      "match_type": "exact_role",
+      "unsupported": false
+    },
+    {
+      "id": "b9c47145-f9c2-43f5-8b6e-abe82ac625e9",
+      "name": "API Tester",
+      "status": "error",
+      "staffingState": "active_core",
+      "current_model": "gpt-5.3-codex-spark",
+      "target_model": "gpt-5.3-codex-spark",
+      "match_type": "exact_role",
+      "unsupported": false
+    },
+    {
+      "id": "04e1fdfd-7dd8-4b60-8ea5-1b3656a79702",
+      "name": "Threat Detection Engineer",
+      "status": "paused",
+      "staffingState": "standby_pool",
+      "current_model": "o3",
+      "target_model": "o3",
+      "match_type": "exact_role",
+      "unsupported": false
+    },
+    {
+      "id": "49d53429-f0d3-42a9-ba01-a5e62ecb8627",
+      "name": "Trend Researcher",
+      "status": "paused",
+      "staffingState": "standby_pool",
+      "current_model": "gpt-5",
+      "target_model": "gpt-5",
+      "match_type": "exact_role",
+      "unsupported": false
+    },
+    {
+      "id": "4e81eb20-8914-454a-9233-25f2e7ef3a1c",
+      "name": "Feedback Synthesizer",
+      "status": "paused",
+      "staffingState": "standby_pool",
+      "current_model": "gpt-5-mini",
+      "target_model": "gpt-5-mini",
+      "match_type": "exact_role",
+      "unsupported": false
+    },
+    {
+      "id": "c2f018ed-2d09-4d13-be17-4998a643cbc4",
+      "name": "Language Translator",
+      "status": "paused",
+      "staffingState": "standby_pool",
+      "current_model": "gpt-5-mini",
+      "target_model": "gpt-5-mini",
+      "match_type": "exact_role",
+      "unsupported": false
+    },
+    {
+      "id": "3112e11a-7d2d-4fe2-8edc-779d1c32db17",
+      "name": "Pipeline Analyst",
+      "status": "paused",
+      "staffingState": "standby_pool",
+      "current_model": "gpt-5-mini",
+      "target_model": "gpt-5-mini",
+      "match_type": "exact_role",
+      "unsupported": false
+    },
+    {
+      "id": "41c8cc10-2630-4360-a386-940729cc23ff",
+      "name": "SRE",
+      "status": "error",
+      "staffingState": "active_core",
+      "current_model": "o3",
+      "target_model": "o3",
+      "match_type": "exact_role",
+      "unsupported": false
+    },
+    {
+      "id": "8e56e3b0-0f48-498f-9346-1623e7cd43dd",
+      "name": "Twitter Engager",
+      "status": "paused",
+      "staffingState": "standby_pool",
+      "current_model": "gpt-5-nano",
+      "target_model": "gpt-5-nano",
+      "match_type": "exact_role",
+      "unsupported": false
+    },
+    {
+      "id": "c17eed80-fedc-4f35-b56a-067bccee0c33",
+      "name": "Behavioral Nudge Engine",
+      "status": "paused",
+      "staffingState": "standby_pool",
+      "current_model": "gpt-5",
+      "target_model": "gpt-5",
+      "match_type": "exact_role",
+      "unsupported": false
+    },
+    {
+      "id": "683484c8-dfb0-4ed5-83ed-b33af5411a2b",
+      "name": "Infrastructure Maintainer",
+      "status": "paused",
+      "staffingState": "standby_pool",
+      "current_model": "gpt-5.3-codex-spark",
+      "target_model": "gpt-5.3-codex-spark",
+      "match_type": "exact_role",
+      "unsupported": false
+    },
+    {
+      "id": "1256be95-f1a4-4d5e-9788-5e0143061cab",
+      "name": "SEO Specialist",
+      "status": "paused",
+      "staffingState": "standby_pool",
+      "current_model": "gpt-5",
+      "target_model": "gpt-5",
+      "match_type": "exact_role",
+      "unsupported": false
+    },
+    {
+      "id": "09a614fb-e593-4680-b43f-d51b368580a1",
+      "name": "Sales Coach",
+      "status": "paused",
+      "staffingState": "standby_pool",
+      "current_model": "gpt-5",
+      "target_model": "gpt-5",
+      "match_type": "exact_role",
+      "unsupported": false
+    },
+    {
+      "id": "576ca873-7e59-4939-bfcc-517c610c7be3",
+      "name": "Technical Writer",
+      "status": "paused",
+      "staffingState": "standby_pool",
+      "current_model": "gpt-5-mini",
+      "target_model": "gpt-5-mini",
+      "match_type": "exact_role",
+      "unsupported": false
+    },
+    {
+      "id": "68121be7-b2b0-4fd2-85d5-abaddd29d943",
+      "name": "Investment Researcher",
+      "status": "paused",
+      "staffingState": "standby_pool",
+      "current_model": "o3",
+      "target_model": "o3",
+      "match_type": "exact_role",
+      "unsupported": false
+    },
+    {
+      "id": "82852058-01da-4929-af20-9f361a79d2bb",
+      "name": "PPC Campaign Strategist",
+      "status": "paused",
+      "staffingState": "standby_pool",
+      "current_model": "gpt-5",
+      "target_model": "gpt-5",
+      "match_type": "exact_role",
+      "unsupported": false
+    },
+    {
+      "id": "ec83d0bd-3247-436c-a300-317ccc156ae4",
+      "name": "Bilibili Content Strategist",
+      "status": "paused",
+      "staffingState": "standby_pool",
+      "current_model": "gpt-5",
+      "target_model": "gpt-5",
+      "match_type": "exact_role",
+      "unsupported": false
+    },
+    {
+      "id": "6c095321-af52-420b-ac20-01ad27f66714",
+      "name": "Livestream Commerce Coach",
+      "status": "paused",
+      "staffingState": "standby_pool",
+      "current_model": "gpt-5",
+      "target_model": "gpt-5",
+      "match_type": "exact_role",
+      "unsupported": false
+    },
+    {
+      "id": "156643fe-5a09-4307-b896-157212828a1e",
+      "name": "Backend Architect",
+      "status": "error",
+      "staffingState": "active_core",
+      "current_model": "gpt-5.4",
+      "target_model": "gpt-5.4",
+      "match_type": "exact_role",
+      "unsupported": false
+    },
+    {
+      "id": "093b826d-e896-47f6-baac-0d39f3e5e950",
+      "name": "Civil Engineer",
+      "status": "paused",
+      "staffingState": "standby_pool",
+      "current_model": "gpt-5.4",
+      "target_model": "gpt-5.4",
+      "match_type": "exact_role",
+      "unsupported": false
+    },
+    {
+      "id": "02a49a62-1924-4c00-aa97-36db3cdd28d3",
+      "name": "Tool Evaluator",
+      "status": "paused",
+      "staffingState": "standby_pool",
+      "current_model": "o4-mini",
+      "target_model": "o4-mini",
+      "match_type": "exact_role",
+      "unsupported": false
+    },
+    {
+      "id": "78464bcc-85f9-40b0-a5b5-2c0c8d4c09f5",
+      "name": "Studio Operations",
+      "status": "paused",
+      "staffingState": "standby_pool",
+      "current_model": "gpt-5-mini",
+      "target_model": "gpt-5-mini",
+      "match_type": "exact_role",
+      "unsupported": false
+    },
+    {
+      "id": "ebdfa9bd-1879-4fb2-a600-b62ac14adf7b",
+      "name": "Rapid Prototyper",
+      "status": "paused",
+      "staffingState": "standby_pool",
+      "current_model": "gpt-5.3-codex-spark",
+      "target_model": "gpt-5.3-codex-spark",
+      "match_type": "exact_role",
+      "unsupported": false
+    },
+    {
+      "id": "f011f83a-2ae3-4a56-9a0d-ab5b31acbd6d",
+      "name": "Reality Checker",
+      "status": "paused",
+      "staffingState": "standby_pool",
+      "current_model": "o3",
+      "target_model": "o3",
+      "match_type": "exact_role",
+      "unsupported": false
+    },
+    {
+      "id": "39975c77-1209-4f9b-8162-d1773eb90a3b",
+      "name": "Codebase Onboarding Engineer",
+      "status": "paused",
+      "staffingState": "standby_pool",
+      "current_model": "gpt-5-mini",
+      "target_model": "gpt-5-mini",
+      "match_type": "exact_role",
+      "unsupported": false
+    },
+    {
+      "id": "9f7ac002-a0e3-4f7d-a2a6-a12a0ed1a014",
+      "name": "Compliance Auditor",
+      "status": "paused",
+      "staffingState": "standby_pool",
+      "current_model": "o3",
+      "target_model": "o3",
+      "match_type": "exact_role",
+      "unsupported": false
+    },
+    {
+      "id": "e81e924c-7da4-4ef4-b123-e4e37bfb7249",
+      "name": "Carousel Growth Engine",
+      "status": "paused",
+      "staffingState": "standby_pool",
+      "current_model": "gpt-5-mini",
+      "target_model": "gpt-5-mini",
+      "match_type": "exact_role",
+      "unsupported": false
+    },
+    {
+      "id": "b121e0c8-da29-4845-a806-4c504b1ff099",
+      "name": "TikTok Strategist",
+      "status": "paused",
+      "staffingState": "standby_pool",
+      "current_model": "gpt-5-mini",
+      "target_model": "gpt-5-mini",
+      "match_type": "exact_role",
+      "unsupported": false
+    },
+    {
+      "id": "578b7fb9-a44f-41be-a5c5-ebf8ef7db1cc",
+      "name": "Model QA Specialist",
+      "status": "paused",
+      "staffingState": "standby_pool",
+      "current_model": "o3",
+      "target_model": "o3",
+      "match_type": "exact_role",
+      "unsupported": false
+    },
+    {
+      "id": "39062021-7ced-4ca0-ba73-3901b365891e",
+      "name": "Financial Analyst",
+      "status": "paused",
+      "staffingState": "standby_pool",
+      "current_model": "gpt-5.4",
+      "target_model": "gpt-5.4",
+      "match_type": "exact_role",
+      "unsupported": false
+    },
+    {
+      "id": "45f35a81-7e62-46b9-9c1b-d39eadda07ef",
+      "name": "Historian",
+      "status": "paused",
+      "staffingState": "standby_pool",
+      "current_model": "gpt-5.4",
+      "target_model": "gpt-5.4",
+      "match_type": "exact_role",
+      "unsupported": false
+    },
+    {
+      "id": "9d18d709-da90-4d81-a0b2-3e29e5145270",
+      "name": "Workflow Architect",
+      "status": "paused",
+      "staffingState": "standby_pool",
+      "current_model": "gpt-5.4",
+      "target_model": "gpt-5.4",
+      "match_type": "exact_role",
+      "unsupported": false
+    },
+    {
+      "id": "a16566ae-0100-4e98-8f89-b67df29b4687",
+      "name": "Healthcare Marketing Compliance",
+      "status": "paused",
+      "staffingState": "standby_pool",
+      "current_model": "o3",
+      "target_model": "o3",
+      "match_type": "exact_role",
+      "unsupported": false
+    },
+    {
+      "id": "fe1bc4f1-8e57-432a-a861-76abbefde751",
+      "name": "Developer Advocate",
+      "status": "paused",
+      "staffingState": "standby_pool",
+      "current_model": "gpt-5",
+      "target_model": "gpt-5",
+      "match_type": "exact_role",
+      "unsupported": false
+    },
+    {
+      "id": "19685502-771d-4570-9631-607529ad65f0",
+      "name": "visionOS Spatial Engineer",
+      "status": "paused",
+      "staffingState": "standby_pool",
+      "current_model": "gpt-5.3-codex",
+      "target_model": "gpt-5.3-codex",
+      "match_type": "exact_role",
+      "unsupported": false
+    },
+    {
+      "id": "bb4b6803-5565-48df-b848-c30e8c68a496",
+      "name": "ZK Steward",
+      "status": "paused",
+      "staffingState": "standby_pool",
+      "current_model": "o3",
+      "target_model": "o3",
+      "match_type": "exact_role",
+      "unsupported": false
+    },
+    {
+      "id": "92107a12-02dc-4d1c-9f98-6ff03aa7324d",
+      "name": "AI Engineer",
+      "status": "error",
+      "staffingState": "active_core",
+      "current_model": "gpt-5.4",
+      "target_model": "gpt-5.4",
+      "match_type": "exact_role",
+      "unsupported": false
+    },
+    {
+      "id": "0a11fdc9-091c-43d5-b5eb-5949a1a84995",
+      "name": "Frontend Developer",
+      "status": "error",
+      "staffingState": "active_core",
+      "current_model": "gpt-5.3-codex",
+      "target_model": "gpt-5.3-codex",
+      "match_type": "exact_role",
+      "unsupported": false
+    },
+    {
+      "id": "97d3c591-841e-4156-8a24-be50afa7ba18",
+      "name": "Finance Tracker",
+      "status": "paused",
+      "staffingState": "standby_pool",
+      "current_model": "gpt-5-mini",
+      "target_model": "gpt-5-mini",
+      "match_type": "exact_role",
+      "unsupported": false
+    },
+    {
+      "id": "23f711bf-8adb-47ba-8813-2152cfea9108",
+      "name": "Account Strategist",
+      "status": "paused",
+      "staffingState": "standby_pool",
+      "current_model": "gpt-5",
+      "target_model": "gpt-5",
+      "match_type": "exact_role",
+      "unsupported": false
+    },
+    {
+      "id": "4f087aad-0260-4db7-bf30-296e61d8dc81",
+      "name": "Поплавок Вова",
+      "status": "error",
+      "staffingState": "active_core",
+      "current_model": "gpt-5-mini",
+      "target_model": "gpt-5-mini",
+      "match_type": "global_default",
+      "unsupported": false
+    },
+    {
+      "id": "890f7160-63a8-4fdf-9e02-257cd4844354",
+      "name": "Document Generator",
+      "status": "paused",
+      "staffingState": "standby_pool",
+      "current_model": "gpt-5-mini",
+      "target_model": "gpt-5-mini",
+      "match_type": "exact_role",
+      "unsupported": false
+    },
+    {
+      "id": "1bde7077-5e38-47cd-b145-607610156364",
+      "name": "Product Manager",
+      "status": "error",
+      "staffingState": "active_core",
+      "current_model": "gpt-5.4",
+      "target_model": "gpt-5.4",
+      "match_type": "exact_role",
+      "unsupported": false
+    },
+    {
+      "id": "76ec538d-fbda-4a90-ab7f-44f74bf483c1",
+      "name": "Sprint Prioritizer",
+      "status": "error",
+      "staffingState": "active_core",
+      "current_model": "o4-mini",
+      "target_model": "o4-mini",
+      "match_type": "exact_role",
+      "unsupported": false
+    },
+    {
+      "id": "9cb1e5ed-c450-4b3b-80e0-353506c35141",
+      "name": "Korean Business Navigator",
+      "status": "paused",
+      "staffingState": "standby_pool",
+      "current_model": "gpt-5",
+      "target_model": "gpt-5",
+      "match_type": "exact_role",
+      "unsupported": false
+    },
+    {
+      "id": "43882569-76d8-4522-9914-970beed3afab",
+      "name": "Project Shepherd",
+      "status": "error",
+      "staffingState": "active_core",
+      "current_model": "gpt-5-mini",
+      "target_model": "gpt-5-mini",
+      "match_type": "exact_role",
+      "unsupported": false
+    },
+    {
+      "id": "4cb4ec6d-93b8-476c-ba88-403393c6e144",
+      "name": "Security Engineer",
+      "status": "error",
+      "staffingState": "active_core",
+      "current_model": "o3",
+      "target_model": "o3",
+      "match_type": "exact_role",
+      "unsupported": false
+    },
+    {
+      "id": "4c72dee4-2beb-4cda-a123-1c16e281f1ed",
+      "name": "UX Researcher",
+      "status": "paused",
+      "staffingState": "standby_pool",
+      "current_model": "gpt-5",
+      "target_model": "gpt-5",
+      "match_type": "exact_role",
+      "unsupported": false
+    },
+    {
+      "id": "80c97b94-8a59-483e-b21f-a0ea4a694988",
+      "name": "Supply Chain Strategist",
+      "status": "paused",
+      "staffingState": "standby_pool",
+      "current_model": "gpt-5.4",
+      "target_model": "gpt-5.4",
+      "match_type": "exact_role",
+      "unsupported": false
+    },
+    {
+      "id": "e1f8b466-1ccd-4420-9530-1bcd422b6508",
+      "name": "Incident Response Commander",
+      "status": "paused",
+      "staffingState": "standby_pool",
+      "current_model": "o3",
+      "target_model": "o3",
+      "match_type": "exact_role",
+      "unsupported": false
+    },
+    {
+      "id": "f1a8b559-cb7e-42c4-8587-12716bf695e9",
+      "name": "Automation Governance Architect",
+      "status": "paused",
+      "staffingState": "standby_pool",
+      "current_model": "o3",
+      "target_model": "o3",
+      "match_type": "exact_role",
+      "unsupported": false
+    },
+    {
+      "id": "2a9866d5-1b02-4dec-8619-c7821814814d",
+      "name": "Agents Orchestrator",
+      "status": "paused",
+      "staffingState": "standby_pool",
+      "current_model": "gpt-5.4",
+      "target_model": "gpt-5.4",
+      "match_type": "exact_role",
+      "unsupported": false
+    },
+    {
+      "id": "1e9e7ea5-84ea-46ea-a3d4-54f37f0d2ac0",
+      "name": "Studio Producer",
+      "status": "paused",
+      "staffingState": "standby_pool",
+      "current_model": "gpt-5-mini",
+      "target_model": "gpt-5-mini",
+      "match_type": "exact_role",
+      "unsupported": false
+    },
+    {
+      "id": "80964cb8-bd12-41a1-855d-3e5417a4cdb2",
+      "name": "Data Engineer",
+      "status": "error",
+      "staffingState": "active_core",
+      "current_model": "gpt-5.3-codex",
+      "target_model": "gpt-5.3-codex",
+      "match_type": "exact_role",
+      "unsupported": false
+    },
+    {
+      "id": "b5d4640c-7a11-433c-ba63-366812263a02",
+      "name": "Growth Hacker",
+      "status": "paused",
+      "staffingState": "standby_pool",
+      "current_model": "gpt-5",
+      "target_model": "gpt-5",
+      "match_type": "exact_role",
+      "unsupported": false
+    },
+    {
+      "id": "301eb9df-8416-48df-9c07-a3c9c628d03b",
+      "name": "Feishu Integration Developer",
+      "status": "paused",
+      "staffingState": "standby_pool",
+      "current_model": "gpt-5.3-codex",
+      "target_model": "gpt-5.3-codex",
+      "match_type": "exact_role",
+      "unsupported": false
+    },
+    {
+      "id": "be52ba62-c82f-43c4-a6bf-89aac1c1e6a1",
+      "name": "MCP Builder",
+      "status": "paused",
+      "staffingState": "standby_pool",
+      "current_model": "gpt-5.3-codex",
+      "target_model": "gpt-5.3-codex",
+      "match_type": "exact_role",
+      "unsupported": false
+    },
+    {
+      "id": "470c05ec-316c-4076-aadb-06529f935d06",
+      "name": "XR Interface Architect",
+      "status": "paused",
+      "staffingState": "standby_pool",
+      "current_model": "gpt-5.4",
+      "target_model": "gpt-5.4",
+      "match_type": "exact_role",
+      "unsupported": false
+    },
+    {
+      "id": "b25d5fdc-b33d-473f-a3fb-56e46d25cd76",
+      "name": "Corporate Training Designer",
+      "status": "paused",
+      "staffingState": "standby_pool",
+      "current_model": "gpt-5",
+      "target_model": "gpt-5",
+      "match_type": "exact_role",
+      "unsupported": false
+    },
+    {
+      "id": "92925e14-0827-47d5-8eb6-1b8949f3fb19",
+      "name": "Sales Data Extraction Agent",
+      "status": "paused",
+      "staffingState": "standby_pool",
+      "current_model": "gpt-5-mini",
+      "target_model": "gpt-5-mini",
+      "match_type": "exact_role",
+      "unsupported": false
+    },
+    {
+      "id": "d03a99e6-39b4-4ca0-a598-bd6c5954947c",
+      "name": "Solidity Smart Contract Engineer",
+      "status": "paused",
+      "staffingState": "standby_pool",
+      "current_model": "gpt-5.3-codex",
+      "target_model": "gpt-5.3-codex",
+      "match_type": "exact_role",
+      "unsupported": false
+    },
+    {
+      "id": "53db4333-cb38-4131-b963-4cc25d4ef757",
+      "name": "LSP/Index Engineer",
+      "status": "paused",
+      "staffingState": "standby_pool",
+      "current_model": "gpt-5.3-codex",
+      "target_model": "gpt-5.3-codex",
+      "match_type": "exact_role",
+      "unsupported": false
+    },
+    {
+      "id": "b3884e9c-30c0-40d7-9782-3ef2799d78af",
+      "name": "CMS Developer",
+      "status": "paused",
+      "staffingState": "standby_pool",
+      "current_model": "gpt-5.3-codex-spark",
+      "target_model": "gpt-5.3-codex-spark",
+      "match_type": "exact_role",
+      "unsupported": false
+    },
+    {
+      "id": "6b716624-8cdc-4289-b755-3d3b0013ee50",
+      "name": "Tax Strategist",
+      "status": "paused",
+      "staffingState": "standby_pool",
+      "current_model": "o3",
+      "target_model": "o3",
+      "match_type": "exact_role",
+      "unsupported": false
+    },
+    {
+      "id": "187f0dee-58de-4b10-96f6-19c4ab7e37fe",
+      "name": "Git Workflow Master",
+      "status": "paused",
+      "staffingState": "standby_pool",
+      "current_model": "gpt-5-mini",
+      "target_model": "gpt-5-mini",
+      "match_type": "exact_role",
+      "unsupported": false
+    },
+    {
+      "id": "9875caeb-22b3-4f81-970c-240404a33e32",
+      "name": "WeChat Mini Program Developer",
+      "status": "paused",
+      "staffingState": "standby_pool",
+      "current_model": "gpt-5.3-codex",
+      "target_model": "gpt-5.3-codex",
+      "match_type": "exact_role",
+      "unsupported": false
+    },
+    {
+      "id": "40ebec7d-fe08-4434-9596-6d813b45c7ea",
+      "name": "Douyin Strategist",
+      "status": "paused",
+      "staffingState": "standby_pool",
+      "current_model": "gpt-5",
+      "target_model": "gpt-5",
+      "match_type": "exact_role",
+      "unsupported": false
+    },
+    {
+      "id": "c500a9b9-7e0b-4702-929d-70b12fa2305b",
+      "name": "Book Co-Author",
+      "status": "paused",
+      "staffingState": "standby_pool",
+      "current_model": "gpt-5.4",
+      "target_model": "gpt-5.4",
+      "match_type": "exact_role",
+      "unsupported": false
+    },
+    {
+      "id": "b4334f94-154c-46b0-b4a0-ba29ef51877f",
+      "name": "UI Designer",
+      "status": "paused",
+      "staffingState": "standby_pool",
+      "current_model": "gpt-5.4",
+      "target_model": "gpt-5.4",
+      "match_type": "exact_role",
+      "unsupported": false
+    },
+    {
+      "id": "b08d02f8-3eff-404b-96ef-e70ec751630c",
+      "name": "HR Onboarding",
+      "status": "paused",
+      "staffingState": "standby_pool",
+      "current_model": "gpt-5-mini",
+      "target_model": "gpt-5-mini",
+      "match_type": "exact_role",
+      "unsupported": false
+    },
+    {
+      "id": "0b825fed-287a-4b4a-a104-9805a70d4c20",
+      "name": "Inclusive Visuals Specialist",
+      "status": "paused",
+      "staffingState": "standby_pool",
+      "current_model": "o4-mini",
+      "target_model": "o4-mini",
+      "match_type": "exact_role",
+      "unsupported": false
+    },
+    {
+      "id": "6657d8cf-eefc-43ab-a3e8-26201bff842d",
+      "name": "Deal Strategist",
+      "status": "paused",
+      "staffingState": "standby_pool",
+      "current_model": "gpt-5",
+      "target_model": "gpt-5",
+      "match_type": "exact_role",
+      "unsupported": false
+    },
+    {
+      "id": "44d00a90-2b53-4157-a6ae-f8af656e586f",
+      "name": "Content Creator",
+      "status": "paused",
+      "staffingState": "standby_pool",
+      "current_model": "gpt-5-mini",
+      "target_model": "gpt-5-mini",
+      "match_type": "exact_role",
+      "unsupported": false
+    },
+    {
+      "id": "7d7483a0-f242-4591-9f03-33d4fc0a1490",
+      "name": "Tracking & Measurement Specialist",
+      "status": "paused",
+      "staffingState": "standby_pool",
+      "current_model": "gpt-5.3-codex-spark",
+      "target_model": "gpt-5.3-codex-spark",
+      "match_type": "exact_role",
+      "unsupported": false
+    },
+    {
+      "id": "77a796e3-264b-4563-a49d-ec994e4e6c6e",
+      "name": "Visual Storyteller",
+      "status": "paused",
+      "staffingState": "standby_pool",
+      "current_model": "gpt-5",
+      "target_model": "gpt-5",
+      "match_type": "exact_role",
+      "unsupported": false
+    },
+    {
+      "id": "367aab1c-3bfc-48ed-95ca-8c0dc27ca6f7",
+      "name": "Image Prompt Engineer",
+      "status": "paused",
+      "staffingState": "standby_pool",
+      "current_model": "gpt-5",
+      "target_model": "gpt-5",
+      "match_type": "exact_role",
+      "unsupported": false
+    },
+    {
+      "id": "0aa04bd1-861e-4e9a-b84f-6eb7a72c13eb",
+      "name": "Weibo Strategist",
+      "status": "paused",
+      "staffingState": "standby_pool",
+      "current_model": "gpt-5",
+      "target_model": "gpt-5",
+      "match_type": "exact_role",
+      "unsupported": false
+    },
+    {
+      "id": "0557e099-5d8b-4825-ba6e-0131dbc539fc",
+      "name": "Search Query Analyst",
+      "status": "paused",
+      "staffingState": "standby_pool",
+      "current_model": "gpt-5-mini",
+      "target_model": "gpt-5-mini",
+      "match_type": "exact_role",
+      "unsupported": false
+    },
+    {
+      "id": "73c31404-006e-4450-bc45-1cafa046234b",
+      "name": "WeChat Official Account Manager",
+      "status": "paused",
+      "staffingState": "standby_pool",
+      "current_model": "gpt-5",
+      "target_model": "gpt-5",
+      "match_type": "exact_role",
+      "unsupported": false
+    },
+    {
+      "id": "59cdecd0-69ec-433b-8bc9-a37ffddefb56",
+      "name": "Performance Benchmarker",
+      "status": "paused",
+      "staffingState": "standby_pool",
+      "current_model": "o4-mini",
+      "target_model": "o4-mini",
+      "match_type": "exact_role",
+      "unsupported": false
+    },
+    {
+      "id": "616a8b7d-6beb-4d7d-9540-b8f8d85a9d58",
+      "name": "Legal Client Intake",
+      "status": "paused",
+      "staffingState": "standby_pool",
+      "current_model": "gpt-5",
+      "target_model": "gpt-5",
+      "match_type": "exact_role",
+      "unsupported": false
+    },
+    {
+      "id": "eaa52d42-c2af-45da-b80f-b3e10d45f46e",
+      "name": "Accounts Payable Agent",
+      "status": "paused",
+      "staffingState": "standby_pool",
+      "current_model": "gpt-5-mini",
+      "target_model": "gpt-5-mini",
+      "match_type": "exact_role",
+      "unsupported": false
+    },
+    {
+      "id": "7b6e27c0-ae67-4fce-9018-d2fddb1d3926",
+      "name": "Voice AI Integration Engineer",
+      "status": "paused",
+      "staffingState": "standby_pool",
+      "current_model": "gpt-5.4",
+      "target_model": "gpt-5.4",
+      "match_type": "exact_role",
+      "unsupported": false
+    },
+    {
+      "id": "08aa20ea-8f21-4263-80d8-396aab1f77a5",
+      "name": "Programmatic & Display Buyer",
+      "status": "paused",
+      "staffingState": "standby_pool",
+      "current_model": "gpt-5",
+      "target_model": "gpt-5",
+      "match_type": "exact_role",
+      "unsupported": false
+    },
+    {
+      "id": "236f3356-e038-414c-bdec-f2ddfea034b5",
+      "name": "Geographer",
+      "status": "paused",
+      "staffingState": "standby_pool",
+      "current_model": "gpt-5.4",
+      "target_model": "gpt-5.4",
+      "match_type": "exact_role",
+      "unsupported": false
+    },
+    {
+      "id": "db811a6b-6445-4477-a473-50b1f335ab1f",
+      "name": "Narratologist",
+      "status": "paused",
+      "staffingState": "standby_pool",
+      "current_model": "gpt-5",
+      "target_model": "gpt-5",
+      "match_type": "exact_role",
+      "unsupported": false
+    },
+    {
+      "id": "b8dd5f8f-23fd-448a-8ced-fee5d3098c06",
+      "name": "China E-Commerce Operator",
+      "status": "paused",
+      "staffingState": "standby_pool",
+      "current_model": "gpt-5",
+      "target_model": "gpt-5",
+      "match_type": "exact_role",
+      "unsupported": false
+    },
+    {
+      "id": "523339b9-b0df-4138-bbb0-f62076a8be14",
+      "name": "Paid Social Strategist",
+      "status": "paused",
+      "staffingState": "standby_pool",
+      "current_model": "gpt-5",
+      "target_model": "gpt-5",
+      "match_type": "exact_role",
+      "unsupported": false
+    },
+    {
+      "id": "405c577c-2090-42d7-97f6-b317089d3a9d",
+      "name": "Social Media Strategist",
+      "status": "paused",
+      "staffingState": "standby_pool",
+      "current_model": "gpt-5",
+      "target_model": "gpt-5",
+      "match_type": "exact_role",
+      "unsupported": false
+    },
+    {
+      "id": "8949bb75-647c-4ae9-8978-7c674c49676e",
+      "name": "Ad Creative Strategist",
+      "status": "paused",
+      "staffingState": "standby_pool",
+      "current_model": "gpt-5",
+      "target_model": "gpt-5",
+      "match_type": "exact_role",
+      "unsupported": false
+    },
+    {
+      "id": "6a6df125-723f-4af8-814b-1cae34826a40",
+      "name": "Agentic Identity & Trust Architect",
+      "status": "paused",
+      "staffingState": "standby_pool",
+      "current_model": "o3",
+      "target_model": "o3",
+      "match_type": "exact_role",
+      "unsupported": false
+    },
+    {
+      "id": "6d88a1d4-da4e-45c4-90ac-fd36ef742bba",
+      "name": "Terminal Integration Specialist",
+      "status": "paused",
+      "staffingState": "standby_pool",
+      "current_model": "gpt-5.3-codex-spark",
+      "target_model": "gpt-5.3-codex-spark",
+      "match_type": "exact_role",
+      "unsupported": false
+    },
+    {
+      "id": "fa7bf374-234b-4f62-a3d7-161fe539b26c",
+      "name": "Government Digital Presales Consultant",
+      "status": "paused",
+      "staffingState": "standby_pool",
+      "current_model": "gpt-5.4",
+      "target_model": "gpt-5.4",
+      "match_type": "exact_role",
+      "unsupported": false
+    },
+    {
+      "id": "780284ad-e6a8-40d7-9a1b-0a5b803498f2",
+      "name": "Experiment Tracker",
+      "status": "paused",
+      "staffingState": "standby_pool",
+      "current_model": "gpt-5-nano",
+      "target_model": "gpt-5-nano",
+      "match_type": "exact_role",
+      "unsupported": false
+    },
+    {
+      "id": "a9a85809-7c4c-4fcd-adec-2acc2530e6ae",
+      "name": "FP&A Analyst",
+      "status": "paused",
+      "staffingState": "standby_pool",
+      "current_model": "gpt-5.4",
+      "target_model": "gpt-5.4",
+      "match_type": "exact_role",
+      "unsupported": false
+    },
+    {
+      "id": "9193127c-78c9-42a4-b044-7607ef055164",
+      "name": "Jira Workflow Steward",
+      "status": "paused",
+      "staffingState": "standby_pool",
+      "current_model": "gpt-5.3-codex-spark",
+      "target_model": "gpt-5.3-codex-spark",
+      "match_type": "exact_role",
+      "unsupported": false
+    },
+    {
+      "id": "fafc0c42-ea51-499d-bd7c-b3118d88c0b0",
+      "name": "Study Abroad Advisor",
+      "status": "paused",
+      "staffingState": "standby_pool",
+      "current_model": "gpt-5",
+      "target_model": "gpt-5",
+      "match_type": "exact_role",
+      "unsupported": false
+    },
+    {
+      "id": "a7340a14-6ccd-400d-8fc7-6babc87e1786",
+      "name": "Mobile App Builder",
+      "status": "error",
+      "staffingState": "active_core",
+      "current_model": "gpt-5.3-codex",
+      "target_model": "gpt-5.3-codex",
+      "match_type": "exact_role",
+      "unsupported": false
+    },
+    {
+      "id": "4500f659-5b2e-42d0-b6d4-483cc52ef6cf",
+      "name": "Senior Developer",
+      "status": "error",
+      "staffingState": "active_core",
+      "current_model": "gpt-5.3-codex",
+      "target_model": "gpt-5.3-codex",
+      "match_type": "exact_role",
+      "unsupported": false
+    },
+    {
+      "id": "142e2172-3e1f-454f-b791-c0afb15a13de",
+      "name": "Analytics Reporter",
+      "status": "paused",
+      "staffingState": "standby_pool",
+      "current_model": "gpt-5-mini",
+      "target_model": "gpt-5-mini",
+      "match_type": "exact_role",
+      "unsupported": false
+    },
+    {
+      "id": "412423f0-63cb-4df9-9a72-f3948832cd29",
+      "name": "Code Reviewer",
+      "status": "paused",
+      "staffingState": "standby_pool",
+      "current_model": "o4-mini",
+      "target_model": "o4-mini",
+      "match_type": "exact_role",
+      "unsupported": false
+    },
+    {
+      "id": "72233f64-7d4c-4aef-93db-42663e27f7d6",
+      "name": "Legal Billing & Time Tracking",
+      "status": "paused",
+      "staffingState": "standby_pool",
+      "current_model": "gpt-5-mini",
+      "target_model": "gpt-5-mini",
+      "match_type": "exact_role",
+      "unsupported": false
+    },
+    {
+      "id": "eae5fa67-3c9c-4e69-8f44-94ad54af610a",
+      "name": "Executive Summary Generator",
+      "status": "paused",
+      "staffingState": "standby_pool",
+      "current_model": "gpt-5-mini",
+      "target_model": "gpt-5-mini",
+      "match_type": "exact_role",
+      "unsupported": false
+    },
+    {
+      "id": "1eb232a1-d0f5-4858-983b-4d8ba7d2ebf8",
+      "name": "Loan Officer Assistant",
+      "status": "paused",
+      "staffingState": "standby_pool",
+      "current_model": "gpt-5",
+      "target_model": "gpt-5",
+      "match_type": "exact_role",
+      "unsupported": false
+    },
+    {
+      "id": "fd07cb16-0e76-4b7d-8b9d-3ad015815abe",
+      "name": "Anthropologist",
+      "status": "paused",
+      "staffingState": "standby_pool",
+      "current_model": "gpt-5.4",
+      "target_model": "gpt-5.4",
+      "match_type": "exact_role",
+      "unsupported": false
+    },
+    {
+      "id": "6f60b1d4-bd09-406a-9956-b1d886365d5e",
+      "name": "Baidu SEO Specialist",
+      "status": "paused",
+      "staffingState": "standby_pool",
+      "current_model": "gpt-5",
+      "target_model": "gpt-5",
+      "match_type": "exact_role",
+      "unsupported": false
+    },
+    {
+      "id": "c7993fd7-4dbc-4db7-ae8c-65072566fb21",
+      "name": "Zhihu Strategist",
+      "status": "paused",
+      "staffingState": "standby_pool",
+      "current_model": "gpt-5",
+      "target_model": "gpt-5",
+      "match_type": "exact_role",
+      "unsupported": false
+    },
+    {
+      "id": "02c93ab6-5770-4254-842c-f0949967ac4c",
+      "name": "UX Architect",
+      "status": "paused",
+      "staffingState": "standby_pool",
+      "current_model": "gpt-5.4",
+      "target_model": "gpt-5.4",
+      "match_type": "exact_role",
+      "unsupported": false
+    },
+    {
+      "id": "c0f0f75a-41f9-46db-baad-0abce3e797b5",
+      "name": "App Store Optimizer",
+      "status": "paused",
+      "staffingState": "standby_pool",
+      "current_model": "gpt-5",
+      "target_model": "gpt-5",
+      "match_type": "exact_role",
+      "unsupported": false
+    },
+    {
+      "id": "f66a8dc8-8f97-4881-bbba-703a2ee2ef49",
+      "name": "Outbound Strategist",
+      "status": "paused",
+      "staffingState": "standby_pool",
+      "current_model": "gpt-5-mini",
+      "target_model": "gpt-5-mini",
+      "match_type": "exact_role",
+      "unsupported": false
+    },
+    {
+      "id": "50a279d5-80e9-4e49-9fbe-9f2b0905d41c",
+      "name": "Reddit Community Builder",
+      "status": "paused",
+      "staffingState": "standby_pool",
+      "current_model": "gpt-5-mini",
+      "target_model": "gpt-5-mini",
+      "match_type": "exact_role",
+      "unsupported": false
+    },
+    {
+      "id": "e4092b0b-09a7-4248-b8df-0932528e3526",
+      "name": "macOS Spatial/Metal Engineer",
+      "status": "paused",
+      "staffingState": "standby_pool",
+      "current_model": "gpt-5.3-codex",
+      "target_model": "gpt-5.3-codex",
+      "match_type": "exact_role",
+      "unsupported": false
+    },
+    {
+      "id": "b16d46b2-c8cd-4e10-bfc7-789c98a51eb5",
+      "name": "Private Domain Operator",
+      "status": "paused",
+      "staffingState": "standby_pool",
+      "current_model": "gpt-5",
+      "target_model": "gpt-5",
+      "match_type": "exact_role",
+      "unsupported": false
+    },
+    {
+      "id": "1413c379-dba8-4016-aaef-e4e7b853d75b",
+      "name": "Xiaohongshu Specialist",
+      "status": "paused",
+      "staffingState": "standby_pool",
+      "current_model": "gpt-5",
+      "target_model": "gpt-5",
+      "match_type": "exact_role",
+      "unsupported": false
+    },
+    {
+      "id": "1ff53186-b295-44fc-b43e-ff8b82d52ed8",
+      "name": "Short-Video Editing Coach",
+      "status": "paused",
+      "staffingState": "standby_pool",
+      "current_model": "gpt-5-mini",
+      "target_model": "gpt-5-mini",
+      "match_type": "exact_role",
+      "unsupported": false
+    },
+    {
+      "id": "7bc7d61c-eae3-4f3c-acff-5f944cee0fb0",
+      "name": "DevOps Automator",
+      "status": "error",
+      "staffingState": "active_core",
+      "current_model": "gpt-5.3-codex",
+      "target_model": "gpt-5.3-codex",
+      "match_type": "exact_role",
+      "unsupported": false
+    },
+    {
+      "id": "87846301-a9dd-476f-9e89-c8b6a4e8578c",
+      "name": "Support Responder",
+      "status": "error",
+      "staffingState": "active_core",
+      "current_model": "gpt-5-mini",
+      "target_model": "gpt-5-mini",
+      "match_type": "exact_role",
+      "unsupported": false
+    },
+    {
+      "id": "2eb0e3ac-bdd1-4a33-bdbc-f5ec38f2197f",
+      "name": "Whimsy Injector",
+      "status": "paused",
+      "staffingState": "standby_pool",
+      "current_model": "gpt-5-mini",
+      "target_model": "gpt-5-mini",
+      "match_type": "exact_role",
+      "unsupported": false
+    },
+    {
+      "id": "2c3b6b1d-80ed-476c-8187-37f2331bad5a",
+      "name": "AI Citation Strategist",
+      "status": "paused",
+      "staffingState": "standby_pool",
+      "current_model": "o4-mini",
+      "target_model": "o4-mini",
+      "match_type": "exact_role",
+      "unsupported": false
+    },
+    {
+      "id": "a0ca8051-e50b-4e86-8a8b-6341267f075d",
+      "name": "Report Distribution Agent",
+      "status": "paused",
+      "staffingState": "standby_pool",
+      "current_model": "gpt-5-nano",
+      "target_model": "gpt-5-nano",
+      "match_type": "exact_role",
+      "unsupported": false
+    },
+    {
+      "id": "1c51b300-29eb-4d99-a321-fa60551c58ed",
+      "name": "Proposal Strategist",
+      "status": "paused",
+      "staffingState": "standby_pool",
+      "current_model": "gpt-5",
+      "target_model": "gpt-5",
+      "match_type": "exact_role",
+      "unsupported": false
+    },
+    {
+      "id": "2ca665ba-7518-400d-84ae-1e909c7bb336",
+      "name": "Instagram Curator",
+      "status": "paused",
+      "staffingState": "standby_pool",
+      "current_model": "gpt-5-mini",
+      "target_model": "gpt-5-mini",
+      "match_type": "exact_role",
+      "unsupported": false
+    },
+    {
+      "id": "4523ccd9-5497-48a3-a00b-0f4d4d80a6aa",
+      "name": "Customer Service",
+      "status": "paused",
+      "staffingState": "standby_pool",
+      "current_model": "gpt-5-mini",
+      "target_model": "gpt-5-mini",
+      "match_type": "exact_role",
+      "unsupported": false
+    },
+    {
+      "id": "229bab03-4397-42cf-9524-f7512521750f",
+      "name": "Workflow Optimizer",
+      "status": "paused",
+      "staffingState": "standby_pool",
+      "current_model": "gpt-5.4",
+      "target_model": "gpt-5.4",
+      "match_type": "exact_role",
+      "unsupported": false
+    },
+    {
+      "id": "380d6118-38b1-4763-aa85-b481c220c7c2",
+      "name": "Hospitality Guest Services",
+      "status": "paused",
+      "staffingState": "standby_pool",
+      "current_model": "gpt-5-mini",
+      "target_model": "gpt-5-mini",
+      "match_type": "exact_role",
+      "unsupported": false
+    },
+    {
+      "id": "4d606fb1-bb7f-45a9-83f5-5da28ae122ec",
+      "name": "Software Architect",
+      "status": "paused",
+      "staffingState": "standby_pool",
+      "current_model": "gpt-5.4",
+      "target_model": "gpt-5.4",
+      "match_type": "exact_role",
+      "unsupported": false
+    },
+    {
+      "id": "2b81e0e4-56ff-43c3-b858-3cd9888de57e",
+      "name": "AI Data Remediation Engineer",
+      "status": "paused",
+      "staffingState": "standby_pool",
+      "current_model": "gpt-5.4",
+      "target_model": "gpt-5.4",
+      "match_type": "exact_role",
+      "unsupported": false
+    },
+    {
+      "id": "2ab0101f-928d-4afb-ae39-baa8edf15cd6",
+      "name": "Brand Guardian",
+      "status": "paused",
+      "staffingState": "standby_pool",
+      "current_model": "gpt-5",
+      "target_model": "gpt-5",
+      "match_type": "exact_role",
+      "unsupported": false
+    },
+    {
+      "id": "2d395460-4bcc-428b-89af-cc3e34374902",
+      "name": "Blockchain Security Auditor",
+      "status": "paused",
+      "staffingState": "standby_pool",
+      "current_model": "o3",
+      "target_model": "o3",
+      "match_type": "exact_role",
+      "unsupported": false
+    },
+    {
+      "id": "284375c6-02f9-492e-aee0-ef344a156061",
+      "name": "Real Estate Buyer & Seller",
+      "status": "paused",
+      "staffingState": "standby_pool",
+      "current_model": "gpt-5",
+      "target_model": "gpt-5",
+      "match_type": "exact_role",
+      "unsupported": false
+    },
+    {
+      "id": "0be93689-58cd-4bb1-9329-c358f7648bb5",
+      "name": "Accessibility Auditor",
+      "status": "paused",
+      "staffingState": "standby_pool",
+      "current_model": "o4-mini",
+      "target_model": "o4-mini",
+      "match_type": "exact_role",
+      "unsupported": false
+    },
+    {
+      "id": "985f6633-630f-4dc0-b3d9-e76f15855bf3",
+      "name": "Healthcare Customer Service",
+      "status": "paused",
+      "staffingState": "standby_pool",
+      "current_model": "gpt-5",
+      "target_model": "gpt-5",
+      "match_type": "exact_role",
+      "unsupported": false
+    },
+    {
+      "id": "d03c8060-9c88-4865-a0d3-14083b3d7d4b",
+      "name": "French Consulting Market Navigator",
+      "status": "paused",
+      "staffingState": "standby_pool",
+      "current_model": "gpt-5",
+      "target_model": "gpt-5",
+      "match_type": "exact_role",
+      "unsupported": false
+    },
+    {
+      "id": "cedcc1d0-49c8-405c-a3a1-413a95d27f03",
+      "name": "Podcast Strategist",
+      "status": "paused",
+      "staffingState": "standby_pool",
+      "current_model": "gpt-5",
+      "target_model": "gpt-5",
+      "match_type": "exact_role",
+      "unsupported": false
+    },
+    {
+      "id": "0e5d9063-5eb0-4828-8298-293064986694",
+      "name": "Kuaishou Strategist",
+      "status": "paused",
+      "staffingState": "standby_pool",
+      "current_model": "gpt-5",
+      "target_model": "gpt-5",
+      "match_type": "exact_role",
+      "unsupported": false
+    },
+    {
+      "id": "fabf8803-1a5e-4736-9ace-0694842b32ca",
+      "name": "Video Optimization Specialist",
+      "status": "paused",
+      "staffingState": "standby_pool",
+      "current_model": "gpt-5-mini",
+      "target_model": "gpt-5-mini",
+      "match_type": "exact_role",
+      "unsupported": false
+    },
+    {
+      "id": "584bdaa6-cdc7-401e-8765-0378c2d70388",
+      "name": "Legal Document Review",
+      "status": "paused",
+      "staffingState": "standby_pool",
+      "current_model": "o3",
+      "target_model": "o3",
+      "match_type": "exact_role",
+      "unsupported": false
+    },
+    {
+      "id": "ae17aa74-4ded-4125-b523-8cbd13a6c07e",
+      "name": "Email Intelligence Engineer",
+      "status": "paused",
+      "staffingState": "standby_pool",
+      "current_model": "gpt-5.4",
+      "target_model": "gpt-5.4",
+      "match_type": "exact_role",
+      "unsupported": false
+    },
+    {
+      "id": "eff23738-43ee-4f40-961f-50bd5e727538",
+      "name": "LinkedIn Content Creator",
+      "status": "paused",
+      "staffingState": "standby_pool",
+      "current_model": "gpt-5-mini",
+      "target_model": "gpt-5-mini",
+      "match_type": "exact_role",
+      "unsupported": false
+    },
+    {
+      "id": "9721f923-3fc6-4acf-ade6-be851bcc692c",
+      "name": "Database Optimizer",
+      "status": "paused",
+      "staffingState": "standby_pool",
+      "current_model": "gpt-5.4",
+      "target_model": "gpt-5.4",
+      "match_type": "exact_role",
+      "unsupported": false
+    },
+    {
+      "id": "e13af2a4-e64b-44ac-a277-8e7048a15b7d",
+      "name": "Legal Compliance Checker",
+      "status": "paused",
+      "staffingState": "standby_pool",
+      "current_model": "o3",
+      "target_model": "o3",
+      "match_type": "exact_role",
+      "unsupported": false
+    },
+    {
+      "id": "04041a64-8c40-4869-924c-25febdae8241",
+      "name": "XR Immersive Developer",
+      "status": "paused",
+      "staffingState": "standby_pool",
+      "current_model": "gpt-5.3-codex",
+      "target_model": "gpt-5.3-codex",
+      "match_type": "exact_role",
+      "unsupported": false
+    },
+    {
+      "id": "652412e7-1dec-4a09-9b1a-d8cfd56a6520",
+      "name": "Test Results Analyzer",
+      "status": "paused",
+      "staffingState": "standby_pool",
+      "current_model": "o4-mini",
+      "target_model": "o4-mini",
+      "match_type": "exact_role",
+      "unsupported": false
+    },
+    {
+      "id": "8cc4838d-a42f-4588-8137-48b578fb3c5c",
+      "name": "Cross-Border E-Commerce Specialist",
+      "status": "paused",
+      "staffingState": "standby_pool",
+      "current_model": "gpt-5",
+      "target_model": "gpt-5",
+      "match_type": "exact_role",
+      "unsupported": false
+    },
+    {
+      "id": "9d969633-dec4-498b-97e7-d23115f79c72",
+      "name": "Filament Optimization Specialist",
+      "status": "paused",
+      "staffingState": "standby_pool",
+      "current_model": "gpt-5.3-codex",
+      "target_model": "gpt-5.3-codex",
+      "match_type": "exact_role",
+      "unsupported": false
+    },
+    {
+      "id": "5d5ee10d-4517-4692-811d-41bd85d0e4ab",
+      "name": "XR Cockpit Interaction Specialist",
+      "status": "paused",
+      "staffingState": "standby_pool",
+      "current_model": "gpt-5.4",
+      "target_model": "gpt-5.4",
+      "match_type": "exact_role",
+      "unsupported": false
+    },
+    {
+      "id": "9adbb6a8-286d-460b-ab8e-073a4b65d16b",
+      "name": "Sales Engineer",
+      "status": "paused",
+      "staffingState": "standby_pool",
+      "current_model": "gpt-5.4",
+      "target_model": "gpt-5.4",
+      "match_type": "exact_role",
+      "unsupported": false
+    },
+    {
+      "id": "cdb27acd-19a4-4570-92fc-20b97c529803",
+      "name": "Salesforce Architect",
+      "status": "paused",
+      "staffingState": "standby_pool",
+      "current_model": "gpt-5.4",
+      "target_model": "gpt-5.4",
+      "match_type": "exact_role",
+      "unsupported": false
+    },
+    {
+      "id": "dc9df34b-3a78-490c-9374-550c76ee254a",
+      "name": "Psychologist",
+      "status": "paused",
+      "staffingState": "standby_pool",
+      "current_model": "gpt-5.4",
+      "target_model": "gpt-5.4",
+      "match_type": "exact_role",
+      "unsupported": false
+    },
+    {
+      "id": "5517fa9b-b9ba-4f48-a5de-235a0f2bd31c",
+      "name": "Bookkeeper & Controller",
+      "status": "paused",
+      "staffingState": "standby_pool",
+      "current_model": "gpt-5",
+      "target_model": "gpt-5",
+      "match_type": "exact_role",
+      "unsupported": false
+    },
+    {
+      "id": "dcc8cc15-d5c0-46f3-82fa-728af26daa89",
+      "name": "Data Consolidation Agent",
+      "status": "paused",
+      "staffingState": "standby_pool",
+      "current_model": "gpt-5-mini",
+      "target_model": "gpt-5-mini",
+      "match_type": "exact_role",
+      "unsupported": false
+    },
+    {
+      "id": "12e5b31d-a434-48d1-8aa3-df5f8c80345e",
+      "name": "Retail Customer Returns",
+      "status": "paused",
+      "staffingState": "standby_pool",
+      "current_model": "gpt-5-mini",
+      "target_model": "gpt-5-mini",
+      "match_type": "exact_role",
+      "unsupported": false
+    },
+    {
+      "id": "0c63e0b3-a104-4c33-9384-5bb3567642ec",
+      "name": "Evidence Collector",
+      "status": "paused",
+      "staffingState": "standby_pool",
+      "current_model": "gpt-5-mini",
+      "target_model": "gpt-5-mini",
+      "match_type": "exact_role",
+      "unsupported": false
+    },
+    {
+      "id": "21829c1f-31ee-4f11-84a8-18261265c630",
+      "name": "Autonomous Optimization Architect",
+      "status": "paused",
+      "staffingState": "standby_pool",
+      "current_model": "gpt-5.4",
+      "target_model": "gpt-5.4",
+      "match_type": "exact_role",
+      "unsupported": false
+    },
+    {
+      "id": "62e125be-bc0e-4c72-9f7a-b6e87e418d4b",
+      "name": "Recruitment Specialist",
+      "status": "paused",
+      "staffingState": "standby_pool",
+      "current_model": "gpt-5-mini",
+      "target_model": "gpt-5-mini",
+      "match_type": "exact_role",
+      "unsupported": false
+    },
+    {
+      "id": "69e77a3c-953b-4e3d-9b09-1b6a195a88a4",
+      "name": "Paid Media Auditor",
+      "status": "paused",
+      "staffingState": "standby_pool",
+      "current_model": "o4-mini",
+      "target_model": "o4-mini",
+      "match_type": "exact_role",
+      "unsupported": false
+    },
+    {
+      "id": "ce6a12a3-80b9-40e2-bdb9-ea09698df806",
+      "name": "Sales Outreach",
+      "status": "paused",
+      "staffingState": "standby_pool",
+      "current_model": "gpt-5-mini",
+      "target_model": "gpt-5-mini",
+      "match_type": "exact_role",
+      "unsupported": false
+    },
+    {
+      "id": "389da655-1394-413e-aadf-af7632b054e9",
+      "name": "Discovery Coach",
+      "status": "paused",
+      "staffingState": "standby_pool",
+      "current_model": "gpt-5",
+      "target_model": "gpt-5",
+      "match_type": "exact_role",
+      "unsupported": false
+    }
+  ],
+  "updated": [],
+  "failed": [],
+  "unchanged": [
+    {
+      "id": "cb29f2dd-1546-421e-8aab-64bcb1fdc96d",
+      "name": "Senior Project Manager",
+      "model": "gpt-5"
+    },
+    {
+      "id": "a61c5947-d166-4ba1-9534-15bbb1b877be",
+      "name": "Cultural Intelligence Strategist",
+      "model": "gpt-5.4"
+    },
+    {
+      "id": "3d1c3020-f916-4f15-ab9a-2785f70ab293",
+      "name": "China Market Localization Strategist",
+      "model": "gpt-5.4"
+    },
+    {
+      "id": "36a28e02-8d3a-43da-a65a-c7120eb0b81b",
+      "name": "Identity Graph Operator",
+      "model": "gpt-5.4"
+    },
+    {
+      "id": "b9c47145-f9c2-43f5-8b6e-abe82ac625e9",
+      "name": "API Tester",
+      "model": "gpt-5.3-codex-spark"
+    },
+    {
+      "id": "04e1fdfd-7dd8-4b60-8ea5-1b3656a79702",
+      "name": "Threat Detection Engineer",
+      "model": "o3"
+    },
+    {
+      "id": "49d53429-f0d3-42a9-ba01-a5e62ecb8627",
+      "name": "Trend Researcher",
+      "model": "gpt-5"
+    },
+    {
+      "id": "4e81eb20-8914-454a-9233-25f2e7ef3a1c",
+      "name": "Feedback Synthesizer",
+      "model": "gpt-5-mini"
+    },
+    {
+      "id": "c2f018ed-2d09-4d13-be17-4998a643cbc4",
+      "name": "Language Translator",
+      "model": "gpt-5-mini"
+    },
+    {
+      "id": "3112e11a-7d2d-4fe2-8edc-779d1c32db17",
+      "name": "Pipeline Analyst",
+      "model": "gpt-5-mini"
+    },
+    {
+      "id": "41c8cc10-2630-4360-a386-940729cc23ff",
+      "name": "SRE",
+      "model": "o3"
+    },
+    {
+      "id": "8e56e3b0-0f48-498f-9346-1623e7cd43dd",
+      "name": "Twitter Engager",
+      "model": "gpt-5-nano"
+    },
+    {
+      "id": "c17eed80-fedc-4f35-b56a-067bccee0c33",
+      "name": "Behavioral Nudge Engine",
+      "model": "gpt-5"
+    },
+    {
+      "id": "683484c8-dfb0-4ed5-83ed-b33af5411a2b",
+      "name": "Infrastructure Maintainer",
+      "model": "gpt-5.3-codex-spark"
+    },
+    {
+      "id": "1256be95-f1a4-4d5e-9788-5e0143061cab",
+      "name": "SEO Specialist",
+      "model": "gpt-5"
+    },
+    {
+      "id": "09a614fb-e593-4680-b43f-d51b368580a1",
+      "name": "Sales Coach",
+      "model": "gpt-5"
+    },
+    {
+      "id": "576ca873-7e59-4939-bfcc-517c610c7be3",
+      "name": "Technical Writer",
+      "model": "gpt-5-mini"
+    },
+    {
+      "id": "68121be7-b2b0-4fd2-85d5-abaddd29d943",
+      "name": "Investment Researcher",
+      "model": "o3"
+    },
+    {
+      "id": "82852058-01da-4929-af20-9f361a79d2bb",
+      "name": "PPC Campaign Strategist",
+      "model": "gpt-5"
+    },
+    {
+      "id": "ec83d0bd-3247-436c-a300-317ccc156ae4",
+      "name": "Bilibili Content Strategist",
+      "model": "gpt-5"
+    },
+    {
+      "id": "6c095321-af52-420b-ac20-01ad27f66714",
+      "name": "Livestream Commerce Coach",
+      "model": "gpt-5"
+    },
+    {
+      "id": "156643fe-5a09-4307-b896-157212828a1e",
+      "name": "Backend Architect",
+      "model": "gpt-5.4"
+    },
+    {
+      "id": "093b826d-e896-47f6-baac-0d39f3e5e950",
+      "name": "Civil Engineer",
+      "model": "gpt-5.4"
+    },
+    {
+      "id": "02a49a62-1924-4c00-aa97-36db3cdd28d3",
+      "name": "Tool Evaluator",
+      "model": "o4-mini"
+    },
+    {
+      "id": "78464bcc-85f9-40b0-a5b5-2c0c8d4c09f5",
+      "name": "Studio Operations",
+      "model": "gpt-5-mini"
+    },
+    {
+      "id": "ebdfa9bd-1879-4fb2-a600-b62ac14adf7b",
+      "name": "Rapid Prototyper",
+      "model": "gpt-5.3-codex-spark"
+    },
+    {
+      "id": "f011f83a-2ae3-4a56-9a0d-ab5b31acbd6d",
+      "name": "Reality Checker",
+      "model": "o3"
+    },
+    {
+      "id": "39975c77-1209-4f9b-8162-d1773eb90a3b",
+      "name": "Codebase Onboarding Engineer",
+      "model": "gpt-5-mini"
+    },
+    {
+      "id": "9f7ac002-a0e3-4f7d-a2a6-a12a0ed1a014",
+      "name": "Compliance Auditor",
+      "model": "o3"
+    },
+    {
+      "id": "e81e924c-7da4-4ef4-b123-e4e37bfb7249",
+      "name": "Carousel Growth Engine",
+      "model": "gpt-5-mini"
+    },
+    {
+      "id": "b121e0c8-da29-4845-a806-4c504b1ff099",
+      "name": "TikTok Strategist",
+      "model": "gpt-5-mini"
+    },
+    {
+      "id": "578b7fb9-a44f-41be-a5c5-ebf8ef7db1cc",
+      "name": "Model QA Specialist",
+      "model": "o3"
+    },
+    {
+      "id": "39062021-7ced-4ca0-ba73-3901b365891e",
+      "name": "Financial Analyst",
+      "model": "gpt-5.4"
+    },
+    {
+      "id": "45f35a81-7e62-46b9-9c1b-d39eadda07ef",
+      "name": "Historian",
+      "model": "gpt-5.4"
+    },
+    {
+      "id": "9d18d709-da90-4d81-a0b2-3e29e5145270",
+      "name": "Workflow Architect",
+      "model": "gpt-5.4"
+    },
+    {
+      "id": "a16566ae-0100-4e98-8f89-b67df29b4687",
+      "name": "Healthcare Marketing Compliance",
+      "model": "o3"
+    },
+    {
+      "id": "fe1bc4f1-8e57-432a-a861-76abbefde751",
+      "name": "Developer Advocate",
+      "model": "gpt-5"
+    },
+    {
+      "id": "19685502-771d-4570-9631-607529ad65f0",
+      "name": "visionOS Spatial Engineer",
+      "model": "gpt-5.3-codex"
+    },
+    {
+      "id": "bb4b6803-5565-48df-b848-c30e8c68a496",
+      "name": "ZK Steward",
+      "model": "o3"
+    },
+    {
+      "id": "92107a12-02dc-4d1c-9f98-6ff03aa7324d",
+      "name": "AI Engineer",
+      "model": "gpt-5.4"
+    },
+    {
+      "id": "0a11fdc9-091c-43d5-b5eb-5949a1a84995",
+      "name": "Frontend Developer",
+      "model": "gpt-5.3-codex"
+    },
+    {
+      "id": "97d3c591-841e-4156-8a24-be50afa7ba18",
+      "name": "Finance Tracker",
+      "model": "gpt-5-mini"
+    },
+    {
+      "id": "23f711bf-8adb-47ba-8813-2152cfea9108",
+      "name": "Account Strategist",
+      "model": "gpt-5"
+    },
+    {
+      "id": "4f087aad-0260-4db7-bf30-296e61d8dc81",
+      "name": "Поплавок Вова",
+      "model": "gpt-5-mini"
+    },
+    {
+      "id": "890f7160-63a8-4fdf-9e02-257cd4844354",
+      "name": "Document Generator",
+      "model": "gpt-5-mini"
+    },
+    {
+      "id": "1bde7077-5e38-47cd-b145-607610156364",
+      "name": "Product Manager",
+      "model": "gpt-5.4"
+    },
+    {
+      "id": "76ec538d-fbda-4a90-ab7f-44f74bf483c1",
+      "name": "Sprint Prioritizer",
+      "model": "o4-mini"
+    },
+    {
+      "id": "9cb1e5ed-c450-4b3b-80e0-353506c35141",
+      "name": "Korean Business Navigator",
+      "model": "gpt-5"
+    },
+    {
+      "id": "43882569-76d8-4522-9914-970beed3afab",
+      "name": "Project Shepherd",
+      "model": "gpt-5-mini"
+    },
+    {
+      "id": "4cb4ec6d-93b8-476c-ba88-403393c6e144",
+      "name": "Security Engineer",
+      "model": "o3"
+    },
+    {
+      "id": "4c72dee4-2beb-4cda-a123-1c16e281f1ed",
+      "name": "UX Researcher",
+      "model": "gpt-5"
+    },
+    {
+      "id": "80c97b94-8a59-483e-b21f-a0ea4a694988",
+      "name": "Supply Chain Strategist",
+      "model": "gpt-5.4"
+    },
+    {
+      "id": "e1f8b466-1ccd-4420-9530-1bcd422b6508",
+      "name": "Incident Response Commander",
+      "model": "o3"
+    },
+    {
+      "id": "f1a8b559-cb7e-42c4-8587-12716bf695e9",
+      "name": "Automation Governance Architect",
+      "model": "o3"
+    },
+    {
+      "id": "2a9866d5-1b02-4dec-8619-c7821814814d",
+      "name": "Agents Orchestrator",
+      "model": "gpt-5.4"
+    },
+    {
+      "id": "1e9e7ea5-84ea-46ea-a3d4-54f37f0d2ac0",
+      "name": "Studio Producer",
+      "model": "gpt-5-mini"
+    },
+    {
+      "id": "80964cb8-bd12-41a1-855d-3e5417a4cdb2",
+      "name": "Data Engineer",
+      "model": "gpt-5.3-codex"
+    },
+    {
+      "id": "b5d4640c-7a11-433c-ba63-366812263a02",
+      "name": "Growth Hacker",
+      "model": "gpt-5"
+    },
+    {
+      "id": "301eb9df-8416-48df-9c07-a3c9c628d03b",
+      "name": "Feishu Integration Developer",
+      "model": "gpt-5.3-codex"
+    },
+    {
+      "id": "be52ba62-c82f-43c4-a6bf-89aac1c1e6a1",
+      "name": "MCP Builder",
+      "model": "gpt-5.3-codex"
+    },
+    {
+      "id": "470c05ec-316c-4076-aadb-06529f935d06",
+      "name": "XR Interface Architect",
+      "model": "gpt-5.4"
+    },
+    {
+      "id": "b25d5fdc-b33d-473f-a3fb-56e46d25cd76",
+      "name": "Corporate Training Designer",
+      "model": "gpt-5"
+    },
+    {
+      "id": "92925e14-0827-47d5-8eb6-1b8949f3fb19",
+      "name": "Sales Data Extraction Agent",
+      "model": "gpt-5-mini"
+    },
+    {
+      "id": "d03a99e6-39b4-4ca0-a598-bd6c5954947c",
+      "name": "Solidity Smart Contract Engineer",
+      "model": "gpt-5.3-codex"
+    },
+    {
+      "id": "53db4333-cb38-4131-b963-4cc25d4ef757",
+      "name": "LSP/Index Engineer",
+      "model": "gpt-5.3-codex"
+    },
+    {
+      "id": "b3884e9c-30c0-40d7-9782-3ef2799d78af",
+      "name": "CMS Developer",
+      "model": "gpt-5.3-codex-spark"
+    },
+    {
+      "id": "6b716624-8cdc-4289-b755-3d3b0013ee50",
+      "name": "Tax Strategist",
+      "model": "o3"
+    },
+    {
+      "id": "187f0dee-58de-4b10-96f6-19c4ab7e37fe",
+      "name": "Git Workflow Master",
+      "model": "gpt-5-mini"
+    },
+    {
+      "id": "9875caeb-22b3-4f81-970c-240404a33e32",
+      "name": "WeChat Mini Program Developer",
+      "model": "gpt-5.3-codex"
+    },
+    {
+      "id": "40ebec7d-fe08-4434-9596-6d813b45c7ea",
+      "name": "Douyin Strategist",
+      "model": "gpt-5"
+    },
+    {
+      "id": "c500a9b9-7e0b-4702-929d-70b12fa2305b",
+      "name": "Book Co-Author",
+      "model": "gpt-5.4"
+    },
+    {
+      "id": "b4334f94-154c-46b0-b4a0-ba29ef51877f",
+      "name": "UI Designer",
+      "model": "gpt-5.4"
+    },
+    {
+      "id": "b08d02f8-3eff-404b-96ef-e70ec751630c",
+      "name": "HR Onboarding",
+      "model": "gpt-5-mini"
+    },
+    {
+      "id": "0b825fed-287a-4b4a-a104-9805a70d4c20",
+      "name": "Inclusive Visuals Specialist",
+      "model": "o4-mini"
+    },
+    {
+      "id": "6657d8cf-eefc-43ab-a3e8-26201bff842d",
+      "name": "Deal Strategist",
+      "model": "gpt-5"
+    },
+    {
+      "id": "44d00a90-2b53-4157-a6ae-f8af656e586f",
+      "name": "Content Creator",
+      "model": "gpt-5-mini"
+    },
+    {
+      "id": "7d7483a0-f242-4591-9f03-33d4fc0a1490",
+      "name": "Tracking & Measurement Specialist",
+      "model": "gpt-5.3-codex-spark"
+    },
+    {
+      "id": "77a796e3-264b-4563-a49d-ec994e4e6c6e",
+      "name": "Visual Storyteller",
+      "model": "gpt-5"
+    },
+    {
+      "id": "367aab1c-3bfc-48ed-95ca-8c0dc27ca6f7",
+      "name": "Image Prompt Engineer",
+      "model": "gpt-5"
+    },
+    {
+      "id": "0aa04bd1-861e-4e9a-b84f-6eb7a72c13eb",
+      "name": "Weibo Strategist",
+      "model": "gpt-5"
+    },
+    {
+      "id": "0557e099-5d8b-4825-ba6e-0131dbc539fc",
+      "name": "Search Query Analyst",
+      "model": "gpt-5-mini"
+    },
+    {
+      "id": "73c31404-006e-4450-bc45-1cafa046234b",
+      "name": "WeChat Official Account Manager",
+      "model": "gpt-5"
+    },
+    {
+      "id": "59cdecd0-69ec-433b-8bc9-a37ffddefb56",
+      "name": "Performance Benchmarker",
+      "model": "o4-mini"
+    },
+    {
+      "id": "616a8b7d-6beb-4d7d-9540-b8f8d85a9d58",
+      "name": "Legal Client Intake",
+      "model": "gpt-5"
+    },
+    {
+      "id": "eaa52d42-c2af-45da-b80f-b3e10d45f46e",
+      "name": "Accounts Payable Agent",
+      "model": "gpt-5-mini"
+    },
+    {
+      "id": "7b6e27c0-ae67-4fce-9018-d2fddb1d3926",
+      "name": "Voice AI Integration Engineer",
+      "model": "gpt-5.4"
+    },
+    {
+      "id": "08aa20ea-8f21-4263-80d8-396aab1f77a5",
+      "name": "Programmatic & Display Buyer",
+      "model": "gpt-5"
+    },
+    {
+      "id": "236f3356-e038-414c-bdec-f2ddfea034b5",
+      "name": "Geographer",
+      "model": "gpt-5.4"
+    },
+    {
+      "id": "db811a6b-6445-4477-a473-50b1f335ab1f",
+      "name": "Narratologist",
+      "model": "gpt-5"
+    },
+    {
+      "id": "b8dd5f8f-23fd-448a-8ced-fee5d3098c06",
+      "name": "China E-Commerce Operator",
+      "model": "gpt-5"
+    },
+    {
+      "id": "523339b9-b0df-4138-bbb0-f62076a8be14",
+      "name": "Paid Social Strategist",
+      "model": "gpt-5"
+    },
+    {
+      "id": "405c577c-2090-42d7-97f6-b317089d3a9d",
+      "name": "Social Media Strategist",
+      "model": "gpt-5"
+    },
+    {
+      "id": "8949bb75-647c-4ae9-8978-7c674c49676e",
+      "name": "Ad Creative Strategist",
+      "model": "gpt-5"
+    },
+    {
+      "id": "6a6df125-723f-4af8-814b-1cae34826a40",
+      "name": "Agentic Identity & Trust Architect",
+      "model": "o3"
+    },
+    {
+      "id": "6d88a1d4-da4e-45c4-90ac-fd36ef742bba",
+      "name": "Terminal Integration Specialist",
+      "model": "gpt-5.3-codex-spark"
+    },
+    {
+      "id": "fa7bf374-234b-4f62-a3d7-161fe539b26c",
+      "name": "Government Digital Presales Consultant",
+      "model": "gpt-5.4"
+    },
+    {
+      "id": "780284ad-e6a8-40d7-9a1b-0a5b803498f2",
+      "name": "Experiment Tracker",
+      "model": "gpt-5-nano"
+    },
+    {
+      "id": "a9a85809-7c4c-4fcd-adec-2acc2530e6ae",
+      "name": "FP&A Analyst",
+      "model": "gpt-5.4"
+    },
+    {
+      "id": "9193127c-78c9-42a4-b044-7607ef055164",
+      "name": "Jira Workflow Steward",
+      "model": "gpt-5.3-codex-spark"
+    },
+    {
+      "id": "fafc0c42-ea51-499d-bd7c-b3118d88c0b0",
+      "name": "Study Abroad Advisor",
+      "model": "gpt-5"
+    },
+    {
+      "id": "a7340a14-6ccd-400d-8fc7-6babc87e1786",
+      "name": "Mobile App Builder",
+      "model": "gpt-5.3-codex"
+    },
+    {
+      "id": "4500f659-5b2e-42d0-b6d4-483cc52ef6cf",
+      "name": "Senior Developer",
+      "model": "gpt-5.3-codex"
+    },
+    {
+      "id": "142e2172-3e1f-454f-b791-c0afb15a13de",
+      "name": "Analytics Reporter",
+      "model": "gpt-5-mini"
+    },
+    {
+      "id": "412423f0-63cb-4df9-9a72-f3948832cd29",
+      "name": "Code Reviewer",
+      "model": "o4-mini"
+    },
+    {
+      "id": "72233f64-7d4c-4aef-93db-42663e27f7d6",
+      "name": "Legal Billing & Time Tracking",
+      "model": "gpt-5-mini"
+    },
+    {
+      "id": "eae5fa67-3c9c-4e69-8f44-94ad54af610a",
+      "name": "Executive Summary Generator",
+      "model": "gpt-5-mini"
+    },
+    {
+      "id": "1eb232a1-d0f5-4858-983b-4d8ba7d2ebf8",
+      "name": "Loan Officer Assistant",
+      "model": "gpt-5"
+    },
+    {
+      "id": "fd07cb16-0e76-4b7d-8b9d-3ad015815abe",
+      "name": "Anthropologist",
+      "model": "gpt-5.4"
+    },
+    {
+      "id": "6f60b1d4-bd09-406a-9956-b1d886365d5e",
+      "name": "Baidu SEO Specialist",
+      "model": "gpt-5"
+    },
+    {
+      "id": "c7993fd7-4dbc-4db7-ae8c-65072566fb21",
+      "name": "Zhihu Strategist",
+      "model": "gpt-5"
+    },
+    {
+      "id": "02c93ab6-5770-4254-842c-f0949967ac4c",
+      "name": "UX Architect",
+      "model": "gpt-5.4"
+    },
+    {
+      "id": "c0f0f75a-41f9-46db-baad-0abce3e797b5",
+      "name": "App Store Optimizer",
+      "model": "gpt-5"
+    },
+    {
+      "id": "f66a8dc8-8f97-4881-bbba-703a2ee2ef49",
+      "name": "Outbound Strategist",
+      "model": "gpt-5-mini"
+    },
+    {
+      "id": "50a279d5-80e9-4e49-9fbe-9f2b0905d41c",
+      "name": "Reddit Community Builder",
+      "model": "gpt-5-mini"
+    },
+    {
+      "id": "e4092b0b-09a7-4248-b8df-0932528e3526",
+      "name": "macOS Spatial/Metal Engineer",
+      "model": "gpt-5.3-codex"
+    },
+    {
+      "id": "b16d46b2-c8cd-4e10-bfc7-789c98a51eb5",
+      "name": "Private Domain Operator",
+      "model": "gpt-5"
+    },
+    {
+      "id": "1413c379-dba8-4016-aaef-e4e7b853d75b",
+      "name": "Xiaohongshu Specialist",
+      "model": "gpt-5"
+    },
+    {
+      "id": "1ff53186-b295-44fc-b43e-ff8b82d52ed8",
+      "name": "Short-Video Editing Coach",
+      "model": "gpt-5-mini"
+    },
+    {
+      "id": "7bc7d61c-eae3-4f3c-acff-5f944cee0fb0",
+      "name": "DevOps Automator",
+      "model": "gpt-5.3-codex"
+    },
+    {
+      "id": "87846301-a9dd-476f-9e89-c8b6a4e8578c",
+      "name": "Support Responder",
+      "model": "gpt-5-mini"
+    },
+    {
+      "id": "2eb0e3ac-bdd1-4a33-bdbc-f5ec38f2197f",
+      "name": "Whimsy Injector",
+      "model": "gpt-5-mini"
+    },
+    {
+      "id": "2c3b6b1d-80ed-476c-8187-37f2331bad5a",
+      "name": "AI Citation Strategist",
+      "model": "o4-mini"
+    },
+    {
+      "id": "a0ca8051-e50b-4e86-8a8b-6341267f075d",
+      "name": "Report Distribution Agent",
+      "model": "gpt-5-nano"
+    },
+    {
+      "id": "1c51b300-29eb-4d99-a321-fa60551c58ed",
+      "name": "Proposal Strategist",
+      "model": "gpt-5"
+    },
+    {
+      "id": "2ca665ba-7518-400d-84ae-1e909c7bb336",
+      "name": "Instagram Curator",
+      "model": "gpt-5-mini"
+    },
+    {
+      "id": "4523ccd9-5497-48a3-a00b-0f4d4d80a6aa",
+      "name": "Customer Service",
+      "model": "gpt-5-mini"
+    },
+    {
+      "id": "229bab03-4397-42cf-9524-f7512521750f",
+      "name": "Workflow Optimizer",
+      "model": "gpt-5.4"
+    },
+    {
+      "id": "380d6118-38b1-4763-aa85-b481c220c7c2",
+      "name": "Hospitality Guest Services",
+      "model": "gpt-5-mini"
+    },
+    {
+      "id": "4d606fb1-bb7f-45a9-83f5-5da28ae122ec",
+      "name": "Software Architect",
+      "model": "gpt-5.4"
+    },
+    {
+      "id": "2b81e0e4-56ff-43c3-b858-3cd9888de57e",
+      "name": "AI Data Remediation Engineer",
+      "model": "gpt-5.4"
+    },
+    {
+      "id": "2ab0101f-928d-4afb-ae39-baa8edf15cd6",
+      "name": "Brand Guardian",
+      "model": "gpt-5"
+    },
+    {
+      "id": "2d395460-4bcc-428b-89af-cc3e34374902",
+      "name": "Blockchain Security Auditor",
+      "model": "o3"
+    },
+    {
+      "id": "284375c6-02f9-492e-aee0-ef344a156061",
+      "name": "Real Estate Buyer & Seller",
+      "model": "gpt-5"
+    },
+    {
+      "id": "0be93689-58cd-4bb1-9329-c358f7648bb5",
+      "name": "Accessibility Auditor",
+      "model": "o4-mini"
+    },
+    {
+      "id": "985f6633-630f-4dc0-b3d9-e76f15855bf3",
+      "name": "Healthcare Customer Service",
+      "model": "gpt-5"
+    },
+    {
+      "id": "d03c8060-9c88-4865-a0d3-14083b3d7d4b",
+      "name": "French Consulting Market Navigator",
+      "model": "gpt-5"
+    },
+    {
+      "id": "cedcc1d0-49c8-405c-a3a1-413a95d27f03",
+      "name": "Podcast Strategist",
+      "model": "gpt-5"
+    },
+    {
+      "id": "0e5d9063-5eb0-4828-8298-293064986694",
+      "name": "Kuaishou Strategist",
+      "model": "gpt-5"
+    },
+    {
+      "id": "fabf8803-1a5e-4736-9ace-0694842b32ca",
+      "name": "Video Optimization Specialist",
+      "model": "gpt-5-mini"
+    },
+    {
+      "id": "584bdaa6-cdc7-401e-8765-0378c2d70388",
+      "name": "Legal Document Review",
+      "model": "o3"
+    },
+    {
+      "id": "ae17aa74-4ded-4125-b523-8cbd13a6c07e",
+      "name": "Email Intelligence Engineer",
+      "model": "gpt-5.4"
+    },
+    {
+      "id": "eff23738-43ee-4f40-961f-50bd5e727538",
+      "name": "LinkedIn Content Creator",
+      "model": "gpt-5-mini"
+    },
+    {
+      "id": "9721f923-3fc6-4acf-ade6-be851bcc692c",
+      "name": "Database Optimizer",
+      "model": "gpt-5.4"
+    },
+    {
+      "id": "e13af2a4-e64b-44ac-a277-8e7048a15b7d",
+      "name": "Legal Compliance Checker",
+      "model": "o3"
+    },
+    {
+      "id": "04041a64-8c40-4869-924c-25febdae8241",
+      "name": "XR Immersive Developer",
+      "model": "gpt-5.3-codex"
+    },
+    {
+      "id": "652412e7-1dec-4a09-9b1a-d8cfd56a6520",
+      "name": "Test Results Analyzer",
+      "model": "o4-mini"
+    },
+    {
+      "id": "8cc4838d-a42f-4588-8137-48b578fb3c5c",
+      "name": "Cross-Border E-Commerce Specialist",
+      "model": "gpt-5"
+    },
+    {
+      "id": "9d969633-dec4-498b-97e7-d23115f79c72",
+      "name": "Filament Optimization Specialist",
+      "model": "gpt-5.3-codex"
+    },
+    {
+      "id": "5d5ee10d-4517-4692-811d-41bd85d0e4ab",
+      "name": "XR Cockpit Interaction Specialist",
+      "model": "gpt-5.4"
+    },
+    {
+      "id": "9adbb6a8-286d-460b-ab8e-073a4b65d16b",
+      "name": "Sales Engineer",
+      "model": "gpt-5.4"
+    },
+    {
+      "id": "cdb27acd-19a4-4570-92fc-20b97c529803",
+      "name": "Salesforce Architect",
+      "model": "gpt-5.4"
+    },
+    {
+      "id": "dc9df34b-3a78-490c-9374-550c76ee254a",
+      "name": "Psychologist",
+      "model": "gpt-5.4"
+    },
+    {
+      "id": "5517fa9b-b9ba-4f48-a5de-235a0f2bd31c",
+      "name": "Bookkeeper & Controller",
+      "model": "gpt-5"
+    },
+    {
+      "id": "dcc8cc15-d5c0-46f3-82fa-728af26daa89",
+      "name": "Data Consolidation Agent",
+      "model": "gpt-5-mini"
+    },
+    {
+      "id": "12e5b31d-a434-48d1-8aa3-df5f8c80345e",
+      "name": "Retail Customer Returns",
+      "model": "gpt-5-mini"
+    },
+    {
+      "id": "0c63e0b3-a104-4c33-9384-5bb3567642ec",
+      "name": "Evidence Collector",
+      "model": "gpt-5-mini"
+    },
+    {
+      "id": "21829c1f-31ee-4f11-84a8-18261265c630",
+      "name": "Autonomous Optimization Architect",
+      "model": "gpt-5.4"
+    },
+    {
+      "id": "62e125be-bc0e-4c72-9f7a-b6e87e418d4b",
+      "name": "Recruitment Specialist",
+      "model": "gpt-5-mini"
+    },
+    {
+      "id": "69e77a3c-953b-4e3d-9b09-1b6a195a88a4",
+      "name": "Paid Media Auditor",
+      "model": "o4-mini"
+    },
+    {
+      "id": "ce6a12a3-80b9-40e2-bdb9-ea09698df806",
+      "name": "Sales Outreach",
+      "model": "gpt-5-mini"
+    },
+    {
+      "id": "389da655-1394-413e-aadf-af7632b054e9",
+      "name": "Discovery Coach",
+      "model": "gpt-5"
+    }
+  ],
+  "heartbeat_checks": [
+    {
+      "agent_id": "b9c47145-f9c2-43f5-8b6e-abe82ac625e9",
+      "name": "API Tester",
+      "invoke_status": 202,
+      "run_status": "failed",
+      "error": "Process adapter missing command"
+    },
+    {
+      "agent_id": "41c8cc10-2630-4360-a386-940729cc23ff",
+      "name": "SRE",
+      "invoke_status": 202,
+      "run_status": "failed",
+      "error": "Process adapter missing command"
+    },
+    {
+      "agent_id": "156643fe-5a09-4307-b896-157212828a1e",
+      "name": "Backend Architect",
+      "invoke_status": 202,
+      "run_status": "failed",
+      "error": "Process adapter missing command"
+    },
+    {
+      "agent_id": "92107a12-02dc-4d1c-9f98-6ff03aa7324d",
+      "name": "AI Engineer",
+      "invoke_status": 202,
+      "run_status": "failed",
+      "error": "Process adapter missing command"
+    },
+    {
+      "agent_id": "0a11fdc9-091c-43d5-b5eb-5949a1a84995",
+      "name": "Frontend Developer",
+      "invoke_status": 202,
+      "run_status": "failed",
+      "error": "Process adapter missing command"
+    },
+    {
+      "agent_id": "4f087aad-0260-4db7-bf30-296e61d8dc81",
+      "name": "Поплавок Вова",
+      "invoke_status": 202,
+      "run_status": "running",
+      "error": ""
+    },
+    {
+      "agent_id": "1bde7077-5e38-47cd-b145-607610156364",
+      "name": "Product Manager",
+      "invoke_status": 202,
+      "run_status": "failed",
+      "error": "Process adapter missing command"
+    },
+    {
+      "agent_id": "76ec538d-fbda-4a90-ab7f-44f74bf483c1",
+      "name": "Sprint Prioritizer",
+      "invoke_status": 202,
+      "run_status": "failed",
+      "error": "Process adapter missing command"
+    },
+    {
+      "agent_id": "43882569-76d8-4522-9914-970beed3afab",
+      "name": "Project Shepherd",
+      "invoke_status": 202,
+      "run_status": "failed",
+      "error": "Process adapter missing command"
+    },
+    {
+      "agent_id": "4cb4ec6d-93b8-476c-ba88-403393c6e144",
+      "name": "Security Engineer",
+      "invoke_status": 202,
+      "run_status": "failed",
+      "error": "Process adapter missing command"
+    },
+    {
+      "agent_id": "80964cb8-bd12-41a1-855d-3e5417a4cdb2",
+      "name": "Data Engineer",
+      "invoke_status": 202,
+      "run_status": "failed",
+      "error": "Process adapter missing command"
+    },
+    {
+      "agent_id": "a7340a14-6ccd-400d-8fc7-6babc87e1786",
+      "name": "Mobile App Builder",
+      "invoke_status": 202,
+      "run_status": "failed",
+      "error": "Process adapter missing command"
+    },
+    {
+      "agent_id": "4500f659-5b2e-42d0-b6d4-483cc52ef6cf",
+      "name": "Senior Developer",
+      "invoke_status": 202,
+      "run_status": "failed",
+      "error": "Process adapter missing command"
+    },
+    {
+      "agent_id": "7bc7d61c-eae3-4f3c-acff-5f944cee0fb0",
+      "name": "DevOps Automator",
+      "invoke_status": 202,
+      "run_status": "failed",
+      "error": "Process adapter missing command"
+    },
+    {
+      "agent_id": "87846301-a9dd-476f-9e89-c8b6a4e8578c",
+      "name": "Support Responder",
+      "invoke_status": 202,
+      "run_status": "failed",
+      "error": "Process adapter missing command"
+    }
+  ],
+  "isolation": {
+    "bikube_company_present": true,
+    "changed_agent_count": 0,
+    "changed_agents": []
+  },
+  "post_apply_metadata_sync": {
+    "metadata_updates": 14,
+    "failed": 0
+  }
+}

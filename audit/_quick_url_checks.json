@@ -1,0 +1,37 @@
+﻿[
+    {
+        "url":  "http://136.119.84.22/",
+        "status":  200,
+        "location":  null
+    },
+    {
+        "url":  "http://136.119.84.22/category/delivery",
+        "status":  200,
+        "location":  null
+    },
+    {
+        "url":  "http://136.119.84.22/classifieds",
+        "status":  200,
+        "location":  null
+    },
+    {
+        "url":  "http://136.119.84.22/account",
+        "status":  "ERR",
+        "location":  "Operation is not valid due to the current state of the object."
+    },
+    {
+        "url":  "http://136.119.84.22/lk",
+        "status":  "ERR",
+        "location":  "Operation is not valid due to the current state of the object."
+    },
+    {
+        "url":  "http://136.119.84.22/admin",
+        "status":  "ERR",
+        "location":  "Operation is not valid due to the current state of the object."
+    },
+    {
+        "url":  "http://136.119.84.22/admin/login",
+        "status":  200,
+        "location":  null
+    }
+]

@@ -1,0 +1,42 @@
+﻿name: PR Security Scan (Draft)
+
+on:
+  pull_request:
+    branches: ["*"]
+
+jobs:
+  security-scan:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: '8.4'
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Composer audit
+        run: |
+          if [ -f composer.lock ]; then
+            composer audit || true
+          fi
+
+      - name: npm audit
+        run: |
+          if [ -f package-lock.json ]; then
+            npm audit --audit-level=high || true
+          fi
+
+      - name: Secret scan (gitleaks)
+        uses: gitleaks/gitleaks-action@v2
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: SAST placeholder
+        run: echo "TODO: integrate semgrep or codeql rules for GDPR data flows"

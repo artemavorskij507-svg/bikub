@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 32" width="64" height="32">
+  <!-- Background -->
+  <rect width="64" height="32" fill="transparent"/>
+  
+  <!-- Table Top -->
+  <rect x="0" y="8" width="64" height="8" fill="#8b5cf6"/>
+  <rect x="0" y="8" width="64" height="2" fill="#a78bfa"/>
+  
+  <!-- Table Legs -->
+  <rect x="4" y="16" width="4" height="16" fill="#6b7280"/>
+  <rect x="56" y="16" width="4" height="16" fill="#6b7280"/>
+  
+  <!-- Center Support -->
+  <rect x="28" y="16" width="8" height="16" fill="#6b7280"/>
+  
+  <!-- Table Surface Details -->
+  <rect x="8" y="10" width="48" height="4" fill="#9ca3af"/>
+  <rect x="12" y="11" width="40" height="2" fill="#d1d5db"/>
+  
+  <!-- Power Outlets -->
+  <rect x="10" y="12" width="4" height="2" fill="#1e3a8a"/>
+  <rect x="50" y="12" width="4" height="2" fill="#1e3a8a"/>
+  
+  <!-- USB Ports -->
+  <rect x="16" y="12" width="2" height="2" fill="#10b981"/>
+  <rect x="46" y="12" width="2" height="2" fill="#10b981"/>
+</svg>

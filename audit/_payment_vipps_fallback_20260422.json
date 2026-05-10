@@ -1,0 +1,17 @@
+{
+  "email": "smoke.vipps.1776840986@example.com",
+  "idempotency_key": "vipps-fallback-1776840986",
+  "response": {
+    "success": true,
+    "data": {
+      "order_id": 19,
+      "order_number": "GLF202604227694",
+      "total_amount": 249,
+      "currency": "NOK",
+      "payment_url": "https://136.119.84.22/vipps/payment/19",
+      "payment_intent_id": "vipps_19",
+      "payment_status": "ready"
+    },
+    "message": "Order created successfully"
+  }
+}

@@ -1,0 +1,107 @@
+id,name,type,category,duplicates_count,missing_attrs,suggested_action
+1,"Melk 1L",product,—,0,"[{""attribute"":""weight_kg"",""reason"":""column_missing""},{""attribute"":""volume_m3"",""reason"":""column_missing""},{""attribute"":""dimensions"",""reason"":""column_missing""},{""attribute"":""unit"",""reason"":""column_missing""}]",enrich_attributes
+2,"Brød Grovt",product,—,0,"[{""attribute"":""weight_kg"",""reason"":""column_missing""},{""attribute"":""volume_m3"",""reason"":""column_missing""},{""attribute"":""dimensions"",""reason"":""column_missing""},{""attribute"":""unit"",""reason"":""column_missing""}]",enrich_attributes
+3,"Egg 12stk",product,—,0,"[{""attribute"":""weight_kg"",""reason"":""column_missing""},{""attribute"":""volume_m3"",""reason"":""column_missing""},{""attribute"":""dimensions"",""reason"":""column_missing""},{""attribute"":""unit"",""reason"":""column_missing""}]",enrich_attributes
+4,"Kyllingfilet 1kg",product,—,0,"[{""attribute"":""weight_kg"",""reason"":""column_missing""},{""attribute"":""volume_m3"",""reason"":""column_missing""},{""attribute"":""dimensions"",""reason"":""column_missing""},{""attribute"":""unit"",""reason"":""column_missing""}]",enrich_attributes
+5,Bananer,product,—,0,"[{""attribute"":""weight_kg"",""reason"":""column_missing""},{""attribute"":""volume_m3"",""reason"":""column_missing""},{""attribute"":""dimensions"",""reason"":""column_missing""},{""attribute"":""unit"",""reason"":""column_missing""}]",enrich_attributes
+6,"Norwegian Whole Milk 1L",product,—,0,"[{""attribute"":""sku"",""reason"":""value_missing""},{""attribute"":""weight_kg"",""reason"":""column_missing""},{""attribute"":""volume_m3"",""reason"":""column_missing""},{""attribute"":""dimensions"",""reason"":""column_missing""},{""attribute"":""unit"",""reason"":""column_missing""}]",enrich_attributes
+7,"Grovbrød Whole Grain Bread",product,—,0,"[{""attribute"":""sku"",""reason"":""value_missing""},{""attribute"":""weight_kg"",""reason"":""column_missing""},{""attribute"":""volume_m3"",""reason"":""column_missing""},{""attribute"":""dimensions"",""reason"":""column_missing""},{""attribute"":""unit"",""reason"":""column_missing""}]",enrich_attributes
+8,"Free-Range Eggs (12 pcs)",product,—,0,"[{""attribute"":""sku"",""reason"":""value_missing""},{""attribute"":""weight_kg"",""reason"":""column_missing""},{""attribute"":""volume_m3"",""reason"":""column_missing""},{""attribute"":""dimensions"",""reason"":""column_missing""},{""attribute"":""unit"",""reason"":""column_missing""}]",enrich_attributes
+9,"Arctic Apples 1kg",product,—,0,"[{""attribute"":""sku"",""reason"":""value_missing""},{""attribute"":""weight_kg"",""reason"":""column_missing""},{""attribute"":""volume_m3"",""reason"":""column_missing""},{""attribute"":""dimensions"",""reason"":""column_missing""},{""attribute"":""unit"",""reason"":""column_missing""}]",enrich_attributes
+10,"Fjord Ground Coffee 250g",product,—,0,"[{""attribute"":""sku"",""reason"":""value_missing""},{""attribute"":""weight_kg"",""reason"":""column_missing""},{""attribute"":""volume_m3"",""reason"":""column_missing""},{""attribute"":""dimensions"",""reason"":""column_missing""},{""attribute"":""unit"",""reason"":""column_missing""}]",enrich_attributes
+1,Доставка,service_category,delivery,0,[],ok
+2,"Переезд под ключ",service_category,moving,0,[],ok
+3,"Эко-услуги и утилизация",service_category,eco,0,[],ok
+4,"Мастер на час",service_category,handyman,0,[],ok
+5,"Эвакуатор и помощь на дороге",service_category,tow,0,[],ok
+6,"Индивидуальные поручения",service_category,personal-task,1,[],review_duplicates
+7,"Социальная помощь",service_category,social-help,0,[],ok
+8,"Индивидуальные поручения",service_category,errands,1,[],review_duplicates
+9,Доручення,service_category,personal,0,[],ok
+10,"Соціальна допомога",service_category,social,0,[],ok
+1,"Доставка продуктов",service_type,Доставка,0,[],ok
+2,"Доставка крупногабарита",service_type,Доставка,0,[],ok
+3,"Доставка готовой еды",service_type,Доставка,0,[],ok
+4,"Купить и доставить",service_type,"Индивидуальные поручения",0,[],ok
+5,"Забрать и передать",service_type,"Индивидуальные поручения",0,[],ok
+6,"Документы и госуслуги",service_type,"Индивидуальные поручения",0,[],ok
+7,"Аптека / лекарства",service_type,"Индивидуальные поручения",0,[],ok
+8,"Особые поручения",service_type,"Индивидуальные поручения",0,[],ok
+9,"Eco-Friendly Cleaning",service_type,"Эко-услуги и утилизация",0,[],ok
+10,"Emergency Tow",service_type,"Эвакуатор и помощь на дороге",0,[],ok
+11,"Доставка лекарств",service_type,—,0,[],ok
+12,"Поручения в городе",service_type,—,0,[],ok
+13,"Занос на этаж/дрова",service_type,—,0,[],ok
+14,Лампочка/батарейки,service_type,—,0,[],ok
+15,Сопровождение,service_type,—,0,[],ok
+16,"Добрый визит",service_type,—,0,[],ok
+17,"Напоминания о лекарствах",service_type,—,0,[],ok
+18,Давление/сахар,service_type,—,0,[],ok
+19,"Помощь в реабилитации",service_type,—,0,[],ok
+20,Телемедицина-связь,service_type,—,0,[],ok
+21,"Безбарьерные доработки",service_type,—,0,[],ok
+22,"Датчики и SOS",service_type,—,0,[],ok
+23,"Уборка у входа",service_type,—,0,[],ok
+24,"Вывоз холодильника",service_type,—,0,[],ok
+25,"Вывоз матраса",service_type,—,0,[],ok
+26,"Вывоз мебели",service_type,—,0,[],ok
+27,"Электро лом",service_type,—,0,[],ok
+28,"Чистка гаража",service_type,—,0,[],ok
+29,"Чистка подвала",service_type,—,0,[],ok
+30,"Чистка балкона",service_type,—,0,[],ok
+31,"После ремонта",service_type,—,0,[],ok
+32,"Картон от офисов",service_type,—,0,[],ok
+33,"Пластик от офисов",service_type,—,0,[],ok
+34,"Доставка в Fretex",service_type,—,0,[],ok
+35,"Сортировка на месте",service_type,—,0,[],ok
+36,Ветки/листья,service_type,—,0,[],ok
+37,"Вывоз снега",service_type,—,0,[],ok
+38,"Тяжёлый подъём",service_type,—,0,[],ok
+39,"Эвакуация в городе",service_type,—,0,[],ok
+40,"Эвакуация по E6/E10",service_type,—,0,[],ok
+41,"Вытягивание из снега",service_type,—,0,[],ok
+42,Прикуривание,service_type,—,0,[],ok
+43,"Замена колеса",service_type,—,0,[],ok
+44,"Установка цепей",service_type,—,0,[],ok
+45,"Доставка топлива",service_type,—,0,[],ok
+46,"Транспорт до СТО",service_type,—,0,[],ok
+47,Электрокультиватор,service_type,—,0,[],ok
+48,Газонокосилка,service_type,—,0,[],ok
+49,Перфоратор,service_type,—,0,[],ok
+50,"Пылесос строительный",service_type,—,0,[],ok
+51,Пароочиститель,service_type,—,0,[],ok
+52,"Лыжи комплект",service_type,—,0,[],ok
+53,"Сноуборд комплект",service_type,—,0,[],ok
+54,"Шипы на ботинки",service_type,—,0,[],ok
+55,Велосипед,service_type,—,0,[],ok
+56,Велоприцеп,service_type,—,0,[],ok
+57,Коляска,service_type,—,0,[],ok
+58,Домкрат,service_type,—,0,[],ok
+59,"Зарядка АКБ",service_type,—,0,[],ok
+60,"Маршрутная линия №1",service_type,—,0,[],ok
+61,"Маршрутная линия №2",service_type,—,0,[],ok
+62,"On-Demand город",service_type,—,0,[],ok
+63,"On-Demand регион",service_type,—,0,[],ok
+64,"Месячный пасс",service_type,—,0,[],ok
+65,"Сборка мебели",service_type,—,0,[],ok
+66,"Подключение стиралки",service_type,—,0,[],ok
+67,"Монтаж душкабины",service_type,—,0,[],ok
+68,"Замена замка",service_type,—,0,[],ok
+69,Лампочки/светильники,service_type,—,0,[],ok
+70,"Зима готова",service_type,—,0,[],ok
+71,"Помочь бабушке",service_type,—,0,[],ok
+72,"Заехал и живи",service_type,—,0,[],ok
+1,"Norwegian Whole Milk 1L @ Rema 1000 Narvik",product_store_price,"Rema 1000 Narvik",0,[],ok
+2,"Norwegian Whole Milk 1L @ Kiwi Narvik",product_store_price,"Kiwi Narvik",0,[],ok
+3,"Norwegian Whole Milk 1L @ Coop Prix Narvik",product_store_price,"Coop Prix Narvik",0,[],ok
+4,"Grovbrød Whole Grain Bread @ Rema 1000 Narvik",product_store_price,"Rema 1000 Narvik",0,[],ok
+5,"Grovbrød Whole Grain Bread @ Coop Extra Narvik",product_store_price,"Coop Extra Narvik",0,[],ok
+6,"Grovbrød Whole Grain Bread @ Eurospar Narvik",product_store_price,"Eurospar Narvik",0,[],ok
+7,"Free-Range Eggs (12 pcs) @ Kiwi Narvik",product_store_price,"Kiwi Narvik",0,[],ok
+8,"Free-Range Eggs (12 pcs) @ Coop Extra Narvik",product_store_price,"Coop Extra Narvik",0,[],ok
+9,"Free-Range Eggs (12 pcs) @ Bunnpris Narvik",product_store_price,"Bunnpris Narvik",0,[],ok
+10,"Arctic Apples 1kg @ Rema 1000 Narvik",product_store_price,"Rema 1000 Narvik",0,[],ok
+11,"Arctic Apples 1kg @ Kiwi Narvik",product_store_price,"Kiwi Narvik",0,[],ok
+12,"Arctic Apples 1kg @ Coop Extra Narvik",product_store_price,"Coop Extra Narvik",0,[],ok
+13,"Fjord Ground Coffee 250g @ Coop Prix Narvik",product_store_price,"Coop Prix Narvik",0,[],ok
+14,"Fjord Ground Coffee 250g @ Eurospar Narvik",product_store_price,"Eurospar Narvik",0,[],ok

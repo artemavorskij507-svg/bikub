@@ -1,0 +1,1075 @@
+<?php
+
+namespace App\Http\Controllers;
+
+use App\Events\OrderCreated;
+use App\Models\GeoZone;
+use App\Models\Order;
+use App\Models\Organization;
+use App\Models\ScheduleSlot;
+use App\Models\ServiceCategory;
+use App\Models\ServiceType;
+use App\Models\User;
+use App\Services\OrderPricingService;
+use App\Services\StripePaymentService;
+use App\Services\VippsController;
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Cache;
+use Illuminate\Support\Facades\Log;
+use Illuminate\Support\Facades\RateLimiter;
+use Illuminate\Support\Facades\Schema;
+use Illuminate\Support\Facades\Validator;
+use Illuminate\Support\Carbon;
+
+class PublicStorefrontController extends Controller
+{
+    protected OrderPricingService $pricingService;
+
+    protected StripePaymentService $stripeService;
+
+    /**
+     * @var array<int, string>|null
+     */
+    private ?array $scheduleSlotsColumns = null;
+
+    public function __construct(
+        OrderPricingService $pricingService,
+        StripePaymentService $stripeService
+    ) {
+        $this->pricingService = $pricingService;
+        $this->stripeService = $stripeService;
+    }
+
+    /**
+     * Get public catalog with filters.
+     */
+    public function getCatalog(Request $request)
+    {
+        $request->validate([
+            'zone' => 'nullable|string',
+            'slot' => 'nullable|string',
+            'category' => 'nullable|string',
+            'partner' => 'nullable|string',
+            'search' => 'nullable|string|max:100',
+        ]);
+
+        $query = ServiceType::query();
+
+        if (Schema::hasColumn('service_types', 'is_active')) {
+            $query->where('is_active', true);
+        }
+
+        $relations = [];
+        if (Schema::hasTable('service_categories')) {
+            $relations[] = 'category';
+        }
+        if (Schema::hasTable('pricing_rules')) {
+            $relations[] = 'pricingRules';
+        }
+        if ($relations !== []) {
+            $query->with($relations);
+        }
+
+        // Filter by category
+        if ($request->category) {
+            $query->whereHas('category', function ($q) use ($request) {
+                $q->where('code', $request->category);
+            });
+        }
+
+        // Filter by partner
+        if ($request->partner) {
+            $query->where('partner_id', $request->partner);
+        }
+
+        // Search
+        if ($request->search) {
+            $query->where(function ($q) use ($request) {
+                $q->where('name', 'like', '%'.$request->search.'%')
+                    ->orWhere('description', 'like', '%'.$request->search.'%');
+            });
+        }
+
+        $services = $query->get();
+
+        // Filter by availability (zone/slot)
+        if ($request->zone || $request->slot) {
+            $services = $services->filter(function ($service) use ($request) {
+                return $this->isServiceAvailable($service, $request->zone, $request->slot);
+            });
+        }
+
+        return response()->json([
+            'success' => true,
+            'data' => [
+                'services' => $services->map(function ($service) {
+                    return [
+                        'id' => $service->id,
+                        'name' => $service->name,
+                        'description' => $service->description,
+                        'category' => $this->resolveCategoryName($service),
+                        'base_price' => $service->base_price,
+                        'currency' => $service->currency,
+                        'estimated_duration' => $service->estimated_duration,
+                        'image_url' => $service->image_url,
+                        'slug' => $service->slug,
+                    ];
+                }),
+                'filters' => [
+                    'categories' => $this->getCatalogCategories(),
+                    'zones' => $this->getCatalogZones(),
+                    'slots' => $this->getCatalogSlots(),
+                ],
+            ],
+        ]);
+    }
+
+    /**
+     * Get service details.
+     */
+    public function getServiceDetails(string $slug)
+    {
+        $query = ServiceType::where('slug', $slug);
+
+        if (Schema::hasColumn('service_types', 'is_active')) {
+            $query->where('is_active', true);
+        }
+
+        $relations = [];
+        if (Schema::hasTable('service_categories')) {
+            $relations[] = 'category';
+        }
+        if (Schema::hasTable('pricing_rules')) {
+            $relations[] = 'pricingRules';
+        }
+        if ($relations !== []) {
+            $query->with($relations);
+        }
+
+        $service = $query->firstOrFail();
+
+        return response()->json([
+            'success' => true,
+            'data' => [
+                'id' => $service->id,
+                'name' => $service->name,
+                'description' => $service->description,
+                'category' => $this->resolveCategoryName($service),
+                'base_price' => $service->base_price,
+                'currency' => $service->currency,
+                'estimated_duration' => $service->estimated_duration,
+                'image_url' => $service->image_url,
+                'slug' => $service->slug,
+                'pricing_rules' => $service->pricingRules->map(function ($rule) {
+                    return [
+                        'id' => $rule->id,
+                        'name' => $rule->name,
+                        'rule' => $rule->rule,
+                    ];
+                }),
+                'available_slots' => $this->getAvailableSlotsForService($service),
+            ],
+        ]);
+    }
+
+    /**
+     * Create order from public storefront.
+     */
+    public function createOrder(Request $request)
+    {
+        // Rate limiting
+        $key = 'order_creation:'.$request->ip();
+        if (RateLimiter::tooManyAttempts($key, 5)) {
+            return response()->json([
+                'success' => false,
+                'message' => 'Too many order attempts. Please try again later.',
+            ], 429);
+        }
+
+        RateLimiter::hit($key, 300); // 5 minutes
+
+        $idempotencyKey = trim((string) $request->header('X-Idempotency-Key', ''));
+        $idempotencyCacheKey = null;
+        $requestHash = null;
+
+        if ($idempotencyKey !== '') {
+            $requestHash = hash('sha256', (string) $request->getContent());
+            $scopeEmail = strtolower((string) data_get($request->all(), 'customer.email', ''));
+            $scopeHash = hash('sha256', $request->ip().'|'.$scopeEmail);
+            $idempotencyCacheKey = "public_checkout:idempotency:{$scopeHash}:{$idempotencyKey}";
+
+            $processingState = [
+                'state' => 'processing',
+                'request_hash' => $requestHash,
+                'updated_at' => now()->toIso8601String(),
+            ];
+
+            if (! Cache::add($idempotencyCacheKey, $processingState, now()->addMinutes(30))) {
+                $existing = Cache::get($idempotencyCacheKey);
+
+                if (is_array($existing) && ($existing['request_hash'] ?? null) !== $requestHash) {
+                    return response()->json([
+                        'success' => false,
+                        'message' => 'Idempotency key is already used with different payload.',
+                    ], 409);
+                }
+
+                if (is_array($existing) && ($existing['state'] ?? null) === 'completed') {
+                    return response()->json(
+                        (array) ($existing['response'] ?? ['success' => true]),
+                        (int) ($existing['status'] ?? 200)
+                    );
+                }
+
+                return response()->json([
+                    'success' => false,
+                    'message' => 'Request is already being processed.',
+                ], 409);
+            }
+        }
+
+        $validator = Validator::make($request->all(), [
+            'customer' => 'required|array',
+            'customer.name' => 'required|string|max:255',
+            'customer.email' => 'required|email|max:255',
+            'customer.phone' => 'required|string|max:20',
+            'items' => 'required|array|min:1',
+            'items.*.service_id' => 'required|exists:service_types,id',
+            'items.*.quantity' => 'required|integer|min:1',
+            'items.*.notes' => 'nullable|string|max:500',
+            'items.*.title' => 'nullable|string|max:255',
+            'items.*.description' => 'nullable|string|max:2000',
+            'items.*.unit_price' => 'nullable|numeric|min:0',
+            'items.*.image_url' => 'nullable|url|max:2000',
+            'items.*.product_id' => 'nullable|string|max:191',
+            'items.*.store_id' => 'nullable|string|max:191',
+            'items.*.metadata' => 'nullable|array',
+            'address' => 'required|array',
+            'address.street' => 'required|string|max:255',
+            'address.city' => 'required|string|max:100',
+            'address.postal_code' => 'required|string|max:10',
+            'address.lat' => 'required|numeric|between:-90,90',
+            'address.lng' => 'required|numeric|between:-180,180',
+            'slot_id' => 'required|exists:schedule_slots,id',
+            'payment_provider' => 'required|in:stripe,vipps',
+            'notes' => 'nullable|string|max:1000',
+        ]);
+
+        if ($validator->fails()) {
+            return response()->json([
+                'success' => false,
+                'message' => 'Validation failed',
+                'errors' => $validator->errors(),
+            ], 400);
+        }
+
+        try {
+            DB::beginTransaction();
+
+            // Create or find customer
+            $customer = User::firstOrCreate(
+                ['email' => $request->customer['email']],
+                [
+                    'name' => $request->customer['name'],
+                    'phone' => $request->customer['phone'],
+                    'password' => bcrypt(uniqid()), // Random password
+                    'is_active' => true,
+                ]
+            );
+
+            // Create address
+            $address = \App\Models\Address::create([
+                'street_address' => $request->address['street'],
+                'city' => $request->address['city'],
+                'postal_code' => $request->address['postal_code'],
+                'latitude' => $request->address['lat'],
+                'longitude' => $request->address['lng'],
+                'formatted_address' => $this->formatAddress($request->address),
+            ]);
+
+            // Create order
+            $order = Order::create([
+                'user_id' => $customer->id,
+                'address_id' => $address->id,
+                'schedule_slot_id' => $request->slot_id,
+                'order_number' => $this->generateOrderNumber(),
+                'status' => 'pending',
+                'payment_status' => 'pending',
+                'payment_provider' => $request->payment_provider,
+                'notes' => $request->notes,
+                'total_amount' => 0, // Will be calculated
+                'currency' => 'NOK',
+            ]);
+
+            // Create order items and calculate pricing
+            $totalAmount = 0;
+            $hasProductId = Schema::hasColumn('order_items', 'product_id');
+            $hasStoreId = Schema::hasColumn('order_items', 'store_id');
+
+            foreach ($request->items as $itemData) {
+                $service = ServiceType::findOrFail($itemData['service_id']);
+
+                $unitPrice = array_key_exists('unit_price', $itemData) && $itemData['unit_price'] !== null
+                    ? (float) $itemData['unit_price']
+                    : (float) ($this->pricingService->calculatePricing(
+                        $service,
+                        $request->address,
+                        $request->slot_id
+                    )['total'] ?? 0);
+
+                $itemTotal = $unitPrice * (int) $itemData['quantity'];
+
+                $itemPayload = [
+                    'service_type_id' => $service->id,
+                    'name' => $itemData['title'] ?? $service->name,
+                    'description' => $itemData['description'] ?? $service->description,
+                    'quantity' => $itemData['quantity'],
+                    'unit_price' => $unitPrice,
+                    'total_price' => $itemTotal,
+                    'currency' => $order->currency ?? 'NOK',
+                    'notes' => $itemData['notes'] ?? null,
+                    'metadata' => [
+                        'image_url' => $itemData['image_url'] ?? null,
+                        'product_id' => $itemData['product_id'] ?? null,
+                        'store_id' => $itemData['store_id'] ?? null,
+                        'client_metadata' => $itemData['metadata'] ?? null,
+                    ],
+                ];
+
+                if ($hasProductId) {
+                    $itemPayload['product_id'] = is_numeric($itemData['product_id'] ?? null)
+                        ? (int) $itemData['product_id']
+                        : null;
+                }
+
+                if ($hasStoreId) {
+                    $itemPayload['store_id'] = is_numeric($itemData['store_id'] ?? null)
+                        ? (int) $itemData['store_id']
+                        : null;
+                }
+
+                $order->orderItems()->create($itemPayload);
+
+                $totalAmount += $itemTotal;
+            }
+
+            // Update order total
+            $order->update(['total_amount' => $totalAmount]);
+
+            // Create payment intent (graceful fallback when provider is temporarily unavailable)
+            $paymentResult = $this->createPaymentIntentSafely($order, $request->payment_provider);
+
+            DB::commit();
+            $this->dispatchOrderCreatedEventSafely($order);
+
+            $responsePayload = [
+                'success' => true,
+                'data' => [
+                    'order_id' => $order->id,
+                    'order_number' => $order->order_number,
+                    'total_amount' => $totalAmount,
+                    'currency' => $order->currency,
+                    'payment_url' => $paymentResult['payment_url'] ?? null,
+                    'payment_intent_id' => $paymentResult['payment_intent_id'] ?? null,
+                    'payment_status' => $paymentResult['status'] ?? 'pending',
+                ],
+                'message' => 'Order created successfully',
+            ];
+
+            if ($idempotencyCacheKey !== null) {
+                Cache::put($idempotencyCacheKey, [
+                    'state' => 'completed',
+                    'request_hash' => $requestHash,
+                    'status' => 200,
+                    'response' => $responsePayload,
+                    'updated_at' => now()->toIso8601String(),
+                ], now()->addDay());
+            }
+
+            return response()->json($responsePayload);
+
+        } catch (\Exception $e) {
+            DB::rollBack();
+
+            if ($idempotencyCacheKey !== null) {
+                $existing = Cache::get($idempotencyCacheKey);
+                if (
+                    is_array($existing)
+                    && ($existing['state'] ?? null) === 'processing'
+                    && ($existing['request_hash'] ?? null) === $requestHash
+                ) {
+                    Cache::forget($idempotencyCacheKey);
+                }
+            }
+
+            Log::error('Public order creation failed', [
+                'customer_email' => $request->customer['email'] ?? 'unknown',
+                'error' => $e->getMessage(),
+            ]);
+
+            return response()->json([
+                'success' => false,
+                'message' => 'Order creation failed',
+                'error' => $e->getMessage(),
+            ], 500);
+        }
+    }
+
+    /**
+     * Get order status.
+     */
+    public function getOrderStatus(string $orderNumber)
+    {
+        $order = Order::where('order_number', $orderNumber)
+            ->with(['orderItems.serviceType', 'scheduleSlot'])
+            ->firstOrFail();
+
+        return response()->json([
+            'success' => true,
+            'data' => [
+                'order_number' => $order->order_number,
+                'status' => $order->status,
+                'payment_status' => $order->payment_status,
+                'total_amount' => $order->total_amount,
+                'currency' => $order->currency,
+                'scheduled_at' => $order->scheduled_at,
+                'created_at' => $order->created_at,
+                'items' => $order->orderItems->map(function ($item) {
+                    return [
+                        'service_name' => $item->serviceType->name,
+                        'quantity' => $item->quantity,
+                        'unit_price' => $item->unit_price,
+                        'total_price' => $item->total_price,
+                    ];
+                }),
+            ],
+        ]);
+    }
+
+    /**
+     * Get available time slots.
+     */
+    public function getAvailableSlots(Request $request)
+    {
+        $validator = Validator::make($request->all(), [
+            'date' => 'required|date|after_or_equal:today',
+            'zone_id' => 'nullable|exists:geo_zones,id',
+        ]);
+
+        if ($validator->fails()) {
+            return response()->json([
+                'success' => false,
+                'message' => 'Validation failed',
+                'errors' => $validator->errors(),
+            ], 422);
+        }
+
+        $date = Carbon::parse((string) $request->date)->startOfDay();
+        $zoneId = $request->filled('zone_id') ? (int) $request->zone_id : null;
+        $this->seedLocalDemoSlotsIfEmpty($date);
+
+        $slots = $this->buildSlotsQueryForDate($date, $zoneId)
+            ->get()
+            ->filter(fn (ScheduleSlot $slot) => $this->isSlotPubliclyAvailable($slot))
+            ->values();
+
+        if ($slots->isEmpty() && $zoneId !== null) {
+            $slots = $this->buildSlotsQueryForDate($date, null)
+                ->get()
+                ->filter(fn (ScheduleSlot $slot) => $this->isSlotPubliclyAvailable($slot))
+                ->values();
+        }
+
+        if (
+            $slots->isEmpty()
+            && $this->scheduleSlotHasColumn('start_at')
+            && $this->scheduleSlotHasColumn('end_at')
+        ) {
+            $slots = $this->buildSlotsQueryForDate($date, $zoneId, false)
+                ->where('end_at', '>=', now()->startOfDay())
+                ->limit(8)
+                ->get()
+                ->filter(fn (ScheduleSlot $slot) => $this->isSlotPubliclyAvailable($slot))
+                ->values();
+
+            if ($slots->isEmpty() && $zoneId !== null) {
+                $slots = $this->buildSlotsQueryForDate($date, null, false)
+                    ->where('end_at', '>=', now()->startOfDay())
+                    ->limit(8)
+                    ->get()
+                    ->filter(fn (ScheduleSlot $slot) => $this->isSlotPubliclyAvailable($slot))
+                    ->values();
+            }
+        }
+
+        if ($slots->isEmpty()) {
+            $this->ensurePublicFallbackSlotsForDate($date, $zoneId);
+
+            $slots = $this->buildSlotsQueryForDate($date, $zoneId)
+                ->get()
+                ->filter(fn (ScheduleSlot $slot) => $this->isSlotPubliclyAvailable($slot))
+                ->values();
+
+            if ($slots->isEmpty() && $zoneId !== null) {
+                $slots = $this->buildSlotsQueryForDate($date, null)
+                    ->get()
+                    ->filter(fn (ScheduleSlot $slot) => $this->isSlotPubliclyAvailable($slot))
+                    ->values();
+            }
+        }
+
+        return response()->json([
+            'success' => true,
+            'data' => $slots->map(function ($slot) {
+                $from = $this->formatSlotTime($slot, 'from', 'start_at');
+                $to = $this->formatSlotTime($slot, 'to', 'end_at');
+
+                return [
+                    'id' => $slot->id,
+                    'name' => $slot->name ?? $slot->label ?? "Slot #{$slot->id}",
+                    'code' => $slot->code ?? "slot-{$slot->id}",
+                    'from' => $from,
+                    'to' => $to,
+                    'start' => $from,
+                    'end' => $to,
+                    'available_capacity' => $this->getSlotAvailableCapacity($slot),
+                    'is_overbooked' => method_exists($slot, 'isOverbooked') ? (bool) $slot->isOverbooked() : false,
+                ];
+            }),
+        ]);
+    }
+
+    /**
+     * Check if service is available in zone/slot.
+     */
+    private function isServiceAvailable(ServiceType $service, ?string $zoneId, ?string $slotId): bool
+    {
+        // Simplified availability check
+        // In production, this would check partner availability, zone coverage, etc.
+        return true;
+    }
+
+    /**
+     * Build catalog categories with schema-safe columns.
+     */
+    private function getCatalogCategories(): \Illuminate\Support\Collection
+    {
+        $query = ServiceCategory::query();
+
+        if (Schema::hasColumn('service_categories', 'is_active')) {
+            $query->where('is_active', true);
+        }
+
+        return $this->safeCatalogFilterQuery(
+            table: 'service_categories',
+            query: $query,
+            preferredColumns: ['id', 'name', 'code', 'slug']
+        );
+    }
+
+    /**
+     * Build catalog zones with schema-safe columns.
+     */
+    private function getCatalogZones(): \Illuminate\Support\Collection
+    {
+        $query = GeoZone::query();
+
+        if (Schema::hasColumn('geo_zones', 'is_active')) {
+            $query->where('is_active', true);
+        }
+
+        return $this->safeCatalogFilterQuery(
+            table: 'geo_zones',
+            query: $query,
+            preferredColumns: ['id', 'name', 'code', 'slug']
+        );
+    }
+
+    /**
+     * Build catalog slots with schema-safe columns.
+     */
+    private function getCatalogSlots(): \Illuminate\Support\Collection
+    {
+        $query = ScheduleSlot::query();
+
+        if (Schema::hasColumn('schedule_slots', 'is_active')) {
+            $query->where('is_active', true);
+        } elseif (Schema::hasColumn('schedule_slots', 'status')) {
+            $query->where('status', '!=', 'closed');
+        }
+
+        return $this->safeCatalogFilterQuery(
+            table: 'schedule_slots',
+            query: $query,
+            preferredColumns: ['id', 'name', 'code', 'label']
+        );
+    }
+
+    /**
+     * Execute lightweight filter query without hard dependency on optional columns.
+     */
+    private function safeCatalogFilterQuery(
+        string $table,
+        \Illuminate\Database\Eloquent\Builder $query,
+        array $preferredColumns
+    ): \Illuminate\Support\Collection {
+        if (! Schema::hasTable($table)) {
+            return collect();
+        }
+
+        $columns = $this->existingColumns($table, $preferredColumns);
+        if (empty($columns)) {
+            return collect();
+        }
+
+        try {
+            return $query->get($columns);
+        } catch (\Throwable $e) {
+            Log::warning('Catalog filter query fallback activated', [
+                'table' => $table,
+                'columns' => $columns,
+                'error' => $e->getMessage(),
+            ]);
+
+            return collect();
+        }
+    }
+
+    /**
+     * Return only existing table columns preserving order.
+     *
+     * @param array<int, string> $columns
+     * @return array<int, string>
+     */
+    private function existingColumns(string $table, array $columns): array
+    {
+        return array_values(array_filter($columns, fn (string $column): bool => Schema::hasColumn($table, $column)));
+    }
+
+    /**
+     * Resolve category label regardless of legacy relation/attribute shape.
+     */
+    private function resolveCategoryName(ServiceType $service): ?string
+    {
+        $category = $service->category ?? null;
+
+        if (is_string($category)) {
+            return $category;
+        }
+
+        if (is_object($category)) {
+            $name = $category->name ?? null;
+            if (is_string($name)) {
+                return $name;
+            }
+
+            $code = $category->code ?? null;
+            if (is_string($code)) {
+                return $code;
+            }
+        }
+
+        return null;
+    }
+
+    /**
+     * Get available slots for service (private helper).
+     */
+    private function getAvailableSlotsForService(ServiceType $service): array
+    {
+        $this->seedLocalDemoSlotsIfEmpty(now()->startOfDay());
+
+        return $this->buildSlotsQueryForDate(now()->startOfDay())
+            ->get()
+            ->filter(fn (ScheduleSlot $slot) => $this->isSlotPubliclyAvailable($slot))
+            ->map(function ($slot) {
+                $from = $this->formatSlotTime($slot, 'from', 'start_at');
+                $to = $this->formatSlotTime($slot, 'to', 'end_at');
+
+                return [
+                    'id' => $slot->id,
+                    'name' => $slot->name ?? $slot->label ?? "Slot #{$slot->id}",
+                    'from' => $from,
+                    'to' => $to,
+                ];
+            })
+            ->toArray();
+    }
+
+    private function buildSlotsQueryForDate(Carbon $date, ?int $zoneId = null, bool $applyDateFilter = true)
+    {
+        $query = ScheduleSlot::query();
+
+        if ($this->scheduleSlotHasColumn('is_active')) {
+            $query->where('is_active', true);
+        } elseif ($this->scheduleSlotHasColumn('status')) {
+            $query->whereNotIn('status', ['closed']);
+        }
+
+        if ($zoneId && $this->scheduleSlotHasColumn('zone_id')) {
+            $query->where('zone_id', $zoneId);
+        }
+
+        if (! $applyDateFilter) {
+            // Date filter intentionally skipped for fallback query.
+        } elseif ($this->scheduleSlotHasColumn('dow')) {
+            $query->whereJsonContains('dow', $date->dayOfWeekIso);
+        } elseif ($this->scheduleSlotHasColumn('start_at') && $this->scheduleSlotHasColumn('end_at')) {
+            $from = $date->copy()->startOfDay();
+            $to = $date->copy()->endOfDay();
+
+            $query->where(function ($builder) use ($from, $to) {
+                $builder
+                    ->whereBetween('start_at', [$from, $to])
+                    ->orWhereBetween('end_at', [$from, $to])
+                    ->orWhere(function ($nested) use ($from, $to) {
+                        $nested->where('start_at', '<=', $from)->where('end_at', '>=', $to);
+                    });
+            });
+        }
+
+        if ($this->scheduleSlotHasColumn('start_at')) {
+            $query->orderBy('start_at');
+        } elseif ($this->scheduleSlotHasColumn('from')) {
+            $query->orderBy('from');
+        } else {
+            $query->orderBy('id');
+        }
+
+        return $query;
+    }
+
+    private function isSlotPubliclyAvailable(ScheduleSlot $slot): bool
+    {
+        if ($this->scheduleSlotHasColumn('status') && ($slot->status ?? null) === 'closed') {
+            return false;
+        }
+
+        if ($this->scheduleSlotHasColumn('is_closed') && (bool) ($slot->is_closed ?? false)) {
+            return false;
+        }
+
+        if ($this->scheduleSlotHasColumn('cutoff_at') && ! empty($slot->cutoff_at)) {
+            try {
+                if (Carbon::parse($slot->cutoff_at)->isPast()) {
+                    return false;
+                }
+            } catch (\Throwable $e) {
+                // ignore invalid legacy date values
+            }
+        }
+
+        $availableCapacity = $this->getSlotAvailableCapacity($slot);
+        if ($availableCapacity !== null && $availableCapacity <= 0) {
+            return false;
+        }
+
+        return true;
+    }
+
+    private function getSlotAvailableCapacity(ScheduleSlot $slot): ?int
+    {
+        if (method_exists($slot, 'getAvailableCapacity')) {
+            try {
+                return (int) $slot->getAvailableCapacity();
+            } catch (\Throwable $e) {
+                // fallback by schema below
+            }
+        }
+
+        if ($this->scheduleSlotHasColumn('capacity') || $this->scheduleSlotHasColumn('booked')) {
+            $capacity = (int) ($slot->capacity ?? 0);
+            $booked = (int) ($slot->booked ?? 0);
+
+            return max(0, $capacity - $booked);
+        }
+
+        if ($this->scheduleSlotHasColumn('capacity_total')) {
+            $total = (int) ($slot->capacity_total ?? 0);
+            $reserved = (int) ($slot->reserved_count ?? $slot->capacity_reserved ?? 0);
+            $confirmed = (int) ($slot->confirmed_count ?? $slot->capacity_confirmed ?? 0);
+
+            return max(0, $total - $reserved - $confirmed);
+        }
+
+        return null;
+    }
+
+    private function formatSlotTime(ScheduleSlot $slot, string $legacyColumn, string $dateTimeColumn): ?string
+    {
+        $legacyValue = $slot->{$legacyColumn} ?? null;
+        if (! empty($legacyValue)) {
+            try {
+                return Carbon::parse($legacyValue)->format('H:i');
+            } catch (\Throwable $e) {
+                return substr((string) $legacyValue, 0, 5) ?: null;
+            }
+        }
+
+        $dateTimeValue = $slot->{$dateTimeColumn} ?? null;
+        if (! empty($dateTimeValue)) {
+            try {
+                return Carbon::parse($dateTimeValue)->format('H:i');
+            } catch (\Throwable $e) {
+                return null;
+            }
+        }
+
+        return null;
+    }
+
+    private function scheduleSlotHasColumn(string $column): bool
+    {
+        if ($this->scheduleSlotsColumns === null) {
+            $this->scheduleSlotsColumns = Schema::hasTable('schedule_slots')
+                ? Schema::getColumnListing('schedule_slots')
+                : [];
+        }
+
+        return in_array($column, $this->scheduleSlotsColumns, true);
+    }
+
+    /**
+     * Ensure public slots exist for requested date in non-local environments.
+     */
+    private function ensurePublicFallbackSlotsForDate(Carbon $date, ?int $zoneId = null): void
+    {
+        if (! Schema::hasTable('schedule_slots')) {
+            return;
+        }
+
+        $columns = Schema::getColumnListing('schedule_slots');
+        if (empty($columns)) {
+            return;
+        }
+
+        $hasDateRange = in_array('start_at', $columns, true) && in_array('end_at', $columns, true);
+        if (! $hasDateRange) {
+            return;
+        }
+
+        $existingQuery = ScheduleSlot::query()
+            ->whereBetween('start_at', [$date->copy()->startOfDay(), $date->copy()->endOfDay()]);
+
+        if ($zoneId !== null && in_array('zone_id', $columns, true)) {
+            $existingQuery->where('zone_id', $zoneId);
+        }
+
+        if ($existingQuery->exists()) {
+            return;
+        }
+
+        $columnSet = array_flip($columns);
+        $orgId = in_array('org_id', $columns, true) ? Organization::query()->value('id') : null;
+
+        $templates = [
+            ['code' => 'MORNING', 'name' => 'Morning Window', 'from' => '08:00:00', 'to' => '11:00:00'],
+            ['code' => 'NOON', 'name' => 'Noon Window', 'from' => '11:00:00', 'to' => '14:00:00'],
+            ['code' => 'AFTERNOON', 'name' => 'Afternoon Window', 'from' => '14:00:00', 'to' => '17:00:00'],
+        ];
+
+        foreach ($templates as $index => $template) {
+            $startAt = $date->copy()->setTime((int) substr($template['from'], 0, 2), 0, 0);
+            $endAt = $date->copy()->setTime((int) substr($template['to'], 0, 2), 0, 0);
+
+            $row = [
+                'code' => $template['code'].'-'.$date->format('Ymd'),
+                'name' => $template['name'],
+                'label' => $template['name'],
+                'from' => $template['from'],
+                'to' => $template['to'],
+                'dow' => [1, 2, 3, 4, 5, 6, 7],
+                'is_active' => true,
+                'kind' => 'delivery',
+                'status' => 'open',
+                'start_at' => $startAt,
+                'end_at' => $endAt,
+                'hard_window' => false,
+                'capacity_total' => 20,
+                'capacity' => 20,
+                'max_orders' => 20,
+                'capacity_reserved' => 0,
+                'capacity_confirmed' => 0,
+                'reserved_count' => 0,
+                'confirmed_count' => 0,
+                'booked' => $index * 2,
+                'org_id' => $orgId,
+                'zone_id' => $zoneId,
+                'is_closed' => false,
+                'overbooking_pct' => 0,
+                'created_at' => now(),
+                'updated_at' => now(),
+            ];
+
+            $insert = array_intersect_key($row, $columnSet);
+
+            try {
+                ScheduleSlot::query()->create($insert);
+            } catch (\Throwable $e) {
+                Log::warning('Failed to seed public fallback schedule slot', [
+                    'error' => $e->getMessage(),
+                    'columns' => array_keys($insert),
+                    'date' => $date->toDateString(),
+                    'zone_id' => $zoneId,
+                ]);
+            }
+        }
+    }
+
+    /**
+     * Ensure local checkout can work even on a fresh DB by seeding baseline slots.
+     */
+    private function seedLocalDemoSlotsIfEmpty(Carbon $date): void
+    {
+        if (! app()->environment('local') || ! Schema::hasTable('schedule_slots')) {
+            return;
+        }
+
+        if (ScheduleSlot::query()->exists()) {
+            return;
+        }
+
+        $columns = Schema::getColumnListing('schedule_slots');
+        if (empty($columns)) {
+            return;
+        }
+
+        $columnSet = array_flip($columns);
+        $orgId = in_array('org_id', $columns, true) ? Organization::query()->value('id') : null;
+
+        $templates = [
+            ['code' => 'MORNING', 'name' => 'Morning Window', 'from' => '08:00:00', 'to' => '11:00:00'],
+            ['code' => 'NOON', 'name' => 'Noon Window', 'from' => '11:00:00', 'to' => '14:00:00'],
+            ['code' => 'AFTERNOON', 'name' => 'Afternoon Window', 'from' => '14:00:00', 'to' => '17:00:00'],
+        ];
+
+        foreach ($templates as $index => $template) {
+            $startAt = $date->copy()->setTime((int) substr($template['from'], 0, 2), 0, 0);
+            $endAt = $date->copy()->setTime((int) substr($template['to'], 0, 2), 0, 0);
+
+            $row = [
+                'code' => $template['code'],
+                'name' => $template['name'],
+                'label' => $template['name'],
+                'from' => $template['from'],
+                'to' => $template['to'],
+                'dow' => [1, 2, 3, 4, 5, 6, 7],
+                'is_active' => true,
+                'kind' => 'delivery',
+                'status' => 'open',
+                'start_at' => $startAt,
+                'end_at' => $endAt,
+                'hard_window' => false,
+                'capacity_total' => 20,
+                'capacity' => 20,
+                'max_orders' => 20,
+                'capacity_reserved' => 0,
+                'capacity_confirmed' => 0,
+                'reserved_count' => 0,
+                'confirmed_count' => 0,
+                'booked' => $index * 2,
+                'org_id' => $orgId,
+                'is_closed' => false,
+                'overbooking_pct' => 0,
+                'created_at' => now(),
+                'updated_at' => now(),
+            ];
+
+            $insert = array_intersect_key($row, $columnSet);
+
+            try {
+                ScheduleSlot::query()->create($insert);
+            } catch (\Throwable $e) {
+                Log::warning('Failed to seed local schedule slot', [
+                    'error' => $e->getMessage(),
+                    'columns' => array_keys($insert),
+                ]);
+            }
+        }
+    }
+
+    /**
+     * Create payment intent.
+     */
+    private function createPaymentIntent(Order $order, string $provider): array
+    {
+        return match ($provider) {
+            'stripe' => $this->stripeService->createPaymentIntent($order),
+            'vipps' => $this->createVippsPayment($order),
+            default => throw new \Exception('Unsupported payment provider'),
+        };
+    }
+
+    /**
+     * Keep checkout creation resilient even if payment provider is temporarily degraded.
+     */
+    private function createPaymentIntentSafely(Order $order, string $provider): array
+    {
+        try {
+            $result = $this->createPaymentIntent($order, $provider);
+
+            return [
+                'status' => 'ready',
+                ...$result,
+            ];
+        } catch (\Throwable $e) {
+            Log::warning('Payment provider unavailable during public checkout', [
+                'order_id' => $order->id,
+                'provider' => $provider,
+                'error' => $e->getMessage(),
+            ]);
+
+            return [
+                'status' => 'pending_provider',
+                'payment_url' => null,
+                'payment_intent_id' => null,
+                'provider_error' => $e->getMessage(),
+            ];
+        }
+    }
+
+    /**
+     * Create Vipps payment.
+     */
+    private function createVippsPayment(Order $order): array
+    {
+        // This would integrate with VippsController
+        return [
+            'payment_url' => config('app.url').'/vipps/payment/'.$order->id,
+            'payment_intent_id' => 'vipps_'.$order->id,
+        ];
+    }
+
+    private function dispatchOrderCreatedEventSafely(Order $order): void
+    {
+        try {
+            event(new OrderCreated($order->fresh('orderItems')));
+        } catch (\Throwable $e) {
+            Log::warning('OrderCreated event dispatch failed in public checkout', [
+                'order_id' => $order->id,
+                'error' => $e->getMessage(),
+            ]);
+        }
+    }
+
+    /**
+     * Format address string.
+     */
+    private function formatAddress(array $address): string
+    {
+        return "{$address['street']}, {$address['postal_code']} {$address['city']}";
+    }
+
+    /**
+     * Generate unique order number.
+     */
+    private function generateOrderNumber(): string
+    {
+        do {
+            $orderNumber = 'GLF'.date('Ymd').str_pad(random_int(1, 9999), 4, '0', STR_PAD_LEFT);
+        } while (Order::where('order_number', $orderNumber)->exists());
+
+        return $orderNumber;
+    }
+}

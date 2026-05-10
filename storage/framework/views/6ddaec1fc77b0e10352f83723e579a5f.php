@@ -1,0 +1,1 @@
+<?php /**PATH /var/www/bikube/vendor/filament/filament/resources/views/components/layouts/app/sidebar/end.blade.php ENDPATH**/ ?>

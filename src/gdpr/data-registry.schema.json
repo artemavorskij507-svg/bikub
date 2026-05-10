@@ -1,0 +1,58 @@
+﻿{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://glf.narvik.no/schemas/art30-registry.schema.json",
+  "title": "Bikube Art.30 Processing Register",
+  "type": "object",
+  "required": ["generated_at", "activities"],
+  "properties": {
+    "generated_at": { "type": "string", "format": "date-time" },
+    "activities": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "activity_id",
+          "system_component",
+          "business_owner",
+          "data_controller",
+          "purposes",
+          "legal_basis",
+          "data_subject_categories",
+          "personal_data_categories",
+          "retention_policy",
+          "security_measures",
+          "source_refs",
+          "last_reviewed_at"
+        ],
+        "properties": {
+          "activity_id": { "type": "string", "minLength": 3 },
+          "system_component": { "type": "string" },
+          "business_owner": { "type": "string" },
+          "data_controller": { "type": "string" },
+          "purposes": { "type": "array", "items": { "type": "string" }, "minItems": 1 },
+          "legal_basis": { "type": "array", "items": { "type": "string" }, "minItems": 1 },
+          "data_subject_categories": { "type": "array", "items": { "type": "string" }, "minItems": 1 },
+          "personal_data_categories": { "type": "array", "items": { "type": "string" }, "minItems": 1 },
+          "special_category_data": { "type": "boolean", "default": false },
+          "recipients": { "type": "array", "items": { "type": "string" } },
+          "third_country_transfer": {
+            "type": "object",
+            "required": ["enabled"],
+            "properties": {
+              "enabled": { "type": "boolean" },
+              "countries": { "type": "array", "items": { "type": "string" } },
+              "safeguards": { "type": "array", "items": { "type": "string" } }
+            },
+            "additionalProperties": false
+          },
+          "retention_policy": { "type": "string" },
+          "security_measures": { "type": "array", "items": { "type": "string" }, "minItems": 1 },
+          "source_refs": { "type": "array", "items": { "type": "string" }, "minItems": 1 },
+          "last_reviewed_at": { "type": "string", "format": "date" }
+        },
+        "additionalProperties": false
+      }
+    }
+  },
+  "additionalProperties": false
+}

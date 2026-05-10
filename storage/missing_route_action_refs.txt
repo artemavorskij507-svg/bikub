@@ -1,0 +1,6 @@
+﻿[App\Http\Controllers\Api\V1\Account\AccountProfileApiController]
+routes/api.php:11:use App\Http\Controllers\Api\V1\Account\AccountProfileApiController;
+routes/api.php:49:    Route::patch('/profile', [App\Http\Controllers\Api\V1\Account\AccountProfileApiController::class, 'update']);
+routes/api.php:50:    Route::post('/profile/avatar', [App\Http\Controllers\Api\V1\Account\AccountProfileApiController::class, 'updateAvatar']);
+routes/api.php:489:        Route::get('/account/profile', [AccountProfileApiController::class, 'show'])
+

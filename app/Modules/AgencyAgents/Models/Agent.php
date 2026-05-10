@@ -1,0 +1,309 @@
+<?php
+
+namespace App\Modules\AgencyAgents\Models;
+
+use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\HasMany;
+
+class Agent extends Model
+{
+    use HasFactory;
+
+    protected $table = 'agency_agents';
+
+    protected $fillable = [
+        'name',
+        'slug',
+        'description',
+        'category',
+        'color',
+        'emoji',
+        'vibe',
+        'identity_memory',
+        'core_mission',
+        'critical_rules',
+        'technical_deliverables',
+        'workflow_process',
+        'success_metrics',
+        'status',
+        'last_active_at',
+        'performance_score',
+        'tasks_completed',
+        'current_task',
+        'current_zone',
+        'target_zone',
+        'position_x',
+        'position_y',
+        'avatar_sprite',
+        'avatar_direction',
+        'is_moving',
+        'movement_path',
+        'current_activity',
+        'status_message',
+        'metadata',
+    ];
+
+    protected $casts = [
+        'metadata' => 'array',
+        'movement_path' => 'array',
+        'last_active_at' => 'datetime',
+        'performance_score' => 'decimal:2',
+        'position_x' => 'decimal:2',
+        'position_y' => 'decimal:2',
+        'is_moving' => 'boolean',
+    ];
+
+    protected $attributes = [
+        'status' => 'idle',
+        'performance_score' => 0.00,
+        'tasks_completed' => 0,
+        'position_x' => 0.00,
+        'position_y' => 0.00,
+        'current_zone' => 'workspace',
+        'avatar_direction' => 'down',
+        'is_moving' => false,
+        'current_activity' => 'idle',
+    ];
+
+    public const ZONES = [
+        'workspace' => [
+            'name' => 'Workspace',
+            'icon' => 'desk',
+            'bounds' => ['x_min' => 0, 'x_max' => 600, 'y_min' => 0, 'y_max' => 400],
+            'color' => '#e3f2fd',
+        ],
+        'meeting_room' => [
+            'name' => 'Meeting Room',
+            'icon' => 'meeting',
+            'bounds' => ['x_min' => 620, 'x_max' => 800, 'y_min' => 0, 'y_max' => 200],
+            'color' => '#fff3e0',
+        ],
+        'brainstorm' => [
+            'name' => 'Brainstorm',
+            'icon' => 'idea',
+            'bounds' => ['x_min' => 620, 'x_max' => 800, 'y_min' => 220, 'y_max' => 400],
+            'color' => '#f3e5f5',
+        ],
+        'break_room' => [
+            'name' => 'Break Room',
+            'icon' => 'break',
+            'bounds' => ['x_min' => 0, 'x_max' => 300, 'y_min' => 420, 'y_max' => 580],
+            'color' => '#e8f5e9',
+        ],
+        'cafeteria' => [
+            'name' => 'Cafeteria',
+            'icon' => 'meal',
+            'bounds' => ['x_min' => 320, 'x_max' => 600, 'y_min' => 420, 'y_max' => 580],
+            'color' => '#fff8e1',
+        ],
+        'lounge' => [
+            'name' => 'Lounge',
+            'icon' => 'coffee',
+            'bounds' => ['x_min' => 620, 'x_max' => 800, 'y_min' => 420, 'y_max' => 580],
+            'color' => '#fce4ec',
+        ],
+    ];
+
+    public const CATEGORY_SECTORS = [
+        'academic' => ['x_min' => 0, 'x_max' => 150, 'y_min' => 0, 'y_max' => 200],
+        'design' => ['x_min' => 160, 'x_max' => 310, 'y_min' => 0, 'y_max' => 200],
+        'engineering' => ['x_min' => 320, 'x_max' => 470, 'y_min' => 0, 'y_max' => 200],
+        'game-development' => ['x_min' => 480, 'x_max' => 600, 'y_min' => 0, 'y_max' => 200],
+        'marketing' => ['x_min' => 0, 'x_max' => 150, 'y_min' => 210, 'y_max' => 400],
+        'paid-media' => ['x_min' => 160, 'x_max' => 310, 'y_min' => 210, 'y_max' => 400],
+        'product' => ['x_min' => 320, 'x_max' => 470, 'y_min' => 210, 'y_max' => 400],
+        'project-management' => ['x_min' => 480, 'x_max' => 600, 'y_min' => 210, 'y_max' => 400],
+        'sales' => ['x_min' => 0, 'x_max' => 200, 'y_min' => 0, 'y_max' => 150],
+        'specialized' => ['x_min' => 210, 'x_max' => 400, 'y_min' => 0, 'y_max' => 150],
+        'strategy' => ['x_min' => 410, 'x_max' => 600, 'y_min' => 0, 'y_max' => 150],
+        'spatial-computing' => ['x_min' => 0, 'x_max' => 200, 'y_min' => 160, 'y_max' => 300],
+        'testing' => ['x_min' => 210, 'x_max' => 400, 'y_min' => 160, 'y_max' => 300],
+        'support' => ['x_min' => 410, 'x_max' => 600, 'y_min' => 160, 'y_max' => 300],
+    ];
+
+    public function tasks(): HasMany
+    {
+        return $this->hasMany(AgentTask::class);
+    }
+
+    public function communications(): HasMany
+    {
+        return $this->sentCommunications();
+    }
+
+    public function sentCommunications(): HasMany
+    {
+        return $this->hasMany(AgentCommunication::class, 'sender_agent_id');
+    }
+
+    public function receivedCommunications(): HasMany
+    {
+        return $this->hasMany(AgentCommunication::class, 'receiver_agent_id');
+    }
+
+    public function metrics(): HasMany
+    {
+        return $this->hasMany(AgentMetric::class);
+    }
+
+    public function moduleAssignments(): HasMany
+    {
+        return $this->hasMany(AgentModuleAssignment::class);
+    }
+
+    public function eventLogs(): HasMany
+    {
+        return $this->hasMany(AgentEventLog::class);
+    }
+
+    public function isActive(): bool
+    {
+        return $this->status === 'active';
+    }
+
+    public function isIdle(): bool
+    {
+        return $this->status === 'idle';
+    }
+
+    public function isBusy(): bool
+    {
+        return $this->status === 'busy';
+    }
+
+    public function isOnBreak(): bool
+    {
+        return in_array($this->current_zone, ['break_room', 'cafeteria', 'lounge'], true);
+    }
+
+    public function isInMeeting(): bool
+    {
+        return $this->current_zone === 'meeting_room';
+    }
+
+    public function updatePosition(float $x, float $y): void
+    {
+        $zone = $this->detectZone($x, $y);
+
+        $this->update([
+            'position_x' => $x,
+            'position_y' => $y,
+            'current_zone' => $zone,
+        ]);
+    }
+
+    public function moveToZone(string $targetZone): void
+    {
+        if (!isset(self::ZONES[$targetZone])) {
+            return;
+        }
+
+        $zone = self::ZONES[$targetZone];
+        $targetX = ($zone['bounds']['x_min'] + $zone['bounds']['x_max']) / 2;
+        $targetY = ($zone['bounds']['y_min'] + $zone['bounds']['y_max']) / 2;
+
+        $this->update([
+            'target_zone' => $targetZone,
+            'is_moving' => true,
+            'movement_path' => $this->calculatePath($this->position_x, $this->position_y, $targetX, $targetY),
+        ]);
+    }
+
+    public function detectZone(float $x, float $y): string
+    {
+        foreach (self::ZONES as $zoneName => $zone) {
+            if ($x >= $zone['bounds']['x_min'] && $x <= $zone['bounds']['x_max'] &&
+                $y >= $zone['bounds']['y_min'] && $y <= $zone['bounds']['y_max']) {
+                return $zoneName;
+            }
+        }
+
+        return 'workspace';
+    }
+
+    private function calculatePath(float $startX, float $startY, float $endX, float $endY): array
+    {
+        $path = [];
+        $steps = 10;
+
+        for ($i = 0; $i <= $steps; $i++) {
+            $path[] = [
+                'x' => $startX + ($endX - $startX) * ($i / $steps),
+                'y' => $startY + ($endY - $startY) * ($i / $steps),
+            ];
+        }
+
+        return $path;
+    }
+
+    public function arriveAtZone(): void
+    {
+        $this->update([
+            'is_moving' => false,
+            'current_zone' => $this->target_zone,
+            'target_zone' => null,
+            'movement_path' => null,
+        ]);
+    }
+
+    public function updateStatus(string $status, string $activity = null, string $message = null): void
+    {
+        $this->update([
+            'status' => $status,
+            'current_activity' => $activity ?? $this->current_activity,
+            'status_message' => $message,
+            'last_active_at' => now(),
+        ]);
+    }
+
+    public function incrementTasksCompleted(): void
+    {
+        $this->increment('tasks_completed');
+    }
+
+    public function updatePerformanceScore(float $score): void
+    {
+        $this->update(['performance_score' => $score]);
+    }
+
+    public function getZoneInfo(): array
+    {
+        return self::ZONES[$this->current_zone] ?? self::ZONES['workspace'];
+    }
+
+    public function getCategorySector(): array
+    {
+        return self::CATEGORY_SECTORS[$this->category] ?? ['x_min' => 0, 'x_max' => 100, 'y_min' => 0, 'y_max' => 100];
+    }
+
+    public function getPixelAvatar(): string
+    {
+        $avatars = [
+            'academic' => 'academic',
+            'design' => 'design',
+            'engineering' => 'engineering',
+            'game-development' => 'game-dev',
+            'marketing' => 'marketing',
+            'paid-media' => 'paid-media',
+            'product' => 'product',
+            'project-management' => 'pm',
+            'sales' => 'sales',
+            'specialized' => 'specialized',
+            'strategy' => 'strategy',
+            'spatial-computing' => 'spatial',
+        ];
+
+        return $avatars[$this->category] ?? 'agent';
+    }
+
+    public function hasModuleAccess(string $module): bool
+    {
+        return $this->moduleAssignments()
+            ->where('module_key', $module)
+            ->where('is_active', true)
+            ->exists();
+    }
+}
+
+

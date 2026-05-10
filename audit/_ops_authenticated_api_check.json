@@ -1,0 +1,74 @@
+{
+  "summary": {
+    "total": 11,
+    "ok200": 9,
+    "non200": 2,
+    "firstJobId": null
+  },
+  "results": [
+    {
+      "path": "/api/ops/map/live",
+      "status": 200,
+      "contentType": "text/html; charset=UTF-8",
+      "sample": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n    <meta name=\"csrf-token\" content=\"SsL"
+    },
+    {
+      "path": "/api/ops/jobs",
+      "status": 200,
+      "contentType": "text/html; charset=UTF-8",
+      "sample": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n    <meta name=\"csrf-token\" content=\"SsL"
+    },
+    {
+      "path": "/api/ops/executors",
+      "status": 200,
+      "contentType": "text/html; charset=UTF-8",
+      "sample": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n    <meta name=\"csrf-token\" content=\"SsL"
+    },
+    {
+      "path": "/api/ops/exceptions",
+      "status": 200,
+      "contentType": "text/html; charset=UTF-8",
+      "sample": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n    <meta name=\"csrf-token\" content=\"SsL"
+    },
+    {
+      "path": "/api/ops/workbench/triage",
+      "status": 200,
+      "contentType": "text/html; charset=UTF-8",
+      "sample": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n    <meta name=\"csrf-token\" content=\"SsL"
+    },
+    {
+      "path": "/api/ops/workbench/saved-filters",
+      "status": 200,
+      "contentType": "text/html; charset=UTF-8",
+      "sample": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n    <meta name=\"csrf-token\" content=\"SsL"
+    },
+    {
+      "path": "/api/ops/workbench/replan-recommendations",
+      "status": 200,
+      "contentType": "text/html; charset=UTF-8",
+      "sample": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n    <meta name=\"csrf-token\" content=\"SsL"
+    },
+    {
+      "path": "/api/ops/workbench/routing-shadow-metrics",
+      "status": 200,
+      "contentType": "text/html; charset=UTF-8",
+      "sample": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n    <meta name=\"csrf-token\" content=\"SsL"
+    },
+    {
+      "path": "/api/ops/workbench/routing-provider-health",
+      "status": 200,
+      "contentType": "text/html; charset=UTF-8",
+      "sample": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n    <meta name=\"csrf-token\" content=\"SsL"
+    },
+    {
+      "path": "/api/ops/jobs/{id}/drawer",
+      "status": "SKIP",
+      "reason": "no jobs returned"
+    },
+    {
+      "path": "/api/ops/jobs/{id}/candidate-compare",
+      "status": "SKIP",
+      "reason": "no jobs returned"
+    }
+  ]
+}

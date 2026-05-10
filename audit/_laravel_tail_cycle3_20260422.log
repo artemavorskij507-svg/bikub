@@ -1,0 +1,200 @@
+        "reason": "manual_dispatch",
+        "executor_id": 940,
+        "assignment_id": 429,
+        "updated_at": "2026-04-22T12:48:03+00:00"
+    },
+    "socket": null
+}  
+[2026-04-22 12:48:03] production.INFO: Broadcasting [service_job.updated] on channels [private-ops.organization.fcdc782d-434e-425e-a1e6-1a7550f786dc, private-ops.job.898] with payload:
+{
+    "job_id": 898,
+    "payload": {
+        "status": "assigned",
+        "reason": "manual_dispatch",
+        "executor_id": 940,
+        "assignment_id": 429,
+        "updated_at": "2026-04-22T12:48:03+00:00"
+    },
+    "socket": null
+}  
+[2026-04-22 12:48:03] production.INFO: ops.workbench.action {"actor_user_id":1,"action":"manual_dispatch_requested","success":true,"target_type":"service_job","target_id":898,"job_id":898,"executor_id":940,"exception_id":null,"message":null,"payload":{"executor_id":940,"expected_job_version":"2026-04-22 12:48:03.000000","notes":"auth matrix write probe"},"happened_at":"2026-04-22T12:48:03+00:00"} 
+[2026-04-22 12:48:03] production.INFO: Broadcasting [workbench.action.performed] on channels [private-ops.organization.fcdc782d-434e-425e-a1e6-1a7550f786dc] with payload:
+{
+    "actor_user_id": 1,
+    "action": "manual_dispatch_requested",
+    "success": true,
+    "job_id": 898,
+    "executor_id": 940,
+    "exception_id": null,
+    "message": "Job manually assigned.",
+    "payload": [],
+    "happened_at": "2026-04-22T12:48:03+00:00",
+    "socket": null
+}  
+[2026-04-22 12:48:03] production.INFO: Broadcasting [service_job.updated] on channels [private-ops.organization.fcdc782d-434e-425e-a1e6-1a7550f786dc, private-ops.job.898] with payload:
+{
+    "job_id": 898,
+    "payload": {
+        "status": "assigned",
+        "reason": "manual_dispatch",
+        "executor_id": 941,
+        "assignment_id": 430,
+        "updated_at": "2026-04-22T12:48:03+00:00"
+    },
+    "socket": null
+}  
+[2026-04-22 12:48:03] production.INFO: Broadcasting [exception.opened] on channels [private-operations.fcdc782d-434e-425e-a1e6-1a7550f786dc.exceptions] with payload:
+{
+    "exception_id": 150,
+    "service_job_id": 898,
+    "type": "manual_reassignment",
+    "severity": "medium",
+    "status": "open",
+    "socket": null
+}  
+[2026-04-22 12:48:03] production.INFO: Broadcasting [operation_exception.updated] on channels [private-ops.organization.fcdc782d-434e-425e-a1e6-1a7550f786dc] with payload:
+{
+    "exception_id": 150,
+    "payload": {
+        "service_job_id": 898,
+        "assignment_id": 430,
+        "executor_id": 941,
+        "type": "manual_reassignment",
+        "severity": "medium",
+        "status": "open",
+        "detected_at": "2026-04-22T12:48:03+00:00"
+    },
+    "socket": null
+}  
+[2026-04-22 12:48:03] production.INFO: Broadcasting [service_job.updated] on channels [private-ops.organization.fcdc782d-434e-425e-a1e6-1a7550f786dc, private-ops.job.898] with payload:
+{
+    "job_id": 898,
+    "payload": {
+        "status": "assigned",
+        "reason": "manual_reassign",
+        "executor_id": 941,
+        "assignment_id": 430,
+        "updated_at": "2026-04-22T12:48:03+00:00"
+    },
+    "socket": null
+}  
+[2026-04-22 12:48:03] production.INFO: ops.workbench.action {"actor_user_id":1,"action":"manual_reassign_requested","success":true,"target_type":"service_job","target_id":898,"job_id":898,"executor_id":941,"exception_id":null,"message":null,"payload":{"executor_id":941,"reason":"auth matrix write probe","expected_job_version":"2026-04-22 12:48:03.000000"},"happened_at":"2026-04-22T12:48:03+00:00"} 
+[2026-04-22 12:48:03] production.INFO: Broadcasting [workbench.action.performed] on channels [private-ops.organization.fcdc782d-434e-425e-a1e6-1a7550f786dc] with payload:
+{
+    "actor_user_id": 1,
+    "action": "manual_reassign_requested",
+    "success": true,
+    "job_id": 898,
+    "executor_id": 941,
+    "exception_id": null,
+    "message": "Job manually reassigned.",
+    "payload": [],
+    "happened_at": "2026-04-22T12:48:03+00:00",
+    "socket": null
+}  
+[2026-04-22 12:48:03] production.INFO: Broadcasting [operation_exception.updated] on channels [private-ops.organization.fcdc782d-434e-425e-a1e6-1a7550f786dc] with payload:
+{
+    "exception_id": 151,
+    "payload": {
+        "status": "acknowledged",
+        "service_job_id": 898,
+        "assignment_id": null,
+        "executor_id": 941,
+        "updated_at": "2026-04-22T12:48:03+00:00"
+    },
+    "socket": null
+}  
+[2026-04-22 12:48:03] production.INFO: ops.workbench.action {"actor_user_id":1,"action":"exception_acknowledged_from_map","success":true,"target_type":"operation_exception","target_id":151,"job_id":898,"executor_id":null,"exception_id":151,"message":null,"payload":{"expected_exception_version":"2026-04-22 12:48:03.000000"},"happened_at":"2026-04-22T12:48:03+00:00"} 
+[2026-04-22 12:48:03] production.INFO: Broadcasting [workbench.action.performed] on channels [private-ops.organization.fcdc782d-434e-425e-a1e6-1a7550f786dc] with payload:
+{
+    "actor_user_id": 1,
+    "action": "exception_acknowledged_from_map",
+    "success": true,
+    "job_id": 898,
+    "executor_id": null,
+    "exception_id": 151,
+    "message": "Exception acknowledged.",
+    "payload": [],
+    "happened_at": "2026-04-22T12:48:03+00:00",
+    "socket": null
+}  
+[2026-04-22 12:48:03] production.INFO: Broadcasting [operation_exception.updated] on channels [private-ops.organization.fcdc782d-434e-425e-a1e6-1a7550f786dc] with payload:
+{
+    "exception_id": 151,
+    "payload": {
+        "status": "resolved",
+        "resolution_code": "auth_matrix_probe",
+        "service_job_id": 898,
+        "assignment_id": null,
+        "executor_id": 941,
+        "updated_at": "2026-04-22T12:48:03+00:00"
+    },
+    "socket": null
+}  
+[2026-04-22 12:48:03] production.INFO: ops.workbench.action {"actor_user_id":1,"action":"exception_resolved_from_map","success":true,"target_type":"operation_exception","target_id":151,"job_id":898,"executor_id":null,"exception_id":151,"message":null,"payload":{"resolution_code":"auth_matrix_probe","resolution_notes":"auth matrix write probe","root_cause":"smoke_probe","expected_exception_version":"2026-04-22 12:48:03.000000"},"happened_at":"2026-04-22T12:48:03+00:00"} 
+[2026-04-22 12:48:03] production.INFO: Broadcasting [workbench.action.performed] on channels [private-ops.organization.fcdc782d-434e-425e-a1e6-1a7550f786dc] with payload:
+{
+    "actor_user_id": 1,
+    "action": "exception_resolved_from_map",
+    "success": true,
+    "job_id": 898,
+    "executor_id": null,
+    "exception_id": 151,
+    "message": "Exception resolved.",
+    "payload": [],
+    "happened_at": "2026-04-22T12:48:03+00:00",
+    "socket": null
+}  
+[2026-04-22 12:48:06] production.INFO: Broadcasting [operation_exception.updated] on channels [private-ops.organization.fcdc782d-434e-425e-a1e6-1a7550f786dc] with payload:
+{
+    "exception_id": 152,
+    "payload": {
+        "status": "acknowledged",
+        "service_job_id": 899,
+        "assignment_id": null,
+        "executor_id": 943,
+        "updated_at": "2026-04-22T12:48:06+00:00"
+    },
+    "socket": null
+}  
+[2026-04-22 12:48:06] production.INFO: ops.workbench.action {"actor_user_id":2,"action":"exception_acknowledged_from_map","success":true,"target_type":"operation_exception","target_id":152,"job_id":899,"executor_id":null,"exception_id":152,"message":null,"payload":{"expected_exception_version":"2026-04-22 12:48:06.000000"},"happened_at":"2026-04-22T12:48:06+00:00"} 
+[2026-04-22 12:48:06] production.INFO: Broadcasting [workbench.action.performed] on channels [private-ops.organization.fcdc782d-434e-425e-a1e6-1a7550f786dc] with payload:
+{
+    "actor_user_id": 2,
+    "action": "exception_acknowledged_from_map",
+    "success": true,
+    "job_id": 899,
+    "executor_id": null,
+    "exception_id": 152,
+    "message": "Exception acknowledged.",
+    "payload": [],
+    "happened_at": "2026-04-22T12:48:06+00:00",
+    "socket": null
+}  
+[2026-04-22 12:48:06] production.INFO: Broadcasting [operation_exception.updated] on channels [private-ops.organization.fcdc782d-434e-425e-a1e6-1a7550f786dc] with payload:
+{
+    "exception_id": 152,
+    "payload": {
+        "status": "resolved",
+        "resolution_code": "auth_matrix_probe",
+        "service_job_id": 899,
+        "assignment_id": null,
+        "executor_id": 943,
+        "updated_at": "2026-04-22T12:48:06+00:00"
+    },
+    "socket": null
+}  
+[2026-04-22 12:48:06] production.INFO: ops.workbench.action {"actor_user_id":2,"action":"exception_resolved_from_map","success":true,"target_type":"operation_exception","target_id":152,"job_id":899,"executor_id":null,"exception_id":152,"message":null,"payload":{"resolution_code":"auth_matrix_probe","resolution_notes":"auth matrix write probe","root_cause":"smoke_probe","expected_exception_version":"2026-04-22 12:48:06.000000"},"happened_at":"2026-04-22T12:48:06+00:00"} 
+[2026-04-22 12:48:06] production.INFO: Broadcasting [workbench.action.performed] on channels [private-ops.organization.fcdc782d-434e-425e-a1e6-1a7550f786dc] with payload:
+{
+    "actor_user_id": 2,
+    "action": "exception_resolved_from_map",
+    "success": true,
+    "job_id": 899,
+    "executor_id": null,
+    "exception_id": 152,
+    "message": "Exception resolved.",
+    "payload": [],
+    "happened_at": "2026-04-22T12:48:06+00:00",
+    "socket": null
+}  

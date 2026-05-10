@@ -1,0 +1,32 @@
+{
+  "order_id": 16,
+  "intent1": {
+    "success": true,
+    "data": {
+      "client_secret": "pi_3TOudIJvnGh6jvlD0CJB0vz8_secret_ywiSAaU4mW8bL7piNscpcBHPl",
+      "payment_intent_id": "pi_3TOudIJvnGh6jvlD0CJB0vz8",
+      "amount": 19900,
+      "currency": "nok"
+    },
+    "message": "Payment intent created successfully"
+  },
+  "intent2": {
+    "success": true,
+    "data": {
+      "client_secret": "pi_3TOudJJvnGh6jvlD1yNIztxy_secret_cVXfeaeRtTj9Pb4Qq8wdMGeDs",
+      "payment_intent_id": "pi_3TOudJJvnGh6jvlD1yNIztxy",
+      "amount": 19900,
+      "currency": "nok"
+    },
+    "message": "Payment intent created successfully"
+  },
+  "confirm": {
+    "success": false,
+    "message": "Payment confirmation failed",
+    "error": "This PaymentIntent is configured to accept payment methods enabled in your Dashboard. Because some of these payment methods might redirect your customer off of your page, you must provide a `return_url`. If you don't want to accept redirect-based payment methods, set `automatic_payment_methods[enabled]` to `true` and `automatic_payment_methods[allow_redirects]` to `never` when creating Setup Intents and Payment Intents."
+  },
+  "vipps_init": {
+    "success": false,
+    "message": "Vipps is not configured"
+  }
+}

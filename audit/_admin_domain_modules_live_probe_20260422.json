@@ -1,0 +1,19 @@
+{
+  "generated_at": "2026-04-22T07:35:02.595Z",
+  "base": "https://136.119.84.22",
+  "login_attempts": [
+    {
+      "email": "keks@glf.no",
+      "ok": false,
+      "url": "https://136.119.84.22/admin/login"
+    },
+    {
+      "email": "keks@gfl.no",
+      "ok": false,
+      "url": "https://136.119.84.22/admin/login"
+    }
+  ],
+  "login_success": null,
+  "checks": [],
+  "error": "login_failed_all_candidates"
+}

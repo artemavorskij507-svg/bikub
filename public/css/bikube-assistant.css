@@ -1,0 +1,459 @@
+/**
+ * Bikube Smart Assistant Styles
+ * Оптимизированные стили для ассистента
+ */
+
+/* Основной контейнер */
+.bikube-assistant {
+    position: fixed;
+    bottom: 1rem;
+    right: 1rem;
+    z-index: 50;
+}
+
+@media (min-width: 768px) {
+    .bikube-assistant {
+        bottom: 1.5rem;
+        right: 1.5rem;
+    }
+}
+
+/* Кнопка открытия чата */
+.bikube-assistant-toggle {
+    position: relative;
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #f59e0b 0%, #f97316 100%);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 10px 30px rgba(245, 158, 11, 0.4);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    border: 4px solid rgba(255, 255, 255, 0.2);
+    cursor: pointer;
+}
+
+.bikube-assistant-toggle:hover {
+    transform: scale(1.1);
+    box-shadow: 0 15px 40px rgba(245, 158, 11, 0.6);
+}
+
+.bikube-assistant-toggle:active {
+    transform: scale(0.95);
+}
+
+@media (min-width: 768px) {
+    .bikube-assistant-toggle {
+        width: 5rem;
+        height: 5rem;
+    }
+}
+
+/* Анимация пульсации */
+.bikube-assistant-pulse {
+    position: absolute;
+    inset: 0;
+    border-radius: 50%;
+    background: #fbbf24;
+    opacity: 0.2;
+    animation: ping 2s cubic-bezier(0, 0, 0.2, 1) infinite;
+}
+
+@keyframes ping {
+    75%, 100% {
+        transform: scale(2);
+        opacity: 0;
+    }
+}
+
+/* Окно чата */
+.bikube-assistant-window {
+    position: absolute;
+    bottom: calc(100% + 1rem);
+    right: 0;
+    width: 22rem;
+    max-height: 650px;
+    background: white;
+    border-radius: 1.5rem;
+    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.2);
+    border: 2px solid #fef3c7;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    animation: slideUp 0.3s ease-out;
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(1rem) scale(0.95);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+@media (min-width: 640px) {
+    .bikube-assistant-window {
+        width: 28rem;
+    }
+}
+
+/* Хедер чата */
+.bikube-assistant-header {
+    padding: 1.25rem 1.5rem;
+    background: linear-gradient(135deg, #f59e0b 0%, #f97316 50%, #f59e0b 100%);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(245, 158, 11, 0.3);
+}
+
+.bikube-assistant-header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 8rem;
+    height: 8rem;
+    background: white;
+    border-radius: 50%;
+    opacity: 0.1;
+    transform: translate(25%, -25%);
+}
+
+.bikube-assistant-header::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 6rem;
+    height: 6rem;
+    background: white;
+    border-radius: 50%;
+    opacity: 0.1;
+    transform: translate(-25%, 25%);
+}
+
+/* Область сообщений */
+.bikube-assistant-messages {
+    padding: 1.25rem;
+    flex: 1;
+    overflow-y: auto;
+    background: white;
+    max-height: 450px;
+}
+
+.bikube-assistant-messages::-webkit-scrollbar {
+    width: 6px;
+}
+
+.bikube-assistant-messages::-webkit-scrollbar-track {
+    background: #f3f4f6;
+    border-radius: 10px;
+}
+
+.bikube-assistant-messages::-webkit-scrollbar-thumb {
+    background: #d1d5db;
+    border-radius: 10px;
+}
+
+.bikube-assistant-messages::-webkit-scrollbar-thumb:hover {
+    background: #9ca3af;
+}
+
+/* Пустое состояние */
+.bikube-assistant-empty {
+    text-align: center;
+    padding: 2.5rem 1rem;
+}
+
+.bikube-assistant-empty-icon {
+    width: 6rem;
+    height: 6rem;
+    border-radius: 1.5rem;
+    background: linear-gradient(135deg, #fbbf24 0%, #f97316 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1.25rem;
+    box-shadow: 0 10px 30px rgba(245, 158, 11, 0.3);
+    border: 4px solid white;
+}
+
+.bikube-assistant-empty-title {
+    font-size: 1.25rem;
+    font-weight: 900;
+    color: #000000;
+    margin-bottom: 0.5rem;
+}
+
+.bikube-assistant-empty-text {
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: #000000;
+    margin-bottom: 1.75rem;
+    line-height: 1.6;
+    max-width: 18rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Кнопки быстрых вопросов */
+.bikube-assistant-question-btn {
+    width: 100%;
+    text-align: left;
+    font-size: 0.875rem;
+    padding: 0.875rem 1.25rem;
+    background: white;
+    border: 2px solid #e5e7eb;
+    border-radius: 1rem;
+    color: #000000;
+    font-weight: 700;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    transition: all 0.2s;
+    margin-bottom: 0.75rem;
+}
+
+.bikube-assistant-question-btn:hover {
+    border-color: #fbbf24;
+    background: #fef3c7;
+    transform: scale(1.02);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.bikube-assistant-question-btn:active {
+    transform: scale(0.98);
+}
+
+/* Сообщения */
+.bikube-assistant-message {
+    display: flex;
+    margin-bottom: 1rem;
+}
+
+.bikube-assistant-message-user {
+    justify-content: flex-end;
+}
+
+.bikube-assistant-message-assistant {
+    justify-content: flex-start;
+}
+
+.bikube-assistant-message-bubble {
+    max-width: 85%;
+    display: flex;
+    align-items: flex-end;
+    gap: 0.5rem;
+}
+
+.bikube-assistant-message-user .bikube-assistant-message-bubble {
+    flex-direction: row-reverse;
+}
+
+.bikube-assistant-message-avatar {
+    width: 2rem;
+    height: 2rem;
+    border-radius: 0.75rem;
+    background: linear-gradient(135deg, #fbbf24 0%, #f97316 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    border: 1px solid white;
+}
+
+.bikube-assistant-message-text {
+    padding: 0.875rem 1.25rem;
+    border-radius: 1rem;
+    font-size: 0.875rem;
+    font-weight: 600;
+    line-height: 1.6;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.bikube-assistant-message-user .bikube-assistant-message-text {
+    background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+    color: white;
+    border-bottom-right-radius: 0.25rem;
+}
+
+.bikube-assistant-message-assistant .bikube-assistant-message-text {
+    background: white;
+    color: #000000;
+    border: 2px solid #fef3c7;
+    border-bottom-left-radius: 0.25rem;
+}
+
+/* Поле ввода */
+.bikube-assistant-input-form {
+    padding: 1.25rem;
+    background: white;
+    border-top: 2px solid #fef3c7;
+    display: flex;
+    align-items: flex-end;
+    gap: 0.75rem;
+}
+
+.bikube-assistant-input {
+    flex: 1;
+    font-size: 0.875rem;
+    border: 2px solid #e5e7eb;
+    border-radius: 1rem;
+    padding: 0.875rem 1.25rem;
+    background: #f9fafb;
+    font-weight: 600;
+    color: #000000;
+    transition: all 0.2s;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.bikube-assistant-input:focus {
+    outline: none;
+    border-color: #f59e0b;
+    background: white;
+    box-shadow: 0 0 0 3px rgba(245, 158, 11, 0.1);
+}
+
+.bikube-assistant-input::placeholder {
+    color: #9ca3af;
+}
+
+.bikube-assistant-send-btn {
+    width: 3rem;
+    height: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 1rem;
+    background: linear-gradient(135deg, #f59e0b 0%, #f97316 100%);
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: all 0.2s;
+    box-shadow: 0 4px 12px rgba(245, 158, 11, 0.3);
+    font-weight: 700;
+}
+
+.bikube-assistant-send-btn:hover:not(:disabled) {
+    background: linear-gradient(135deg, #d97706 0%, #ea580c 100%);
+    box-shadow: 0 6px 20px rgba(245, 158, 11, 0.4);
+    transform: translateY(-1px);
+}
+
+.bikube-assistant-send-btn:active:not(:disabled) {
+    transform: scale(0.95);
+}
+
+.bikube-assistant-send-btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+/* Индикатор загрузки */
+.bikube-assistant-loading {
+    display: flex;
+    justify-content: flex-start;
+    margin-bottom: 1rem;
+}
+
+.bikube-assistant-loading-dots {
+    display: flex;
+    gap: 0.25rem;
+    padding: 0.875rem 1.25rem;
+    background: white;
+    border: 2px solid #f3f4f6;
+    border-radius: 1rem;
+    border-bottom-left-radius: 0.25rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.bikube-assistant-loading-dot {
+    width: 0.375rem;
+    height: 0.375rem;
+    background: #9ca3af;
+    border-radius: 50%;
+    animation: bounce 1.4s infinite;
+}
+
+.bikube-assistant-loading-dot:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.bikube-assistant-loading-dot:nth-child(3) {
+    animation-delay: 0.4s;
+}
+
+@keyframes bounce {
+    0%, 80%, 100% {
+        transform: scale(0);
+    }
+    40% {
+        transform: scale(1);
+    }
+}
+
+/* Бейдж с количеством сообщений */
+.bikube-assistant-badge {
+    position: absolute;
+    top: -0.25rem;
+    right: -0.25rem;
+    width: 1.75rem;
+    height: 1.75rem;
+    background: #ef4444;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 0.6875rem;
+    font-weight: 900;
+    box-shadow: 0 2px 8px rgba(239, 68, 68, 0.4);
+    border: 3px solid white;
+    z-index: 20;
+}
+
+@media (min-width: 768px) {
+    .bikube-assistant-badge {
+        width: 1.875rem;
+        height: 1.875rem;
+        font-size: 0.75rem;
+    }
+}
+
+/* Tooltip */
+.bikube-assistant-tooltip {
+    position: absolute;
+    right: calc(100% + 1rem);
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 0.5rem 1rem;
+    background: #1e293b;
+    color: white;
+    font-size: 0.75rem;
+    font-weight: 700;
+    border-radius: 0.75rem;
+    white-space: nowrap;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.2s;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    z-index: 30;
+}
+
+.bikube-assistant-toggle:hover .bikube-assistant-tooltip {
+    opacity: 1;
+}
+
+@media (max-width: 767px) {
+    .bikube-assistant-tooltip {
+        display: none;
+    }
+}
+

@@ -1,0 +1,75 @@
+<?php
+
+namespace App\Filament\Pages;
+
+use Filament\Pages\Page;
+use Filament\Forms\Concerns\InteractsWithForms;
+use Filament\Forms\Contracts\HasForms;
+use Filament\Forms\Components\{Grid, DatePicker, Select};
+use Filament\Pages\Actions\{Action, Actions};
+use App\Models\GeoZone;
+use App\Models\ServiceCategory;
+
+class Analytics extends Page implements HasForms
+{
+    use InteractsWithForms;
+
+    protected static ?string $navigationIcon = 'heroicon-o-chart-bar';
+    protected static ?string $navigationGroup = 'Аналитика и отчётность';
+    protected static ?string $navigationLabel = 'Аналитика';
+    protected static ?string $title = 'Аналитика';
+    protected static ?string $slug = 'analytics';
+    protected static string $view = 'filament.pages.analytics';
+
+    // Временно отключено, чтобы избежать ошибки RouteNotFoundException
+    protected static function shouldRegisterNavigation(): bool
+    {
+        return false;
+    }
+
+    // Временно отключено, чтобы избежать ошибки RouteNotFoundException
+    public static function shouldRegister(): bool
+    {
+        return false;
+    }
+
+    public ?array $filters = [
+        'period' => ['from' => null, 'to' => null],
+        'zone_id' => null,
+        'category' => null,
+    ];
+
+    public static function getWidgets(): array
+    {
+        return [
+            \App\Filament\Widgets\KpiOverview::class,
+            \App\Filament\Widgets\OrdersOverTime::class,
+            \App\Filament\Widgets\SlaBreaches::class,
+            \App\Filament\Widgets\SlotUtilization::class,
+        ];
+    }
+
+    protected function getHeaderWidgetsData(): array
+    {
+        return ['filters' => $this->filters];
+    }
+
+    protected function getFormSchema(): array
+    {
+        return [
+            Grid::make(12)->schema([
+                DatePicker::make('filters.period.from')->label('С дати')->required()->columnSpan(2),
+                DatePicker::make('filters.period.to')->label('По дату')->required()->columnSpan(2),
+                Select::make('filters.zone_id')->label('Зона')
+                    ->options(GeoZone::query()->orderBy('name')->pluck('name','id')->all())
+                    ->searchable()->columnSpan(3),
+                Select::make('filters.category')->label('Категорія')
+                    ->options(method_exists(ServiceCategory::class, 'pluck') ? \App\Models\ServiceCategory::pluck('name','code')->all() : [])
+                    ->searchable()->columnSpan(3),
+            ]),
+        ];
+    }
+}
+
+/* Legacy duplicate class removed to fix autoload parse error */
+

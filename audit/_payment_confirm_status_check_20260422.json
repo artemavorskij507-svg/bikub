@@ -1,0 +1,13 @@
+{
+  "http_status": 422,
+  "payment_intent_id": "pi_3TOuu2JvnGh6jvlD1HuYlNwj",
+  "body": {
+    "success": false,
+    "message": "Payment requires client-side confirmation or additional confirmation parameters.",
+    "data": {
+      "status": "requires_payment_method",
+      "payment_intent_id": "pi_3TOuu2JvnGh6jvlD1HuYlNwj",
+      "requires_action": true
+    }
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "first_status": 422,
+  "second_status": 409,
+  "first_body": {
+    "success": false,
+    "message": "Payment requires client-side confirmation or additional confirmation parameters.",
+    "data": {
+      "status": "requires_payment_method",
+      "payment_intent_id": "pi_3TOuvrJvnGh6jvlD1YUgt85j",
+      "requires_action": true
+    }
+  },
+  "second_body": {
+    "success": false,
+    "message": "Idempotency key is already used with different payload."
+  }
+}

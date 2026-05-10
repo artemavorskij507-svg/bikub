@@ -1,0 +1,605 @@
+{
+  "categories": [
+    {
+      "code": "care",
+      "name": "Alle Care",
+      "description": "Сервис заботы в Нарвике - бытовая поддержка, медицинская помощь, безопасность дома"
+    },
+    {
+      "code": "eco",
+      "name": "Alle Eco", 
+      "description": "Вывоз и переработка - утилизация мебели, техники, сезонная уборка"
+    },
+    {
+      "code": "tow",
+      "name": "Alle Tow",
+      "description": "Эвакуатор и помощь на дороге - эвакуация, прикуривание, замена колес"
+    },
+    {
+      "code": "rent",
+      "name": "Alle Rent",
+      "description": "Аренда вещей - инструменты, спорт, транспорт, совместное потребление"
+    },
+    {
+      "code": "shuttle",
+      "name": "Alle Shuttle",
+      "description": "Транспорт для сменных работников - маршрутные и on-demand перевозки"
+    },
+    {
+      "code": "master",
+      "name": "Alle Master",
+      "description": "Ремонт дома, сборка мебели, подключение техники"
+    },
+    {
+      "code": "food",
+      "name": "Alle Food",
+      "description": "Доставка готовой еды из ресторанов и кафе Нарвика"
+    },
+    {
+      "code": "market",
+      "name": "Alle Market",
+      "description": "Доставка из магазинов - продукты, хозтовары, мебель, электроника"
+    }
+  ],
+  "service_types": [
+    {
+      "code": "care.l1.med_delivery",
+      "category": "care",
+      "name": "Доставка лекарств (ID/рецепт)",
+      "description": "Забираем в аптеке, проверяем ID/рецепт, доставляем",
+      "default_pricing": {
+        "base": 349,
+        "duration_minutes": 45,
+        "surcharges": {
+          "evening": 50,
+          "snow_ice": 100
+        }
+      },
+      "skills": ["Вежливое общение", "Проверка ID"],
+      "inventory": ["Сумка-термо", "Планшет"]
+    },
+    {
+      "code": "care.l1.errands",
+      "category": "care", 
+      "name": "Поручения в городе",
+      "description": "Мелкие закупки/почта/оплата счетов",
+      "default_pricing": {
+        "base": 399,
+        "duration_minutes": 60,
+        "surcharges": {
+          "per_km": 15,
+          "waiting_time": 10
+        }
+      },
+      "skills": ["Коммуникация", "Касса"],
+      "inventory": ["Тележка", "Рюкзак"]
+    },
+    {
+      "code": "care.l1.stairs_firewood",
+      "category": "care",
+      "name": "Занос на этаж/дрова", 
+      "description": "Подъём грузов/дров, особенно зимой",
+      "default_pricing": {
+        "base": 449,
+        "duration_minutes": 60,
+        "surcharges": {
+          "per_floor": 50,
+          "per_kg": 2
+        }
+      },
+      "skills": ["Безопасный подъём"],
+      "inventory": ["Ремни-стяжки"]
+    },
+    {
+      "code": "care.l1.light_fix",
+      "category": "care",
+      "name": "Лампочка/батарейки",
+      "description": "Мелкий быт без электромонтажа",
+      "default_pricing": {
+        "base": 299,
+        "duration_minutes": 30,
+        "surcharges": {
+          "evening": 50
+        }
+      },
+      "skills": ["Осторожность"],
+      "inventory": ["Стремянка", "Фонарь"]
+    },
+    {
+      "code": "care.l1.companion",
+      "category": "care",
+      "name": "Сопровождение (NAV/врач/почта)",
+      "description": "Транспорт/ожидание/помощь",
+      "default_pricing": {
+        "base": 599,
+        "duration_minutes": 120,
+        "surcharges": {
+          "waiting_over_30min": 100
+        }
+      },
+      "skills": ["Эмпатия"],
+      "inventory": ["Планшет", "Авто"]
+    },
+    {
+      "code": "care.l1.good_visit",
+      "category": "care",
+      "name": "«Добрый визит»",
+      "description": "Час общения/профилактика одиночества",
+      "default_pricing": {
+        "base": 299,
+        "duration_minutes": 60,
+        "surcharges": {
+          "evening": 50
+        }
+      },
+      "skills": ["Эмпатия"],
+      "inventory": ["Планшет"]
+    },
+    {
+      "code": "care.l2.med_remind",
+      "category": "care",
+      "name": "Напоминания о лекарствах",
+      "description": "Без манипуляций, контроль графика",
+      "default_pricing": {
+        "base": 149,
+        "duration_minutes": 15,
+        "surcharges": {
+          "evening": 30
+        }
+      },
+      "skills": ["Этика", "Приватность"],
+      "inventory": ["Приложение"]
+    },
+    {
+      "code": "care.l2.vitals_check",
+      "category": "care",
+      "name": "Давление/сахар (совм. с медслужбой)",
+      "description": "Сбор показаний, передача",
+      "default_pricing": {
+        "base": 299,
+        "duration_minutes": 30,
+        "surcharges": {
+          "consumables": 50
+        }
+      },
+      "skills": ["Обучение", "GDPR"],
+      "inventory": ["Тонометр", "Глюкометр"]
+    },
+    {
+      "code": "care.l2.rehab_assist",
+      "category": "care",
+      "name": "Помощь в реабилитации",
+      "description": "Простые упражнения/сопровождение",
+      "default_pricing": {
+        "base": 499,
+        "duration_minutes": 60,
+        "surcharges": {
+          "weekend": 100
+        }
+      },
+      "skills": ["Базовая ЛФК"],
+      "inventory": ["Коврик"]
+    },
+    {
+      "code": "care.l2.telemed",
+      "category": "care",
+      "name": "Телемедицина-связь",
+      "description": "Вызов врача через планшет",
+      "default_pricing": {
+        "base": 399,
+        "duration_minutes": 40,
+        "surcharges": {
+          "evening": 50
+        }
+      },
+      "skills": ["ИТ-навыки"],
+      "inventory": ["Планшет", "LTE"]
+    },
+    {
+      "code": "care.l3.safety_home",
+      "category": "care",
+      "name": "Безбарьерные доработки",
+      "description": "Поручни/антискользящие зоны",
+      "default_pricing": {
+        "base": 0,
+        "duration_minutes": 0,
+        "surcharges": {
+          "materials": 0
+        }
+      },
+      "skills": ["Плотницкие"],
+      "inventory": ["Инструмент"]
+    },
+    {
+      "code": "care.l3.sensors",
+      "category": "care",
+      "name": "Датчики и SOS",
+      "description": "Пожар/газ/падение/SOS",
+      "default_pricing": {
+        "base": 2490,
+        "duration_minutes": 120,
+        "surcharges": {
+          "sensors": 0
+        }
+      },
+      "skills": ["Базовая эл-безопасность"],
+      "inventory": ["Дрель", "Датчики"]
+    },
+    {
+      "code": "care.l3.snow_entry",
+      "category": "care",
+      "name": "Уборка у входа",
+      "description": "Расчистка ступеней/посыпка",
+      "default_pricing": {
+        "base": 399,
+        "duration_minutes": 40,
+        "surcharges": {
+          "snowfall": 100
+        }
+      },
+      "skills": ["Техника безопасности"],
+      "inventory": ["Лопата", "Реагент"]
+    },
+    {
+      "code": "eco.pickup.fridge",
+      "category": "eco",
+      "name": "Вывоз холодильника",
+      "description": "Вынос, транспорт, сдача",
+      "default_pricing": {
+        "base": 599,
+        "duration_minutes": 60,
+        "surcharges": {
+          "per_floor": 50,
+          "per_km": 25
+        }
+      },
+      "skills": ["Безопасный подъём"],
+      "inventory": ["Ремни", "Тележка"]
+    },
+    {
+      "code": "eco.pickup.mattress",
+      "category": "eco",
+      "name": "Вывоз матраса",
+      "description": "Упаковка, вынос, сдача",
+      "default_pricing": {
+        "base": 399,
+        "duration_minutes": 30,
+        "surcharges": {
+          "per_floor": 30,
+          "volume": 50
+        }
+      },
+      "skills": ["Осторожность"],
+      "inventory": ["Плёнка", "Ремни"]
+    },
+    {
+      "code": "eco.pickup.furniture",
+      "category": "eco",
+      "name": "Вывоз мебели (1–3 шт.)",
+      "description": "Разбор/вынос/сдача",
+      "default_pricing": {
+        "base": 499,
+        "duration_minutes": 90,
+        "surcharges": {
+          "assembly_disassembly": 100,
+          "per_kg": 3
+        }
+      },
+      "skills": ["Разборка мебели"],
+      "inventory": ["Инструменты", "Ремни"]
+    },
+    {
+      "code": "eco.pickup.electro",
+      "category": "eco",
+      "name": "Электро/электронный лом",
+      "description": "Упаковка, сдача",
+      "default_pricing": {
+        "base": 349,
+        "duration_minutes": 45,
+        "surcharges": {
+          "volume": 30
+        }
+      },
+      "skills": ["Обращение с техникой"],
+      "inventory": ["Коробки", "Плёнка"]
+    },
+    {
+      "code": "eco.clean.garage",
+      "category": "eco",
+      "name": "Чистка гаража",
+      "description": "Разбор/сортировка/вывоз",
+      "default_pricing": {
+        "base": 1490,
+        "duration_minutes": 240,
+        "surcharges": {
+          "per_sqm": 20,
+          "per_km": 25
+        }
+      },
+      "skills": ["Сортировка отходов"],
+      "inventory": ["Мешки", "Перчатки"]
+    },
+    {
+      "code": "eco.clean.basement",
+      "category": "eco",
+      "name": "Чистка подвала",
+      "description": "Аналогично гаражу",
+      "default_pricing": {
+        "base": 1490,
+        "duration_minutes": 240,
+        "surcharges": {
+          "per_sqm": 20,
+          "humidity": 100
+        }
+      },
+      "skills": ["Сортировка отходов"],
+      "inventory": ["Мешки", "Перчатки"]
+    },
+    {
+      "code": "eco.clean.balcony",
+      "category": "eco",
+      "name": "Чистка балкона",
+      "description": "Коробки/мебель",
+      "default_pricing": {
+        "base": 590,
+        "duration_minutes": 60,
+        "surcharges": {
+          "per_floor": 30
+        }
+      },
+      "skills": ["Осторожность"],
+      "inventory": ["Мешки", "Перчатки"]
+    },
+    {
+      "code": "eco.move.reno",
+      "category": "eco",
+      "name": "После ремонта (неопасное)",
+      "description": "Мешки/меш-контейнер",
+      "default_pricing": {
+        "base": 890,
+        "duration_minutes": 120,
+        "surcharges": {
+          "per_cubic_meter": 100
+        }
+      },
+      "skills": ["Сортировка отходов"],
+      "inventory": ["Мешки", "Контейнеры"]
+    },
+    {
+      "code": "eco.office.cardboard",
+      "category": "eco",
+      "name": "Картон от офисов/магазинов",
+      "description": "Регулярный забор",
+      "default_pricing": {
+        "base": 299,
+        "duration_minutes": 30,
+        "surcharges": {
+          "per_kg": 5,
+          "subscription": -50
+        }
+      },
+      "skills": ["Сортировка"],
+      "inventory": ["Мешки"]
+    },
+    {
+      "code": "eco.office.plastic",
+      "category": "eco",
+      "name": "Пластик от офисов/магазинов",
+      "description": "Регулярный забор",
+      "default_pricing": {
+        "base": 299,
+        "duration_minutes": 30,
+        "surcharges": {
+          "per_kg": 5,
+          "subscription": -50
+        }
+      },
+      "skills": ["Сортировка"],
+      "inventory": ["Мешки"]
+    },
+    {
+      "code": "eco.reuse.fretex",
+      "category": "eco",
+      "name": "Доставка в Fretex",
+      "description": "Вторичная жизнь",
+      "default_pricing": {
+        "base": 299,
+        "duration_minutes": 45,
+        "surcharges": {
+          "volume": 30
+        }
+      },
+      "skills": ["Оценка состояния"],
+      "inventory": ["Мешки"]
+    },
+    {
+      "code": "eco.sorting.on_site",
+      "category": "eco",
+      "name": "Сортировка на месте",
+      "description": "Обучение+разбор",
+      "default_pricing": {
+        "base": 399,
+        "duration_minutes": 60,
+        "surcharges": {
+          "over_60min": 100
+        }
+      },
+      "skills": ["Обучение"],
+      "inventory": ["Мешки", "Наклейки"]
+    },
+    {
+      "code": "eco.season.branches",
+      "category": "eco",
+      "name": "Ветки/листья",
+      "description": "Погрузка/вывоз",
+      "default_pricing": {
+        "base": 499,
+        "duration_minutes": 90,
+        "surcharges": {
+          "volume": 50,
+          "per_km": 25
+        }
+      },
+      "skills": ["Работа с природными материалами"],
+      "inventory": ["Мешки", "Грабли"]
+    },
+    {
+      "code": "eco.season.snow",
+      "category": "eco",
+      "name": "Вывоз снега/наледи",
+      "description": "Зоны у входа",
+      "default_pricing": {
+        "base": 399,
+        "duration_minutes": 40,
+        "surcharges": {
+          "snowfall": 100,
+          "reagent": 50
+        }
+      },
+      "skills": ["Техника безопасности"],
+      "inventory": ["Лопата", "Реагент"]
+    },
+    {
+      "code": "eco.heavy.two_man",
+      "category": "eco",
+      "name": "Тяжёлый подъём (2 чел)",
+      "description": "Безопасный подъём",
+      "default_pricing": {
+        "base": 399,
+        "duration_minutes": 60,
+        "surcharges": {
+          "per_hour_per_person": 399,
+          "per_kg": 5,
+          "per_floor": 50
+        }
+      },
+      "skills": ["Командная работа"],
+      "inventory": ["Ремни", "Тележка"]
+    },
+    {
+      "code": "tow.recovery.city",
+      "category": "tow",
+      "name": "Эвакуация в городе",
+      "description": "Погрузка/перевозка",
+      "default_pricing": {
+        "base": 1199,
+        "duration_minutes": 60,
+        "surcharges": {
+          "night": 500,
+          "blizzard": 300
+        }
+      },
+      "skills": ["Управление эвакуатором"],
+      "inventory": ["Эвакуатор", "Ремни"]
+    },
+    {
+      "code": "tow.recovery.road",
+      "category": "tow",
+      "name": "Эвакуация по E6/E10",
+      "description": "Км-тариф + база",
+      "default_pricing": {
+        "base": 1199,
+        "duration_minutes": 120,
+        "surcharges": {
+          "per_km": 35,
+          "night": 500,
+          "blizzard": 300
+        }
+      },
+      "skills": ["Управление эвакуатором"],
+      "inventory": ["Эвакуатор", "Ремни"]
+    },
+    {
+      "code": "tow.pullout.snow",
+      "category": "tow",
+      "name": "Вытягивание из снега/канавы",
+      "description": "Лебёдка/страпы",
+      "default_pricing": {
+        "base": 899,
+        "duration_minutes": 45,
+        "surcharges": {
+          "night": 300,
+          "blizzard": 200
+        }
+      },
+      "skills": ["Работа с лебёдкой"],
+      "inventory": ["Лебёдка", "Страпы"]
+    },
+    {
+      "code": "tow.jumpstart",
+      "category": "tow",
+      "name": "Прикуривание",
+      "description": "Пуск/проверка",
+      "default_pricing": {
+        "base": 499,
+        "duration_minutes": 30,
+        "surcharges": {
+          "night": 200
+        }
+      },
+      "skills": ["Знание автомобилей"],
+      "inventory": ["Бустер", "Провода"]
+    },
+    {
+      "code": "tow.tire.change",
+      "category": "tow",
+      "name": "Замена колеса",
+      "description": "Домкрат/момент",
+      "default_pricing": {
+        "base": 599,
+        "duration_minutes": 45,
+        "surcharges": {
+          "night": 200
+        }
+      },
+      "skills": ["Замена колёс"],
+      "inventory": ["Домкрат", "Ключи"]
+    },
+    {
+      "code": "tow.chains.install",
+      "category": "tow",
+      "name": "Установка цепей",
+      "description": "Пара колёс",
+      "default_pricing": {
+        "base": 499,
+        "duration_minutes": 30,
+        "surcharges": {
+          "night": 200
+        }
+      },
+      "skills": ["Установка цепей"],
+      "inventory": ["Цепи", "Инструменты"]
+    },
+    {
+      "code": "tow.fuel.delivery",
+      "category": "tow",
+      "name": "Доставка топлива",
+      "description": "Топливо + доставка",
+      "default_pricing": {
+        "base": 499,
+        "duration_minutes": 45,
+        "surcharges": {
+          "fuel_cost": 0,
+          "per_km": 25
+        }
+      },
+      "skills": ["Безопасность топлива"],
+      "inventory": ["Канистра", "Воронка"]
+    },
+    {
+      "code": "tow.to.service",
+      "category": "tow",
+      "name": "Транспорт до СТО",
+      "description": "Партнёрские СТО",
+      "default_pricing": {
+        "base": 1199,
+        "duration_minutes": 90,
+        "surcharges": {
+          "per_km": 35
+        }
+      },
+      "skills": ["Управление эвакуатором"],
+      "inventory": ["Эвакуатор", "Ремни"]
+    }
+  ]
+}

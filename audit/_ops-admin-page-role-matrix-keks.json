@@ -1,0 +1,650 @@
+{
+    "generated_at": "2026-04-21T20:24:24+00:00",
+    "host": "136.119.84.22",
+    "emails": [
+        "keks@glf.no"
+    ],
+    "paths": [
+        "/admin",
+        "/admin/a-i-agent-team-chat",
+        "/admin/admin-i-p-rules",
+        "/admin/a-p-i-keys-management",
+        "/admin/audit-logs",
+        "/admin/security/two-factor-setup",
+        "/admin/service-categories",
+        "/admin/service-types",
+        "/admin/client-profiles",
+        "/admin/partners",
+        "/admin/payouts",
+        "/admin/bikube-smart-assistant",
+        "/admin/assistant-conversations",
+        "/admin/delivery-operations",
+        "/admin/dispatch",
+        "/admin/tasks",
+        "/admin/work-specifications",
+        "/admin/schedule-slots",
+        "/admin/users",
+        "/admin/feature-flags",
+        "/admin/analytics-orders",
+        "/admin/roadside-debug-page",
+        "/admin/virtual-office-dashboard",
+        "/admin/agents",
+        "/admin/ad-categories",
+        "/admin/ad-features",
+        "/admin/ad-imports",
+        "/admin/classified-ads",
+        "/admin/shops",
+        "/admin/admin-ip-rules",
+        "/admin/api-keys",
+        "/admin/webhook-logs",
+        "/admin/operations-core",
+        "/admin/service-jobs",
+        "/admin/live-operations-map",
+        "/admin/operation-exceptions",
+        "/admin/executor-shifts",
+        "/admin/executor-breaks",
+        "/admin/dispatch-rule-sets",
+        "/admin/dispatch-rule-preview",
+        "/admin/loyalty-balances",
+        "/admin/loyalty-transactions",
+        "/admin/employees",
+        "/admin/price-estimate-logs",
+        "/admin/support-tickets",
+        "/admin/payment-settings",
+        "/admin/geo-zones",
+        "/admin/pricing-rules",
+        "/admin/errand-tasks",
+        "/admin/restaurants",
+        "/admin/retail-stores",
+        "/admin/delivery/delivery-orders",
+        "/admin/orders",
+        "/admin/errand-order-details",
+        "/admin/delivery-zones",
+        "/admin/coupons",
+        "/admin/disposal-items",
+        "/admin/disposal-partners",
+        "/admin/eco-certificates",
+        "/admin/eco-teams",
+        "/admin/eco-disposal-dashboard",
+        "/admin/claims",
+        "/admin/handyman-assignments",
+        "/admin/handyman-materials-entries",
+        "/admin/repair-projects",
+        "/admin/repair-stages",
+        "/admin/repair-team-members",
+        "/admin/work-warranties",
+        "/admin/moving/executor-profiles",
+        "/admin/moving/moving-items",
+        "/admin/moving/moving-orders",
+        "/admin/moving/teams",
+        "/admin/moving/moving-order-photos",
+        "/admin/moving/moving-order-tasks",
+        "/admin/roadside-dashboard",
+        "/admin/roadside-dispatch-board",
+        "/admin/roadside-presets",
+        "/admin/road-helper-profiles",
+        "/admin/vehicle-inspection-requests",
+        "/admin/roadside-partners",
+        "/admin/vehicle-inspection-presets",
+        "/admin/roadside-emergencies",
+        "/admin/analitika-social-care",
+        "/admin/community-points-balances",
+        "/admin/care-plans",
+        "/admin/social-helper-profiles",
+        "/admin/pultkoordinatora-social-care",
+        "/admin/social-care-orders",
+        "/admin/care-services"
+    ],
+    "summary": {
+        "total": 1,
+        "ok": 0,
+        "warn": 0,
+        "fail": 1,
+        "missing_user": 0
+    },
+    "results": [
+        {
+            "email": "keks@glf.no",
+            "status": "fail",
+            "roles": [
+                "admin"
+            ],
+            "pages": [
+                {
+                    "path": "/admin",
+                    "status": 500,
+                    "location": null,
+                    "access_denied_text": false
+                },
+                {
+                    "path": "/admin/a-i-agent-team-chat",
+                    "status": 500,
+                    "location": null,
+                    "access_denied_text": false
+                },
+                {
+                    "path": "/admin/admin-i-p-rules",
+                    "status": 302,
+                    "location": "http://136.119.84.22/admin/admin-ip-rules",
+                    "access_denied_text": false
+                },
+                {
+                    "path": "/admin/a-p-i-keys-management",
+                    "status": 302,
+                    "location": "http://136.119.84.22/admin/api-keys",
+                    "access_denied_text": false
+                },
+                {
+                    "path": "/admin/audit-logs",
+                    "status": 500,
+                    "location": null,
+                    "access_denied_text": false
+                },
+                {
+                    "path": "/admin/security/two-factor-setup",
+                    "status": 500,
+                    "location": null,
+                    "access_denied_text": false
+                },
+                {
+                    "path": "/admin/service-categories",
+                    "status": 500,
+                    "location": null,
+                    "access_denied_text": false
+                },
+                {
+                    "path": "/admin/service-types",
+                    "status": 500,
+                    "location": null,
+                    "access_denied_text": false
+                },
+                {
+                    "path": "/admin/client-profiles",
+                    "status": 500,
+                    "location": null,
+                    "access_denied_text": false
+                },
+                {
+                    "path": "/admin/partners",
+                    "status": 500,
+                    "location": null,
+                    "access_denied_text": false
+                },
+                {
+                    "path": "/admin/payouts",
+                    "status": 500,
+                    "location": null,
+                    "access_denied_text": false
+                },
+                {
+                    "path": "/admin/bikube-smart-assistant",
+                    "status": 500,
+                    "location": null,
+                    "access_denied_text": false
+                },
+                {
+                    "path": "/admin/assistant-conversations",
+                    "status": 500,
+                    "location": null,
+                    "access_denied_text": false
+                },
+                {
+                    "path": "/admin/delivery-operations",
+                    "status": 500,
+                    "location": null,
+                    "access_denied_text": false
+                },
+                {
+                    "path": "/admin/dispatch",
+                    "status": 500,
+                    "location": null,
+                    "access_denied_text": false
+                },
+                {
+                    "path": "/admin/tasks",
+                    "status": 500,
+                    "location": null,
+                    "access_denied_text": false
+                },
+                {
+                    "path": "/admin/work-specifications",
+                    "status": 500,
+                    "location": null,
+                    "access_denied_text": false
+                },
+                {
+                    "path": "/admin/schedule-slots",
+                    "status": 500,
+                    "location": null,
+                    "access_denied_text": false
+                },
+                {
+                    "path": "/admin/users",
+                    "status": 500,
+                    "location": null,
+                    "access_denied_text": false
+                },
+                {
+                    "path": "/admin/feature-flags",
+                    "status": 500,
+                    "location": null,
+                    "access_denied_text": false
+                },
+                {
+                    "path": "/admin/analytics-orders",
+                    "status": 500,
+                    "location": null,
+                    "access_denied_text": false
+                },
+                {
+                    "path": "/admin/roadside-debug-page",
+                    "status": 500,
+                    "location": null,
+                    "access_denied_text": false
+                },
+                {
+                    "path": "/admin/virtual-office-dashboard",
+                    "status": 500,
+                    "location": null,
+                    "access_denied_text": false
+                },
+                {
+                    "path": "/admin/agents",
+                    "status": 500,
+                    "location": null,
+                    "access_denied_text": false
+                },
+                {
+                    "path": "/admin/ad-categories",
+                    "status": 500,
+                    "location": null,
+                    "access_denied_text": false
+                },
+                {
+                    "path": "/admin/ad-features",
+                    "status": 500,
+                    "location": null,
+                    "access_denied_text": false
+                },
+                {
+                    "path": "/admin/ad-imports",
+                    "status": 500,
+                    "location": null,
+                    "access_denied_text": false
+                },
+                {
+                    "path": "/admin/classified-ads",
+                    "status": 500,
+                    "location": null,
+                    "access_denied_text": false
+                },
+                {
+                    "path": "/admin/shops",
+                    "status": 500,
+                    "location": null,
+                    "access_denied_text": false
+                },
+                {
+                    "path": "/admin/admin-ip-rules",
+                    "status": 500,
+                    "location": null,
+                    "access_denied_text": false
+                },
+                {
+                    "path": "/admin/api-keys",
+                    "status": 500,
+                    "location": null,
+                    "access_denied_text": false
+                },
+                {
+                    "path": "/admin/webhook-logs",
+                    "status": 500,
+                    "location": null,
+                    "access_denied_text": false
+                },
+                {
+                    "path": "/admin/operations-core",
+                    "status": 500,
+                    "location": null,
+                    "access_denied_text": false
+                },
+                {
+                    "path": "/admin/service-jobs",
+                    "status": 500,
+                    "location": null,
+                    "access_denied_text": false
+                },
+                {
+                    "path": "/admin/live-operations-map",
+                    "status": 500,
+                    "location": null,
+                    "access_denied_text": false
+                },
+                {
+                    "path": "/admin/operation-exceptions",
+                    "status": 500,
+                    "location": null,
+                    "access_denied_text": false
+                },
+                {
+                    "path": "/admin/executor-shifts",
+                    "status": 500,
+                    "location": null,
+                    "access_denied_text": false
+                },
+                {
+                    "path": "/admin/executor-breaks",
+                    "status": 500,
+                    "location": null,
+                    "access_denied_text": false
+                },
+                {
+                    "path": "/admin/dispatch-rule-sets",
+                    "status": 500,
+                    "location": null,
+                    "access_denied_text": false
+                },
+                {
+                    "path": "/admin/dispatch-rule-preview",
+                    "status": 500,
+                    "location": null,
+                    "access_denied_text": false
+                },
+                {
+                    "path": "/admin/loyalty-balances",
+                    "status": 500,
+                    "location": null,
+                    "access_denied_text": false
+                },
+                {
+                    "path": "/admin/loyalty-transactions",
+                    "status": 500,
+                    "location": null,
+                    "access_denied_text": false
+                },
+                {
+                    "path": "/admin/employees",
+                    "status": 500,
+                    "location": null,
+                    "access_denied_text": false
+                },
+                {
+                    "path": "/admin/price-estimate-logs",
+                    "status": 500,
+                    "location": null,
+                    "access_denied_text": false
+                },
+                {
+                    "path": "/admin/support-tickets",
+                    "status": 500,
+                    "location": null,
+                    "access_denied_text": false
+                },
+                {
+                    "path": "/admin/payment-settings",
+                    "status": 500,
+                    "location": null,
+                    "access_denied_text": false
+                },
+                {
+                    "path": "/admin/geo-zones",
+                    "status": 500,
+                    "location": null,
+                    "access_denied_text": false
+                },
+                {
+                    "path": "/admin/pricing-rules",
+                    "status": 500,
+                    "location": null,
+                    "access_denied_text": false
+                },
+                {
+                    "path": "/admin/errand-tasks",
+                    "status": 500,
+                    "location": null,
+                    "access_denied_text": false
+                },
+                {
+                    "path": "/admin/restaurants",
+                    "status": 500,
+                    "location": null,
+                    "access_denied_text": false
+                },
+                {
+                    "path": "/admin/retail-stores",
+                    "status": 500,
+                    "location": null,
+                    "access_denied_text": false
+                },
+                {
+                    "path": "/admin/delivery/delivery-orders",
+                    "status": 500,
+                    "location": null,
+                    "access_denied_text": false
+                },
+                {
+                    "path": "/admin/orders",
+                    "status": 500,
+                    "location": null,
+                    "access_denied_text": false
+                },
+                {
+                    "path": "/admin/errand-order-details",
+                    "status": 500,
+                    "location": null,
+                    "access_denied_text": false
+                },
+                {
+                    "path": "/admin/delivery-zones",
+                    "status": 500,
+                    "location": null,
+                    "access_denied_text": false
+                },
+                {
+                    "path": "/admin/coupons",
+                    "status": 500,
+                    "location": null,
+                    "access_denied_text": false
+                },
+                {
+                    "path": "/admin/disposal-items",
+                    "status": 500,
+                    "location": null,
+                    "access_denied_text": false
+                },
+                {
+                    "path": "/admin/disposal-partners",
+                    "status": 500,
+                    "location": null,
+                    "access_denied_text": false
+                },
+                {
+                    "path": "/admin/eco-certificates",
+                    "status": 500,
+                    "location": null,
+                    "access_denied_text": false
+                },
+                {
+                    "path": "/admin/eco-teams",
+                    "status": 500,
+                    "location": null,
+                    "access_denied_text": false
+                },
+                {
+                    "path": "/admin/eco-disposal-dashboard",
+                    "status": 500,
+                    "location": null,
+                    "access_denied_text": false
+                },
+                {
+                    "path": "/admin/claims",
+                    "status": 500,
+                    "location": null,
+                    "access_denied_text": false
+                },
+                {
+                    "path": "/admin/handyman-assignments",
+                    "status": 500,
+                    "location": null,
+                    "access_denied_text": false
+                },
+                {
+                    "path": "/admin/handyman-materials-entries",
+                    "status": 500,
+                    "location": null,
+                    "access_denied_text": false
+                },
+                {
+                    "path": "/admin/repair-projects",
+                    "status": 500,
+                    "location": null,
+                    "access_denied_text": false
+                },
+                {
+                    "path": "/admin/repair-stages",
+                    "status": 500,
+                    "location": null,
+                    "access_denied_text": false
+                },
+                {
+                    "path": "/admin/repair-team-members",
+                    "status": 500,
+                    "location": null,
+                    "access_denied_text": false
+                },
+                {
+                    "path": "/admin/work-warranties",
+                    "status": 500,
+                    "location": null,
+                    "access_denied_text": false
+                },
+                {
+                    "path": "/admin/moving/executor-profiles",
+                    "status": 500,
+                    "location": null,
+                    "access_denied_text": false
+                },
+                {
+                    "path": "/admin/moving/moving-items",
+                    "status": 500,
+                    "location": null,
+                    "access_denied_text": false
+                },
+                {
+                    "path": "/admin/moving/moving-orders",
+                    "status": 500,
+                    "location": null,
+                    "access_denied_text": false
+                },
+                {
+                    "path": "/admin/moving/teams",
+                    "status": 500,
+                    "location": null,
+                    "access_denied_text": false
+                },
+                {
+                    "path": "/admin/moving/moving-order-photos",
+                    "status": 500,
+                    "location": null,
+                    "access_denied_text": false
+                },
+                {
+                    "path": "/admin/moving/moving-order-tasks",
+                    "status": 500,
+                    "location": null,
+                    "access_denied_text": false
+                },
+                {
+                    "path": "/admin/roadside-dashboard",
+                    "status": 500,
+                    "location": null,
+                    "access_denied_text": false
+                },
+                {
+                    "path": "/admin/roadside-dispatch-board",
+                    "status": 500,
+                    "location": null,
+                    "access_denied_text": false
+                },
+                {
+                    "path": "/admin/roadside-presets",
+                    "status": 500,
+                    "location": null,
+                    "access_denied_text": false
+                },
+                {
+                    "path": "/admin/road-helper-profiles",
+                    "status": 500,
+                    "location": null,
+                    "access_denied_text": false
+                },
+                {
+                    "path": "/admin/vehicle-inspection-requests",
+                    "status": 500,
+                    "location": null,
+                    "access_denied_text": false
+                },
+                {
+                    "path": "/admin/roadside-partners",
+                    "status": 500,
+                    "location": null,
+                    "access_denied_text": false
+                },
+                {
+                    "path": "/admin/vehicle-inspection-presets",
+                    "status": 500,
+                    "location": null,
+                    "access_denied_text": false
+                },
+                {
+                    "path": "/admin/roadside-emergencies",
+                    "status": 500,
+                    "location": null,
+                    "access_denied_text": false
+                },
+                {
+                    "path": "/admin/analitika-social-care",
+                    "status": 500,
+                    "location": null,
+                    "access_denied_text": false
+                },
+                {
+                    "path": "/admin/community-points-balances",
+                    "status": 500,
+                    "location": null,
+                    "access_denied_text": false
+                },
+                {
+                    "path": "/admin/care-plans",
+                    "status": 500,
+                    "location": null,
+                    "access_denied_text": false
+                },
+                {
+                    "path": "/admin/social-helper-profiles",
+                    "status": 500,
+                    "location": null,
+                    "access_denied_text": false
+                },
+                {
+                    "path": "/admin/pultkoordinatora-social-care",
+                    "status": 500,
+                    "location": null,
+                    "access_denied_text": false
+                },
+                {
+                    "path": "/admin/social-care-orders",
+                    "status": 500,
+                    "location": null,
+                    "access_denied_text": false
+                },
+                {
+                    "path": "/admin/care-services",
+                    "status": 500,
+                    "location": null,
+                    "access_denied_text": false
+                }
+            ]
+        }
+    ]
+}

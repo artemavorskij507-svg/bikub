@@ -1,0 +1,22 @@
+C:\home\vscode\bikube\routes\api.php:215:    Route::post('/payments/vipps/init', [App\Http\Controllers\VippsController::class, 'initPayment'])->middleware('throttle:payments');
+C:\home\vscode\bikube\routes\api.php:216:    Route::post('/payments/vipps/callback', [App\Http\Controllers\VippsController::class, 'handleCallback']); // Callbacks should not be throttled
+C:\home\vscode\bikube\routes\api.php:217:    Route::post('/payments/vipps/webhook', [App\Http\Controllers\VippsController::class, 'handleWebhook']); // Webhooks should not be throttled
+C:\home\vscode\bikube\routes\api.php:218:    Route::post('/payments/vipps/capture', [App\Http\Controllers\VippsController::class, 'capturePayment'])->middleware('throttle:payments');
+C:\home\vscode\bikube\routes\api.php:219:    Route::post('/payments/vipps/refund', [App\Http\Controllers\VippsController::class, 'refundPayment'])->middleware('throttle:payments');
+C:\home\vscode\bikube\routes\api.php:220:    Route::match(['GET', 'POST'], '/payments/vipps/consent-removal', [App\Http\Controllers\VippsController::class, 'handleConsentRemoval']);
+C:\home\vscode\bikube\routes\api.php:221:    Route::match(['GET', 'POST'], '/payments/vipps/shipping-details', [App\Http\Controllers\VippsController::class, 'getShippingDetails']);
+C:\home\vscode\bikube\routes\web.php:242:Route::get('/order/{orderId}/vipps/fallback', [\App\Http\Controllers\VippsController::class, 'vippsFallback'])
+C:\home\vscode\bikube\app\Http\Controllers\VippsController.php:40:            return $this->vippsNotConfiguredResponse();
+C:\home\vscode\bikube\app\Http\Controllers\VippsController.php:51:                'message' => 'Validation failed',
+C:\home\vscode\bikube\app\Http\Controllers\VippsController.php:82:                    'callbackPrefix' => config('app.url').'/api/v1/payments/vipps/callback',
+C:\home\vscode\bikube\app\Http\Controllers\VippsController.php:83:                    'fallBack' => config('app.url').'/order/'.$order->id.'/vipps/fallback',
+C:\home\vscode\bikube\app\Http\Controllers\VippsController.php:84:                    'consentRemovalPrefix' => config('app.url').'/api/v1/payments/vipps/consent-removal',
+C:\home\vscode\bikube\app\Http\Controllers\VippsController.php:87:                    'shippingDetailsPrefix' => config('app.url').'/api/v1/payments/vipps/shipping-details',
+C:\home\vscode\bikube\app\Http\Controllers\VippsController.php:166:            return $this->vippsNotConfiguredResponse();
+C:\home\vscode\bikube\app\Http\Controllers\VippsController.php:176:                'message' => 'Validation failed',
+C:\home\vscode\bikube\app\Http\Controllers\VippsController.php:240:                'message' => 'Validation failed',
+C:\home\vscode\bikube\app\Http\Controllers\VippsController.php:304:            return $this->vippsNotConfiguredResponse();
+C:\home\vscode\bikube\app\Http\Controllers\VippsController.php:314:                'message' => 'Validation failed',
+C:\home\vscode\bikube\app\Http\Controllers\VippsController.php:383:            return $this->vippsNotConfiguredResponse();
+C:\home\vscode\bikube\app\Http\Controllers\VippsController.php:395:                'message' => 'Validation failed',
+C:\home\vscode\bikube\app\Http\Controllers\VippsController.php:608:    private function vippsNotConfiguredResponse()

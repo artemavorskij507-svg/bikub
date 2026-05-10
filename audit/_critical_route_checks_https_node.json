@@ -1,0 +1,177 @@
+[
+  {
+    "url": "https://136.119.84.22/",
+    "status": 200,
+    "location": null
+  },
+  {
+    "url": "https://136.119.84.22/category/delivery",
+    "status": 200,
+    "location": null
+  },
+  {
+    "url": "https://136.119.84.22/category/moving",
+    "status": 200,
+    "location": null
+  },
+  {
+    "url": "https://136.119.84.22/category/handyman",
+    "status": 200,
+    "location": null
+  },
+  {
+    "url": "https://136.119.84.22/category/eco",
+    "status": 200,
+    "location": null
+  },
+  {
+    "url": "https://136.119.84.22/category/personal-task",
+    "status": 200,
+    "location": null
+  },
+  {
+    "url": "https://136.119.84.22/category/tow",
+    "status": 200,
+    "location": null
+  },
+  {
+    "url": "https://136.119.84.22/classifieds",
+    "status": 200,
+    "location": null
+  },
+  {
+    "url": "https://136.119.84.22/catalog",
+    "status": 200,
+    "location": null
+  },
+  {
+    "url": "https://136.119.84.22/stores",
+    "status": 302,
+    "location": "https://136.119.84.22/catalog"
+  },
+  {
+    "url": "https://136.119.84.22/restaurants",
+    "status": 302,
+    "location": "https://136.119.84.22/catalog"
+  },
+  {
+    "url": "https://136.119.84.22/account",
+    "status": 302,
+    "location": "https://136.119.84.22/login"
+  },
+  {
+    "url": "https://136.119.84.22/account/orders",
+    "status": 302,
+    "location": "https://136.119.84.22/login"
+  },
+  {
+    "url": "https://136.119.84.22/account/profile",
+    "status": 302,
+    "location": "https://136.119.84.22/login"
+  },
+  {
+    "url": "https://136.119.84.22/lk",
+    "status": 302,
+    "location": "https://136.119.84.22/login"
+  },
+  {
+    "url": "https://136.119.84.22/lk/orders",
+    "status": 302,
+    "location": "https://136.119.84.22/login"
+  },
+  {
+    "url": "https://136.119.84.22/lk/support",
+    "status": 302,
+    "location": "https://136.119.84.22/login"
+  },
+  {
+    "url": "https://136.119.84.22/admin",
+    "status": 302,
+    "location": "https://136.119.84.22/admin/login"
+  },
+  {
+    "url": "https://136.119.84.22/admin/login",
+    "status": 200,
+    "location": null
+  },
+  {
+    "url": "https://136.119.84.22/api/v1/health",
+    "status": 200,
+    "location": null
+  },
+  {
+    "url": "https://136.119.84.22/api/v1/categories",
+    "status": 200,
+    "location": null
+  },
+  {
+    "url": "https://136.119.84.22/api/v1/service-types",
+    "status": 200,
+    "location": null
+  },
+  {
+    "url": "https://136.119.84.22/api/v1/restaurants",
+    "status": 200,
+    "location": null
+  },
+  {
+    "url": "https://136.119.84.22/api/v1/stores",
+    "status": 200,
+    "location": null
+  },
+  {
+    "url": "https://136.119.84.22/api/v1/public/catalog",
+    "status": 200,
+    "location": null
+  },
+  {
+    "url": "https://136.119.84.22/api/v1/public/slots",
+    "status": 302,
+    "location": "https://136.119.84.22"
+  },
+  {
+    "url": "https://136.119.84.22/api/ops/map/live",
+    "status": 302,
+    "location": "https://136.119.84.22/login"
+  },
+  {
+    "url": "https://136.119.84.22/api/ops/jobs",
+    "status": 302,
+    "location": "https://136.119.84.22/login"
+  },
+  {
+    "url": "https://136.119.84.22/api/ops/executors",
+    "status": 302,
+    "location": "https://136.119.84.22/login"
+  },
+  {
+    "url": "https://136.119.84.22/api/ops/exceptions",
+    "status": 302,
+    "location": "https://136.119.84.22/login"
+  },
+  {
+    "url": "https://136.119.84.22/api/ops/workbench/triage",
+    "status": 302,
+    "location": "https://136.119.84.22/login"
+  },
+  {
+    "url": "https://136.119.84.22/api/ops/workbench/saved-filters",
+    "status": 302,
+    "location": "https://136.119.84.22/login"
+  },
+  {
+    "url": "https://136.119.84.22/api/ops/workbench/replan-recommendations",
+    "status": 302,
+    "location": "https://136.119.84.22/login"
+  },
+  {
+    "url": "https://136.119.84.22/api/ops/workbench/routing-shadow-metrics",
+    "status": 302,
+    "location": "https://136.119.84.22/login"
+  },
+  {
+    "url": "https://136.119.84.22/api/ops/workbench/routing-provider-health",
+    "status": 302,
+    "location": "https://136.119.84.22/login"
+  }
+]

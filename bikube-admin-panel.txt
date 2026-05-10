@@ -1,0 +1,356 @@
+BIKUBE ADMIN PANEL DOCUMENTATION
+
+WHAT IS BIKUBE:
+Bikube is a multi-service platform for managing delivery, moving, roadside assistance, repairs, eco-services, and social care. It helps companies optimize operations, manage orders and executors, handle payments, and ensure data security through a centralized admin panel.
+
+================================================================================
+
+DASHBOARD
+
+Dashboard
+Function: Main overview with key metrics and statistics.
+Purpose: Provides a quick snapshot of business health, including orders, revenue, and user activity, enabling fast decision-making.
+
+================================================================================
+
+SYSTEM & OPERATIONS
+
+Admin IP Rules
+Function: Manage IP access rules for admin users.
+Purpose: Enhances security by restricting admin panel access to trusted IP addresses only.
+
+API Keys Management
+Function: Create, edit, and delete API keys.
+Purpose: Controls access for external integrations and services, ensuring secure data exchange.
+
+Audit Logs
+Function: View logs of all system actions and changes.
+Purpose: Essential for security audits, compliance, and troubleshooting by tracking who did what and when.
+
+2FA Setup
+Function: Configure two-factor authentication for users.
+Purpose: Adds an extra layer of security to prevent unauthorized account access.
+
+Bikube Assistant
+Function: AI assistant integration for task automation.
+Purpose: Increases efficiency by automating responses and decision support.
+
+Assistant Conversations
+Function: View history of AI assistant interactions.
+Purpose: Allows analysis and improvement of AI responses and training.
+
+Операционный центр доставки (Delivery Operations Center)
+Function: Centralized management of delivery operations.
+Purpose: Coordinates logistics, monitors routes and statuses for timely deliveries.
+
+Диспетчерская (Dispatch Center)
+Function: Dispatch panel for task management.
+Purpose: Assigns executors and tracks progress to optimize resource allocation.
+
+Tasks
+Function: Manage tasks and projects.
+Purpose: Organizes workflow and boosts team productivity through clear task assignment.
+
+ТЗ и задачи (Technical Specifications and Tasks)
+Function: Manage technical requirements and related tasks.
+Purpose: Ensures clarity in development and execution by documenting requirements.
+
+Временные слоты (Time Slots)
+Function: Manage time intervals for services.
+Purpose: Prevents scheduling conflicts and improves booking efficiency.
+
+Пользователи (Users)
+Function: Manage system users, roles, and permissions.
+Purpose: Controls access levels and ensures security through proper user management.
+
+Feature Flags
+Function: Enable or disable specific features.
+Purpose: Allows safe testing and gradual rollout of new functionalities.
+
+Заказы (Аналитика) (Orders Analytics)
+Function: Analytics and reports on orders.
+Purpose: Helps optimize business strategies based on order trends and data.
+
+Debug & Demo
+Function: Tools for debugging and demonstrations.
+Purpose: Simplifies development, testing, and presentations of features.
+
+================================================================================
+
+CLASSIFIEDS
+
+Ad Categories
+Function: Manage categories for classified ads.
+Purpose: Organizes ads for better navigation and searchability.
+
+Ad Features
+Function: Manage premium features for ads.
+Purpose: Enables monetization through paid ad enhancements.
+
+Bulk Import
+Function: Mass import of classified ads.
+Purpose: Saves time when adding large volumes of data or migrating from other systems.
+
+Ads Moderation
+Function: Review and approve classified ads.
+Purpose: Ensures content quality and safety by preventing inappropriate listings.
+
+Shops
+Function: Manage shop profiles and settings.
+Purpose: Integrates e-commerce capabilities by supporting seller accounts.
+
+================================================================================
+
+SECURITY
+
+Admin IP Rules
+Function: Manage IP access rules for admins.
+Purpose: Restricts admin access to trusted networks for enhanced security.
+
+API Keys
+Function: Manage API keys for integrations.
+Purpose: Secures external service connections and data exchange.
+
+================================================================================
+
+INTEGRATIONS
+
+Webhook Center
+Function: Manage webhooks for event-driven integrations.
+Purpose: Automates data synchronization with external systems by sending real-time events.
+
+================================================================================
+
+LOYALTY (ЛОЯЛЬНІСТЬ)
+
+Баланси балів (Point Balances)
+Function: Manage customer loyalty point balances.
+Purpose: Tracks and manages loyalty points to encourage repeat business.
+
+Історія операцій (Transaction History)
+Function: View history of loyalty point transactions.
+Purpose: Provides transparency and audit trail for point usage and accrual.
+
+================================================================================
+
+RESOURCES AND PLANNING (РЕСУРСЫ И ПЛАНИРОВАНИЕ)
+
+Исполнители (Executors)
+Function: Manage service executor profiles and assignments.
+Purpose: Optimizes task distribution by maintaining executor information and availability.
+
+================================================================================
+
+ANALYTICS (АНАЛИТИКА)
+
+Логи Расчёта Цен (Price Calculation Logs)
+Function: View logs of price calculations.
+Purpose: Enables analysis and optimization of pricing strategies by tracking how prices are computed.
+
+================================================================================
+
+SUPPORT
+
+Support Tickets
+Function: Manage customer support requests.
+Purpose: Improves customer service by tracking and resolving user issues efficiently.
+
+================================================================================
+
+SYSTEM SETTINGS (СИСТЕМНЫЕ НАСТРОЙКИ)
+
+Настройки платежей (Payment Settings)
+Function: Configure payment gateway settings.
+Purpose: Ensures secure and functional payment processing through providers like Stripe.
+
+================================================================================
+
+DELIVERY
+
+Errand Tasks
+Function: Manage errand and small task orders.
+Purpose: Expands service offerings beyond standard delivery to include miscellaneous tasks.
+
+Restaurants
+Function: Manage restaurant partners and menus.
+Purpose: Supports food delivery operations by integrating restaurant data.
+
+Retail Stores
+Function: Manage retail store partners.
+Purpose: Integrates retail operations for broader delivery options.
+
+Delivery
+Function: General delivery management overview.
+Purpose: Centralizes logistics coordination for all delivery types.
+
+Delivery Orders
+Function: View and manage delivery orders.
+Purpose: Tracks order status and ensures timely completion of deliveries.
+
+Errand Order Details
+Function: View detailed information about errand orders.
+Purpose: Provides clarity on specific requirements for errand tasks.
+
+Delivery Zones
+Function: Define and manage delivery zones.
+Purpose: Optimizes routes and determines service availability by geographic area.
+
+================================================================================
+
+MARKETING
+
+Coupons
+Function: Create and manage promotional coupons.
+Purpose: Stimulates sales and attracts customers through discounts and offers.
+
+================================================================================
+
+ECO DISPOSAL
+
+Disposal Items
+Function: Manage items available for eco-friendly disposal.
+Purpose: Supports environmental initiatives by categorizing recyclable materials.
+
+Disposal Partners
+Function: Manage partners involved in disposal services.
+Purpose: Expands the network of eco-service providers.
+
+Eco Certificates
+Function: Issue and manage eco-disposal certificates.
+Purpose: Builds trust by providing proof of environmentally responsible disposal.
+
+Eco Teams
+Function: Manage teams responsible for eco-services.
+Purpose: Organizes workforce for efficient eco-service execution.
+
+Аналитика ЭКО-услуг (Eco-Services Analytics)
+Function: Analytics and reports on eco-services.
+Purpose: Monitors environmental impact and service performance.
+
+================================================================================
+
+HANDYMAN & REPAIR
+
+Claims
+Function: Manage repair claims and requests.
+Purpose: Registers and tracks repair issues for proper handling.
+
+Handyman Assignments
+Function: Assign handyman tasks to executors.
+Purpose: Optimizes resource allocation for repair jobs.
+
+Handyman Materials Entries
+Function: Track materials used in repair jobs.
+Purpose: Controls costs and inventory by logging material usage.
+
+Repair Projects
+Function: Manage large-scale repair projects.
+Purpose: Structures complex repair work into manageable units.
+
+Repair Stages
+Function: Track stages of repair projects.
+Purpose: Improves planning and monitoring of repair progress.
+
+Repair Team Members
+Function: Manage repair team member profiles.
+Purpose: Coordinates repair workforce and skills.
+
+Work Warranties
+Function: Manage warranties for repair work.
+Purpose: Ensures quality assurance and customer satisfaction.
+
+================================================================================
+
+MOVING
+
+Executor Profiles
+Function: Manage profiles of moving service executors.
+Purpose: Helps select appropriate movers based on skills and availability.
+
+Moving Items
+Function: Catalog items involved in moving services.
+Purpose: Simplifies estimation and planning by listing movable items.
+
+Замовлення Переїздів (Moving Orders)
+Function: Manage moving service orders.
+Purpose: Coordinates logistics and scheduling for moving jobs.
+
+Moving Teams
+Function: Manage teams assigned to moving jobs.
+Purpose: Optimizes execution by grouping movers into effective teams.
+
+Moving Order Photos
+Function: Store photos related to moving orders.
+Purpose: Documents item condition before and after moves for liability.
+
+Moving Order Tasks
+Function: Manage specific tasks within moving orders.
+Purpose: Clarifies requirements and steps for each moving job.
+
+================================================================================
+
+ROADSIDE & TOW
+
+Roadside & Tow
+Function: Main section for roadside assistance management.
+Purpose: Centralizes management of emergency road services.
+
+Roadside Dispatch
+Function: Dispatch panel for roadside assistance.
+Purpose: Ensures rapid response by assigning help to stranded motorists.
+
+Виды работ Roadside (Roadside Work Types)
+Function: Categorize types of roadside services.
+Purpose: Standardizes service offerings for consistent handling.
+
+Дорожные помощники (Roadside Helpers)
+Function: Manage profiles of roadside assistance providers.
+Purpose: Maintains a roster of available help for emergencies.
+
+Заявки на осмотр авто (Car Inspection Requests)
+Function: Manage vehicle inspection requests.
+Purpose: Ensures vehicle safety and documentation through inspections.
+
+Партнёры-эвакуаторы (Tow Truck Partners)
+Function: Manage tow truck partner network.
+Purpose: Integrates towing services for comprehensive roadside help.
+
+Пресеты осмотра авто (Car Inspection Presets)
+Function: Manage templates for vehicle inspections.
+Purpose: Speeds up inspection process with standardized checks.
+
+Экстренные вызовы Roadside (Emergency Roadside Calls)
+Function: Manage emergency roadside assistance calls.
+Purpose: Prioritizes critical situations for immediate response.
+
+================================================================================
+
+SOCIAL CARE
+
+Аналитика и отчёты (Analytics and Reports)
+Function: Analytics for social care services.
+Purpose: Monitors social impact and service effectiveness.
+
+Баллы сообщества (Community Points)
+Function: Manage community loyalty points.
+Purpose: Encourages participation in social programs through rewards.
+
+Планы заботы (Care Plans)
+Function: Manage social care programs and plans.
+Purpose: Structures assistance efforts for organized social support.
+
+Помощники (Helpers)
+Function: Manage social care helper profiles.
+Purpose: Coordinates volunteers and paid helpers for social tasks.
+
+Пульт координатора (Coordinator Dashboard)
+Function: Central panel for social care coordination.
+Purpose: Centralizes management of social service operations.
+
+Соц. заказы (Social Orders)
+Function: Manage social service requests.
+Purpose: Organizes and tracks assistance provided to community members.
+
+Типы услуг (Service Types)
+Function: Categorize social care service types.
+Purpose: Simplifies management and selection of social services.

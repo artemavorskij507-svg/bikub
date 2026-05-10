@@ -1,0 +1,69 @@
+/* public/themes/bikube/css/bikube-home.css - базовый стиль */
+
+:root{
+  --accent:#f7b32b;
+  --muted:#e6e6e6;
+  --bg:#0b1220;
+  --container-width:1200px;
+}
+
+body { background: #0f1724; color:#fff; font-family: Inter, system-ui, Arial; margin:0; }
+.container { max-width: var(--container-width); margin:0 auto; padding: 40px 20px; }
+
+.bikube-hero {
+  background-size: cover;
+  background-position: center;
+  padding: 80px 0;
+  position: relative;
+  color: #fff;
+}
+
+.bikube-hero-inner { display:flex; align-items:center; gap:30px; position:relative; }
+
+.bikube-logo { width:120px; height:auto; }
+
+.hero-text h1 { font-size:48px; margin:0 0 10px; text-shadow: 0 4px 20px rgba(0,0,0,.6); }
+
+.hero-text .lead { opacity:.9; margin-bottom:18px; }
+
+.btn-primary { background:var(--accent); color:#111; padding:12px 20px; border-radius:8px; text-decoration:none; font-weight:700; }
+
+.hero-bees { position:absolute; right:40px; top:40px; width:420px; pointer-events:none; }
+
+/* Services */
+
+.bikube-services { padding:60px 0; text-align:center; background: linear-gradient(180deg, rgba(255,255,255,0.02), transparent); }
+
+.services-grid { display:flex; gap:24px; justify-content:center; margin-top:28px; }
+
+.service-card { background: rgba(255,255,255,0.03); padding:24px; border-radius:12px; width:300px; box-shadow: 0 10px 30px rgba(0,0,0,.6); }
+
+.service-card img { width:64px; height:64px; margin-bottom:12px; }
+
+/* hex section */
+
+.bikube-hex { position:relative; padding:80px 0; color:#fff; overflow:hidden; }
+
+.hex-bg { position:absolute; inset:0; background-size:cover; opacity:.14; filter:blur(0px) contrast(1.1); }
+
+.hex-overlay { position:relative; display:grid; grid-template-columns:repeat(3,1fr); gap:24px; z-index:2; max-width:1000px; margin:0 auto; }
+
+.hex-item { background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01)); padding:28px; border-radius:12px; text-align:center; box-shadow: 0 6px 20px rgba(0,0,0,.5); }
+
+/* footer */
+
+.bikube-footer { padding:30px 0; background:#0b0f14; border-top:1px solid rgba(255,255,255,0.03); color:#bfc7d1; }
+
+.footer-inner { display:flex; justify-content:space-between; align-items:center; }
+
+.footer-contacts p { margin:0; }
+
+.footer-social img { width:28px; margin-left:12px; opacity:.9; }
+
+@media (max-width:900px) {
+  .bikube-hero-inner { flex-direction:column; text-align:center; }
+  .hero-bees { position:relative; width:320px; right:auto; top:auto; margin-top:22px; }
+  .services-grid { flex-direction:column; }
+  .hex-overlay { grid-template-columns:repeat(1,1fr); }
+}
+

@@ -1,0 +1,94 @@
+services:
+  ollama:
+    image: ollama/ollama:latest
+    container_name: ollama
+    restart: unless-stopped
+    volumes:
+      - ollama_data:/root/.ollama
+    ports:
+      - "11434:11434"
+    # If you have NVIDIA GPUs and docker supports them, use: deploy: resources: reservations: devices... 
+    # For local GPU run: docker run --gpus=all ...
+
+  postgres:
+    image: postgres:15
+    container_name: bikube_postgres
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: bikube
+      POSTGRES_USER: bikube
+      POSTGRES_PASSWORD: bikube_pass
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+      - ./docker/initdb:/docker-entrypoint-initdb.d
+    ports:
+      - "5434:5432"
+
+  redis:
+    image: redis:7
+    container_name: bikube_redis
+    restart: unless-stopped
+    ports:
+      - "6380:6379"
+
+  n8n:
+    image: n8nio/n8n
+    restart: always
+    container_name: glf_bikube_n8n
+    environment:
+      N8N_HOST: localhost
+      N8N_PORT: 8080
+      N8N_PROTOCOL: http
+      VUE_APP_URL: http://localhost:8080/
+      GENERIC_SECRET: bikube_n8n_secret_key_2024
+      DB_TYPE: sqlite
+    ports:
+      - "8080:8080"
+    volumes:
+      - n8n_data:/home/node/.n8n
+
+  php:
+    build:
+      context: docker/php
+      dockerfile: Dockerfile
+    container_name: bikube_php
+    restart: unless-stopped
+    volumes:
+      - ./:/var/www/html
+    working_dir: /var/www/html
+    depends_on:
+      - postgres
+      - redis
+      - n8n
+    environment:
+      - APP_ENV=local
+      - DB_HOST=postgres
+      - DB_DATABASE=bikube
+      - DB_USERNAME=bikube
+      - DB_PASSWORD=bikube_pass
+
+  nginx:
+    image: nginx:stable
+    container_name: bikube_nginx
+    ports:
+      - "2244:80"
+    volumes:
+      - ./:/var/www/html:ro
+      - ./docker/nginx/default.conf:/etc/nginx/conf.d/default.conf:ro
+    depends_on:
+      - php
+      - n8n
+
+  nginx-redirect:
+    image: nginx:stable
+    container_name: bikube_nginx_redirect
+    ports:
+      - "80:80"
+    volumes:
+      - ./docker/nginx/redirect.conf:/etc/nginx/conf.d/default.conf:ro
+
+volumes:
+  ollama_data:
+  pgdata:
+  n8n_data:
+

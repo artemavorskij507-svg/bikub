@@ -1,0 +1,25 @@
+
+   ErrorException 
+
+  include(/home/dima/Стільниця/glfbikube (1-я копия)/vendor/composer/../../app/Filament/Resources/CouponResource/Pages/CreateCoupon.php): Failed to open stream: No such file or directory
+
+  at vendor/composer/ClassLoader.php:576
+    572▕          * @param  string $file
+    573▕          * @return void
+    574▕          */
+    575▕         self::$includeFile = \Closure::bind(static function($file) {
+  ➜ 576▕             include $file;
+    577▕         }, null, null);
+    578▕     }
+    579▕ }
+    580▕
+
+      [2m+2 vendor frames [22m
+
+  3   app/Filament/Resources/CouponResource.php:210
+      Composer\Autoload\ClassLoader::loadClass()
+      [2m+35 vendor frames [22m
+
+  39  [internal]:0
+      Illuminate\Foundation\Application::{closure:Illuminate\Foundation\Application::boot():1039}()
+

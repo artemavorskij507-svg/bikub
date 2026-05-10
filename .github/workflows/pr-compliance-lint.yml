@@ -1,0 +1,41 @@
+﻿name: PR Compliance Lint (Draft)
+
+on:
+  pull_request:
+    branches: ["*"]
+
+jobs:
+  compliance-lint:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install markdown/yaml linters
+        run: |
+          npm install -g markdownlint-cli @redocly/cli
+          pip install yamllint
+
+      - name: Markdown lint
+        run: markdownlint "docs/compliance/**/*.md" "src/gdpr/**/*.md"
+
+      - name: YAML lint
+        run: yamllint .github/workflows
+
+      - name: OpenAPI lint
+        run: redocly lint src/gdpr/dsar.openapi.yaml
+
+      - name: Validate registry schema (placeholder)
+        run: |
+          test -f src/gdpr/data-registry.schema.json
+          echo "TODO: add ajv validation for generated registry artifact"

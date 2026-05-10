@@ -1,0 +1,5 @@
+﻿subject=CN = instance-20260405-001420
+issuer=CN = instance-20260405-001420
+notBefore=Apr  5 10:54:56 2026 GMT
+notAfter=Apr  2 10:54:56 2036 GMT
+sha256 Fingerprint=C9:D6:8C:37:3B:3C:39:AA:BA:14:8E:8F:85:4A:EF:61:E4:49:6F:28:48:AF:D9:23:A0:47:52:B8:76:BA:CF:BB

@@ -1,0 +1,14 @@
+{
+  "patch_director_status": 200,
+  "issue_status_patch": 422,
+  "issue_comment_status": 201,
+  "invoke_status": 202,
+  "director_last_run_status": "running",
+  "director_last_run_error": "",
+  "integrity": {
+    "total_agents": 161,
+    "missing_model_count": 0,
+    "missing_prompt_count": 0,
+    "non_managed_bundle_count": 0
+  }
+}

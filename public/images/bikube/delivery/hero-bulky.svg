@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 620" fill="none">
+  <defs><radialGradient id="g" cx="0" cy="0" r="1" gradientTransform="translate(390 330) scale(310)"><stop stop-color="#8b5cf6" stop-opacity=".48"/><stop offset="1" stop-color="#8b5cf6" stop-opacity="0"/></radialGradient><filter id="s"><feDropShadow dx="0" dy="34" stdDeviation="26" flood-color="#000" flood-opacity=".45"/></filter></defs>
+  <ellipse cx="390" cy="340" rx="320" ry="230" fill="url(#g)"/>
+  <g filter="url(#s)">
+    <rect x="170" y="275" width="360" height="155" rx="34" fill="#4c1d95"/>
+    <rect x="224" y="214" width="245" height="96" rx="30" fill="#7c3aed"/>
+    <rect x="500" y="300" width="76" height="130" rx="18" fill="#a78bfa"/>
+    <circle cx="250" cy="462" r="31" fill="#111827"/><circle cx="492" cy="462" r="31" fill="#111827"/>
+    <path d="M138 414h466" stroke="#c4b5fd" stroke-width="13" stroke-linecap="round" opacity=".7"/>
+  </g>
+</svg>

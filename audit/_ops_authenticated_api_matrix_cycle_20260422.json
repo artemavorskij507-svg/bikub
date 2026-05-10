@@ -1,0 +1,70 @@
+{
+    "generated_at": "2026-04-22T07:47:55+00:00",
+    "base_url": "http://127.0.0.1",
+    "emails": [
+        "keks@glf.no",
+        "keks@gfl.no",
+        "oleksandr@glf.no",
+        "maria@glf.no",
+        "eva.nystad@glf.no"
+    ],
+    "summary": {
+        "total": 5,
+        "ok": 0,
+        "warn": 0,
+        "fail": 4,
+        "missing_user": 1
+    },
+    "results": [
+        {
+            "email": "keks@glf.no",
+            "status": "fail",
+            "roles": [
+                "admin"
+            ],
+            "statuses": [],
+            "detail": {
+                "exception": "cURL error 60: SSL: no alternative certificate subject name matches target host name '127.0.0.1' (see https://curl.haxx.se/libcurl/c/libcurl-errors.html) for https://127.0.0.1/api/ops/map/live"
+            }
+        },
+        {
+            "email": "keks@gfl.no",
+            "status": "missing_user",
+            "roles": [],
+            "detail": []
+        },
+        {
+            "email": "oleksandr@glf.no",
+            "status": "fail",
+            "roles": [
+                "ops_admin"
+            ],
+            "statuses": [],
+            "detail": {
+                "exception": "cURL error 60: SSL: no alternative certificate subject name matches target host name '127.0.0.1' (see https://curl.haxx.se/libcurl/c/libcurl-errors.html) for https://127.0.0.1/api/ops/map/live"
+            }
+        },
+        {
+            "email": "maria@glf.no",
+            "status": "fail",
+            "roles": [
+                "ops_manager"
+            ],
+            "statuses": [],
+            "detail": {
+                "exception": "cURL error 60: SSL: no alternative certificate subject name matches target host name '127.0.0.1' (see https://curl.haxx.se/libcurl/c/libcurl-errors.html) for https://127.0.0.1/api/ops/map/live"
+            }
+        },
+        {
+            "email": "eva.nystad@glf.no",
+            "status": "fail",
+            "roles": [
+                "ops_rules_admin"
+            ],
+            "statuses": [],
+            "detail": {
+                "exception": "cURL error 60: SSL: no alternative certificate subject name matches target host name '127.0.0.1' (see https://curl.haxx.se/libcurl/c/libcurl-errors.html) for https://127.0.0.1/api/ops/map/live"
+            }
+        }
+    ]
+}

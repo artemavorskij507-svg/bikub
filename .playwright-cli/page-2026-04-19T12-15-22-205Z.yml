@@ -1,0 +1,627 @@
+- generic [ref=e2]:
+  - main [ref=e3]:
+    - generic [ref=e4]:
+      - generic [ref=e6]:
+        - link "GLF BiKuBe Delivery Hub Narvik, Norway · grocery, food and freight" [ref=e7] [cursor=pointer]:
+          - /url: /
+          - generic [ref=e8]: GLF
+          - generic [ref=e9]:
+            - paragraph [ref=e10]: BiKuBe Delivery Hub
+            - paragraph [ref=e11]: Narvik, Norway · grocery, food and freight
+        - generic [ref=e12]:
+          - img [ref=e13]
+          - textbox "Search partner or service" [ref=e15]
+        - generic [ref=e16]:
+          - generic [ref=e17]: 35 · Narvik Partners
+          - generic [ref=e18]: 4 · Open delivery slots
+          - generic [ref=e19]: 7 · Coverage zones
+          - generic [ref=e20]: Live · Dispatch readiness
+        - button "Cart 0" [ref=e21] [cursor=pointer]:
+          - generic [ref=e22]: Cart
+          - generic [ref=e23]: "0"
+      - main [ref=e24]:
+        - generic [ref=e27]:
+          - generic [ref=e28]:
+            - generic [ref=e29]: Dispatch ready
+            - heading "Fresh delivery in Narvik with real BiKuBe partner data." [level=1] [ref=e30]
+            - paragraph [ref=e31]: "This catalog is built from live Narvik entities in the database: retail stores, restaurants, service zones and dispatch slots. Add items, choose slot and send order to the dispatch queue in one flow."
+            - generic [ref=e32]:
+              - button "Start order" [ref=e33] [cursor=pointer]
+              - link "Track my deliveries" [ref=e34] [cursor=pointer]:
+                - /url: /account/deliveries
+          - generic [ref=e35]:
+            - heading "Live checkout readiness" [level=2] [ref=e36]
+            - generic [ref=e37]:
+              - generic [ref=e38]:
+                - paragraph [ref=e39]: Catalog items
+                - paragraph [ref=e40]: "33"
+              - generic [ref=e41]:
+                - paragraph [ref=e42]: Current cart total
+                - paragraph [ref=e43]: 0,00 kr
+              - generic [ref=e44]:
+                - paragraph [ref=e45]: Available slots
+                - paragraph [ref=e46]: "0"
+              - generic [ref=e47]:
+                - paragraph [ref=e48]: Filters
+                - paragraph [ref=e49]: Grocery · Food · Freight
+        - generic [ref=e51]:
+          - generic [ref=e52]:
+            - generic [ref=e53]:
+              - heading "Choose delivery category" [level=2] [ref=e54]
+              - paragraph [ref=e55]: Filter catalog by domain and add items directly to checkout.
+            - generic [ref=e56]:
+              - button "◆ All 33" [ref=e57] [cursor=pointer]:
+                - generic [ref=e58]: ◆
+                - generic [ref=e59]: All
+                - generic [ref=e60]: "33"
+              - button "🛒 Retail & Grocery 13" [ref=e61] [cursor=pointer]:
+                - generic [ref=e62]: 🛒
+                - generic [ref=e63]: Retail & Grocery
+                - generic [ref=e64]: "13"
+              - button "🍽️ Food 11" [ref=e65] [cursor=pointer]:
+                - generic [ref=e66]: 🍽️
+                - generic [ref=e67]: Food
+                - generic [ref=e68]: "11"
+              - button "📦 Freight 1" [ref=e69] [cursor=pointer]:
+                - generic [ref=e70]: 📦
+                - generic [ref=e71]: Freight
+                - generic [ref=e72]: "1"
+              - button "⚡ Express 8" [ref=e73] [cursor=pointer]:
+                - generic [ref=e74]: ⚡
+                - generic [ref=e75]: Express
+                - generic [ref=e76]: "8"
+          - generic [ref=e77]:
+            - article [ref=e78]:
+              - generic:
+                - img "AMFI Narvik"
+                - generic [ref=e79]: Retail & Grocery
+              - generic [ref=e80]:
+                - heading "AMFI Narvik" [level=3] [ref=e81]
+                - paragraph [ref=e82]: Shopping center
+                - generic [ref=e83]:
+                  - generic [ref=e84]:
+                    - paragraph [ref=e85]: From
+                    - paragraph [ref=e86]: 149,00 kr
+                  - paragraph [ref=e87]: 25-50 min ETA
+                - generic [ref=e88]:
+                  - paragraph [ref=e89]: Bikube Retail Partner
+                  - button "Add" [ref=e90] [cursor=pointer]
+            - article [ref=e91]:
+              - generic:
+                - img "Alicofood Noor Tawfiq Sabiri"
+                - generic [ref=e92]: Retail & Grocery
+              - generic [ref=e93]:
+                - heading "Alicofood Noor Tawfiq Sabiri" [level=3] [ref=e94]
+                - paragraph [ref=e95]: International food store
+                - generic [ref=e96]:
+                  - generic [ref=e97]:
+                    - paragraph [ref=e98]: From
+                    - paragraph [ref=e99]: 149,00 kr
+                  - paragraph [ref=e100]: 25-50 min ETA
+                - generic [ref=e101]:
+                  - paragraph [ref=e102]: Bikube Retail Partner
+                  - button "Add" [ref=e103] [cursor=pointer]
+            - article [ref=e104]:
+              - generic:
+                - img "Biltema"
+                - generic [ref=e105]: Retail & Grocery
+              - generic [ref=e106]:
+                - heading "Biltema" [level=3] [ref=e107]
+                - paragraph [ref=e108]: Auto parts and tools
+                - generic [ref=e109]:
+                  - generic [ref=e110]:
+                    - paragraph [ref=e111]: From
+                    - paragraph [ref=e112]: 149,00 kr
+                  - paragraph [ref=e113]: 25-50 min ETA
+                - generic [ref=e114]:
+                  - paragraph [ref=e115]: Bikube Retail Partner
+                  - button "Add" [ref=e116] [cursor=pointer]
+            - article [ref=e117]:
+              - generic:
+                - img "Bohus Narvik"
+                - generic [ref=e118]: Retail & Grocery
+              - generic [ref=e119]:
+                - heading "Bohus Narvik" [level=3] [ref=e120]
+                - paragraph [ref=e121]: Furniture and interior
+                - generic [ref=e122]:
+                  - generic [ref=e123]:
+                    - paragraph [ref=e124]: From
+                    - paragraph [ref=e125]: 149,00 kr
+                  - paragraph [ref=e126]: 25-50 min ETA
+                - generic [ref=e127]:
+                  - paragraph [ref=e128]: Bikube Retail Partner
+                  - button "Add" [ref=e129] [cursor=pointer]
+            - article [ref=e130]:
+              - generic:
+                - img "Bunnpris & Gourmet (Narvik)"
+                - generic [ref=e131]: Retail & Grocery
+              - generic [ref=e132]:
+                - heading "Bunnpris & Gourmet (Narvik)" [level=3] [ref=e133]
+                - paragraph [ref=e134]: Grocery store
+                - generic [ref=e135]:
+                  - generic [ref=e136]:
+                    - paragraph [ref=e137]: From
+                    - paragraph [ref=e138]: 149,00 kr
+                  - paragraph [ref=e139]: 25-50 min ETA
+                - generic [ref=e140]:
+                  - paragraph [ref=e141]: Bikube Retail Partner
+                  - button "Add" [ref=e142] [cursor=pointer]
+            - article [ref=e143]:
+              - generic:
+                - img "Clas Ohlson"
+                - generic [ref=e144]: Retail & Grocery
+              - generic [ref=e145]:
+                - heading "Clas Ohlson" [level=3] [ref=e146]
+                - paragraph [ref=e147]: Tools and gadgets
+                - generic [ref=e148]:
+                  - generic [ref=e149]:
+                    - paragraph [ref=e150]: From
+                    - paragraph [ref=e151]: 149,00 kr
+                  - paragraph [ref=e152]: 25-50 min ETA
+                - generic [ref=e153]:
+                  - paragraph [ref=e154]: Bikube Retail Partner
+                  - button "Add" [ref=e155] [cursor=pointer]
+            - article [ref=e156]:
+              - generic:
+                - img "Clas Ohlson Narvik"
+                - generic [ref=e157]: Retail & Grocery
+              - generic [ref=e158]:
+                - heading "Clas Ohlson Narvik" [level=3] [ref=e159]
+                - paragraph [ref=e160]: Tools and gadgets
+                - generic [ref=e161]:
+                  - generic [ref=e162]:
+                    - paragraph [ref=e163]: From
+                    - paragraph [ref=e164]: 149,00 kr
+                  - paragraph [ref=e165]: 25-50 min ETA
+                - generic [ref=e166]:
+                  - paragraph [ref=e167]: Bikube Retail Partner
+                  - button "Add" [ref=e168] [cursor=pointer]
+            - article [ref=e169]:
+              - generic:
+                - img "Coop Extra"
+                - generic [ref=e170]: Retail & Grocery
+              - generic [ref=e171]:
+                - heading "Coop Extra" [level=3] [ref=e172]
+                - paragraph [ref=e173]: Grocery store
+                - generic [ref=e174]:
+                  - generic [ref=e175]:
+                    - paragraph [ref=e176]: From
+                    - paragraph [ref=e177]: 149,00 kr
+                  - paragraph [ref=e178]: 25-50 min ETA
+                - generic [ref=e179]:
+                  - paragraph [ref=e180]: Bikube Retail Partner
+                  - button "Add" [ref=e181] [cursor=pointer]
+            - article [ref=e182]:
+              - generic:
+                - img "Elkjøp Narvik"
+                - generic [ref=e183]: Retail & Grocery
+              - generic [ref=e184]:
+                - heading "Elkjøp Narvik" [level=3] [ref=e185]
+                - paragraph [ref=e186]: Electronics and appliances
+                - generic [ref=e187]:
+                  - generic [ref=e188]:
+                    - paragraph [ref=e189]: From
+                    - paragraph [ref=e190]: 149,00 kr
+                  - paragraph [ref=e191]: 25-50 min ETA
+                - generic [ref=e192]:
+                  - paragraph [ref=e193]: Bikube Retail Partner
+                  - button "Add" [ref=e194] [cursor=pointer]
+            - article [ref=e195]:
+              - generic:
+                - img "Europris"
+                - generic [ref=e196]: Retail & Grocery
+              - generic [ref=e197]:
+                - heading "Europris" [level=3] [ref=e198]
+                - paragraph [ref=e199]: Discount store
+                - generic [ref=e200]:
+                  - generic [ref=e201]:
+                    - paragraph [ref=e202]: From
+                    - paragraph [ref=e203]: 149,00 kr
+                  - paragraph [ref=e204]: 25-50 min ETA
+                - generic [ref=e205]:
+                  - paragraph [ref=e206]: Bikube Retail Partner
+                  - button "Add" [ref=e207] [cursor=pointer]
+            - article [ref=e208]:
+              - generic:
+                - img "Felleskjøpet"
+                - generic [ref=e209]: Retail & Grocery
+              - generic [ref=e210]:
+                - heading "Felleskjøpet" [level=3] [ref=e211]
+                - paragraph [ref=e212]: Agricultural supplies
+                - generic [ref=e213]:
+                  - generic [ref=e214]:
+                    - paragraph [ref=e215]: From
+                    - paragraph [ref=e216]: 149,00 kr
+                  - paragraph [ref=e217]: 25-50 min ETA
+                - generic [ref=e218]:
+                  - paragraph [ref=e219]: Bikube Retail Partner
+                  - button "Add" [ref=e220] [cursor=pointer]
+            - article [ref=e221]:
+              - generic:
+                - img "Frydenlund Kontorspar Narvik"
+                - generic [ref=e222]: Retail & Grocery
+              - generic [ref=e223]:
+                - heading "Frydenlund Kontorspar Narvik" [level=3] [ref=e224]
+                - paragraph [ref=e225]: Office supplies
+                - generic [ref=e226]:
+                  - generic [ref=e227]:
+                    - paragraph [ref=e228]: From
+                    - paragraph [ref=e229]: 149,00 kr
+                  - paragraph [ref=e230]: 25-50 min ETA
+                - generic [ref=e231]:
+                  - paragraph [ref=e232]: Bikube Retail Partner
+                  - button "Add" [ref=e233] [cursor=pointer]
+            - article [ref=e234]:
+              - generic:
+                - img "Burger King Narvik"
+                - generic [ref=e235]: Food
+              - generic [ref=e236]:
+                - heading "Burger King Narvik" [level=3] [ref=e237]
+                - paragraph [ref=e238]: Fast food
+                - generic [ref=e239]:
+                  - generic [ref=e240]:
+                    - paragraph [ref=e241]: From
+                    - paragraph [ref=e242]: 199,00 kr
+                  - paragraph [ref=e243]: 33-57 min ETA
+                - generic [ref=e244]:
+                  - paragraph [ref=e245]: Fast-food · Narvik
+                  - button "Add" [ref=e246] [cursor=pointer]
+            - article [ref=e247]:
+              - generic:
+                - img "Duus Narvik"
+                - generic [ref=e248]: Food
+              - generic [ref=e249]:
+                - heading "Duus Narvik" [level=3] [ref=e250]
+                - paragraph [ref=e251]: Restaurant
+                - generic [ref=e252]:
+                  - generic [ref=e253]:
+                    - paragraph [ref=e254]: From
+                    - paragraph [ref=e255]: 199,00 kr
+                  - paragraph [ref=e256]: 33-57 min ETA
+                - generic [ref=e257]:
+                  - paragraph [ref=e258]: European · Narvik
+                  - button "Add" [ref=e259] [cursor=pointer]
+            - article [ref=e260]:
+              - generic:
+                - img "Fiskehallen Narvik"
+                - generic [ref=e261]: Food
+              - generic [ref=e262]:
+                - heading "Fiskehallen Narvik" [level=3] [ref=e263]
+                - paragraph [ref=e264]: Fish restaurant
+                - generic [ref=e265]:
+                  - generic [ref=e266]:
+                    - paragraph [ref=e267]: From
+                    - paragraph [ref=e268]: 199,00 kr
+                  - paragraph [ref=e269]: 33-57 min ETA
+                - generic [ref=e270]:
+                  - paragraph [ref=e271]: Seafood · Narvik
+                  - button "Add" [ref=e272] [cursor=pointer]
+            - article [ref=e273]:
+              - generic:
+                - img "Milano Restaurant Narvik"
+                - generic [ref=e274]: Food
+              - generic [ref=e275]:
+                - heading "Milano Restaurant Narvik" [level=3] [ref=e276]
+                - paragraph [ref=e277]: Italian restaurant
+                - generic [ref=e278]:
+                  - generic [ref=e279]:
+                    - paragraph [ref=e280]: From
+                    - paragraph [ref=e281]: 199,00 kr
+                  - paragraph [ref=e282]: 33-57 min ETA
+                - generic [ref=e283]:
+                  - paragraph [ref=e284]: Italian · Narvik
+                  - button "Add" [ref=e285] [cursor=pointer]
+            - article [ref=e286]:
+              - generic:
+                - img "Napoli Narvik"
+                - generic [ref=e287]: Food
+              - generic [ref=e288]:
+                - heading "Napoli Narvik" [level=3] [ref=e289]
+                - paragraph [ref=e290]: Italian restaurant
+                - generic [ref=e291]:
+                  - generic [ref=e292]:
+                    - paragraph [ref=e293]: From
+                    - paragraph [ref=e294]: 199,00 kr
+                  - paragraph [ref=e295]: 33-57 min ETA
+                - generic [ref=e296]:
+                  - paragraph [ref=e297]: Italian · Narvik
+                  - button "Add" [ref=e298] [cursor=pointer]
+            - article [ref=e299]:
+              - generic:
+                - img "Narvikfjellet Mountainrestaurant"
+                - generic [ref=e300]: Food
+              - generic [ref=e301]:
+                - heading "Narvikfjellet Mountainrestaurant" [level=3] [ref=e302]
+                - paragraph [ref=e303]: Mountain restaurant
+                - generic [ref=e304]:
+                  - generic [ref=e305]:
+                    - paragraph [ref=e306]: From
+                    - paragraph [ref=e307]: 199,00 kr
+                  - paragraph [ref=e308]: 33-57 min ETA
+                - generic [ref=e309]:
+                  - paragraph [ref=e310]: European · Narvik
+                  - button "Add" [ref=e311] [cursor=pointer]
+            - article [ref=e312]:
+              - generic:
+                - img "Nordre Matbar Narvik"
+                - generic [ref=e313]: Food
+              - generic [ref=e314]:
+                - heading "Nordre Matbar Narvik" [level=3] [ref=e315]
+                - paragraph [ref=e316]: Food bar
+                - generic [ref=e317]:
+                  - generic [ref=e318]:
+                    - paragraph [ref=e319]: From
+                    - paragraph [ref=e320]: 199,00 kr
+                  - paragraph [ref=e321]: 33-57 min ETA
+                - generic [ref=e322]:
+                  - paragraph [ref=e323]: European · Narvik
+                  - button "Add" [ref=e324] [cursor=pointer]
+            - article [ref=e325]:
+              - generic:
+                - img "Senterkafeen Narvik"
+                - generic [ref=e326]: Food
+              - generic [ref=e327]:
+                - heading "Senterkafeen Narvik" [level=3] [ref=e328]
+                - paragraph [ref=e329]: Cafe
+                - generic [ref=e330]:
+                  - generic [ref=e331]:
+                    - paragraph [ref=e332]: From
+                    - paragraph [ref=e333]: 199,00 kr
+                  - paragraph [ref=e334]: 33-57 min ETA
+                - generic [ref=e335]:
+                  - paragraph [ref=e336]: Cafe · Narvik
+                  - button "Add" [ref=e337] [cursor=pointer]
+            - article [ref=e338]:
+              - generic:
+                - img "Thaikjøkken Narvik"
+                - generic [ref=e339]: Food
+              - generic [ref=e340]:
+                - heading "Thaikjøkken Narvik" [level=3] [ref=e341]
+                - paragraph [ref=e342]: Thai restaurant
+                - generic [ref=e343]:
+                  - generic [ref=e344]:
+                    - paragraph [ref=e345]: From
+                    - paragraph [ref=e346]: 199,00 kr
+                  - paragraph [ref=e347]: 33-57 min ETA
+                - generic [ref=e348]:
+                  - paragraph [ref=e349]: Thai · Narvik
+                  - button "Add" [ref=e350] [cursor=pointer]
+            - article [ref=e351]:
+              - generic:
+                - img "Totta Bar / Scandic Narvik"
+                - generic [ref=e352]: Food
+              - generic [ref=e353]:
+                - heading "Totta Bar / Scandic Narvik" [level=3] [ref=e354]
+                - paragraph [ref=e355]: Hotel restaurant
+                - generic [ref=e356]:
+                  - generic [ref=e357]:
+                    - paragraph [ref=e358]: From
+                    - paragraph [ref=e359]: 199,00 kr
+                  - paragraph [ref=e360]: 33-57 min ETA
+                - generic [ref=e361]:
+                  - paragraph [ref=e362]: European · Narvik
+                  - button "Add" [ref=e363] [cursor=pointer]
+            - article [ref=e364]:
+              - generic:
+                - img "Viva Italia Narvik"
+                - generic [ref=e365]: Food
+              - generic [ref=e366]:
+                - heading "Viva Italia Narvik" [level=3] [ref=e367]
+                - paragraph [ref=e368]: Italian restaurant
+                - generic [ref=e369]:
+                  - generic [ref=e370]:
+                    - paragraph [ref=e371]: From
+                    - paragraph [ref=e372]: 199,00 kr
+                  - paragraph [ref=e373]: 33-57 min ETA
+                - generic [ref=e374]:
+                  - paragraph [ref=e375]: Italian · Narvik
+                  - button "Add" [ref=e376] [cursor=pointer]
+            - article [ref=e377]:
+              - generic:
+                - img "Grocery Delivery"
+                - generic [ref=e378]: Retail & Grocery
+              - generic [ref=e379]:
+                - heading "Grocery Delivery" [level=3] [ref=e380]
+                - paragraph [ref=e381]: Fast grocery delivery service
+                - generic [ref=e382]:
+                  - generic [ref=e383]:
+                    - paragraph [ref=e384]: From
+                    - paragraph [ref=e385]: 129,00 kr
+                  - paragraph [ref=e386]: 35-65 min ETA
+                - generic [ref=e387]:
+                  - paragraph [ref=e388]: Bikube Delivery
+                  - button "Add" [ref=e389] [cursor=pointer]
+            - article [ref=e390]:
+              - generic:
+                - img "Emergency Tow"
+                - generic [ref=e391]: Freight
+              - generic [ref=e392]:
+                - heading "Emergency Tow" [level=3] [ref=e393]
+                - paragraph [ref=e394]: Emergency bike towing service
+                - generic [ref=e395]:
+                  - generic [ref=e396]:
+                    - paragraph [ref=e397]: From
+                    - paragraph [ref=e398]: 129,00 kr
+                  - paragraph [ref=e399]: 35-65 min ETA
+                - generic [ref=e400]:
+                  - paragraph [ref=e401]: Bikube Delivery
+                  - button "Add" [ref=e402] [cursor=pointer]
+            - article [ref=e403]:
+              - generic:
+                - img "Доставка лекарств"
+                - generic [ref=e404]: Express
+              - generic [ref=e405]:
+                - heading "Доставка лекарств" [level=3] [ref=e406]
+                - paragraph [ref=e407]: Забираем в аптеке, проверяем ID/рецепт
+                - generic [ref=e408]:
+                  - generic [ref=e409]:
+                    - paragraph [ref=e410]: From
+                    - paragraph [ref=e411]: 129,00 kr
+                  - paragraph [ref=e412]: 30-60 min ETA
+                - generic [ref=e413]:
+                  - paragraph [ref=e414]: Bikube Delivery
+                  - button "Add" [ref=e415] [cursor=pointer]
+            - article [ref=e416]:
+              - generic:
+                - img "Поручения в городе"
+                - generic [ref=e417]: Express
+              - generic [ref=e418]:
+                - heading "Поручения в городе" [level=3] [ref=e419]
+                - paragraph [ref=e420]: Мелкие закупки/почта/оплата счетов
+                - generic [ref=e421]:
+                  - generic [ref=e422]:
+                    - paragraph [ref=e423]: From
+                    - paragraph [ref=e424]: 129,00 kr
+                  - paragraph [ref=e425]: 50-80 min ETA
+                - generic [ref=e426]:
+                  - paragraph [ref=e427]: Bikube Delivery
+                  - button "Add" [ref=e428] [cursor=pointer]
+            - article [ref=e429]:
+              - generic:
+                - img "Занос на этаж/дрова"
+                - generic [ref=e430]: Express
+              - generic [ref=e431]:
+                - heading "Занос на этаж/дрова" [level=3] [ref=e432]
+                - paragraph [ref=e433]: Подъём грузов/дров
+                - generic [ref=e434]:
+                  - generic [ref=e435]:
+                    - paragraph [ref=e436]: From
+                    - paragraph [ref=e437]: 129,00 kr
+                  - paragraph [ref=e438]: 35-65 min ETA
+                - generic [ref=e439]:
+                  - paragraph [ref=e440]: Bikube Delivery
+                  - button "Add" [ref=e441] [cursor=pointer]
+            - article [ref=e442]:
+              - generic:
+                - img "Лампочка/батарейки"
+                - generic [ref=e443]: Express
+              - generic [ref=e444]:
+                - heading "Лампочка/батарейки" [level=3] [ref=e445]
+                - paragraph [ref=e446]: Мелкий быт без электромонтажа
+                - generic [ref=e447]:
+                  - generic [ref=e448]:
+                    - paragraph [ref=e449]: From
+                    - paragraph [ref=e450]: 129,00 kr
+                  - paragraph [ref=e451]: 20-45 min ETA
+                - generic [ref=e452]:
+                  - paragraph [ref=e453]: Bikube Delivery
+                  - button "Add" [ref=e454] [cursor=pointer]
+            - article [ref=e455]:
+              - generic:
+                - img "Сопровождение"
+                - generic [ref=e456]: Express
+              - generic [ref=e457]:
+                - heading "Сопровождение" [level=3] [ref=e458]
+                - paragraph [ref=e459]: Транспорт/ожидание/помощь
+                - generic [ref=e460]:
+                  - generic [ref=e461]:
+                    - paragraph [ref=e462]: From
+                    - paragraph [ref=e463]: 129,00 kr
+                  - paragraph [ref=e464]: 80-110 min ETA
+                - generic [ref=e465]:
+                  - paragraph [ref=e466]: Bikube Delivery
+                  - button "Add" [ref=e467] [cursor=pointer]
+            - article [ref=e468]:
+              - generic:
+                - img "Добрый визит"
+                - generic [ref=e469]: Express
+              - generic [ref=e470]:
+                - heading "Добрый визит" [level=3] [ref=e471]
+                - paragraph [ref=e472]: Час общения/профилактика одиночества
+                - generic [ref=e473]:
+                  - generic [ref=e474]:
+                    - paragraph [ref=e475]: From
+                    - paragraph [ref=e476]: 129,00 kr
+                  - paragraph [ref=e477]: 50-80 min ETA
+                - generic [ref=e478]:
+                  - paragraph [ref=e479]: Bikube Delivery
+                  - button "Add" [ref=e480] [cursor=pointer]
+            - article [ref=e481]:
+              - generic:
+                - img "Напоминания о лекарствах"
+                - generic [ref=e482]: Express
+              - generic [ref=e483]:
+                - heading "Напоминания о лекарствах" [level=3] [ref=e484]
+                - paragraph [ref=e485]: Без манипуляций, контроль графика
+                - generic [ref=e486]:
+                  - generic [ref=e487]:
+                    - paragraph [ref=e488]: From
+                    - paragraph [ref=e489]: 129,00 kr
+                  - paragraph [ref=e490]: 20-35 min ETA
+                - generic [ref=e491]:
+                  - paragraph [ref=e492]: Bikube Delivery
+                  - button "Add" [ref=e493] [cursor=pointer]
+            - article [ref=e494]:
+              - generic:
+                - img "Давление/сахар"
+                - generic [ref=e495]: Express
+              - generic [ref=e496]:
+                - heading "Давление/сахар" [level=3] [ref=e497]
+                - paragraph [ref=e498]: Сбор показаний, передача медслужбе
+                - generic [ref=e499]:
+                  - generic [ref=e500]:
+                    - paragraph [ref=e501]: From
+                    - paragraph [ref=e502]: 129,00 kr
+                  - paragraph [ref=e503]: 20-45 min ETA
+                - generic [ref=e504]:
+                  - paragraph [ref=e505]: Bikube Delivery
+                  - button "Add" [ref=e506] [cursor=pointer]
+        - generic [ref=e508]:
+          - generic [ref=e509]:
+            - generic [ref=e510]:
+              - heading "Narvik Partner Coverage" [level=2] [ref=e511]
+              - paragraph [ref=e512]: Real stores, restaurants and zones loaded for Narvik, Norway.
+            - generic [ref=e513]: 16 live partners
+          - generic [ref=e514]:
+            - generic [ref=e515]:
+              - paragraph [ref=e516]: Top Partners
+              - generic [ref=e517]:
+                - generic [ref=e518]:
+                  - paragraph [ref=e519]: AMFI Narvik
+                  - paragraph [ref=e520]: Retail store
+                - generic [ref=e521]:
+                  - paragraph [ref=e522]: Alicofood Noor Tawfiq Sabiri
+                  - paragraph [ref=e523]: Retail store
+                - generic [ref=e524]:
+                  - paragraph [ref=e525]: Biltema
+                  - paragraph [ref=e526]: Retail store
+                - generic [ref=e527]:
+                  - paragraph [ref=e528]: Bohus Narvik
+                  - paragraph [ref=e529]: Retail store
+                - generic [ref=e530]:
+                  - paragraph [ref=e531]: Bunnpris & Gourmet (Narvik)
+                  - paragraph [ref=e532]: Retail store
+                - generic [ref=e533]:
+                  - paragraph [ref=e534]: Clas Ohlson
+                  - paragraph [ref=e535]: Retail store
+                - generic [ref=e536]:
+                  - paragraph [ref=e537]: Clas Ohlson Narvik
+                  - paragraph [ref=e538]: Retail store
+                - generic [ref=e539]:
+                  - paragraph [ref=e540]: Coop Extra
+                  - paragraph [ref=e541]: Retail store
+            - generic [ref=e542]:
+              - paragraph [ref=e543]: Service Zones
+              - generic [ref=e544]:
+                - generic [ref=e545]:
+                  - paragraph [ref=e546]: Нарвік - Основна зона обслуговування
+                  - paragraph [ref=e547]: "Radius: 60 km"
+                - generic [ref=e548]:
+                  - paragraph [ref=e549]: Нарвік - Центр міста
+                  - paragraph [ref=e550]: "Radius: 5 km"
+                - generic [ref=e551]:
+                  - paragraph [ref=e552]: Нарвік - Промислова зона
+                  - paragraph [ref=e553]: "Radius: 3 km"
+                - generic [ref=e554]:
+                  - paragraph [ref=e555]: Нарвік - Залізничний вокзал
+                  - paragraph [ref=e556]: "Radius: 0.5 km"
+                - generic [ref=e557]:
+                  - paragraph [ref=e558]: Нарвік - Університет
+                  - paragraph [ref=e559]: "Radius: 2 km"
+                - generic [ref=e560]:
+                  - paragraph [ref=e561]: Нарвік - Гірськолижний курорт
+                  - paragraph [ref=e562]: "Radius: 3 km"
+                - generic [ref=e563]:
+                  - paragraph [ref=e564]: Narvik Personal Errands (60km)
+                  - paragraph [ref=e565]: "Radius: 60 km"
+  - contentinfo [ref=e566]: © 2026 BiKuBe Ecosystem. All rights reserved.

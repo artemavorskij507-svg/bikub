@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32">
+  <!-- Background -->
+  <rect width="32" height="32" fill="transparent"/>
+  
+  <!-- Desk Top -->
+  <rect x="0" y="8" width="32" height="4" fill="#8b5cf6"/>
+  <rect x="0" y="8" width="32" height="1" fill="#a78bfa"/>
+  
+  <!-- Desk Legs -->
+  <rect x="2" y="12" width="4" height="20" fill="#6b7280"/>
+  <rect x="26" y="12" width="4" height="20" fill="#6b7280"/>
+  
+  <!-- Drawer -->
+  <rect x="8" y="12" width="16" height="8" fill="#9ca3af"/>
+  <rect x="10" y="14" width="12" height="4" fill="#d1d5db"/>
+  <rect x="14" y="16" width="4" height="1" fill="#6b7280"/>
+</svg>

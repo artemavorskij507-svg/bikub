@@ -1,0 +1,170 @@
+[
+  {
+    "path": "/admin/a-i-agent-team-chat",
+    "listStatus": 200,
+    "listServerError": false,
+    "createStatus": 404,
+    "createServerError": false
+  },
+  {
+    "path": "/admin/admin-ip-rules",
+    "listStatus": 200,
+    "listServerError": false,
+    "createStatus": 200,
+    "createServerError": false
+  },
+  {
+    "path": "/admin/api-keys",
+    "listStatus": 200,
+    "listServerError": false,
+    "createStatus": 200,
+    "createServerError": false
+  },
+  {
+    "path": "/admin/audit-logs",
+    "listStatus": 200,
+    "listServerError": false,
+    "createStatus": 404,
+    "createServerError": false
+  },
+  {
+    "path": "/admin/security/two-factor-setup",
+    "listStatus": 200,
+    "listServerError": false,
+    "createStatus": 404,
+    "createServerError": false
+  },
+  {
+    "path": "/admin/service-categories",
+    "listStatus": 200,
+    "listServerError": false,
+    "createStatus": 200,
+    "createServerError": false
+  },
+  {
+    "path": "/admin/service-types",
+    "listStatus": 200,
+    "listServerError": false,
+    "createStatus": 200,
+    "createServerError": false
+  },
+  {
+    "path": "/admin/client-profiles",
+    "listStatus": 200,
+    "listServerError": false,
+    "createStatus": 200,
+    "createServerError": false
+  },
+  {
+    "path": "/admin/partners",
+    "listStatus": 200,
+    "listServerError": false,
+    "createStatus": 200,
+    "createServerError": false
+  },
+  {
+    "path": "/admin/payouts",
+    "listStatus": 200,
+    "listServerError": false,
+    "createStatus": 200,
+    "createServerError": false
+  },
+  {
+    "path": "/admin/bikube-smart-assistant",
+    "listStatus": 200,
+    "listServerError": false,
+    "createStatus": 404,
+    "createServerError": false
+  },
+  {
+    "path": "/admin/assistant-conversations",
+    "listStatus": 200,
+    "listServerError": false,
+    "createStatus": 200,
+    "createServerError": false
+  },
+  {
+    "path": "/admin/schedule-slots",
+    "listStatus": 200,
+    "listServerError": false,
+    "createStatus": 200,
+    "createServerError": false
+  },
+  {
+    "path": "/admin/users",
+    "listStatus": 200,
+    "listServerError": false,
+    "createStatus": 200,
+    "createServerError": false
+  },
+  {
+    "path": "/admin/feature-flags",
+    "listStatus": 200,
+    "listServerError": false,
+    "createStatus": 200,
+    "createServerError": false
+  },
+  {
+    "path": "/admin/webhook-logs",
+    "listStatus": 200,
+    "listServerError": false,
+    "createStatus": 200,
+    "createServerError": false
+  },
+  {
+    "path": "/admin/loyalty-balances",
+    "listStatus": 200,
+    "listServerError": false,
+    "createStatus": 200,
+    "createServerError": false
+  },
+  {
+    "path": "/admin/loyalty-transactions",
+    "listStatus": 200,
+    "listServerError": false,
+    "createStatus": 200,
+    "createServerError": false
+  },
+  {
+    "path": "/admin/employees",
+    "listStatus": 200,
+    "listServerError": false,
+    "createStatus": 200,
+    "createServerError": false
+  },
+  {
+    "path": "/admin/support-tickets",
+    "listStatus": 200,
+    "listServerError": false,
+    "createStatus": 200,
+    "createServerError": false
+  },
+  {
+    "path": "/admin/payment-settings",
+    "listStatus": 200,
+    "listServerError": false,
+    "createStatus": 200,
+    "createServerError": false
+  },
+  {
+    "path": "/admin/geo-zones",
+    "listStatus": 200,
+    "listServerError": false,
+    "createStatus": 200,
+    "createServerError": false
+  },
+  {
+    "path": "/admin/pricing-rules",
+    "listStatus": 200,
+    "listServerError": false,
+    "createStatus": 200,
+    "createServerError": false
+  },
+  {
+    "path": "/admin/coupons",
+    "listStatus": 200,
+    "listServerError": false,
+    "createStatus": 200,
+    "createServerError": false
+  }
+]

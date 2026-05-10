@@ -1,0 +1,19 @@
+/* Glass Panel Effect */
+.glass-panel {
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+}
+
+/* Cyberpunk Scrollbar */
+.cyber-scrollbar::-webkit-scrollbar {
+    width: 6px;
+}
+.cyber-scrollbar::-webkit-scrollbar-track {
+    background: rgba(0,0,0,0.1);
+}
+.cyber-scrollbar::-webkit-scrollbar-thumb {
+    background: #4f46e5;
+    border-radius: 3px;
+}
+

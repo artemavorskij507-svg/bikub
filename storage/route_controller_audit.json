@@ -1,0 +1,464 @@
+﻿[
+    {
+        "uri": "api/profile",
+        "name": null,
+        "action": "App\\Http\\Controllers\\Api\\V1\\Account\\AccountProfileApiController@update",
+        "problem": "Controller method not found"
+    },
+    {
+        "uri": "api/profile/avatar",
+        "name": null,
+        "action": "App\\Http\\Controllers\\Api\\V1\\Account\\AccountProfileApiController@updateAvatar",
+        "problem": "Controller method not found"
+    },
+    {
+        "uri": "api/password/forgot",
+        "name": null,
+        "action": "App\\Http\\Controllers\\Api\\AuthController@forgotPassword",
+        "problem": "Controller method not found"
+    },
+    {
+        "uri": "api/password/reset",
+        "name": null,
+        "action": "App\\Http\\Controllers\\Api\\AuthController@resetPassword",
+        "problem": "Controller method not found"
+    },
+    {
+        "uri": "api/v1/routes/matrix",
+        "name": null,
+        "action": "App\\Http\\Controllers\\RoutingController@calculateMatrix",
+        "problem": "Controller method not found"
+    },
+    {
+        "uri": "api/v1/routes/{id}/recalc-eta",
+        "name": null,
+        "action": "App\\Http\\Controllers\\RoutingController@recalculateEta",
+        "problem": "Controller method not found"
+    },
+    {
+        "uri": "api/v1/geo/v3/route",
+        "name": null,
+        "action": "App\\Http\\Controllers\\Api\\GeoV3Controller@calculateRoute",
+        "problem": "Controller method not found"
+    },
+    {
+        "uri": "api/v1/geo/v3/matrix",
+        "name": null,
+        "action": "App\\Http\\Controllers\\Api\\GeoV3Controller@calculateMatrix",
+        "problem": "Controller method not found"
+    },
+    {
+        "uri": "api/v1/geo/v3/optimize",
+        "name": null,
+        "action": "App\\Http\\Controllers\\Api\\GeoV3Controller@optimizeRoute",
+        "problem": "Controller method not found"
+    },
+    {
+        "uri": "api/v1/geo/v3/profile",
+        "name": null,
+        "action": "App\\Http\\Controllers\\Api\\GeoV3Controller@getOptimalProfile",
+        "problem": "Controller method not found"
+    },
+    {
+        "uri": "api/v1/geo/v3/eta",
+        "name": null,
+        "action": "App\\Http\\Controllers\\Api\\GeoV3Controller@calculateETA",
+        "problem": "Controller method not found"
+    },
+    {
+        "uri": "api/v1/geo/v3/validate-windows",
+        "name": null,
+        "action": "App\\Http\\Controllers\\Api\\GeoV3Controller@validateTimeWindows",
+        "problem": "Controller method not found"
+    },
+    {
+        "uri": "api/v1/performance/report",
+        "name": null,
+        "action": "App\\Http\\Controllers\\Api\\PerformanceController@getReport",
+        "problem": "Controller method not found"
+    },
+    {
+        "uri": "api/v1/performance/slow-queries",
+        "name": null,
+        "action": "App\\Http\\Controllers\\Api\\PerformanceController@getSlowQueries",
+        "problem": "Controller method not found"
+    },
+    {
+        "uri": "api/v1/performance/optimize-db",
+        "name": null,
+        "action": "App\\Http\\Controllers\\Api\\PerformanceController@optimizeDatabase",
+        "problem": "Controller method not found"
+    },
+    {
+        "uri": "api/v1/performance/cache-stats",
+        "name": null,
+        "action": "App\\Http\\Controllers\\Api\\PerformanceController@getCacheStatistics",
+        "problem": "Controller method not found"
+    },
+    {
+        "uri": "api/v1/performance/optimize-cache",
+        "name": null,
+        "action": "App\\Http\\Controllers\\Api\\PerformanceController@optimizeCache",
+        "problem": "Controller method not found"
+    },
+    {
+        "uri": "api/v1/performance/cost-analysis",
+        "name": null,
+        "action": "App\\Http\\Controllers\\Api\\PerformanceController@getCostAnalysis",
+        "problem": "Controller method not found"
+    },
+    {
+        "uri": "api/v1/gdpr/request",
+        "name": null,
+        "action": "App\\Http\\Controllers\\Api\\GdprController@createRequest",
+        "problem": "Controller method not found"
+    },
+    {
+        "uri": "api/v1/gdpr/requests",
+        "name": null,
+        "action": "App\\Http\\Controllers\\Api\\GdprController@getRequests",
+        "problem": "Controller method not found"
+    },
+    {
+        "uri": "api/v1/gdpr/requests/{id}",
+        "name": null,
+        "action": "App\\Http\\Controllers\\Api\\GdprController@getRequest",
+        "problem": "Controller method not found"
+    },
+    {
+        "uri": "api/v1/gdpr/requests/{id}/process",
+        "name": null,
+        "action": "App\\Http\\Controllers\\Api\\GdprController@processRequest",
+        "problem": "Controller method not found"
+    },
+    {
+        "uri": "api/v1/gdpr/anonymize-logs",
+        "name": null,
+        "action": "App\\Http\\Controllers\\Api\\GdprController@anonymizeLogs",
+        "problem": "Controller method not found"
+    },
+    {
+        "uri": "api/v1/gdpr/retention-report",
+        "name": null,
+        "action": "App\\Http\\Controllers\\Api\\GdprController@getRetentionReport",
+        "problem": "Controller method not found"
+    },
+    {
+        "uri": "api/v1/subscriptions/cancel",
+        "name": null,
+        "action": "App\\Http\\Controllers\\Api\\SubscriptionController@cancel",
+        "problem": "Controller method not found"
+    },
+    {
+        "uri": "api/v1/subscriptions/my",
+        "name": null,
+        "action": "App\\Http\\Controllers\\Api\\SubscriptionController@getMySubscriptions",
+        "problem": "Controller method not found"
+    },
+    {
+        "uri": "api/v1/bundles/price",
+        "name": null,
+        "action": "App\\Http\\Controllers\\Api\\BundleController@calculatePrice",
+        "problem": "Controller method not found"
+    },
+    {
+        "uri": "api/v1/bundles/available",
+        "name": null,
+        "action": "App\\Http\\Controllers\\Api\\BundleController@getAvailable",
+        "problem": "Controller method not found"
+    },
+    {
+        "uri": "api/v1/orders/{id}/return",
+        "name": null,
+        "action": "App\\Http\\Controllers\\Api\\ReturnController@createReturn",
+        "problem": "Controller method not found"
+    },
+    {
+        "uri": "api/v1/orders/{id}/returns",
+        "name": null,
+        "action": "App\\Http\\Controllers\\Api\\ReturnController@getReturns",
+        "problem": "Controller method not found"
+    },
+    {
+        "uri": "api/v1/returns/{id}/status",
+        "name": null,
+        "action": "App\\Http\\Controllers\\Api\\ReturnController@updateStatus",
+        "problem": "Controller method not found"
+    },
+    {
+        "uri": "api/v1/payments/{id}/refund",
+        "name": null,
+        "action": "App\\Http\\Controllers\\Api\\RefundController@createRefund",
+        "problem": "Controller method not found"
+    },
+    {
+        "uri": "api/v1/refunds",
+        "name": null,
+        "action": "App\\Http\\Controllers\\Api\\RefundController@getRefunds",
+        "problem": "Controller method not found"
+    },
+    {
+        "uri": "api/v1/orders/{id}/sla-credit",
+        "name": null,
+        "action": "App\\Http\\Controllers\\Api\\SlaCreditController@grantCredit",
+        "problem": "Controller method not found"
+    },
+    {
+        "uri": "api/v1/sla-credits",
+        "name": null,
+        "action": "App\\Http\\Controllers\\Api\\SlaCreditController@getCredits",
+        "problem": "Controller method not found"
+    },
+    {
+        "uri": "api/v1/reviews",
+        "name": null,
+        "action": "App\\Http\\Controllers\\Api\\ReviewController@createReview",
+        "problem": "Controller method not found"
+    },
+    {
+        "uri": "api/v1/reviews",
+        "name": null,
+        "action": "App\\Http\\Controllers\\Api\\ReviewController@getReviews",
+        "problem": "Controller method not found"
+    },
+    {
+        "uri": "api/v1/reviews/{id}/status",
+        "name": null,
+        "action": "App\\Http\\Controllers\\Api\\ReviewController@updateStatus",
+        "problem": "Controller method not found"
+    },
+    {
+        "uri": "api/v1/disputes",
+        "name": null,
+        "action": "App\\Http\\Controllers\\Api\\DisputeController@createDispute",
+        "problem": "Controller method not found"
+    },
+    {
+        "uri": "api/v1/disputes",
+        "name": null,
+        "action": "App\\Http\\Controllers\\Api\\DisputeController@getDisputes",
+        "problem": "Controller method not found"
+    },
+    {
+        "uri": "api/v1/disputes/{id}/status",
+        "name": null,
+        "action": "App\\Http\\Controllers\\Api\\DisputeController@updateStatus",
+        "problem": "Controller method not found"
+    },
+    {
+        "uri": "api/v1/disputes/{id}/evidence",
+        "name": null,
+        "action": "App\\Http\\Controllers\\Api\\DisputeController@addEvidence",
+        "problem": "Controller method not found"
+    },
+    {
+        "uri": "api/v1/cfo/dashboard",
+        "name": null,
+        "action": "App\\Http\\Controllers\\Api\\CfoController@getDashboard",
+        "problem": "Controller method not found"
+    },
+    {
+        "uri": "api/v1/cfo/revenue",
+        "name": null,
+        "action": "App\\Http\\Controllers\\Api\\CfoController@getRevenue",
+        "problem": "Controller method not found"
+    },
+    {
+        "uri": "api/v1/cfo/margins",
+        "name": null,
+        "action": "App\\Http\\Controllers\\Api\\CfoController@getMargins",
+        "problem": "Controller method not found"
+    },
+    {
+        "uri": "api/v1/cfo/ltv-cac",
+        "name": null,
+        "action": "App\\Http\\Controllers\\Api\\CfoController@getLtvCac",
+        "problem": "Controller method not found"
+    },
+    {
+        "uri": "api/v1/cfo/returns",
+        "name": null,
+        "action": "App\\Http\\Controllers\\Api\\CfoController@getReturns",
+        "problem": "Controller method not found"
+    },
+    {
+        "uri": "api/v1/cfo/discounts",
+        "name": null,
+        "action": "App\\Http\\Controllers\\Api\\CfoController@getDiscounts",
+        "problem": "Controller method not found"
+    },
+    {
+        "uri": "api/v1/webhooks/subscriptions",
+        "name": null,
+        "action": "App\\Http\\Controllers\\Api\\WebhookController@createSubscription",
+        "problem": "Controller method not found"
+    },
+    {
+        "uri": "api/v1/webhooks/subscriptions",
+        "name": null,
+        "action": "App\\Http\\Controllers\\Api\\WebhookController@getSubscriptions",
+        "problem": "Controller method not found"
+    },
+    {
+        "uri": "api/v1/webhooks/subscriptions/{id}",
+        "name": null,
+        "action": "App\\Http\\Controllers\\Api\\WebhookController@updateSubscription",
+        "problem": "Controller method not found"
+    },
+    {
+        "uri": "api/v1/webhooks/subscriptions/{id}",
+        "name": null,
+        "action": "App\\Http\\Controllers\\Api\\WebhookController@deleteSubscription",
+        "problem": "Controller method not found"
+    },
+    {
+        "uri": "api/v1/webhooks/subscriptions/{id}/logs",
+        "name": null,
+        "action": "App\\Http\\Controllers\\Api\\WebhookController@getLogs",
+        "problem": "Controller method not found"
+    },
+    {
+        "uri": "api/v1/pricing/calculate",
+        "name": null,
+        "action": "App\\Http\\Controllers\\Api\\PricingController@calculate",
+        "problem": "Controller method not found"
+    },
+    {
+        "uri": "api/v1/pricing/rules",
+        "name": null,
+        "action": "App\\Http\\Controllers\\Api\\PricingController@index",
+        "problem": "Controller method not found"
+    },
+    {
+        "uri": "api/v1/pricing/rules",
+        "name": null,
+        "action": "App\\Http\\Controllers\\Api\\PricingController@store",
+        "problem": "Controller method not found"
+    },
+    {
+        "uri": "api/v1/pricing/rules/{id}",
+        "name": null,
+        "action": "App\\Http\\Controllers\\Api\\PricingController@update",
+        "problem": "Controller method not found"
+    },
+    {
+        "uri": "api/v1/pricing/rules/{id}",
+        "name": null,
+        "action": "App\\Http\\Controllers\\Api\\PricingController@destroy",
+        "problem": "Controller method not found"
+    },
+    {
+        "uri": "api/v1/pricing/experiments",
+        "name": null,
+        "action": "App\\Http\\Controllers\\Api\\PricingController@getExperiments",
+        "problem": "Controller method not found"
+    },
+    {
+        "uri": "api/v1/pricing/experiments",
+        "name": null,
+        "action": "App\\Http\\Controllers\\Api\\PricingController@createExperiment",
+        "problem": "Controller method not found"
+    },
+    {
+        "uri": "api/v1/telemetry/events",
+        "name": null,
+        "action": "App\\Http\\Controllers\\Api\\TelemetryController@processEvents",
+        "problem": "Controller method not found"
+    },
+    {
+        "uri": "api/v1/telemetry/events",
+        "name": null,
+        "action": "App\\Http\\Controllers\\Api\\TelemetryController@getEvents",
+        "problem": "Controller method not found"
+    },
+    {
+        "uri": "api/v1/telemetry/eta-update",
+        "name": null,
+        "action": "App\\Http\\Controllers\\Api\\TelemetryController@updateEta",
+        "problem": "Controller method not found"
+    },
+    {
+        "uri": "api/v1/telemetry/anomalies",
+        "name": null,
+        "action": "App\\Http\\Controllers\\Api\\TelemetryController@getAnomalies",
+        "problem": "Controller method not found"
+    },
+    {
+        "uri": "api/v1/telemetry/route-optimization",
+        "name": null,
+        "action": "App\\Http\\Controllers\\Api\\TelemetryController@getRouteOptimization",
+        "problem": "Controller method not found"
+    },
+    {
+        "uri": "api/v1/geofences",
+        "name": null,
+        "action": "App\\Http\\Controllers\\Api\\GeofenceController@getGeofences",
+        "problem": "Controller method not found"
+    },
+    {
+        "uri": "api/v1/geofences",
+        "name": null,
+        "action": "App\\Http\\Controllers\\Api\\GeofenceController@createGeofence",
+        "problem": "Controller method not found"
+    },
+    {
+        "uri": "api/v1/geofences/{id}",
+        "name": null,
+        "action": "App\\Http\\Controllers\\Api\\GeofenceController@updateGeofence",
+        "problem": "Controller method not found"
+    },
+    {
+        "uri": "api/v1/geofences/{id}",
+        "name": null,
+        "action": "App\\Http\\Controllers\\Api\\GeofenceController@deleteGeofence",
+        "problem": "Controller method not found"
+    },
+    {
+        "uri": "api/v1/geofences/{id}/events",
+        "name": null,
+        "action": "App\\Http\\Controllers\\Api\\GeofenceController@getEvents",
+        "problem": "Controller method not found"
+    },
+    {
+        "uri": "api/v1/kyc/documents",
+        "name": null,
+        "action": "App\\Http\\Controllers\\Api\\KycController@uploadDocument",
+        "problem": "Controller method not found"
+    },
+    {
+        "uri": "api/v1/kyc/documents",
+        "name": null,
+        "action": "App\\Http\\Controllers\\Api\\KycController@getDocuments",
+        "problem": "Controller method not found"
+    },
+    {
+        "uri": "api/v1/kyc/status",
+        "name": null,
+        "action": "App\\Http\\Controllers\\Api\\KycController@getStatus",
+        "problem": "Controller method not found"
+    },
+    {
+        "uri": "api/v1/contracts/sign",
+        "name": null,
+        "action": "App\\Http\\Controllers\\Api\\ContractController@signContract",
+        "problem": "Controller method not found"
+    },
+    {
+        "uri": "api/v1/contracts",
+        "name": null,
+        "action": "App\\Http\\Controllers\\Api\\ContractController@getContracts",
+        "problem": "Controller method not found"
+    },
+    {
+        "uri": "api/v1/onboarding/checklist",
+        "name": null,
+        "action": "App\\Http\\Controllers\\Api\\OnboardingController@getChecklist",
+        "problem": "Controller method not found"
+    },
+    {
+        "uri": "roadside/sos",
+        "name": "public.roadside.sos.submit",
+        "action": "App\\Http\\Controllers\\Public\\RoadsideSOSController@store",
+        "problem": "Controller method not found"
+    }
+]

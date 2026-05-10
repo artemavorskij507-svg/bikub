@@ -1,0 +1,8 @@
+{
+  "checked_at": "2026-04-21T14:45:05.404Z",
+  "after_login_url": "http://136.119.84.22/admin",
+  "target_url": "http://136.119.84.22/admin/orders/create",
+  "status": 404,
+  "final_url": "http://136.119.84.22/admin/orders/create",
+  "has_500_markers": false
+}

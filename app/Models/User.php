@@ -1,0 +1,99 @@
+<?php
+
+namespace App\Models;
+
+use Filament\Models\Contracts\FilamentUser;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Foundation\Auth\User as Authenticatable;
+use Illuminate\Notifications\Notifiable;
+use Laravel\Sanctum\HasApiTokens;
+use Spatie\Permission\Traits\HasRoles;
+
+class User extends Authenticatable implements FilamentUser
+{
+    use HasApiTokens, HasFactory, Notifiable, HasRoles;
+
+    protected $fillable = [
+        'name',
+        'email',
+        'password',
+    ];
+
+    protected $hidden = [
+        'password',
+        'remember_token',
+    ];
+
+    protected $casts = [
+        'email_verified_at' => 'datetime',
+        'two_factor_confirmed_at' => 'datetime',
+    ];
+
+    /**
+     * Determine if the user can access Filament.
+     */
+    public function canAccessFilament(): bool
+    {
+        return $this->hasAnyRole([
+            'owner',
+            'admin',
+            'operator',
+            'dispatcher',
+            'support',
+            'super_admin',
+            'ops_admin',
+            'ops_manager',
+            'ops_rules_admin',
+        ]);
+    }
+
+    /**
+     * Get the roles assigned to the user.
+     * Overriding default Spatie roles to use 'user_roles' table.
+     */
+    public function roles()
+    {
+        return $this->belongsToMany(
+            \App\Models\Role::class,
+            'user_roles',
+            'user_id',
+            'role_id'
+        )->withTimestamps();
+    }
+
+    /**
+     * Check if user has any of the given roles using custom user_roles table.
+     */
+    public function hasAnyRole($roles): bool
+    {
+        $roles = is_array($roles) ? $roles : [$roles];
+
+        return $this->roles()->whereIn('name', $roles)->exists();
+    }
+
+    /**
+     * Check if user has a specific role using custom user_roles table.
+     */
+    public function hasRole($roles, ?string $guard = null): bool
+    {
+        $roles = is_array($roles) ? $roles : [$roles];
+
+        return $this->roles()->whereIn('name', $roles)->exists();
+    }
+
+    /**
+     * Role-permission check based on roles.permissions JSON.
+     */
+    public function hasPermission(string $permission): bool
+    {
+        return $this->roles()
+            ->where('is_active', true)
+            ->get()
+            ->contains(fn ($role) => $role->hasPermission($permission) || $role->hasPermission('*'));
+    }
+
+    public function hasTwoFactorEnabled(): bool
+    {
+        return ! empty($this->two_factor_secret) && ! is_null($this->two_factor_confirmed_at);
+    }
+}

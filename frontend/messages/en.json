@@ -1,0 +1,213 @@
+{
+  "HomePage": {
+    "servicesTitle": "Our Services",
+    "whyChooseUs": "Why Choose GLF BiKube?",
+    "fastService": "Fast Service",
+    "fastServiceDesc": "Quick and efficient bike care services",
+    "qualityGuarantee": "Quality Guarantee",
+    "qualityGuaranteeDesc": "Professional service with quality assurance",
+    "mobileService": "Mobile Service",
+    "mobileServiceDesc": "We come to you for convenience"
+  },
+  "Header": {
+    "tagline": "Unified Logistic Hub",
+    "allServices": "All Services",
+    "login": "Sign in",
+    "register": "Create account",
+    "menu": "Menu",
+    "close": "Close",
+    "aria": {
+      "header": "Main site navigation",
+      "home": "Back to homepage",
+      "primaryNav": "Primary navigation",
+      "openCart": "Open shopping cart"
+    },
+    "nav": {
+      "howItWorks": "How it works",
+      "about": "About GLF",
+      "contact": "Contacts",
+      "partnership": "Partnership"
+    },
+    "services": {
+      "delivery": {
+        "title": "Grocery Delivery",
+        "description": "Personal shopper, smart substitutions and ETA tracking"
+      },
+      "bulky": {
+        "title": "Bulky Logistics",
+        "description": "Crew, lift and assembly for heavy deliveries"
+      },
+      "food": {
+        "title": "Food Express",
+        "description": "Local restaurants with temperature control"
+      },
+      "handyman": {
+        "title": "Handyman",
+        "description": "Verified specialists with GLF warranty"
+      },
+      "eco": {
+        "title": "Eco Services",
+        "description": "Sorted recycling and sustainability reports"
+      },
+      "roadside": {
+        "title": "Roadside Assistance",
+        "description": "Jump-start, towing and urgent fixes"
+      },
+      "personal": {
+        "title": "Personal Concierge",
+        "description": "Errands, shopping and bespoke logistics"
+      }
+    },
+    "fastOrder": {
+      "serviceLabel": "Select service",
+      "addressLabel": "Pickup address",
+      "addressPlaceholder": "Where should we arrive?",
+      "cta": "Quick order",
+      "chooseService": "Service",
+      "destination": "Destination address"
+    }
+  },
+  "Hero": {
+    "title": "Professional Bike Care Services",
+    "subtitle": "Expert maintenance, repair, and care for your bicycle",
+    "browseServices": "Browse Services",
+    "bookNow": "Book Now",
+    "aria": {
+      "slider": "Hero stories",
+      "prevSlide": "Previous story",
+      "nextSlide": "Next story",
+      "goToSlide": "Go to slide {number}"
+    }
+  },
+  "ServicesGrid": {
+    "eyebrow": "GLF Deliveri",
+    "title": "Unified logistics platform for city and business",
+    "subtitle": "Seven service modules covering grocery, bulky, food delivery, eco services, handyman tasks, roadside assistance and personal concierge."
+  },
+  "ServiceGrid": {
+    "bookService": "Book Service"
+  },
+  "CatalogPage": {
+    "title": "Service Catalog",
+    "subtitle": "Choose from our wide range of professional bike care services"
+  },
+  "CatalogFilters": {
+    "title": "Filters",
+    "category": "Category",
+    "deliveryZone": "Delivery Zone",
+    "timeSlot": "Time Slot",
+    "priceRange": "Price Range",
+    "allCategories": "All Categories",
+    "allZones": "All Zones",
+    "allSlots": "All Time Slots",
+    "clearFilters": "Clear Filters",
+    "categories": {
+      "care": "Bike Care",
+      "eco": "Eco Cleaning",
+      "tow": "Tow Service",
+      "rent": "Bike Rental",
+      "shuttle": "Shuttle Service",
+      "master": "Master Service",
+      "food": "Food Delivery",
+      "market": "Market Delivery"
+    },
+    "zones": {
+      "osloCenter": "Oslo Center",
+      "osloWest": "Oslo West",
+      "osloEast": "Oslo East",
+      "bergen": "Bergen",
+      "trondheim": "Trondheim"
+    },
+    "slots": {
+      "morning": "Morning (8:00-12:00)",
+      "afternoon": "Afternoon (12:00-17:00)",
+      "evening": "Evening (17:00-21:00)"
+    }
+  },
+  "OrderPage": {
+    "title": "Place Your Order",
+    "service": "Service",
+    "loading": "Loading..."
+  },
+  "OrderForm": {
+    "customerInfo": "Customer Information",
+    "addressInfo": "Address Information",
+    "scheduleSlot": "Schedule Slot",
+    "additionalInfo": "Additional Information",
+    "serviceSummary": "Service Summary",
+    "fullName": "Full Name",
+    "email": "Email",
+    "phone": "Phone",
+    "streetAddress": "Street Address",
+    "city": "City",
+    "postalCode": "Postal Code",
+    "preferredTime": "Preferred Time",
+    "notes": "Additional Notes",
+    "processing": "Processing...",
+    "continueToPayment": "Continue to Payment",
+    "placeholders": {
+      "fullName": "Enter your full name",
+      "email": "Enter your email address",
+      "phone": "Enter your phone number",
+      "streetAddress": "Enter street address",
+      "city": "Enter city",
+      "postalCode": "Enter postal code",
+      "notes": "Any additional information or special requests"
+    },
+    "timeSlots": {
+      "morning": "Morning (8:00-12:00)",
+      "afternoon": "Afternoon (12:00-17:00)",
+      "evening": "Evening (17:00-21:00)"
+    },
+    "errors": {
+      "nameRequired": "Name is required",
+      "emailRequired": "Email is required",
+      "phoneRequired": "Phone is required",
+      "streetRequired": "Street address is required",
+      "cityRequired": "City is required",
+      "postalCodeRequired": "Postal code is required",
+      "slotRequired": "Please select a time slot"
+    }
+  },
+  "PaymentForm": {
+    "orderSummary": "Order Summary",
+    "service": "Service",
+    "customer": "Customer",
+    "address": "Address",
+    "timeSlot": "Time Slot",
+    "total": "Total",
+    "paymentMethod": "Payment Method",
+    "back": "Back",
+    "payNow": "Pay Now",
+    "processing": "Processing Payment...",
+    "paymentFailed": "Payment failed. Please try again.",
+    "paymentError": "An error occurred during payment.",
+    "stripe": {
+      "title": "Credit/Debit Card",
+      "description": "Pay securely with Stripe"
+    },
+    "vipps": {
+      "title": "Vipps",
+      "description": "Pay with Vipps mobile app"
+    },
+    "security": {
+      "title": "Secure Payment",
+      "description": "Your payment information is encrypted and secure."
+    }
+  },
+  "Footer": {
+    "description": "Professional bike care services in Norway. We provide expert maintenance, repair, and care for your bicycle with convenience and quality.",
+    "quickLinks": "Quick Links",
+    "home": "Home",
+    "catalog": "Catalog",
+    "services": "Services",
+    "about": "About",
+    "contact": "Contact",
+    "phone": "Phone",
+    "email": "Email",
+    "address": "Address",
+    "allRightsReserved": "All rights reserved.",
+    "privacyPolicy": "Privacy Policy",
+    "termsOfService": "Terms of Service"
+  }
+}

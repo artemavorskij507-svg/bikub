@@ -1,0 +1,282 @@
+﻿[
+    {
+        "url":  "http://136.119.84.22/",
+        "status":  200,
+        "location":  null,
+        "expect":  "200",
+        "ok":  true,
+        "error":  null
+    },
+    {
+        "url":  "http://136.119.84.22/category/delivery",
+        "status":  200,
+        "location":  null,
+        "expect":  "200",
+        "ok":  true,
+        "error":  null
+    },
+    {
+        "url":  "http://136.119.84.22/category/moving",
+        "status":  200,
+        "location":  null,
+        "expect":  "200",
+        "ok":  true,
+        "error":  null
+    },
+    {
+        "url":  "http://136.119.84.22/category/handyman",
+        "status":  200,
+        "location":  null,
+        "expect":  "200",
+        "ok":  true,
+        "error":  null
+    },
+    {
+        "url":  "http://136.119.84.22/category/eco",
+        "status":  200,
+        "location":  null,
+        "expect":  "200",
+        "ok":  true,
+        "error":  null
+    },
+    {
+        "url":  "http://136.119.84.22/category/personal-task",
+        "status":  200,
+        "location":  null,
+        "expect":  "200",
+        "ok":  true,
+        "error":  null
+    },
+    {
+        "url":  "http://136.119.84.22/category/tow",
+        "status":  200,
+        "location":  null,
+        "expect":  "200",
+        "ok":  true,
+        "error":  null
+    },
+    {
+        "url":  "http://136.119.84.22/classifieds",
+        "status":  200,
+        "location":  null,
+        "expect":  "200",
+        "ok":  true,
+        "error":  null
+    },
+    {
+        "url":  "http://136.119.84.22/catalog",
+        "status":  200,
+        "location":  null,
+        "expect":  "200",
+        "ok":  true,
+        "error":  null
+    },
+    {
+        "url":  "http://136.119.84.22/stores",
+        "status":  "ERR",
+        "location":  null,
+        "expect":  "200or302",
+        "ok":  false,
+        "error":  "Operation is not valid due to the current state of the object."
+    },
+    {
+        "url":  "http://136.119.84.22/restaurants",
+        "status":  "ERR",
+        "location":  null,
+        "expect":  "200or302",
+        "ok":  false,
+        "error":  "Operation is not valid due to the current state of the object."
+    },
+    {
+        "url":  "http://136.119.84.22/account",
+        "status":  "ERR",
+        "location":  null,
+        "expect":  "302login",
+        "ok":  false,
+        "error":  "Operation is not valid due to the current state of the object."
+    },
+    {
+        "url":  "http://136.119.84.22/account/orders",
+        "status":  "ERR",
+        "location":  null,
+        "expect":  "302login",
+        "ok":  false,
+        "error":  "Operation is not valid due to the current state of the object."
+    },
+    {
+        "url":  "http://136.119.84.22/account/profile",
+        "status":  "ERR",
+        "location":  null,
+        "expect":  "302login",
+        "ok":  false,
+        "error":  "Operation is not valid due to the current state of the object."
+    },
+    {
+        "url":  "http://136.119.84.22/lk",
+        "status":  "ERR",
+        "location":  null,
+        "expect":  "302login",
+        "ok":  false,
+        "error":  "Operation is not valid due to the current state of the object."
+    },
+    {
+        "url":  "http://136.119.84.22/lk/orders",
+        "status":  "ERR",
+        "location":  null,
+        "expect":  "302login",
+        "ok":  false,
+        "error":  "Operation is not valid due to the current state of the object."
+    },
+    {
+        "url":  "http://136.119.84.22/lk/support",
+        "status":  "ERR",
+        "location":  null,
+        "expect":  "302login",
+        "ok":  false,
+        "error":  "Operation is not valid due to the current state of the object."
+    },
+    {
+        "url":  "http://136.119.84.22/admin",
+        "status":  "ERR",
+        "location":  null,
+        "expect":  "302adminlogin",
+        "ok":  false,
+        "error":  "Operation is not valid due to the current state of the object."
+    },
+    {
+        "url":  "http://136.119.84.22/admin/login",
+        "status":  200,
+        "location":  null,
+        "expect":  "200",
+        "ok":  true,
+        "error":  null
+    },
+    {
+        "url":  "http://136.119.84.22/api/v1/health",
+        "status":  200,
+        "location":  null,
+        "expect":  "200",
+        "ok":  true,
+        "error":  null
+    },
+    {
+        "url":  "http://136.119.84.22/api/v1/categories",
+        "status":  200,
+        "location":  null,
+        "expect":  "200",
+        "ok":  true,
+        "error":  null
+    },
+    {
+        "url":  "http://136.119.84.22/api/v1/service-types",
+        "status":  200,
+        "location":  null,
+        "expect":  "200",
+        "ok":  true,
+        "error":  null
+    },
+    {
+        "url":  "http://136.119.84.22/api/v1/restaurants",
+        "status":  200,
+        "location":  null,
+        "expect":  "200",
+        "ok":  true,
+        "error":  null
+    },
+    {
+        "url":  "http://136.119.84.22/api/v1/stores",
+        "status":  200,
+        "location":  null,
+        "expect":  "200",
+        "ok":  true,
+        "error":  null
+    },
+    {
+        "url":  "http://136.119.84.22/api/v1/public/catalog",
+        "status":  500,
+        "location":  null,
+        "expect":  "200",
+        "ok":  true,
+        "error":  null
+    },
+    {
+        "url":  "http://136.119.84.22/api/v1/public/slots",
+        "status":  "ERR",
+        "location":  null,
+        "expect":  "200or422",
+        "ok":  false,
+        "error":  "Operation is not valid due to the current state of the object."
+    },
+    {
+        "url":  "http://136.119.84.22/api/ops/map/live",
+        "status":  "ERR",
+        "location":  null,
+        "expect":  "401or302",
+        "ok":  false,
+        "error":  "Operation is not valid due to the current state of the object."
+    },
+    {
+        "url":  "http://136.119.84.22/api/ops/jobs",
+        "status":  "ERR",
+        "location":  null,
+        "expect":  "401or302",
+        "ok":  false,
+        "error":  "Operation is not valid due to the current state of the object."
+    },
+    {
+        "url":  "http://136.119.84.22/api/ops/executors",
+        "status":  "ERR",
+        "location":  null,
+        "expect":  "401or302",
+        "ok":  false,
+        "error":  "Operation is not valid due to the current state of the object."
+    },
+    {
+        "url":  "http://136.119.84.22/api/ops/exceptions",
+        "status":  "ERR",
+        "location":  null,
+        "expect":  "401or302",
+        "ok":  false,
+        "error":  "Operation is not valid due to the current state of the object."
+    },
+    {
+        "url":  "http://136.119.84.22/api/ops/workbench/triage",
+        "status":  "ERR",
+        "location":  null,
+        "expect":  "401or302",
+        "ok":  false,
+        "error":  "Operation is not valid due to the current state of the object."
+    },
+    {
+        "url":  "http://136.119.84.22/api/ops/workbench/saved-filters",
+        "status":  "ERR",
+        "location":  null,
+        "expect":  "401or302",
+        "ok":  false,
+        "error":  "Operation is not valid due to the current state of the object."
+    },
+    {
+        "url":  "http://136.119.84.22/api/ops/workbench/replan-recommendations",
+        "status":  "ERR",
+        "location":  null,
+        "expect":  "401or302",
+        "ok":  false,
+        "error":  "Operation is not valid due to the current state of the object."
+    },
+    {
+        "url":  "http://136.119.84.22/api/ops/workbench/routing-shadow-metrics",
+        "status":  "ERR",
+        "location":  null,
+        "expect":  "401or302",
+        "ok":  false,
+        "error":  "Operation is not valid due to the current state of the object."
+    },
+    {
+        "url":  "http://136.119.84.22/api/ops/workbench/routing-provider-health",
+        "status":  "ERR",
+        "location":  null,
+        "expect":  "401or302",
+        "ok":  false,
+        "error":  "Operation is not valid due to the current state of the object."
+    }
+]

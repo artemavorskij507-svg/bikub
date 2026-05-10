@@ -1,0 +1,32 @@
+﻿name: PR Accessibility Audit (Draft)
+
+on:
+  pull_request:
+    branches: ["*"]
+
+jobs:
+  a11y-audit:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install pa11y + axe tools
+        run: |
+          npm install -g pa11y-ci
+
+      - name: Accessibility static gate (placeholder)
+        run: |
+          test -f docs/compliance/phase-1/01-compliance-baseline-matrix.md
+          echo "TODO: start app in CI and run pa11y-ci against /login,/account,/admin"
+
+      - name: Upload a11y artifacts (draft)
+        uses: actions/upload-artifact@v4
+        with:
+          name: a11y-audit-draft
+          path: docs/compliance/phase-1

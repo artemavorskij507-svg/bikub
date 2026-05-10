@@ -1,0 +1,100 @@
+{
+  "base": "https://136.119.84.22.nip.io",
+  "guest_checks": [
+    {
+      "path": "/",
+      "status": 200,
+      "location": null,
+      "len": 36433
+    },
+    {
+      "path": "/login",
+      "status": 200,
+      "location": null,
+      "len": 6606
+    },
+    {
+      "path": "/register",
+      "status": 200,
+      "location": null,
+      "len": 6972
+    },
+    {
+      "path": "/category/delivery",
+      "status": 200,
+      "location": null,
+      "len": 116467
+    },
+    {
+      "path": "/account",
+      "status": 302,
+      "location": "https://136.119.84.22.nip.io/login",
+      "len": 382
+    },
+    {
+      "path": "/lk",
+      "status": 302,
+      "location": "https://136.119.84.22.nip.io/login",
+      "len": 382
+    },
+    {
+      "path": "/executor",
+      "status": 302,
+      "location": "https://136.119.84.22.nip.io/login",
+      "len": 382
+    },
+    {
+      "path": "/admin",
+      "status": 302,
+      "location": "https://136.119.84.22.nip.io/admin/login",
+      "len": 406
+    },
+    {
+      "path": "/admin/login",
+      "status": 200,
+      "location": null,
+      "len": 16172
+    },
+    {
+      "path": "/admin/command-center-a-i-agent-team-chat",
+      "status": 302,
+      "location": "https://136.119.84.22.nip.io/admin/login",
+      "len": 406
+    },
+    {
+      "path": "/api/ops/map/live",
+      "status": 302,
+      "location": "https://136.119.84.22.nip.io/login",
+      "len": 382
+    }
+  ],
+  "login_final_url": "https://136.119.84.22.nip.io/account",
+  "login_status": 200,
+  "auth_checks": [
+    {
+      "path": "/account",
+      "status": 200,
+      "location": null
+    },
+    {
+      "path": "/lk",
+      "status": 200,
+      "location": null
+    },
+    {
+      "path": "/executor",
+      "status": 500,
+      "location": null
+    },
+    {
+      "path": "/dashboard",
+      "status": 302,
+      "location": "https://136.119.84.22.nip.io/catalog"
+    },
+    {
+      "path": "/admin/live-operations-map",
+      "status": 200,
+      "location": null
+    }
+  ]
+}

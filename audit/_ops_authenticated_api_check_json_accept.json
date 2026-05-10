@@ -1,0 +1,56 @@
+[
+  {
+    "path": "/api/ops/map/live",
+    "status": 401,
+    "ct": "application/json",
+    "sample": "{\"message\":\"Unauthenticated.\"}"
+  },
+  {
+    "path": "/api/ops/jobs",
+    "status": 401,
+    "ct": "application/json",
+    "sample": "{\"message\":\"Unauthenticated.\"}"
+  },
+  {
+    "path": "/api/ops/executors",
+    "status": 401,
+    "ct": "application/json",
+    "sample": "{\"message\":\"Unauthenticated.\"}"
+  },
+  {
+    "path": "/api/ops/exceptions",
+    "status": 401,
+    "ct": "application/json",
+    "sample": "{\"message\":\"Unauthenticated.\"}"
+  },
+  {
+    "path": "/api/ops/workbench/triage",
+    "status": 401,
+    "ct": "application/json",
+    "sample": "{\"message\":\"Unauthenticated.\"}"
+  },
+  {
+    "path": "/api/ops/workbench/saved-filters",
+    "status": 401,
+    "ct": "application/json",
+    "sample": "{\"message\":\"Unauthenticated.\"}"
+  },
+  {
+    "path": "/api/ops/workbench/replan-recommendations",
+    "status": 401,
+    "ct": "application/json",
+    "sample": "{\"message\":\"Unauthenticated.\"}"
+  },
+  {
+    "path": "/api/ops/workbench/routing-shadow-metrics",
+    "status": 401,
+    "ct": "application/json",
+    "sample": "{\"message\":\"Unauthenticated.\"}"
+  },
+  {
+    "path": "/api/ops/workbench/routing-provider-health",
+    "status": 401,
+    "ct": "application/json",
+    "sample": "{\"message\":\"Unauthenticated.\"}"
+  }
+]

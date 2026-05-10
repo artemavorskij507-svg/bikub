@@ -1,0 +1,137 @@
+﻿openapi: 3.1.0
+info:
+  title: Bikube DSAR API
+  version: 1.0.0-draft
+  description: >-
+    Draft DSAR API for GDPR Foundation (Phase 1 Week 1).
+servers:
+  - url: https://api.bikube.example/api/v1
+paths:
+  /dsar:
+    post:
+      summary: Create DSAR request
+      operationId: createDsar
+      security:
+        - bearerAuth: []
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/DsarCreateRequest'
+      responses:
+        '202':
+          description: Accepted
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/DsarResponse'
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+  /dsar/{id}:
+    get:
+      summary: Get DSAR status
+      operationId: getDsar
+      security:
+        - bearerAuth: []
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+            format: uuid
+      responses:
+        '200':
+          description: Request status
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/DsarResponse'
+        '404':
+          description: Not found
+components:
+  securitySchemes:
+    bearerAuth:
+      type: http
+      scheme: bearer
+      bearerFormat: JWT
+  responses:
+    BadRequest:
+      description: Invalid input
+    Unauthorized:
+      description: Auth required
+  schemas:
+    DsarCreateRequest:
+      type: object
+      required: [type, requester, format]
+      properties:
+        type:
+          type: string
+          enum: [access, erasure, rectification, portability, objection]
+        requester:
+          type: object
+          required: [subject_id, auth_context]
+          properties:
+            subject_id:
+              type: string
+            auth_context:
+              type: string
+              description: ID-porten or Maskinporten assurance context
+        details:
+          type: object
+          additionalProperties: true
+        format:
+          type: array
+          minItems: 1
+          items:
+            type: string
+            enum: [json, pdf]
+    DsarResponse:
+      type: object
+      required: [id, status, sla_due_at, created_at]
+      properties:
+        id:
+          type: string
+          format: uuid
+        status:
+          type: string
+          enum:
+            - submitted
+            - identity_verification
+            - triage
+            - processing
+            - qa_review
+            - completed
+            - rejected
+            - requires_more_info
+            - escalated_legal
+        sla_due_at:
+          type: string
+          format: date-time
+          description: Default 30 calendar days
+        created_at:
+          type: string
+          format: date-time
+        updated_at:
+          type: string
+          format: date-time
+        audit_events:
+          type: array
+          items:
+            type: object
+            required: [at, actor, from_state, to_state]
+            properties:
+              at:
+                type: string
+                format: date-time
+              actor:
+                type: string
+              from_state:
+                type: string
+              to_state:
+                type: string
+              reason:
+                type: string

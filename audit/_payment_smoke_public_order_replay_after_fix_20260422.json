@@ -1,0 +1,31 @@
+{
+  "email": "smoke.payment.1776840861@example.com",
+  "idempotency_key": "pay-smoke-1776840861",
+  "order_count_for_email": 1,
+  "first": {
+    "success": true,
+    "data": {
+      "order_id": 18,
+      "order_number": "GLF202604226811",
+      "total_amount": 199,
+      "currency": "NOK",
+      "payment_url": null,
+      "payment_intent_id": "pi_3TOufxJvnGh6jvlD0EozhoBE",
+      "payment_status": "ready"
+    },
+    "message": "Order created successfully"
+  },
+  "second": {
+    "success": true,
+    "data": {
+      "order_id": 18,
+      "order_number": "GLF202604226811",
+      "total_amount": 199,
+      "currency": "NOK",
+      "payment_url": null,
+      "payment_intent_id": "pi_3TOufxJvnGh6jvlD0EozhoBE",
+      "payment_status": "ready"
+    },
+    "message": "Order created successfully"
+  }
+}

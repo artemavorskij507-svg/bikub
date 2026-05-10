@@ -1,0 +1,42 @@
+<?php
+
+use Illuminate\Database\Migrations\Migration;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\Schema;
+
+return new class extends Migration
+{
+    /**
+     * Run the migrations.
+     */
+    public function up(): void
+    {
+        Schema::table('grocery_orders', function (Blueprint $table) {
+            // Удаляем старый foreign key
+            $table->dropForeign(['store_id']);
+
+            // Изменяем foreign key на retail_stores
+            $table->foreign('store_id')
+                ->references('id')
+                ->on('retail_stores')
+                ->onDelete('set null');
+        });
+    }
+
+    /**
+     * Reverse the migrations.
+     */
+    public function down(): void
+    {
+        Schema::table('grocery_orders', function (Blueprint $table) {
+            // Удаляем foreign key на retail_stores
+            $table->dropForeign(['store_id']);
+
+            // Возвращаем foreign key на stores
+            $table->foreign('store_id')
+                ->references('id')
+                ->on('stores')
+                ->onDelete('set null');
+        });
+    }
+};

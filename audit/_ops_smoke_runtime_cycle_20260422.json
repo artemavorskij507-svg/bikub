@@ -1,0 +1,141 @@
+{
+    "generated_at": "2026-04-22T07:47:45+00:00",
+    "mode": "runtime",
+    "summary": {
+        "total": 11,
+        "passed": 10,
+        "warnings": 1,
+        "failed": 0,
+        "skipped": 0
+    },
+    "results": {
+        "runtime_health_routes": {
+            "status": "pass",
+            "detail": {
+                "status": 200,
+                "body": {
+                    "status": "ok",
+                    "timestamp": "2026-04-22T07:47:41+00:00",
+                    "service": "GLF BiKube API",
+                    "version": "1.0.0",
+                    "php_version": "8.4.19",
+                    "laravel_version": "10.50.0",
+                    "checks": {
+                        "database": "ok",
+                        "redis": "ok"
+                    }
+                }
+            }
+        },
+        "runtime_admin_pages_guard": {
+            "status": "pass",
+            "detail": {
+                "statuses": {
+                    "/admin": 302,
+                    "/admin/login": 200,
+                    "/admin/service-jobs": 302,
+                    "/admin/operation-exceptions": 302,
+                    "/admin/live-operations-map": 302
+                }
+            }
+        },
+        "runtime_routing_provider_reachable": {
+            "status": "warn",
+            "detail": {
+                "provider": "osrm",
+                "reachable": false,
+                "latency_ms": null,
+                "error": "cURL error 7: Failed to connect to 127.0.0.1 port 5000 after 0 ms: Couldn't connect to server (see https://curl.haxx.se/libcurl/c/libcurl-errors.html) for http://127.0.0.1:5000/route/v1/driving/10.7522,59.9139;10.7695,59.9311?overview=false&alternatives=false&steps=false&annotations=false",
+                "checked_at": "2026-04-22T07:47:42+00:00",
+                "note": "Provider unreachable in shadow mode. Heuristic path remains authoritative."
+            }
+        },
+        "runtime_dispatch_shift": {
+            "status": "pass",
+            "detail": {
+                "run_status": "no_candidate",
+                "eligible": false,
+                "reasons": [
+                    "after_shift_end"
+                ]
+            }
+        },
+        "runtime_dispatch_capacity": {
+            "status": "pass",
+            "detail": {
+                "run_status": "no_candidate",
+                "reasons": [
+                    "missing_equipment:pipe_wrench"
+                ]
+            }
+        },
+        "runtime_rules_override": {
+            "status": "pass",
+            "detail": {
+                "eta_weight": 0.55
+            }
+        },
+        "runtime_roadside_fast_lane": {
+            "status": "pass",
+            "detail": {
+                "run_status": "completed",
+                "preempted_status": "reassigned",
+                "acceptance_timeout_seconds": 120
+            }
+        },
+        "runtime_moving_team_eta": {
+            "status": "pass",
+            "detail": {
+                "run_status": "completed",
+                "team_id": 45,
+                "member_etas_count": 2,
+                "max_member_eta": 1200,
+                "team_eta_seconds_from_now": 1199
+            }
+        },
+        "runtime_idempotency_api": {
+            "status": "pass",
+            "detail": {
+                "statuses": [
+                    200,
+                    200,
+                    409
+                ],
+                "assignments_count": 1,
+                "idempotency_state": "completed"
+            }
+        },
+        "runtime_authenticated_secured_paths": {
+            "status": "pass",
+            "detail": {
+                "statuses": {
+                    "map_live": 200,
+                    "job_drawer": 200,
+                    "candidate_compare": 200,
+                    "triage": 200,
+                    "saved_filters_get": 200,
+                    "replan_recommendations": 200,
+                    "routing_shadow_metrics": 200,
+                    "routing_provider_health": 200,
+                    "saved_filters_post": 200,
+                    "bulk_action": 200
+                },
+                "drawer_has_candidates": true,
+                "compare_has_payload": true,
+                "compare_has_eta_diff": true,
+                "replan_payload_shape": true,
+                "routing_metrics_shape": true,
+                "routing_health_shape": true
+            }
+        },
+        "runtime_routing_shadow_mode": {
+            "status": "pass",
+            "detail": {
+                "run_status": "completed",
+                "routing_available": false,
+                "routing_error": "routing_missing_coordinates",
+                "snapshots_count": 0
+            }
+        }
+    }
+}

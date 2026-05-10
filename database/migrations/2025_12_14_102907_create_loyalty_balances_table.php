@@ -1,0 +1,32 @@
+<?php
+
+use Illuminate\Database\Migrations\Migration;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\Schema;
+
+return new class extends Migration
+{
+    /**
+     * Run the migrations.
+     */
+    public function up(): void
+    {
+        Schema::create('loyalty_balances', function (Blueprint $table) {
+            $table->id();
+            $table->foreignId('user_id')->constrained()->unique();
+            $table->unsignedInteger('points')->default(0);
+            $table->unsignedInteger('lifetime_points')->default(0)->comment('Total points ever earned');
+            $table->timestamps();
+
+            $table->index(['user_id', 'points']);
+        });
+    }
+
+    /**
+     * Reverse the migrations.
+     */
+    public function down(): void
+    {
+        Schema::dropIfExists('loyalty_balances');
+    }
+};

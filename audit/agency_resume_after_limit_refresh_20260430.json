@@ -1,0 +1,11 @@
+{
+  "patch_rec_status": 200,
+  "comment_rec_status": 201,
+  "patch_main_status": 200,
+  "comment_main_status": 201,
+  "invoke_status": 202,
+  "rec_issue_status_now": "in_progress",
+  "main_issue_status_now": "todo",
+  "director_last_run_status": "running",
+  "director_last_run_error": ""
+}

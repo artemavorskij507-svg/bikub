@@ -1,0 +1,206 @@
+GLF BiKuBe
+Dashboard
+Dashboard
+Team Chat
+Admin IP Rules
+API Keys Management
+Audit Logs
+2FA Setup
+Categories
+Услуги
+Клиенты
+Партнёры
+Выплаты
+
+SYSTEM & OPERATIONS
+
+Bikube Assistant
+Assistant Conversations
+Операционный центр доставки
+Диспетчерская
+Tasks
+ТЗ и задачи
+Временные слоты
+Пользователи
+Feature Flags
+Заказы (Аналитика)
+Debug & Demo
+
+VIRTUAL OFFICE
+
+Virtual Office
+Virtual Office Agents
+
+CLASSIFIEDS
+
+Ad Categories
+Ad Features
+Bulk Import
+Ads Moderation
+Shops
+
+SECURITY
+
+Admin IP Rules
+API Keys
+
+INTEGRATIONS
+
+Webhook Center
+
+OPERATIONS
+
+Unified Operations Core
+Service Jobs
+Live Operations Map
+Operation Exceptions
+Executor Shifts
+Executor Breaks
+Dispatch Rule Sets
+Dispatch Rule Preview
+
+ЛОЯЛЬНІСТЬ
+
+Баланси балів
+Історія операцій
+
+РЕСУРСЫ И ПЛАНИРОВАНИЕ
+
+Исполнители
+
+АНАЛИТИКА
+
+Логи Расчёта Цен
+
+SUPPORT
+
+Support Tickets
+
+СИСТЕМНЫЕ НАСТРОЙКИ
+
+Настройки платежей
+
+СПРАВОЧНИКИ И КОНТЕНТ
+
+Geo Zones
+Pricing Rules
+
+DELIVERY
+
+Errand Tasks
+Restaurants
+Retail Stores
+Delivery
+Delivery Orders
+Errand Order Details
+Delivery Zones
+
+MARKETING
+
+Coupons
+
+ECO DISPOSAL
+
+Disposal Items
+Disposal Partners
+Eco Certificates
+Eco Teams
+Аналитика ЭКО-услуг
+
+HANDYMAN & REPAIR
+
+Claims
+Handyman Assignments
+Handyman Materials Entries
+Repair Projects
+Repair Stages
+Repair Team Members
+Work Warranties
+
+MOVING
+
+Executor Profiles
+Moving Items
+Замовлення Переїздів
+Moving Teams
+Moving Order Photos
+Moving Order Tasks
+
+ROADSIDE & TOW
+
+Roadside & Tow
+Roadside Dispatch
+Виды работ Roadside
+Дорожные помощники
+Заявки на осмотр авто
+Партнёры-эвакуаторы
+Пресеты осмотра авто
+Экстренные вызовы Roadside
+
+SOCIAL CARE
+
+Аналитика и отчёты
+Баллы сообщества
+Планы заботы
+Помощники
+Пульт координатора
+Соц. заказы
+Типы услуг
+Global search
+AI Agent Team Chat
+AGENT WORKSPACE ? GLASSMORPHISM 4
+в роли QA-инженера откройте файл routes/web.php, просмотрите его с помощью инструмента и скажите, все ли в порядке.
+Run #65 ? planning
+Director Agent online
+Active agents: 334
+PROGRESS
+0%
+RISK
+medium
+ARTIFACTS
+0
+BLOCKERS
+0
+APPROVALS
+0
+CONNECTION
+redis
+QUEUE
+default
+HORIZON
+unknown
+ACTIVE TEAM
+Director
+QA Agent
+RUNS
+Run #65 ? planning
+0% ? 17:52
+в роли QA-инженера откройте файл routes/web.php, просмотрите его с помощью инструмента и с
+ 
+Run #64 ? planning
+0% ? 10:01
+В роли QA инженера открой файл routes/web.php, прочитай его через инструмент и скажи мне,
+ 
+Run #63 ? completed
+100% ? 14:51
+http://136.119.84.22/ Ваш ульяный сервис Доставка, мастер на час, переезды, социальная пом
+ 
+Run #62 ? completed
+100% ? 14:21
+http://136.119.84.22/ Ваш ульяный сервис Доставка, мастер на час, переезды, социальная пом
+ 
+Run #61 ? completed
+100% ? 14:20
+http://136.119.84.22/ Ваш ульяный сервис Доставка, мастер на час, переезды, социальная пом
+ 
+Run #57 ? completed
+100% ? 08:29
+http://136.119.84.22/category/food. 500 Server Error. Почените страницу fix!
+ 
+Run #56 ? completed
+100% ? 08:28
+http://136.119.84.22/category/food. 500 Server Error. Посетите страницу fix!
+ 
+Run #55 ? completed
+100% ? 08:27
+http://136.119.84.22/category/food имеет ош
